@@ -2,9 +2,9 @@
   "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.3.2/src/parser/StudyConfigSchema.json",
   "studyMetadata": {
     "title": "Real vs Virtual Study Demo",
-    "version": "pilot",
+    "version": "e",
     "authors": [
-      "Leana P"
+      "Leana Petiot"
     ],
     "date": "2025-12-02",
     "description": "todo: Add description",
