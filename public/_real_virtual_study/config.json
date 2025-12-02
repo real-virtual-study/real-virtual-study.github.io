@@ -4,12 +4,12 @@
     "title": "Real vs Virtual Study Demo",
     "version": "pilot",
     "authors": [
-      "Demo Author"
+      "Leana P"
     ],
     "date": "2025-12-02",
-    "description": "A minimal example study configuration to demonstrate a simple questionnaire for a psychology experiment.",
+    "description": "todo: Add description",
     "organizations": [
-      "Your Lab or Department"
+      "inria"
     ]
   },
   "uiConfig": {
