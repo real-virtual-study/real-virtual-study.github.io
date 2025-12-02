@@ -19,6 +19,7 @@
     "demo-style",
     "demo-yaml",
     "demo-ranking-widget",
+    "_real_virtual_study",
     "example-brush-interactions",
     "example-cleveland",
     "example-mvnv",
@@ -105,6 +106,9 @@
     },
     "demo-ranking-widget": {
       "path": "demo-ranking-widget/config.json"
+    },
+    "_real_virtual_study": {
+      "path": "_real_virtual_study/config.json"
     },
     "example-brush-interactions": {
       "path": "example-brush-interactions/config.json"
