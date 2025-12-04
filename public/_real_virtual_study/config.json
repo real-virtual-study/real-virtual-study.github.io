@@ -170,21 +170,41 @@
     "recognition-question": {
       "type": "questionnaire",
       "description": "Object recognition",
+      "provideFeedback": true,
+      "trainingAttempts": 1,
       "response": [
         {
-          "id": "q-short-text",
+          "id": "recog-q",
           "prompt": "What object did you see in the video",
           "location": "belowStimulus",
           "type": "shortText",
           "placeholder": "Enter your answer here"
         }
+      ],
+      "correctAnswer": [
+        {
+          "id": "recog-q",
+          "answer": "OBJECT"
+        }
       ]
     },
 
-    "recognition-suggestion": {
-      "type": "markdown",
-      "path": "_real_virtual_study/recognition_suggestion.md",
-      "response": []
+    "identification-question": {
+      "type": "questionnaire",
+      "description": "Object recognition",
+      "response": [
+        {
+          "id": "id-q",
+          "prompt": "What this object real or virtual",
+          "location": "belowStimulus",
+          "type": "shortText",
+          "placeholder": "Enter your answer here"
+        }
+      ],
+      "correctAnswer": [{
+        "id": "id-q",
+        "answer": "OBJECT"
+      }]
     },
 
     "PostQuestionnaire": {
