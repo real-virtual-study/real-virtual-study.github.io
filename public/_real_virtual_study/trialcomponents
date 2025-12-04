@@ -1,0 +1,22 @@
+{
+  "componentsA": [
+    "trial1A","trial2A","trial3A","trial4A","trial5A","trial6A","trial7A","trial8A",
+    "trial9A","trial10A","trial11A","trial12A","trial13A","trial14A","trial15A","trial16A",
+    "trial17A","trial18A","trial19A","trial20A","trial21A","trial22A","trial23A","trial24A"
+  ],
+  "componentsB": [
+    "trial1B","trial2B","trial3B","trial4B","trial5B","trial6B","trial7B","trial8B",
+    "trial9B","trial10B","trial11B","trial12B","trial13B","trial14B","trial15B","trial16B",
+    "trial17B","trial18B","trial19B","trial20B","trial21B","trial22B","trial23B","trial24B"
+  ],
+  "componentsC": [
+    "trial1C","trial2C","trial3C","trial4C","trial5C","trial6C","trial7C","trial8C",
+    "trial9C","trial10C","trial11C","trial12C","trial13C","trial14C","trial15C","trial16C",
+    "trial17C","trial18C","trial19C","trial20C","trial21C","trial22C","trial23C","trial24C"
+  ],
+  "componentsD": [
+    "trial1D","trial2D","trial3D","trial4D","trial5D","trial6D","trial7D","trial8D",
+    "trial9D","trial10D","trial11D","trial12D","trial13D","trial14D","trial15D","trial16D",
+    "trial17D","trial18D","trial19D","trial20D","trial21D","trial22D","trial23D","trial24D"
+  ]
+}
