@@ -20,15 +20,6 @@
     "withSidebar": true,
     "withProgressBar": true
   },
-  "baseComponents": {
-    "trial": {
-      "type": "questionnaire",
-      "response": [],
-      "nextButtonLocation": "aboveStimulus",
-      "instruction": "Please answer the following questions...",
-      "instructionLocation": "aboveStimulus"
-    }
-  },
   "components": {
     "introduction": {
       "type": "markdown",

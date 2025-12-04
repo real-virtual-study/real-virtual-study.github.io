@@ -1,3 +1,0 @@
-## Consent
-
-TODO: Add Consent
