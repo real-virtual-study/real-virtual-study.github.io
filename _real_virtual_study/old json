@@ -1,0 +1,142 @@
+{
+  "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.3.2/src/parser/StudyConfigSchema.json",
+  "studyMetadata": {
+    "title": "Real vs Virtual Study Demo",
+    "version": "e",
+    "authors": [
+      "Leana"
+    ],
+    "date": "2025-12-02",
+    "description": "todo: Add description",
+    "organizations": [
+      "inria"
+    ]
+  },
+  "uiConfig": {
+    "contactEmail": "",
+    "helpTextPath": "_real_virtual_study/assets/observation/help.md",
+    "logoPath": "revisitAssets/revisitLogoSquare.svg",
+    "withProgressBar": true,
+    "autoDownloadStudy": false,
+    "withSidebar": false,
+    "enumerateQuestions": true
+  },
+  "components": {
+    "IntroPage": {
+      "type": "markdown",
+      "path": "_real_virtual_study/assets/observation/part1_intro.md",
+      "response": []
+    },
+    "ConsentPage": {
+      "type": "markdown",
+      "path": "_real_virtual_study/assets/observation/part1_consent.md",
+      "response": []
+    },
+    "ImageTrial": {
+      "type": "image",
+      "description": "Sample image stimulus",
+      "instruction": "Please look at the image and answer the question on the right.",
+      "path": "_real_virtual_study/assets/sample-stimuli/example-static-image.jpg",
+      "style": {
+        "width": "800px"
+      },
+      "nextButtonLocation": "sidebar",
+      "response": [
+        {
+          "id": "image_instructions_sidebar",
+          "type": "textOnly",
+          "location": "sidebar",
+          "prompt": "Please examine the image.\n\nWhen you are finished, click **Next** in this sidebar to continue."
+        }
+      ]
+    },
+    "VideoTrial": {
+      "type": "video",
+      "description": "Sample video stimulus",
+      "instruction": "Please watch the full video, then answer the question in the sidebar and click Next.",
+      "path": "_real_virtual_study/assets/sample-stimuli/example-video.mp4",
+      "forceCompletion": true,
+      "nextButtonLocation": "sidebar",
+      "response": [
+        {
+          "id": "video_instructions_sidebar",
+          "type": "textOnly",
+          "location": "sidebar",
+          "prompt": "Please watch the video until it finishes.\n\nWhen you are done, click **Next** in this sidebar to continue."
+        }
+      ]
+    },
+    "PostQuestionnaire": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "participant_id",
+          "type": "shortText",
+          "prompt": "Please enter your participant ID (or initials).",
+          "placeholder": "e.g., RV001"
+        },
+        {
+          "id": "preference_mode",
+          "type": "radio",
+          "prompt": "For this kind of task, would you **prefer** to complete it in a real or virtual setting?",
+          "options": [
+            "Strongly prefer real / in-person",
+            "Somewhat prefer real / in-person",
+            "No preference",
+            "Somewhat prefer virtual / online",
+            "Strongly prefer virtual / online"
+          ]
+        },
+        {
+          "id": "overall_engagement",
+          "type": "likert",
+          "prompt": "Overall, how engaging did you find this demo?",
+          "secondaryText": "1 = Not at all engaging, 7 = Extremely engaging.",
+          "numItems": 7,
+          "leftLabel": "Not at all engaging",
+          "rightLabel": "Extremely engaging"
+        },
+        {
+          "id": "open_feedback",
+          "type": "longText",
+          "prompt": "Is there anything else you would like to tell us about your experience in this (demo) study?",
+          "placeholder": "Type any additional comments here (optional)."
+        }
+      ]
+    },
+    "EndPage": {
+      "type": "markdown",
+      "path": "_real_virtual_study/assets/end.md",
+      "response": []
+    }
+  },
+  "sequence": {
+    "order": "fixed",
+    "components": [
+      "IntroPage",
+      "ConsentPage",
+      "ImageTrial",
+      "VideoTrial",
+      "PostQuestionnaire",
+      "EndPage"
+    ]
+  }
+}
+
+
+    "VideoTrial": {
+      "type": "video",
+      "description": "Sample video stimulus",
+      "instruction": "Please watch the full video, then answer the question in the sidebar and click Next.",
+      "path": "{{video_path}}",
+      "forceCompletion": true,
+      "nextButtonLocation": "sidebar",
+      "response": [
+        {
+          "id": "video_instructions_sidebar",
+          "type": "textOnly",
+          "location": "sidebar",
+          "prompt": "Please watch the video until it finishes.\n\nWhen you are done, click **Next** in this sidebar to continue."
+        }
+      ]
+    },
