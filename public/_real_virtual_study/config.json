@@ -23,7 +23,6 @@
     "base-video-trial": {
       "type": "video",
       "description": "Video stimulus",
-      "instruction": "Please watch the full video, then answer the question in the sidebar and click Next.",
       "forceCompletion": true,
       "nextButtonLocation": "sidebar",
       "response": [
@@ -64,36 +63,389 @@
 
     "trial1A": {
       "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/banana_100.mp4"
+      "path": "_real_virtual_study/assets/sample-stimuli/hanger_100.mp4"
     },
     "trial2A": {
       "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/banana_15.mp4"
+      "path": "_real_virtual_study/assets/sample-stimuli/paint-palette_100.mp4"
     },
-    "trial1B": {
+    "trial3A": {
       "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/banana_65.mp4"
+      "path": "_real_virtual_study/assets/sample-stimuli/scissors_100.mp4"
     },
-    "trial2B": {
+    "trial4A": {
       "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/apple_100.mp4"
+      "path": "_real_virtual_study/assets/sample-stimuli/keys_15.mp4"
     },
-    "trial1C": {
+    "trial5A": {
       "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/apple_65.mp4"
+      "path": "_real_virtual_study/assets/sample-stimuli/rubberduck_65.mp4"
     },
-    "trial2C": {
+    "trial6A": {
       "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/apple_15.mp4"
+      "path": "_real_virtual_study/assets/sample-stimuli/box-cutter_15.mp4"
     },
-    "trial1D": {
+    "trial7A": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/sunglasses_100.mp4"
+    },
+    "trial8A": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/candle_100.mp4"
+    },
+    "trial9A": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/pen_15.mp4"
+    },
+    "trial10A": {
       "baseComponent": "base-video-trial",
       "path": "_real_virtual_study/assets/sample-stimuli/screwdriver_100.mp4"
     },
+    "trial11A": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/apple_65.mp4"
+    },
+    "trial12A": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/banana_65.mp4"
+    },
+    "trial13A": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/lighter_100.mp4"
+    },
+    "trial14A": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/toothbrush_65.mp4"
+    },
+    "trial15A": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/calculator_100.mp4"
+    },
+    "trial16A": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/clock_100.mp4"
+    },
+    "trial17A": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/computer-mouse_100.mp4"
+    },
+    "trial18A": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/lemon_100.mp4"
+    },
+    "trial19A": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/usb-drive_15.mp4"
+    },
+    "trial20A": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/tin-can_15.mp4"
+    },
+    "trial21A": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/cup_15.mp4"
+    },
+    "trial22A": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/serving-spoon_65.mp4"
+    },
+    "trial23A": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/book_65.mp4"
+    },
+    "trial24A": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/hairdryer_100.mp4"
+    },
+    "trial1B": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/hanger_15.mp4"
+    },
+    "trial2B": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/paint-palette_65.mp4"
+    },
+    "trial3B": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/scissors_65.mp4"
+    },
+    "trial4B": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/keys_100.mp4"
+    },
+    "trial5B": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/rubberduck_100.mp4"
+    },
+    "trial6B": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/box-cutter_100.mp4"
+    },
+    "trial7B": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/sunglasses_15.mp4"
+    },
+    "trial8B": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/candle_15.mp4"
+    },
+    "trial9B": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/pen_100.mp4"
+    },
+    "trial10B": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/screwdriver_65.mp4"
+    },
+    "trial11B": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/apple_100.mp4"
+    },
+    "trial12B": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/banana_100.mp4"
+    },
+    "trial13B": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/lighter_15.mp4"
+    },
+    "trial14B": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/toothbrush_100.mp4"
+    },
+    "trial15B": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/calculator_65.mp4"
+    },
+    "trial16B": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/clock_15.mp4"
+    },
+    "trial17B": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/computer-mouse_15.mp4"
+    },
+    "trial18B": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/lemon_65.mp4"
+    },
+    "trial19B": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/usb-drive_100.mp4"
+    },
+    "trial20B": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/tin-can_100.mp4"
+    },
+    "trial21B": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/cup_100.mp4"
+    },
+    "trial22B": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/serving-spoon_100.mp4"
+    },
+    "trial23B": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/book_100.mp4"
+    },
+    "trial24B": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/hairdryer_65.mp4"
+    },
+    "trial1C": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/hanger_100.mp4"
+    },
+    "trial2C": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/paint-palette_100.mp4"
+    },
+    "trial3C": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/scissors_100.mp4"
+    },
+    "trial4C": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/keys_65.mp4"
+    },
+    "trial5C": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/rubberduck_15.mp4"
+    },
+    "trial6C": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/box-cutter_65.mp4"
+    },
+    "trial7C": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/sunglasses_100.mp4"
+    },
+    "trial8C": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/candle_100.mp4"
+    },
+    "trial9C": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/pen_65.mp4"
+    },
+    "trial10C": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/screwdriver_100.mp4"
+    },
+    "trial11C": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/apple_15.mp4"
+    },
+    "trial12C": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/banana_15.mp4"
+    },
+    "trial13C": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/lighter_100.mp4"
+    },
+    "trial14C": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/toothbrush_15.mp4"
+    },
+    "trial15C": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/calculator_100.mp4"
+    },
+    "trial16C": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/clock_100.mp4"
+    },
+    "trial17C": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/computer-mouse_100.mp4"
+    },
+    "trial18C": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/lemon_100.mp4"
+    },
+    "trial19C": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/usb-drive_65.mp4"
+    },
+    "trial20C": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/tin-can_65.mp4"
+    },
+    "trial21C": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/cup_65.mp4"
+    },
+    "trial22C": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/serving-spoon_15.mp4"
+    },
+    "trial23C": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/book_15.mp4"
+    },
+    "trial24C": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/hairdryer_100.mp4"
+    },
+    "trial1D": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/hanger_65.mp4"
+    },
     "trial2D": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/paint-palette_15.mp4"
+    },
+    "trial3D": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/scissors_15.mp4"
+    },
+    "trial4D": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/keys_100.mp4"
+    },
+    "trial5D": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/rubberduck_100.mp4"
+    },
+    "trial6D": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/box-cutter_100.mp4"
+    },
+    "trial7D": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/sunglasses_65.mp4"
+    },
+    "trial8D": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/candle_65.mp4"
+    },
+    "trial9D": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/pen_100.mp4"
+    },
+    "trial10D": {
       "baseComponent": "base-video-trial",
       "path": "_real_virtual_study/assets/sample-stimuli/screwdriver_15.mp4"
     },
+    "trial11D": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/apple_100.mp4"
+    },
+    "trial12D": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/banana_100.mp4"
+    },
+    "trial13D": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/lighter_65.mp4"
+    },
+    "trial14D": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/toothbrush_100.mp4"
+    },
+    "trial15D": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/calculator_15.mp4"
+    },
+    "trial16D": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/clock_65.mp4"
+    },
+    "trial17D": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/computer-mouse_65.mp4"
+    },
+    "trial18D": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/lemon_15.mp4"
+    },
+    "trial19D": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/usb-drive_100.mp4"
+    },
+    "trial20D": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/tin-can_100.mp4"
+    },
+    "trial21D": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/cup_100.mp4"
+    },
+    "trial22D": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/serving-spoon_100.mp4"
+    },
+    "trial23D": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/book_100.mp4"
+    },
+    "trial24D": {
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/hairdryer_15.mp4"
+    },
+
 
     "recognition-question": {
       "type": "questionnaire",
