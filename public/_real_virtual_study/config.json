@@ -18,7 +18,35 @@
     "enumerateQuestions": true
   },
   "baseComponents": {
+    "base-video-trial": {
+      "type": "video",
+      "description": "Video stimulus",
+      "instruction": "Please watch the full video, then answer the question in the sidebar and click Next.",
+      "forceCompletion": true,
+      "nextButtonLocation": "sidebar",
+      "response": [
+        {
+          "id": "video_instructions_sidebar",
+          "type": "textOnly",
+          "location": "sidebar",
+          "prompt": "Please watch the video until it finishes.\n\nWhen you are done, click **Next** in this sidebar to continue."
+        }
+      ]
+    },
 
+    "base-feedback": {
+      "type": "questionnaire",
+      "description": "Correction Feedback",
+      "nextButtonText": "Continue",
+      "response": [
+        {
+          "id": "feedback-text",
+          "type": "textOnly",
+          "location": "belowStimulus",
+          "prompt": "### Incorrect \n\n The correct object was: **{{correct_object}}**."
+        }
+      ]
+    }
   },
   "components": {
     "IntroPage": {
@@ -31,140 +59,38 @@
       "path": "_real_virtual_study/assets/observation/part1_consent.md",
       "response": []
     },
+
     "trial1A": {
-      "type": "video",
-      "description": "Video stimulus",
-      "instruction": "Please watch the full video, then answer the question in the sidebar and click Next.",
-      "path": "_real_virtual_study/assets/sample-stimuli/banana_100.mp4",
-      "forceCompletion": true,
-      "nextButtonLocation": "sidebar",
-      "response": [
-        {
-          "id": "video_instructions_sidebar",
-          "type": "textOnly",
-          "location": "sidebar",
-          "prompt": "Please watch the video until it finishes.\n\nWhen you are done, click **Next** in this sidebar to continue."
-        }
-      ]
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/banana_100.mp4"
     },
-
     "trial2A": {
-      "type": "video",
-      "description": "Video stimulus",
-      "instruction": "Please watch the full video, then answer the question in the sidebar and click Next.",
-      "path": "_real_virtual_study/assets/sample-stimuli/banana_15.mp4",
-      "forceCompletion": true,
-      "nextButtonLocation": "sidebar",
-      "response": [
-        {
-          "id": "video_instructions_sidebar",
-          "type": "textOnly",
-          "location": "sidebar",
-          "prompt": "Please watch the video until it finishes.\n\nWhen you are done, click **Next** in this sidebar to continue."
-        }
-      ]
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/banana_15.mp4"
     },
-
     "trial1B": {
-      "type": "video",
-      "description": "Video stimulus",
-      "instruction": "Please watch the full video, then answer the question in the sidebar and click Next.",
-      "path": "_real_virtual_study/assets/sample-stimuli/banana_65.mp4",
-      "forceCompletion": true,
-      "nextButtonLocation": "sidebar",
-      "response": [
-        {
-          "id": "video_instructions_sidebar",
-          "type": "textOnly",
-          "location": "sidebar",
-          "prompt": "Please watch the video until it finishes.\n\nWhen you are done, click **Next** in this sidebar to continue."
-        }
-      ]
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/banana_65.mp4"
     },
-
     "trial2B": {
-      "type": "video",
-      "description": "Video stimulus",
-      "instruction": "Please watch the full video, then answer the question in the sidebar and click Next.",
-      "path": "_real_virtual_study/assets/sample-stimuli/apple_100.mp4",
-      "forceCompletion": true,
-      "nextButtonLocation": "sidebar",
-      "response": [
-        {
-          "id": "video_instructions_sidebar",
-          "type": "textOnly",
-          "location": "sidebar",
-          "prompt": "Please watch the video until it finishes.\n\nWhen you are done, click **Next** in this sidebar to continue."
-        }
-      ]
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/apple_100.mp4"
     },
-
     "trial1C": {
-      "type": "video",
-      "description": "Video stimulus",
-      "instruction": "Please watch the full video, then answer the question in the sidebar and click Next.",
-      "path": "_real_virtual_study/assets/sample-stimuli/apple_65.mp4",
-      "forceCompletion": true,
-      "nextButtonLocation": "sidebar",
-      "response": [
-        {
-          "id": "video_instructions_sidebar",
-          "type": "textOnly",
-          "location": "sidebar",
-          "prompt": "Please watch the video until it finishes.\n\nWhen you are done, click **Next** in this sidebar to continue."
-        }
-      ]
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/apple_65.mp4"
     },
-
     "trial2C": {
-      "type": "video",
-      "description": "Video stimulus",
-      "instruction": "Please watch the full video, then answer the question in the sidebar and click Next.",
-      "path": "_real_virtual_study/assets/sample-stimuli/apple_15.mp4",
-      "forceCompletion": true,
-      "nextButtonLocation": "sidebar",
-      "response": [
-        {
-          "id": "video_instructions_sidebar",
-          "type": "textOnly",
-          "location": "sidebar",
-          "prompt": "Please watch the video until it finishes.\n\nWhen you are done, click **Next** in this sidebar to continue."
-        }
-      ]
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/apple_15.mp4"
     },
-
     "trial1D": {
-      "type": "video",
-      "description": "Video stimulus",
-      "instruction": "Please watch the full video, then answer the question in the sidebar and click Next.",
-      "path": "_real_virtual_study/assets/sample-stimuli/screwdriver_100.mp4",
-      "forceCompletion": true,
-      "nextButtonLocation": "sidebar",
-      "response": [
-        {
-          "id": "video_instructions_sidebar",
-          "type": "textOnly",
-          "location": "sidebar",
-          "prompt": "Please watch the video until it finishes.\n\nWhen you are done, click **Next** in this sidebar to continue."
-        }
-      ]
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/screwdriver_100.mp4"
     },
-
     "trial2D": {
-      "type": "video",
-      "description": "Video stimulus",
-      "instruction": "Please watch the full video, then answer the question in the sidebar and click Next.",
-      "path": "_real_virtual_study/assets/sample-stimuli/screwdriver_15.mp4",
-      "forceCompletion": true,
-      "nextButtonLocation": "sidebar",
-      "response": [
-        {
-          "id": "video_instructions_sidebar",
-          "type": "textOnly",
-          "location": "sidebar",
-          "prompt": "Please watch the video until it finishes.\n\nWhen you are done, click **Next** in this sidebar to continue."
-        }
-      ]
+      "baseComponent": "base-video-trial",
+      "path": "_real_virtual_study/assets/sample-stimuli/screwdriver_15.mp4"
     },
 
     "recognition-question": {
@@ -184,7 +110,7 @@
       "correctAnswer": [
         {
           "id": "recog-q",
-          "answer": "OBJECT"
+          "answer": "{{correct_object}}"
         }
       ]
     },
@@ -211,9 +137,9 @@
       "type": "questionnaire",
       "response": [
         {
-          "id": "participant_id",
-          "type": "shortText",
-          "prompt": "Please enter your participant ID."
+          "id": "feedback_p1",
+          "type": "longText",
+          "prompt": "Do you have any feedback on this experiment? Did you encounter any bugs or unusual behavior?"
         }
       ]
     },
@@ -240,7 +166,7 @@
               {
                 "order": "fixed",
                 "components": [
-                  "trial1A","recognition-question","trial2A"
+                  "trial1A", "recognition-question", "identification-question","trial2A"
                 ]
               },
               {
