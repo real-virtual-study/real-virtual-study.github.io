@@ -15,7 +15,9 @@
     "withProgressBar": true,
     "autoDownloadStudy": false,
     "withSidebar": true,
-    "enumerateQuestions": true
+    "enumerateQuestions": true,
+    "studyEndMsg": "Thank you for completing the study. You may click this link and return to Prolific: [https://app.prolific.com/submissions/complete?cc=CE96X7ST&PROLIFIC_ID={PARTICIPANT_ID}](https://app.prolific.com/submissions/complete?cc=CE96X7ST&PROLIFIC_ID={PARTICIPANT_ID})",
+    "urlParticipantIdParam": "PROLIFIC_ID"
   },
   "baseComponents": {
     "base-video-trial": {
@@ -136,12 +138,28 @@
     "PostQuestionnaire": {
       "type": "questionnaire",
       "response": [
-        {
-          "id": "feedback_p1",
-          "type": "longText",
-          "prompt": "Do you have any feedback on this experiment? Did you encounter any bugs or unusual behavior?"
-        }
-      ]
+          {
+            "id": "q1",
+            "prompt": "Did you experience any problems with our tool?",
+            "location": "belowStimulus",
+            "type": "longText",
+            "placeholder": "Enter your answer here."
+          },
+          {
+            "id": "q2",
+            "prompt": "Did anything not render or display properly?",
+            "location": "belowStimulus",
+            "type": "longText",
+            "placeholder": "Enter your answer here"
+          },
+          {
+            "id": "q3",
+            "prompt": "Any other issues or anything you would like to tell us?",
+            "location": "belowStimulus",
+            "type": "longText",
+            "placeholder": "Enter your answer here"
+          }
+        ]
     },
     "EndPage": {
       "type": "markdown",
