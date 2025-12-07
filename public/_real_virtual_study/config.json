@@ -10,7 +10,7 @@
   },
   "uiConfig": {
     "contactEmail": "",
-    "helpTextPath": "_real_virtual_study/assets/observation/help.md",
+    "helpTextPath": "_real_virtual_study/assets/content/help.md",
     "logoPath": "revisitAssets/revisitLogoSquare.svg",
     "withProgressBar": true,
     "autoDownloadStudy": false,
@@ -32,8 +32,9 @@
           "id": "completionSignal",
           "type": "reactive",
           "location": "sidebar",
-          "prompt": "",
-          "required": true
+          "prompt": "Click on next to continue with another object",
+          "required": true,
+          "hidden": true
         }
       ]
     },
@@ -83,16 +84,16 @@
   "components": {
     "IntroPage": {
       "type": "markdown",
-      "path": "_real_virtual_study/assets/observation/part1_intro.md",
+      "path": "_real_virtual_study/assets/content/part1_instructions.md",
       "response": []
     },
     "ConsentPage": {
       "type": "markdown",
-      "path": "_real_virtual_study/assets/observation/part1_consent.md",
+      "path": "_real_virtual_study/assets/content/part1_consent.md",
       "response": []
     },
 
-    "trial-1web": {
+    "trial1A": {
       "baseComponent": "video-task-template",
       "parameters": {
         "videoFile": "hanger_100.mp4",
@@ -100,805 +101,767 @@
         "correctSourceName": "Real"
       }
     },
-
-
-    "trial1A": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/hanger_100.mp4"
-
-    },
-
-    "recogQ1A": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "hanger" }]
-    },
-
-    "id-q1A": {
-      "baseComponent": "identification-question",
-      "correctAnswer": [ { "id": "id-q", "answer": "real" }]
-    },
-
-    "answ-c1A": {
-      "type": "markdown",
-      "path": "_real_virtual_study/assets/suggestions/1A.md",
-      "response": [
-
-      ]
-    },
     "trial2A": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/paint-palette_100.mp4"
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "paint-palette_100.mp4",
+        "correctObjectName": "Paint Palette",
+        "correctSourceName": "Real"
+      }
     },
-
-    "recogQ2A": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "paint palette" }]
-    },
-
-    "id-q2A": {
-      "baseComponent": "identification-question",
-      "correctAnswer": [ { "id": "id-q", "answer": "real" }]
-
-    },
-
     "trial3A": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/scissors_100.mp4"
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "scissors_100.mp4",
+        "correctObjectName": "Scissors",
+        "correctSourceName": "Real"
+      }
     },
-
-    "recogQ3A": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "scissors" }]
-    },
-
     "trial4A": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/keys_15.mp4"
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "keys_15.mp4",
+        "correctObjectName": "Keys",
+        "correctSourceName": "Virtual"
+      }
     },
-
-    "recogQ4A": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "keys" }]
-    },
-
     "trial5A": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/rubberduck_65.mp4"
-    },
-
-    "recogQ5A": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "rubber duck" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "rubber-duck_65.mp4",
+        "correctObjectName": "Rubber duck",
+        "correctSourceName": "Virtual"
+      }
     },
     "trial6A": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/box-cutter_15.mp4"
-    },
-    "recogQ6A": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "box cutter" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "box-cutter_15.mp4",
+        "correctObjectName": "Box Cutter",
+        "correctSourceName": "Virtual"
+      }
     },
     "trial7A": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/sunglasses_100.mp4"
-    },
-    "recogQ7A": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "sunglasses" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "sunglasses_100.mp4",
+        "correctObjectName": "Sunglasses",
+        "correctSourceName": "Real"
+      }
     },
     "trial8A": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/candle_100.mp4"
-    },
-    "recogQ8A": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "candle" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "candle_100.mp4",
+        "correctObjectName": "Candle",
+        "correctSourceName": "Real"
+      }
     },
     "trial9A": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/pen_15.mp4"
-    },
-    "recogQ9A": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "pen" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "pen_15.mp4",
+        "correctObjectName": "Pen",
+        "correctSourceName": "Virtual"
+      }
     },
     "trial10A": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/screwdriver_100.mp4"
-    },
-    "recogQ10A": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "screwdriver" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "screwdriver_100.mp4",
+        "correctObjectName": "Screwdriver",
+        "correctSourceName": "Real"
+      }
     },
     "trial11A": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/apple_65.mp4"
-    },
-    "recogQ11A": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "apple" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "apple_65.mp4",
+        "correctObjectName": "Apple",
+        "correctSourceName": "Virtual"
+      }
     },
     "trial12A": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/banana_65.mp4"
-    },
-    "recogQ12A": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "banana" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "banana_65.mp4",
+        "correctObjectName": "Banana",
+        "correctSourceName": "Virtual"
+      }
     },
     "trial13A": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/lighter_100.mp4"
-    },
-    "recogQ13A": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "lighter" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "lighter_100.mp4",
+        "correctObjectName": "Lighter",
+        "correctSourceName": "Real"
+      }
     },
     "trial14A": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/toothbrush_65.mp4"
-    },
-    "recogQ14A": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "toothbrush" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "toothbrush_65.mp4",
+        "correctObjectName": "Toothbrush",
+        "correctSourceName": "Virtual"
+      }
     },
     "trial15A": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/calculator_100.mp4"
-    },
-    "recogQ15A": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "calculator" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "calculator_100.mp4",
+        "correctObjectName": "Calculator",
+        "correctSourceName": "Real"
+      }
     },
     "trial16A": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/clock_100.mp4"
-    },
-    "recogQ16A": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "clock" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "clock_100.mp4",
+        "correctObjectName": "Clock",
+        "correctSourceName": "Real"
+      }
     },
     "trial17A": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/computer-mouse_100.mp4"
-    },
-    "recogQ17A": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "computer mouse" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "computer-mouse_100.mp4",
+        "correctObjectName": "Computer Mouse",
+        "correctSourceName": "Real"
+      }
     },
     "trial18A": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/lemon_100.mp4"
-    },
-    "recogQ18A": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "lemon" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "lemon_100.mp4",
+        "correctObjectName": "Lemon",
+        "correctSourceName": "Real"
+      }
     },
     "trial19A": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/usb-drive_15.mp4"
-    },
-    "recogQ19A": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "usb drive" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "usb-drive_15.mp4",
+        "correctObjectName": "Usb Drive",
+        "correctSourceName": "Virtual"
+      }
     },
     "trial20A": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/tin-can_15.mp4"
-    },
-    "recogQ20A": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "tin can" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "tin-can_15.mp4",
+        "correctObjectName": "Tin Can",
+        "correctSourceName": "Virtual"
+      }
     },
     "trial21A": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/cup_15.mp4"
-    },
-    "recogQ21A": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "cup" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "cup_15.mp4",
+        "correctObjectName": "Cup",
+        "correctSourceName": "Virtual"
+      }
     },
     "trial22A": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/serving-spoon_65.mp4"
-    },
-    "recogQ22A": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "serving spoon" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "serving-spoon_65.mp4",
+        "correctObjectName": "Serving Spoon",
+        "correctSourceName": "Virtual"
+      }
     },
     "trial23A": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/book_65.mp4"
-    },
-    "recogQ23A": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "book" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "book_65.mp4",
+        "correctObjectName": "Book",
+        "correctSourceName": "Virtual"
+      }
     },
     "trial24A": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/hairdryer_100.mp4"
-    },
-    "recogQ24A": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "hairdryer" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "hairdryer_100.mp4",
+        "correctObjectName": "Hairdryer",
+        "correctSourceName": "Real"
+      }
     },
     "trial1B": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/hanger_15.mp4"
-    },
-    "recogQ1B": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "hanger" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "hanger_15.mp4",
+        "correctObjectName": "Hanger",
+        "correctSourceName": "Virtual"
+      }
     },
     "trial2B": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/paint-palette_65.mp4"
-    },
-    "recogQ2B": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "paint palette" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "paint-palette_65.mp4",
+        "correctObjectName": "Paint Palette",
+        "correctSourceName": "Virtual"
+      }
     },
     "trial3B": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/scissors_65.mp4"
-    },
-    "recogQ3B": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "scissors" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "scissors_65.mp4",
+        "correctObjectName": "Scissors",
+        "correctSourceName": "Virtual"
+      }
     },
     "trial4B": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/keys_100.mp4"
-    },
-    "recogQ4B": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "keys" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "keys_100.mp4",
+        "correctObjectName": "Keys",
+        "correctSourceName": "Real"
+      }
     },
     "trial5B": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/rubberduck_100.mp4"
-    },
-    "recogQ5B": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "rubber duck" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "rubber-duck_100.mp4",
+        "correctObjectName": "Rubber duck",
+        "correctSourceName": "Real"
+      }
     },
     "trial6B": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/box-cutter_100.mp4"
-    },
-    "recogQ6B": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "box cutter" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "box-cutter_100.mp4",
+        "correctObjectName": "Box Cutter",
+        "correctSourceName": "Real"
+      }
     },
     "trial7B": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/sunglasses_15.mp4"
-    },
-    "recogQ7B": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "sunglasses" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "sunglasses_15.mp4",
+        "correctObjectName": "Sunglasses",
+        "correctSourceName": "Virtual"
+      }
     },
     "trial8B": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/candle_15.mp4"
-    },
-    "recogQ8B": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "candle" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "candle_15.mp4",
+        "correctObjectName": "Candle",
+        "correctSourceName": "Virtual"
+      }
     },
     "trial9B": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/pen_100.mp4"
-    },
-    "recogQ9B": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "pen" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "pen_100.mp4",
+        "correctObjectName": "Pen",
+        "correctSourceName": "Real"
+      }
     },
     "trial10B": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/screwdriver_65.mp4"
-    },
-    "recogQ10B": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "screwdriver" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "screwdriver_65.mp4",
+        "correctObjectName": "Screwdriver",
+        "correctSourceName": "Virtual"
+      }
     },
     "trial11B": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/apple_100.mp4"
-    },
-    "recogQ11B": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "apple" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "apple_100.mp4",
+        "correctObjectName": "Apple",
+        "correctSourceName": "Real"
+      }
     },
     "trial12B": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/banana_100.mp4"
-    },
-    "recogQ12B": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "banana" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "banana_100.mp4",
+        "correctObjectName": "Banana",
+        "correctSourceName": "Real"
+      }
     },
     "trial13B": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/lighter_15.mp4"
-    },
-    "recogQ13B": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "lighter" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "lighter_15.mp4",
+        "correctObjectName": "Lighter",
+        "correctSourceName": "Virtual"
+      }
     },
     "trial14B": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/toothbrush_100.mp4"
-    },
-    "recogQ14B": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "toothbrush" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "toothbrush_100.mp4",
+        "correctObjectName": "Toothbrush",
+        "correctSourceName": "Real"
+      }
     },
     "trial15B": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/calculator_65.mp4"
-    },
-    "recogQ15B": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "calculator" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "calculator_65.mp4",
+        "correctObjectName": "Calculator",
+        "correctSourceName": "Virtual"
+      }
     },
     "trial16B": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/clock_15.mp4"
-    },
-    "recogQ16B": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "clock" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "clock_15.mp4",
+        "correctObjectName": "Clock",
+        "correctSourceName": "Virtual"
+      }
     },
     "trial17B": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/computer-mouse_15.mp4"
-    },
-    "recogQ17B": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "computer mouse" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "computer-mouse_15.mp4",
+        "correctObjectName": "Computer Mouse",
+        "correctSourceName": "Virtual"
+      }
     },
     "trial18B": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/lemon_65.mp4"
-    },
-    "recogQ18B": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "lemon" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "lemon_65.mp4",
+        "correctObjectName": "Lemon",
+        "correctSourceName": "Virtual"
+      }
     },
     "trial19B": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/usb-drive_100.mp4"
-    },
-    "recogQ19B": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "usb drive" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "usb-drive_100.mp4",
+        "correctObjectName": "Usb Drive",
+        "correctSourceName": "Real"
+      }
     },
     "trial20B": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/tin-can_100.mp4"
-    },
-    "recogQ20B": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "tin can" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "tin-can_100.mp4",
+        "correctObjectName": "Tin Can",
+        "correctSourceName": "Real"
+      }
     },
     "trial21B": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/cup_100.mp4"
-    },
-    "recogQ21B": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "cup" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "cup_100.mp4",
+        "correctObjectName": "Cup",
+        "correctSourceName": "Real"
+      }
     },
     "trial22B": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/serving-spoon_100.mp4"
-    },
-    "recogQ22B": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "serving spoon" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "serving-spoon_100.mp4",
+        "correctObjectName": "Serving Spoon",
+        "correctSourceName": "Real"
+      }
     },
     "trial23B": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/book_100.mp4"
-    },
-    "recogQ23B": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "book" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "book_100.mp4",
+        "correctObjectName": "Book",
+        "correctSourceName": "Real"
+      }
     },
     "trial24B": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/hairdryer_65.mp4"
-    },
-    "recogQ24B": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "hairdryer" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "hairdryer_65.mp4",
+        "correctObjectName": "Hairdryer",
+        "correctSourceName": "Virtual"
+      }
     },
     "trial1C": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/hanger_100.mp4"
-    },
-    "recogQ1C": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "hanger" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "hanger_100.mp4",
+        "correctObjectName": "Hanger",
+        "correctSourceName": "Real"
+      }
     },
     "trial2C": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/paint-palette_100.mp4"
-    },
-    "recogQ2C": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "paint palette" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "paint-palette_100.mp4",
+        "correctObjectName": "Paint Palette",
+        "correctSourceName": "Real"
+      }
     },
     "trial3C": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/scissors_100.mp4"
-    },
-    "recogQ3C": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "scissors" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "scissors_100.mp4",
+        "correctObjectName": "Scissors",
+        "correctSourceName": "Real"
+      }
     },
     "trial4C": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/keys_65.mp4"
-    },
-    "recogQ4C": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "keys" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "keys_65.mp4",
+        "correctObjectName": "Keys",
+        "correctSourceName": "Virtual"
+      }
     },
     "trial5C": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/rubberduck_15.mp4"
-    },
-    "recogQ5C": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "rubber duck" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "rubber-duck_15.mp4",
+        "correctObjectName": "Rubber duck",
+        "correctSourceName": "Virtual"
+      }
     },
     "trial6C": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/box-cutter_65.mp4"
-    },
-    "recogQ6C": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "box cutter" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "box-cutter_65.mp4",
+        "correctObjectName": "Box Cutter",
+        "correctSourceName": "Virtual"
+      }
     },
     "trial7C": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/sunglasses_100.mp4"
-    },
-    "recogQ7C": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "sunglasses" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "sunglasses_100.mp4",
+        "correctObjectName": "Sunglasses",
+        "correctSourceName": "Real"
+      }
     },
     "trial8C": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/candle_100.mp4"
-    },
-    "recogQ8C": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "candle" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "candle_100.mp4",
+        "correctObjectName": "Candle",
+        "correctSourceName": "Real"
+      }
     },
     "trial9C": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/pen_65.mp4"
-    },
-    "recogQ9C": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "pen" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "pen_65.mp4",
+        "correctObjectName": "Pen",
+        "correctSourceName": "Virtual"
+      }
     },
     "trial10C": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/screwdriver_100.mp4"
-    },
-    "recogQ10C": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "screwdriver" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "screwdriver_100.mp4",
+        "correctObjectName": "Screwdriver",
+        "correctSourceName": "Real"
+      }
     },
     "trial11C": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/apple_15.mp4"
-    },
-    "recogQ11C": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "apple" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "apple_15.mp4",
+        "correctObjectName": "Apple",
+        "correctSourceName": "Virtual"
+      }
     },
     "trial12C": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/banana_15.mp4"
-    },
-    "recogQ12C": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "banana" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "banana_15.mp4",
+        "correctObjectName": "Banana",
+        "correctSourceName": "Virtual"
+      }
     },
     "trial13C": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/lighter_100.mp4"
-    },
-    "recogQ13C": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "lighter" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "lighter_100.mp4",
+        "correctObjectName": "Lighter",
+        "correctSourceName": "Real"
+      }
     },
     "trial14C": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/toothbrush_15.mp4"
-    },
-    "recogQ14C": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "toothbrush" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "toothbrush_15.mp4",
+        "correctObjectName": "Toothbrush",
+        "correctSourceName": "Virtual"
+      }
     },
     "trial15C": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/calculator_100.mp4"
-    },
-    "recogQ15C": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "calculator" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "calculator_100.mp4",
+        "correctObjectName": "Calculator",
+        "correctSourceName": "Real"
+      }
     },
     "trial16C": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/clock_100.mp4"
-    },
-    "recogQ16C": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "clock" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "clock_100.mp4",
+        "correctObjectName": "Clock",
+        "correctSourceName": "Real"
+      }
     },
     "trial17C": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/computer-mouse_100.mp4"
-    },
-    "recogQ17C": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "computer mouse" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "computer-mouse_100.mp4",
+        "correctObjectName": "Computer Mouse",
+        "correctSourceName": "Real"
+      }
     },
     "trial18C": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/lemon_100.mp4"
-    },
-    "recogQ18C": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "lemon" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "lemon_100.mp4",
+        "correctObjectName": "Lemon",
+        "correctSourceName": "Real"
+      }
     },
     "trial19C": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/usb-drive_65.mp4"
-    },
-    "recogQ19C": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "usb drive" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "usb-drive_65.mp4",
+        "correctObjectName": "Usb Drive",
+        "correctSourceName": "Virtual"
+      }
     },
     "trial20C": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/tin-can_65.mp4"
-    },
-    "recogQ20C": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "tin can" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "tin-can_65.mp4",
+        "correctObjectName": "Tin Can",
+        "correctSourceName": "Virtual"
+      }
     },
     "trial21C": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/cup_65.mp4"
-    },
-    "recogQ21C": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "cup" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "cup_65.mp4",
+        "correctObjectName": "Cup",
+        "correctSourceName": "Virtual"
+      }
     },
     "trial22C": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/serving-spoon_15.mp4"
-    },
-    "recogQ22C": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "serving spoon" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "serving-spoon_15.mp4",
+        "correctObjectName": "Serving Spoon",
+        "correctSourceName": "Virtual"
+      }
     },
     "trial23C": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/book_15.mp4"
-    },
-    "recogQ23C": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "book" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "book_15.mp4",
+        "correctObjectName": "Book",
+        "correctSourceName": "Virtual"
+      }
     },
     "trial24C": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/hairdryer_100.mp4"
-    },
-    "recogQ24C": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "hairdryer" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "hairdryer_100.mp4",
+        "correctObjectName": "Hairdryer",
+        "correctSourceName": "Real"
+      }
     },
     "trial1D": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/hanger_65.mp4"
-    },
-    "recogQ1D": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "hanger" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "hanger_65.mp4",
+        "correctObjectName": "Hanger",
+        "correctSourceName": "Virtual"
+      }
     },
     "trial2D": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/paint-palette_15.mp4"
-    },
-    "recogQ2D": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "paint palette" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "paint-palette_15.mp4",
+        "correctObjectName": "Paint Palette",
+        "correctSourceName": "Virtual"
+      }
     },
     "trial3D": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/scissors_15.mp4"
-    },
-    "recogQ3D": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "scissors" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "scissors_15.mp4",
+        "correctObjectName": "Scissors",
+        "correctSourceName": "Virtual"
+      }
     },
     "trial4D": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/keys_100.mp4"
-    },
-    "recogQ4D": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "keys" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "keys_100.mp4",
+        "correctObjectName": "Keys",
+        "correctSourceName": "Real"
+      }
     },
     "trial5D": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/rubberduck_100.mp4"
-    },
-    "recogQ5D": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "rubber duck" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "rubber-duck_100.mp4",
+        "correctObjectName": "Rubber duck",
+        "correctSourceName": "Real"
+      }
     },
     "trial6D": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/box-cutter_100.mp4"
-    },
-    "recogQ6D": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "box cutter" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "box-cutter_100.mp4",
+        "correctObjectName": "Box Cutter",
+        "correctSourceName": "Real"
+      }
     },
     "trial7D": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/sunglasses_65.mp4"
-    },
-    "recogQ7D": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "sunglasses" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "sunglasses_65.mp4",
+        "correctObjectName": "Sunglasses",
+        "correctSourceName": "Virtual"
+      }
     },
     "trial8D": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/candle_65.mp4"
-    },
-    "recogQ8D": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "candle" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "candle_65.mp4",
+        "correctObjectName": "Candle",
+        "correctSourceName": "Virtual"
+      }
     },
     "trial9D": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/pen_100.mp4"
-    },
-    "recogQ9D": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "pen" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "pen_100.mp4",
+        "correctObjectName": "Pen",
+        "correctSourceName": "Real"
+      }
     },
     "trial10D": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/screwdriver_15.mp4"
-    },
-    "recogQ10D": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "screwdriver" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "screwdriver_15.mp4",
+        "correctObjectName": "Screwdriver",
+        "correctSourceName": "Virtual"
+      }
     },
     "trial11D": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/apple_100.mp4"
-    },
-    "recogQ11D": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "apple" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "apple_100.mp4",
+        "correctObjectName": "Apple",
+        "correctSourceName": "Real"
+      }
     },
     "trial12D": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/banana_100.mp4"
-    },
-    "recogQ12D": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "banana" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "banana_100.mp4",
+        "correctObjectName": "Banana",
+        "correctSourceName": "Real"
+      }
     },
     "trial13D": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/lighter_65.mp4"
-    },
-    "recogQ13D": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "lighter" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "lighter_65.mp4",
+        "correctObjectName": "Lighter",
+        "correctSourceName": "Virtual"
+      }
     },
     "trial14D": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/toothbrush_100.mp4"
-    },
-    "recogQ14D": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "toothbrush" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "toothbrush_100.mp4",
+        "correctObjectName": "Toothbrush",
+        "correctSourceName": "Real"
+      }
     },
     "trial15D": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/calculator_15.mp4"
-    },
-    "recogQ15D": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "calculator" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "calculator_15.mp4",
+        "correctObjectName": "Calculator",
+        "correctSourceName": "Virtual"
+      }
     },
     "trial16D": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/clock_65.mp4"
-    },
-    "recogQ16D": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "clock" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "clock_65.mp4",
+        "correctObjectName": "Clock",
+        "correctSourceName": "Virtual"
+      }
     },
     "trial17D": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/computer-mouse_65.mp4"
-    },
-    "recogQ17D": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "computer mouse" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "computer-mouse_65.mp4",
+        "correctObjectName": "Computer Mouse",
+        "correctSourceName": "Virtual"
+      }
     },
     "trial18D": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/lemon_15.mp4"
-    },
-    "recogQ18D": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "lemon" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "lemon_15.mp4",
+        "correctObjectName": "Lemon",
+        "correctSourceName": "Virtual"
+      }
     },
     "trial19D": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/usb-drive_100.mp4"
-    },
-    "recogQ19D": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "usb drive" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "usb-drive_100.mp4",
+        "correctObjectName": "Usb Drive",
+        "correctSourceName": "Real"
+      }
     },
     "trial20D": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/tin-can_100.mp4"
-    },
-    "recogQ20D": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "tin can" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "tin-can_100.mp4",
+        "correctObjectName": "Tin Can",
+        "correctSourceName": "Real"
+      }
     },
     "trial21D": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/cup_100.mp4"
-    },
-    "recogQ21D": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "cup" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "cup_100.mp4",
+        "correctObjectName": "Cup",
+        "correctSourceName": "Real"
+      }
     },
     "trial22D": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/serving-spoon_100.mp4"
-    },
-    "recogQ22D": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "serving spoon" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "serving-spoon_100.mp4",
+        "correctObjectName": "Serving Spoon",
+        "correctSourceName": "Real"
+      }
     },
     "trial23D": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/book_100.mp4"
-    },
-    "recogQ23D": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "book" }]
-    },
-    "trial24D": {
-      "baseComponent": "base-video-trial",
-      "path": "_real_virtual_study/assets/sample-stimuli/hairdryer_15.mp4"
-    },
-    "recogQ24D": {
-      "baseComponent": "recognition-question",
-      "correctAnswer": [ { "id": "recog-q", "answer": "hairdryer" }]
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "book_100.mp4",
+        "correctObjectName": "Book",
+        "correctSourceName": "Real"
+      }
     },
 
+    "trial24D": {
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "hairdryer_15.mp4",
+        "correctObjectName": "Hairdryer",
+        "correctSourceName": "Virtual"
+      }
+    },
 
     "PostQuestionnaire": {
       "type": "questionnaire",
@@ -943,35 +906,24 @@
         "numSamples": 1,
         "components": [
           {
-            "id": "groupA",
-            "order": "fixed",
-            "components": [
-              {
+                "id": "groupA",
                 "order": "fixed",
-                "components": [
-                  "trial-1web","trial1A", "recogQ1A", "id-q1A", "answ-c1A","trial2A"
-                ]
+                "components": ["trial1A", "trial2A", "trial3A", "trial4A", "trial5A", "trial6A", "trial7A", "trial8A", "trial9A", "trial10A", "trial11A", "trial12A", "trial13A", "trial14A", "trial15A", "trial16A", "trial17A", "trial18A", "trial19A", "trial20A", "trial21A", "trial22A", "trial23A", "trial24A"]
               },
               {
                 "id": "groupB",
                 "order": "fixed",
-                "components": [
-                  "trial1B","trial2B"
-                ]
+                "components": ["trial1B", "trial2B", "trial3B", "trial4B", "trial5B", "trial6B", "trial7B", "trial8B", "trial9B", "trial10B", "trial11B", "trial12B", "trial13B", "trial14B", "trial15B", "trial16B", "trial17B", "trial18B", "trial19B", "trial20B", "trial21B", "trial22B", "trial23B", "trial24B"]
               },
               {
                 "id": "groupC",
                 "order": "fixed",
-                "components": [
-                  "trial1C","trial2C"
-                ]
+                "components": ["trial1C", "trial2C", "trial3C", "trial4C", "trial5C", "trial6C", "trial7C", "trial8C", "trial9C", "trial10C", "trial11C", "trial12C", "trial13C", "trial14C", "trial15C", "trial16C", "trial17C", "trial18C", "trial19C", "trial20C", "trial21C", "trial22C", "trial23C", "trial24C"]
               },
               {
                 "id": "groupD",
                 "order": "fixed",
-                "components": [
-                  "trial1D","trial2D"
-                ]
+                "components": ["trial1D", "trial2D", "trial3D", "trial4D", "trial5D", "trial6D", "trial7D", "trial8D", "trial9D", "trial10D", "trial11D", "trial12D", "trial13D", "trial14D", "trial15D", "trial16D", "trial17D", "trial18D", "trial19D", "trial20D", "trial21D", "trial22D", "trial23D", "trial24D"]
               },
               "PostQuestionnaire",
               "EndPage"
@@ -979,6 +931,4 @@
           }
         ]
       }
-    ]
   }
-}

@@ -6,60 +6,55 @@
     <title>Video Task</title>
 
     <style>
-        /* --- 1. GLOBAL STYLES (Match reVISit Font & Tone) --- */
+        /* --- 1. GLOBAL STYLES (Bigger Text + Centered Layout) --- */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: transparent; /* Let reVISit bg show through */
+            background-color: transparent;
             color: #212529;
             margin: 0;
             padding: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
+            font-size: 20px; /* Increased base text size */
+            text-align: center; /* Center text globally */
         }
 
-        /* --- 2. LAYOUT CONTAINERS --- */
-        .container {
-            max-width: 800px;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        /* The Card Look: White box with soft shadow */
+        /* Card Look */
         .question-container {
             background: #ffffff;
             border: 1px solid #e0e0e0;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            padding: 30px;
+            padding: 40px; /* Larger padding */
             margin-top: 20px;
             width: 100%;
-            max-width: 600px;
+            max-width: 700px;
             text-align: center;
+            font-size: 1.2em; /* Bigger text inside the card */
             transition: all 0.3s ease;
         }
 
-        /* --- 3. VIDEO PLAYER --- */
-
+        /* --- 3. VIDEO PLAYER (Bigger) --- */
         video {
-            width: 100%;
+            width: 120%;          /* Increase size beyond container */
+            max-width: 900px;     /* Prevent excessive growth */
+            margin: 20px auto;
             display: block;
         }
 
-        /* --- 4. BUTTONS (Modern Blue) --- */
+        /* --- 4. BUTTONS --- */
         button {
-            background-color: #1976d2; /* Standard UI Blue */
+            background-color: #1976d2;
             color: white;
             border: none;
-            padding: 10px 24px;
-            font-size: 15px;
+            padding: 14px 30px;  /* Bigger buttons */
+            font-size: 18px;     /* Bigger text */
             font-weight: 500;
-            border-radius: 4px;
+            border-radius: 6px;
             cursor: pointer;
             transition: background-color 0.2s, transform 0.1s;
-            margin: 8px;
+            margin: 10px;
             letter-spacing: 0.5px;
         }
 
@@ -72,15 +67,14 @@
             transform: scale(0.98);
         }
 
-
         /* --- 5. INPUT FIELDS --- */
         input[type="text"] {
-            width: 70%;
-            padding: 12px;
-            font-size: 16px;
+            width: 80%;
+            padding: 16px;
+            font-size: 22px; /* Bigger input text */
             border: 1px solid #ccc;
             border-radius: 4px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             outline: none;
             transition: border-color 0.2s;
         }
@@ -90,25 +84,106 @@
             box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.1);
         }
 
-        /* --- 6. TYPOGRAPHY & FEEDBACK --- */
-        h3 { margin-top: 0; font-weight: 600; color: #333; }
-        p { color: #555; line-height: 1.5; margin-bottom: 20px; }
+        /* --- 6. TYPOGRAPHY --- */
+        h3 {
+            margin-top: 0;
+            font-weight: 600;
+            color: #333;
+            font-size: 1.8em; /* Bigger heading */
+        }
 
+        p {
+            color: #555;
+            line-height: 1.4;
+            margin-bottom: 20px;
+            font-size: 1.2em; /* Slightly bigger paragraphs */
+        }
 
-        /* Correction Box (Yellow/Orange) */
+        /* Correction Box */
         .correction-message {
             border-left: 5px solid #ffb74d;
             background-color: #fff8e1;
         }
 
         .correct-answer {
-            color: #bf360c;
+            color: #1976d2;
             font-weight: 600;
-            font-size: 1.1em;
+            font-size: 1.4em;
             margin-bottom: 15px;
         }
 
+        .participant-answer {
+            color: #444;
+            font-weight: 600;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+
+        /* Container layout */
+        .likert-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end; /* Aligns checkboxes at the bottom */
+            width: 100%;
+            max-width: 800px; /* Adjust based on your layout width */
+            margin: 20px 0;
+            font-family: sans-serif;
+        }
+
+        /* Individual Item Wrapper */
+        .likert-option {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            text-align: center;
+            width: 16%; /* Distributes space evenly */
+            position: relative;
+        }
+
+        /* The Label Text */
+        .likert-text {
+            margin-bottom: 15px;
+            font-size: 14px;
+            line-height: 1.2;
+            color: #000;
+        }
+
+        /* Hide default radio button */
+        .likert-option input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        /* Custom Checkbox/Radio styling */
+        .custom-radio {
+            height: 24px;
+            width: 24px;
+            background-color: #fff;
+            border: 1px solid #aaa; /* Grey border like image */
+            border-radius: 6px; /* Rounded corners */
+            display: inline-block;
+            transition: all 0.2s ease;
+        }
+
+        /* Hover effect */
+        .likert-option:hover input ~ .custom-radio {
+            border-color: #666;
+            background-color: #f9f9f9;
+        }
+
+        /* Selected State */
+        .likert-option input:checked ~ .custom-radio {
+            background-color: #333333; /* Light purple fill */
+            border-color: #333333; /* Darker purple border */
+            box-shadow: inset 0 0 0 4px white; /* Creates a ring effect if desired */
+        }
+
         .hidden { display: none !important; }
+
     </style>
 
     <script src="../../../revisitUtilities/revisit-communicate.js"></script>
@@ -126,8 +201,8 @@
 
     <!-- STEP 1 -->
     <div id="step1">
-        <h3>Step 1: What object did you see?</h3>
-        <input type="text" id="objectInput" placeholder="e.g., Apple">
+        <h3>What object did you see?</h3>
+        <input type="text" id="objectInput">
         <br>
         <button onclick="showStep1Correction()">Continue</button>
     </div>
@@ -135,7 +210,7 @@
     <!-- STEP 1 CORRECTION -->
     <div id="step1Correction" class="hidden">
         <div class="correction-message">
-            <div><strong>Your answer:</strong> <span id="participantObjectName"></span></div>
+            <div class="participant-answer"><strong>Your answer:</strong> <span id="participantObjectName"></span></div>
             <div class="correct-answer">Suggested answer: <span id="correctObjectName"></span></div>
         </div>
         <button onclick="goToStep2()">Next</button>
@@ -143,15 +218,62 @@
 
     <!-- STEP 2 QUESTION -->
     <div id="step2" class="hidden">
-        <h3>Step 2: Was it Real or Virtual?</h3>
-        <button onclick="showStep2Correction('Real')">Real</button>
-        <button onclick="showStep2Correction('Virtual')">Virtual</button>
+        <h3>Was it Real or Virtual?</h3>
+        <button onclick="goToConfidenceRating('Real')">Real</button>
+        <button onclick="goToConfidenceRating('Virtual')">Virtual</button>
     </div>
+
+    <div id="rateConfidence" class="hidden">
+        <h3>How confident are you?</h3>
+
+        <div class="likert-container">
+
+            <label class="likert-option">
+                <span class="likert-text">0% (completely guessing)</span>
+                <input type="radio" name="confidence" value="0" onclick="showStep2Correction('0')">
+                <span class="custom-radio"></span>
+            </label>
+
+            <label class="likert-option">
+                <span class="likert-text">20%</span>
+                <input type="radio" name="confidence" value="20" onclick="showStep2Correction('20')">
+                <span class="custom-radio"></span>
+            </label>
+
+            <label class="likert-option">
+                <span class="likert-text">40%</span>
+                <input type="radio" name="confidence" value="40" onclick="showStep2Correction('40')">
+                <span class="custom-radio"></span>
+            </label>
+
+            <label class="likert-option">
+                <span class="likert-text">60%</span>
+                <input type="radio" name="confidence" value="60" onclick="showStep2Correction('60')">
+                <span class="custom-radio"></span>
+            </label>
+
+            <label class="likert-option">
+                <span class="likert-text">80%</span>
+                <input type="radio" name="confidence" value="80" onclick="showStep2Correction('80')">
+                <span class="custom-radio"></span>
+            </label>
+
+            <label class="likert-option">
+                <span class="likert-text">100% (Completely confident that I am right)</span>
+                <input type="radio" name="confidence" value="100" onclick="showStep2Correction('100')">
+                <span class="custom-radio"></span>
+            </label>
+
+        </div>
+
+    </div>
+
+
 
     <!-- STEP 2 CORRECTION -->
     <div id="step2Correction" class="hidden">
         <div class="correction-message">
-            <div><strong>Your answer:</strong> <span id="participantSourceName"></span></div>
+            <div class="participant-answer"><strong>Your answer:</strong> <span id="participantSourceName"></span></div>
             <div class="correct-answer">Suggested answer: <span id="correctSourceName"></span></div>
         </div>
         <button onclick="finishTrial()">Next</button>
@@ -190,7 +312,7 @@
         document.getElementById('question-stage').classList.remove('hidden');
     });
 
-    // STEP 1 → CORRECTION
+    // Object Naming → Object Correction
     window.showStep1Correction = function () {
         const input = document.getElementById('objectInput').value.trim();
         trialData.objectName = input;
@@ -202,31 +324,48 @@
         document.getElementById('step1Correction').classList.remove('hidden');
     };
 
-    // STEP 1 CORRECTION → STEP 2
+    // Object Correction → Source Question
     window.goToStep2 = function () {
         document.getElementById('step1Correction').classList.add('hidden');
         document.getElementById('step2').classList.remove('hidden');
     };
 
-    // STEP 2 → CORRECTION
-    window.showStep2Correction = function (choice) {
-        trialData.sourceChoice = choice;
-
-        document.getElementById('participantSourceName').textContent = choice;
-        document.getElementById('correctSourceName').textContent = suggestedSourceName;
-
+    // Source Question → Confidence
+    window.goToConfidenceRating = function(choice) {
+        trialData.sourceChoice = choice;  // Save Real/Virtual choice
         document.getElementById('step2').classList.add('hidden');
-        document.getElementById('step2Correction').classList.remove('hidden');
+        document.getElementById('rateConfidence').classList.remove('hidden');
     };
+
+    // Confidence → Step 2 Correction
+    window.showStep2Correction = function() {
+        const selectedConfidence = document.querySelector('input[name="confidence"]:checked');
+        if (!selectedConfidence) {
+            alert("Please select a confidence level before proceeding.");
+            return;
+        }
+
+        trialData.confidence = selectedConfidence.value;
+
+        document.getElementById('rateConfidence').classList.add('hidden');
+        document.getElementById('step2Correction').classList.remove('hidden');
+
+        // Show participant answers
+        document.getElementById('participantSourceName').textContent = trialData.sourceChoice;
+        document.getElementById('correctSourceName').textContent = suggestedSourceName;
+    };
+
+
 
     // STEP 2 CORRECTION → FINISH
     window.finishTrial = function () {
         Revisit.postAnswers({
-            ...trialData,                 // 1. Unpacks all your saved answers (name, vr choice, etc.)
-            completionSignal: "Finished"  // 2. The KEY matches the ID in your config.json
+            ...trialData,
+            completionSignal: "Finished"
         });
         document.getElementById('step2Correction').classList.add('hidden');
     };
+
 </script>
 </body>
 </html>
