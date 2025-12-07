@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Task</title>
+
+    <style>
+        /* --- 1. GLOBAL STYLES (Match reVISit Font & Tone) --- */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: transparent; /* Let reVISit bg show through */
+            color: #212529;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* --- 2. LAYOUT CONTAINERS --- */
+        .container {
+            max-width: 800px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* The Card Look: White box with soft shadow */
+        .question-container {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            padding: 30px;
+            margin-top: 20px;
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        /* --- 3. VIDEO PLAYER --- */
+
+        video {
+            width: 100%;
+            display: block;
+        }
+
+        /* --- 4. BUTTONS (Modern Blue) --- */
+        button {
+            background-color: #1976d2; /* Standard UI Blue */
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            font-size: 15px;
+            font-weight: 500;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.1s;
+            margin: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        button:hover {
+            background-color: #1565c0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+
+        /* --- 5. INPUT FIELDS --- */
+        input[type="text"] {
+            width: 70%;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        input[type="text"]:focus {
+            border-color: #1976d2;
+            box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.1);
+        }
+
+        /* --- 6. TYPOGRAPHY & FEEDBACK --- */
+        h3 { margin-top: 0; font-weight: 600; color: #333; }
+        p { color: #555; line-height: 1.5; margin-bottom: 20px; }
+
+
+        /* Correction Box (Yellow/Orange) */
+        .correction-message {
+            border-left: 5px solid #ffb74d;
+            background-color: #fff8e1;
+        }
+
+        .correct-answer {
+            color: #bf360c;
+            font-weight: 600;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+
+        .hidden { display: none !important; }
+    </style>
+
+    <script src="../../../revisitUtilities/revisit-communicate.js"></script>
+</head>
+<body>
+
+<!-- VIDEO -->
+<div id="video-stage">
+    <video id="stimulus-video" autoplay muted playsinline style="pointer-events:none; width:100%; max-width:800px;">
+    </video>
+</div>
+
+<!-- QUESTIONS -->
+<div id="question-stage" class="hidden">
+
+    <!-- STEP 1 -->
+    <div id="step1">
+        <h3>Step 1: What object did you see?</h3>
+        <input type="text" id="objectInput" placeholder="e.g., Apple">
+        <br>
+        <button onclick="showStep1Correction()">Continue</button>
+    </div>
+
+    <!-- STEP 1 CORRECTION -->
+    <div id="step1Correction" class="hidden">
+        <div class="correction-message">
+            <div><strong>Your answer:</strong> <span id="participantObjectName"></span></div>
+            <div class="correct-answer">Suggested answer: <span id="correctObjectName"></span></div>
+        </div>
+        <button onclick="goToStep2()">Next</button>
+    </div>
+
+    <!-- STEP 2 QUESTION -->
+    <div id="step2" class="hidden">
+        <h3>Step 2: Was it Real or Virtual?</h3>
+        <button onclick="showStep2Correction('Real')">Real</button>
+        <button onclick="showStep2Correction('Virtual')">Virtual</button>
+    </div>
+
+    <!-- STEP 2 CORRECTION -->
+    <div id="step2Correction" class="hidden">
+        <div class="correction-message">
+            <div><strong>Your answer:</strong> <span id="participantSourceName"></span></div>
+            <div class="correct-answer">Suggested answer: <span id="correctSourceName"></span></div>
+        </div>
+        <button onclick="finishTrial()">Next</button>
+    </div>
+
+    <div class="question-container hidden" id="finalMessage" style="border-color: #28a745; background-color: #d4edda;">
+        <h3 style="color: #155724;">Trial Complete!</h3>
+        <p>➔ Please click the <strong>Next</strong> button in the bottom right of the page to continue.</p>
+    </div>
+
+
+</div>
+
+<script>
+    const video = document.getElementById('stimulus-video');
+
+    let trialData = {
+        objectName: "",
+        sourceChoice: ""
+    };
+
+    // Values from Revisit
+    let suggestedObjectName = "";
+    let suggestedSourceName = "";
+
+    // RECEIVE REVISIT PARAMETERS
+    Revisit.onDataReceive((data) => {
+        if (data.videoFile) video.src = data.videoFile;
+        if (data.correctObjectName) suggestedObjectName = data.correctObjectName;
+        if (data.correctSourceName) suggestedSourceName = data.correctSourceName;
+    });
+
+    // WHEN VIDEO ENDS → SHOW STEP 1
+    video.addEventListener('ended', () => {
+        document.getElementById('video-stage').classList.add('hidden');
+        document.getElementById('question-stage').classList.remove('hidden');
+    });
+
+    // STEP 1 → CORRECTION
+    window.showStep1Correction = function () {
+        const input = document.getElementById('objectInput').value.trim();
+        trialData.objectName = input;
+
+        document.getElementById('participantObjectName').textContent = input;
+        document.getElementById('correctObjectName').textContent = suggestedObjectName;
+
+        document.getElementById('step1').classList.add('hidden');
+        document.getElementById('step1Correction').classList.remove('hidden');
+    };
+
+    // STEP 1 CORRECTION → STEP 2
+    window.goToStep2 = function () {
+        document.getElementById('step1Correction').classList.add('hidden');
+        document.getElementById('step2').classList.remove('hidden');
+    };
+
+    // STEP 2 → CORRECTION
+    window.showStep2Correction = function (choice) {
+        trialData.sourceChoice = choice;
+
+        document.getElementById('participantSourceName').textContent = choice;
+        document.getElementById('correctSourceName').textContent = suggestedSourceName;
+
+        document.getElementById('step2').classList.add('hidden');
+        document.getElementById('step2Correction').classList.remove('hidden');
+    };
+
+    // STEP 2 CORRECTION → FINISH
+    window.finishTrial = function () {
+        Revisit.postAnswers({
+            ...trialData,                 // 1. Unpacks all your saved answers (name, vr choice, etc.)
+            completionSignal: "Finished"  // 2. The KEY matches the ID in your config.json
+        });
+        document.getElementById('step2Correction').classList.add('hidden');
+    };
+</script>
+</body>
+</html>

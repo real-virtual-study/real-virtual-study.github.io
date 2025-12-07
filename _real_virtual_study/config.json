@@ -20,6 +20,23 @@
     "urlParticipantIdParam": "PROLIFIC_ID"
   },
   "baseComponents": {
+    "video-task-template": {
+      "type": "website",
+      "path": "_real_virtual_study/assets/sample-stimuli/trial.html",
+      "instruction": "Watch the video and answer the questions.",
+      "forceCompletion": true,
+      "nextButtonLocation": "belowStimulus",
+
+      "response": [
+        {
+          "id": "completionSignal",
+          "type": "reactive",
+          "location": "sidebar",
+          "prompt": "",
+          "required": true
+        }
+      ]
+    },
     "base-video-trial": {
       "type": "video",
       "description": "Video stimulus",
@@ -74,9 +91,21 @@
       "path": "_real_virtual_study/assets/observation/part1_consent.md",
       "response": []
     },
+
+    "trial-1web": {
+      "baseComponent": "video-task-template",
+      "parameters": {
+        "videoFile": "hanger_100.mp4",
+        "correctObjectName": "Hanger",
+        "correctSourceName": "Real"
+      }
+    },
+
+
     "trial1A": {
       "baseComponent": "base-video-trial",
       "path": "_real_virtual_study/assets/sample-stimuli/hanger_100.mp4"
+
     },
 
     "recogQ1A": {
@@ -920,7 +949,7 @@
               {
                 "order": "fixed",
                 "components": [
-                  "trial1A", "recogQ1A", "id-q1A", "answ-c1A","trial2A"
+                  "trial-1web","trial1A", "recogQ1A", "id-q1A", "answ-c1A","trial2A"
                 ]
               },
               {
