@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.3.2/src/parser/StudyConfigSchema.json",
   "studyMetadata": {
-    "title": "Real vs Virtual Study Demo",
+    "title": "Real vs Virtual Study Part1",
     "version": "1",
     "authors": ["Leana"],
     "date": "2025-12-02",
@@ -26,7 +26,6 @@
       "instruction": "Watch the video and answer the questions.",
       "forceCompletion": true,
       "nextButtonLocation": "belowStimulus",
-
       "response": [
         {
           "id": "completionSignal",
@@ -35,47 +34,6 @@
           "prompt": "Click on next to continue with another object",
           "required": true,
           "hidden": true
-        }
-      ]
-    },
-    "base-video-trial": {
-      "type": "video",
-      "description": "Video stimulus",
-      "forceCompletion": true,
-      "nextButtonLocation": "belowStimulus",
-      "response": [
-        {
-          "id": "video_instructions_sidebar",
-          "type": "textOnly",
-          "location": "belowStimulus",
-          "prompt": "Please watch the video until it finishes.\n\nWhen you are done, click **Next** in this sidebar to continue."
-        }
-      ]
-    },
-    "recognition-question": {
-      "type": "questionnaire",
-      "description": "Object recognition",
-      "provideFeedback": false,
-      "response": [
-        {
-          "id": "recog-q",
-          "prompt": "What object did you see in the video",
-          "location": "belowStimulus",
-          "type": "shortText",
-          "placeholder": "Enter your answer here"
-        }
-      ]
-    },
-    "identification-question": {
-      "type": "questionnaire",
-      "description": "Object recognition",
-      "response": [
-        {
-          "id": "id-q",
-          "prompt": "Was this object real or virtual",
-          "location": "belowStimulus",
-          "type": "shortText",
-          "placeholder": "Enter your answer here"
         }
       ]
     }
@@ -103,25 +61,6 @@
         {
           "id": "AttentionCheck1",
           "answer": "Green"
-        }
-      ]
-    },
-
-    "myAttentionCheckComponent2": {
-      "type": "questionnaire",
-      "response": [
-        {
-          "id": "AttentionCheck2",
-          "prompt": "I regularly communicate with triangles about their weekend plans",
-          "required": true,
-          "type": "radio",
-          "options": ["Strongly disagree", "Disagree", "Agree", "Strongly agree"]
-        }
-      ],
-      "correctAnswer": [
-        {
-          "id": "AttentionCheck2",
-          "answer": ["Strongly Disagree", "Disagree"]
         }
       ]
     },
@@ -934,21 +873,24 @@
           "prompt": "Did you experience any problems with our tool?",
           "location": "belowStimulus",
           "type": "longText",
-          "placeholder": "Enter your answer here."
+          "placeholder": "Enter your answer here.",
+          "required": false
         },
         {
           "id": "q2",
           "prompt": "Did anything not render or display properly?",
           "location": "belowStimulus",
           "type": "longText",
-          "placeholder": "Enter your answer here"
+          "placeholder": "Enter your answer here",
+          "required": false
         },
         {
           "id": "q3",
           "prompt": "Any other issues or anything you would like to tell us?",
           "location": "belowStimulus",
           "type": "longText",
-          "placeholder": "Enter your answer here"
+          "placeholder": "Enter your answer here",
+          "required": false
         }
       ]
     },
@@ -956,12 +898,8 @@
       "type": "markdown",
       "path": "_real_virtual_study/assets/content/part1_end.md",
       "response": []
-    },
-    "FailedPage": {
-      "type": "markdown",
-      "path": "_real_virtual_study/assets/content/failed_attention.md",
-      "response": []
     }
+
   },
   "sequence": {
     "order": "fixed",

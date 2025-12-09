@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.3.2/src/parser/StudyConfigSchema.json",
   "studyMetadata": {
-    "title": "Real vs Virtual Study Demo",
+    "title": "Real vs Virtual Study Part 2 GroupA",
     "version": "1",
     "authors": ["Leana"],
     "date": "2025-12-02",
@@ -20,83 +20,65 @@
     "urlParticipantIdParam": "PROLIFIC_ID"
   },
   "baseComponents": {
-    "video-task-template": {
-      "type": "website",
-      "path": "_real_virtual_study/assets/sample-stimuli/trial.html",
-      "instruction": "Watch the video and answer the questions.",
-      "forceCompletion": true,
-      "nextButtonLocation": "belowStimulus",
-
+    "memory_test_questionnaire": {
+      "type": "image",
+      "style": {
+        "textAlign": "center",
+        "width": "250px",
+        "maxWidth": "90%",
+        "margin": "auto"
+      },
       "response": [
         {
-          "id": "completionSignal",
-          "type": "reactive",
-          "location": "sidebar",
-          "prompt": "Click on next to continue with another object",
+          "id": "q1_recognition",
+          "type": "radio",
+          "prompt": "Have you seen this object in the first part of the study?",
           "required": true,
-          "hidden": true
-        }
-      ]
-    },
-    "base-video-trial": {
-      "type": "video",
-      "description": "Video stimulus",
-      "forceCompletion": true,
-      "nextButtonLocation": "belowStimulus",
-      "response": [
+          "options": ["Yes", "No"]
+        },
         {
-          "id": "video_instructions_sidebar",
-          "type": "textOnly",
-          "location": "belowStimulus",
-          "prompt": "Please watch the video until it finishes.\n\nWhen you are done, click **Next** in this sidebar to continue."
-        }
-      ]
-    },
-    "recognition-question": {
-      "type": "questionnaire",
-      "description": "Object recognition",
-      "provideFeedback": false,
-      "response": [
+          "id": "q1_confidence",
+          "type": "radio",
+          "prompt": "How confident are you ?",
+          "required": true,
+          "options": ["0% (completely guessing)", "20%", "40%", "60%", "100% (Completely confident that I am right)"],
+          "horizontal": true
+        },
         {
-          "id": "recog-q",
-          "prompt": "What object did you see in the video",
-          "location": "belowStimulus",
-          "type": "shortText",
-          "placeholder": "Enter your answer here"
-        }
-      ]
-    },
-    "identification-question": {
-      "type": "questionnaire",
-      "description": "Object recognition",
-      "response": [
+          "id": "q2_source",
+          "type": "radio",
+          "prompt": "How did you see this object ?",
+          "required": true,
+          "options": ["This object was presented as real", "This object was presented as virtual"]
+        },
         {
-          "id": "id-q",
-          "prompt": "Was this object real or virtual",
-          "location": "belowStimulus",
-          "type": "shortText",
-          "placeholder": "Enter your answer here"
+          "id": "q2_confidence",
+          "type": "radio",
+          "prompt": "How confident are you ?",
+          "required": true,
+          "options": ["0% (completely guessing)", "20%", "40%", "60%", "100% (Completely confident that I am right)"],
+          "horizontal": true
+        },
+        {
+          "id": "text_reasons_source",
+          "type": "longText",
+          "prompt": "Please explain what helped you remember if the object was real or virtual, and why you were confident or not confident in your answer.",
+          "placeholder": "Enter your answer",
+          "required": false
         }
       ]
     }
   },
-
   "components": {
-    "myAttentionCheckComponent" : {
+    "myAttentionCheckComponent": {
       "type": "questionnaire",
       "response": [
         {
           "id": "AttentionCheck1",
-          "prompt": "The colour test you are about to take part in is very simple, when asked for your favorite colour you must select 'Green'. This is an attention check.\n\n[b]Based on the text you read above what colour have you been asked to enter ?[/b]",
+          "prompt": "The colour test you are about to take part in is very simple, when asked for your favorite colour you must select 'Green'. This is an attention check.\n\n[b]Based on the text you read above what colour have you been asked to enter ?",
           "required": true,
           "type": "radio",
-          "options": [
-            "Blue",
-            "Yellow",
-            "Orange",
-            "Red",
-            "Green"
-          ]
+          "options": ["Blue", "Yellow", "Orange", "Red", "Green"]
         }
       ],
       "correctAnswer": [
@@ -106,856 +88,400 @@
         }
       ]
     },
-
-    "myAttentionCheckComponent2": {
-      "type": "questionnaire",
-      "response": [
-        {
-          "id": "AttentionCheck2",
-          "prompt": "I regularly communicate with triangles about their weekend plans",
-          "required": true,
-          "type": "radio",
-          "options": ["Strongly disagree", "Disagree", "Agree", "Strongly agree"]
-        }
-      ],
-      "correctAnswer": [
-        {
-          "id": "AttentionCheck2",
-          "answer": ["Strongly Disagree", "Disagree"]
-        }
-      ]
-    },
-
     "IntroPage": {
       "type": "markdown",
-      "path": "_real_virtual_study/assets/content/part1_instructions.md",
+      "path": "_real_virtual_study2_G1/assets/content/instructions.md",
       "response": []
     },
     "ConsentPage": {
       "type": "markdown",
-      "path": "_real_virtual_study/assets/content/part1_consent.md",
+      "path": "_real_virtual_study2_G1/assets/content/consent.md",
       "response": []
     },
-
-    "trial1A": {
-      "baseComponent": "video-task-template",
+    "trial1": {
+      "baseComponent": "memory_test_questionnaire",
+      "path": "_real_virtual_study2_G1/assets/icons/screwdriver.svg",
+      "instruction": "Screwdriver",
       "parameters": {
-        "videoFile": "hanger_100.mp4",
-        "correctObjectName": "Hanger",
-        "correctSourceName": "Real"
+        "objectName": "Screwdriver"
       }
     },
-    "trial2A": {
-      "baseComponent": "video-task-template",
+    "trial2": {
+      "baseComponent": "memory_test_questionnaire",
+      "path": "_real_virtual_study2_G1/assets/icons/lighter.svg",
       "parameters": {
-        "videoFile": "paint-palette_100.mp4",
-        "correctObjectName": "Paint Palette",
-        "correctSourceName": "Real"
+        "objectName": "Lighter"
       }
     },
-    "trial3A": {
-      "baseComponent": "video-task-template",
+    "trial3": {
+      "baseComponent": "memory_test_questionnaire",
+      "path": "_real_virtual_study2_G1/assets/icons/sunglasses.svg",
+      "instruction": "Sunglasses",
       "parameters": {
-        "videoFile": "scissors_100.mp4",
-        "correctObjectName": "Scissors",
-        "correctSourceName": "Real"
+        "objectName": "Sunglasses"
       }
     },
-    "trial4A": {
-      "baseComponent": "video-task-template",
+    "trial4": {
+      "baseComponent": "memory_test_questionnaire",
+      "path": "_real_virtual_study2_G1/assets/icons/pen.svg",
+      "instruction": "Pen",
       "parameters": {
-        "videoFile": "keys_15.mp4",
-        "correctObjectName": "Keys",
-        "correctSourceName": "Virtual"
+        "objectName": "Pen"
       }
     },
-    "trial5A": {
-      "baseComponent": "video-task-template",
+    "trial5": {
+      "baseComponent": "memory_test_questionnaire",
+      "path": "_real_virtual_study2_G1/assets/icons/cup.svg",
+      "instruction": "Cup",
       "parameters": {
-        "videoFile": "rubber-duck_65.mp4",
-        "correctObjectName": "Rubber duck",
-        "correctSourceName": "Virtual"
+        "objectName": "Cup"
       }
     },
-    "trial6A": {
-      "baseComponent": "video-task-template",
+    "trial6": {
+      "baseComponent": "memory_test_questionnaire",
+      "path": "_real_virtual_study2_G1/assets/icons/hairdryer.svg",
+      "instruction": "Hairdryer",
       "parameters": {
-        "videoFile": "box-cutter_15.mp4",
-        "correctObjectName": "Box Cutter",
-        "correctSourceName": "Virtual"
+        "objectName": "Hairdryer"
       }
     },
-    "trial7A": {
-      "baseComponent": "video-task-template",
+    "trial7": {
+      "baseComponent": "memory_test_questionnaire",
+      "path": "_real_virtual_study2_G1/assets/icons/serving-spoon.svg",
+      "instruction": "Serving Spoon",
       "parameters": {
-        "videoFile": "sunglasses_100.mp4",
-        "correctObjectName": "Sunglasses",
-        "correctSourceName": "Real"
+        "objectName": "Serving Spoon"
       }
     },
-    "trial8A": {
-      "baseComponent": "video-task-template",
+    "trial8": {
+      "baseComponent": "memory_test_questionnaire",
+      "path": "_real_virtual_study2_G1/assets/icons/box-cutter.svg",
+      "instruction": "Box Cutter",
       "parameters": {
-        "videoFile": "candle_100.mp4",
-        "correctObjectName": "Candle",
-        "correctSourceName": "Real"
+        "objectName": "Box Cutter"
       }
     },
-    "trial9A": {
-      "baseComponent": "video-task-template",
+    "trial9": {
+      "baseComponent": "memory_test_questionnaire",
+      "path": "_real_virtual_study2_G1/assets/icons/tin-can.svg",
+      "instruction": "Tin Can",
       "parameters": {
-        "videoFile": "pen_15.mp4",
-        "correctObjectName": "Pen",
-        "correctSourceName": "Virtual"
+        "objectName": "Tin Can"
       }
     },
-    "trial10A": {
-      "baseComponent": "video-task-template",
+    "trial10": {
+      "baseComponent": "memory_test_questionnaire",
+      "path": "_real_virtual_study2_G1/assets/icons/paint-palette.svg",
+      "instruction": "Paint Palette",
       "parameters": {
-        "videoFile": "screwdriver_100.mp4",
-        "correctObjectName": "Screwdriver",
-        "correctSourceName": "Real"
+        "objectName": "Paint Palette"
       }
     },
-    "trial11A": {
-      "baseComponent": "video-task-template",
+    "trial11": {
+      "baseComponent": "memory_test_questionnaire",
+      "path": "_real_virtual_study2_G1/assets/icons/book.svg",
+      "instruction": "Book",
       "parameters": {
-        "videoFile": "apple_65.mp4",
-        "correctObjectName": "Apple",
-        "correctSourceName": "Virtual"
+        "objectName": "Book"
       }
     },
-    "trial12A": {
-      "baseComponent": "video-task-template",
+    "trial12": {
+      "baseComponent": "memory_test_questionnaire",
+      "path": "_real_virtual_study2_G1/assets/icons/rubberduck.svg",
+      "instruction": "Rubberduck",
       "parameters": {
-        "videoFile": "banana_65.mp4",
-        "correctObjectName": "Banana",
-        "correctSourceName": "Virtual"
+        "objectName": "Rubberduck"
       }
     },
-    "trial13A": {
-      "baseComponent": "video-task-template",
+    "trial13": {
+      "baseComponent": "memory_test_questionnaire",
+      "path": "_real_virtual_study2_G1/assets/icons/candle.svg",
+      "instruction": "Candle",
       "parameters": {
-        "videoFile": "lighter_100.mp4",
-        "correctObjectName": "Lighter",
-        "correctSourceName": "Real"
+        "objectName": "Candle"
       }
     },
-    "trial14A": {
-      "baseComponent": "video-task-template",
+    "trial14": {
+      "baseComponent": "memory_test_questionnaire",
+      "path": "_real_virtual_study2_G1/assets/icons/calculator.svg",
+      "instruction": "Calculator",
       "parameters": {
-        "videoFile": "toothbrush_65.mp4",
-        "correctObjectName": "Toothbrush",
-        "correctSourceName": "Virtual"
+        "objectName": "Calculator"
       }
     },
-    "trial15A": {
-      "baseComponent": "video-task-template",
+    "trial15": {
+      "baseComponent": "memory_test_questionnaire",
+      "path": "_real_virtual_study2_G1/assets/icons/hanger.svg",
+      "instruction": "Hanger",
       "parameters": {
-        "videoFile": "calculator_100.mp4",
-        "correctObjectName": "Calculator",
-        "correctSourceName": "Real"
+        "objectName": "Hanger"
       }
     },
-    "trial16A": {
-      "baseComponent": "video-task-template",
+    "trial16": {
+      "baseComponent": "memory_test_questionnaire",
+      "path": "_real_virtual_study2_G1/assets/icons/clock.svg",
+      "instruction": "Clock",
       "parameters": {
-        "videoFile": "clock_100.mp4",
-        "correctObjectName": "Clock",
-        "correctSourceName": "Real"
+        "objectName": "Clock"
       }
     },
-    "trial17A": {
-      "baseComponent": "video-task-template",
+    "trial17": {
+      "baseComponent": "memory_test_questionnaire",
+      "path": "_real_virtual_study2_G1/assets/icons/scissors.svg",
+      "instruction": "Scissors",
       "parameters": {
-        "videoFile": "computer-mouse_100.mp4",
-        "correctObjectName": "Computer Mouse",
-        "correctSourceName": "Real"
+        "objectName": "Scissors"
       }
     },
-    "trial18A": {
-      "baseComponent": "video-task-template",
+    "trial18": {
+      "baseComponent": "memory_test_questionnaire",
+      "path": "_real_virtual_study2_G1/assets/icons/usb-drive.svg",
+      "instruction": "Usb Drive",
       "parameters": {
-        "videoFile": "lemon_100.mp4",
-        "correctObjectName": "Lemon",
-        "correctSourceName": "Real"
+        "objectName": "Usb Drive"
       }
     },
-    "trial19A": {
-      "baseComponent": "video-task-template",
+    "trial19": {
+      "baseComponent": "memory_test_questionnaire",
+      "path": "_real_virtual_study2_G1/assets/icons/computer-mouse.svg",
+      "instruction": "Computer Mouse",
       "parameters": {
-        "videoFile": "usb-drive_15.mp4",
-        "correctObjectName": "Usb Drive",
-        "correctSourceName": "Virtual"
+        "objectName": "Computer Mouse"
       }
     },
-    "trial20A": {
-      "baseComponent": "video-task-template",
+    "trial20": {
+      "baseComponent": "memory_test_questionnaire",
+      "path": "_real_virtual_study2_G1/assets/icons/toothbrush.svg",
+      "instruction": "Toothbrush",
       "parameters": {
-        "videoFile": "tin-can_15.mp4",
-        "correctObjectName": "Tin Can",
-        "correctSourceName": "Virtual"
+        "objectName": "Toothbrush"
       }
     },
-    "trial21A": {
-      "baseComponent": "video-task-template",
+    "trial21": {
+      "baseComponent": "memory_test_questionnaire",
+      "path": "_real_virtual_study2_G1/assets/icons/banana.svg",
+      "instruction": "Banana",
       "parameters": {
-        "videoFile": "cup_15.mp4",
-        "correctObjectName": "Cup",
-        "correctSourceName": "Virtual"
+        "objectName": "Banana"
       }
     },
-    "trial22A": {
-      "baseComponent": "video-task-template",
+    "trial22": {
+      "baseComponent": "memory_test_questionnaire",
+      "path": "_real_virtual_study2_G1/assets/icons/lemon.svg",
+      "instruction": "Lemon",
       "parameters": {
-        "videoFile": "serving-spoon_65.mp4",
-        "correctObjectName": "Serving Spoon",
-        "correctSourceName": "Virtual"
+        "objectName": "Lemon"
       }
     },
-    "trial23A": {
-      "baseComponent": "video-task-template",
+    "trial23": {
+      "baseComponent": "memory_test_questionnaire",
+      "path": "_real_virtual_study2_G1/assets/icons/keys.svg",
+      "instruction": "Keys",
       "parameters": {
-        "videoFile": "book_65.mp4",
-        "correctObjectName": "Book",
-        "correctSourceName": "Virtual"
+        "objectName": "Keys"
       }
     },
-    "trial24A": {
-      "baseComponent": "video-task-template",
+    "trial24": {
+      "baseComponent": "memory_test_questionnaire",
+      "path": "_real_virtual_study2_G1/assets/icons/apple.svg",
+      "instruction": "Apple",
       "parameters": {
-        "videoFile": "hairdryer_100.mp4",
-        "correctObjectName": "Hairdryer",
-        "correctSourceName": "Real"
+        "objectName": "Apple"
       }
     },
-    "trial1B": {
-      "baseComponent": "video-task-template",
+    "trial25": {
+      "baseComponent": "memory_test_questionnaire",
+      "path": "_real_virtual_study2_G1/assets/icons/pear.svg",
+      "instruction": "Pear",
       "parameters": {
-        "videoFile": "hanger_15.mp4",
-        "correctObjectName": "Hanger",
-        "correctSourceName": "Virtual"
+        "objectName": "Pear"
       }
     },
-    "trial2B": {
-      "baseComponent": "video-task-template",
+    "trial26": {
+      "baseComponent": "memory_test_questionnaire",
+      "path": "_real_virtual_study2_G1/assets/icons/potato.svg",
+      "instruction": "Potato",
       "parameters": {
-        "videoFile": "paint-palette_65.mp4",
-        "correctObjectName": "Paint Palette",
-        "correctSourceName": "Virtual"
+        "objectName": "Potato"
       }
     },
-    "trial3B": {
-      "baseComponent": "video-task-template",
+    "trial27": {
+      "baseComponent": "memory_test_questionnaire",
+      "path": "_real_virtual_study2_G1/assets/icons/spray-bottle.svg",
+      "instruction": "Spray Bottle",
       "parameters": {
-        "videoFile": "scissors_65.mp4",
-        "correctObjectName": "Scissors",
-        "correctSourceName": "Virtual"
+        "objectName": "Spray Bottle"
       }
     },
-    "trial4B": {
-      "baseComponent": "video-task-template",
+    "trial28": {
+      "baseComponent": "memory_test_questionnaire",
+      "path": "_real_virtual_study2_G1/assets/icons/scotch-tape.svg",
+      "instruction": "Scotch Tape",
       "parameters": {
-        "videoFile": "keys_100.mp4",
-        "correctObjectName": "Keys",
-        "correctSourceName": "Real"
+        "objectName": "Scotch Tape"
       }
     },
-    "trial5B": {
-      "baseComponent": "video-task-template",
+    "trial29": {
+      "baseComponent": "memory_test_questionnaire",
+      "path": "_real_virtual_study2_G1/assets/icons/tennis-ball.svg",
+      "instruction": "Tennis Ball",
       "parameters": {
-        "videoFile": "rubber-duck_100.mp4",
-        "correctObjectName": "Rubber duck",
-        "correctSourceName": "Real"
+        "objectName": "Tennis Ball"
       }
     },
-    "trial6B": {
-      "baseComponent": "video-task-template",
+    "trial30": {
+      "baseComponent": "memory_test_questionnaire",
+      "path": "_real_virtual_study2_G1/assets/icons/vase.svg",
+      "instruction": "Vase",
       "parameters": {
-        "videoFile": "box-cutter_100.mp4",
-        "correctObjectName": "Box Cutter",
-        "correctSourceName": "Real"
+        "objectName": "Vase"
       }
     },
-    "trial7B": {
-      "baseComponent": "video-task-template",
+    "trial31": {
+      "baseComponent": "memory_test_questionnaire",
+      "path": "_real_virtual_study2_G1/assets/icons/comb.svg",
+      "instruction": "Comb",
       "parameters": {
-        "videoFile": "sunglasses_15.mp4",
-        "correctObjectName": "Sunglasses",
-        "correctSourceName": "Virtual"
+        "objectName": "Comb"
       }
     },
-    "trial8B": {
-      "baseComponent": "video-task-template",
+    "trial32": {
+      "baseComponent": "memory_test_questionnaire",
+      "path": "_real_virtual_study2_G1/assets/icons/fan.svg",
+      "instruction": "Fan",
       "parameters": {
-        "videoFile": "candle_15.mp4",
-        "correctObjectName": "Candle",
-        "correctSourceName": "Virtual"
+        "objectName": "Fan"
       }
     },
-    "trial9B": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "pen_100.mp4",
-        "correctObjectName": "Pen",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial10B": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "screwdriver_65.mp4",
-        "correctObjectName": "Screwdriver",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial11B": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "apple_100.mp4",
-        "correctObjectName": "Apple",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial12B": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "banana_100.mp4",
-        "correctObjectName": "Banana",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial13B": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "lighter_15.mp4",
-        "correctObjectName": "Lighter",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial14B": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "toothbrush_100.mp4",
-        "correctObjectName": "Toothbrush",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial15B": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "calculator_65.mp4",
-        "correctObjectName": "Calculator",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial16B": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "clock_15.mp4",
-        "correctObjectName": "Clock",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial17B": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "computer-mouse_15.mp4",
-        "correctObjectName": "Computer Mouse",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial18B": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "lemon_65.mp4",
-        "correctObjectName": "Lemon",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial19B": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "usb-drive_100.mp4",
-        "correctObjectName": "Usb Drive",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial20B": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "tin-can_100.mp4",
-        "correctObjectName": "Tin Can",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial21B": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "cup_100.mp4",
-        "correctObjectName": "Cup",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial22B": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "serving-spoon_100.mp4",
-        "correctObjectName": "Serving Spoon",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial23B": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "book_100.mp4",
-        "correctObjectName": "Book",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial24B": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "hairdryer_65.mp4",
-        "correctObjectName": "Hairdryer",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial1C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "hanger_100.mp4",
-        "correctObjectName": "Hanger",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial2C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "paint-palette_100.mp4",
-        "correctObjectName": "Paint Palette",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial3C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "scissors_100.mp4",
-        "correctObjectName": "Scissors",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial4C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "keys_65.mp4",
-        "correctObjectName": "Keys",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial5C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "rubber-duck_15.mp4",
-        "correctObjectName": "Rubber duck",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial6C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "box-cutter_65.mp4",
-        "correctObjectName": "Box Cutter",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial7C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "sunglasses_100.mp4",
-        "correctObjectName": "Sunglasses",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial8C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "candle_100.mp4",
-        "correctObjectName": "Candle",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial9C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "pen_65.mp4",
-        "correctObjectName": "Pen",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial10C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "screwdriver_100.mp4",
-        "correctObjectName": "Screwdriver",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial11C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "apple_15.mp4",
-        "correctObjectName": "Apple",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial12C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "banana_15.mp4",
-        "correctObjectName": "Banana",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial13C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "lighter_100.mp4",
-        "correctObjectName": "Lighter",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial14C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "toothbrush_15.mp4",
-        "correctObjectName": "Toothbrush",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial15C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "calculator_100.mp4",
-        "correctObjectName": "Calculator",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial16C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "clock_100.mp4",
-        "correctObjectName": "Clock",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial17C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "computer-mouse_100.mp4",
-        "correctObjectName": "Computer Mouse",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial18C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "lemon_100.mp4",
-        "correctObjectName": "Lemon",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial19C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "usb-drive_65.mp4",
-        "correctObjectName": "Usb Drive",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial20C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "tin-can_65.mp4",
-        "correctObjectName": "Tin Can",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial21C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "cup_65.mp4",
-        "correctObjectName": "Cup",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial22C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "serving-spoon_15.mp4",
-        "correctObjectName": "Serving Spoon",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial23C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "book_15.mp4",
-        "correctObjectName": "Book",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial24C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "hairdryer_100.mp4",
-        "correctObjectName": "Hairdryer",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial1D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "hanger_65.mp4",
-        "correctObjectName": "Hanger",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial2D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "paint-palette_15.mp4",
-        "correctObjectName": "Paint Palette",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial3D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "scissors_15.mp4",
-        "correctObjectName": "Scissors",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial4D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "keys_100.mp4",
-        "correctObjectName": "Keys",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial5D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "rubber-duck_100.mp4",
-        "correctObjectName": "Rubber duck",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial6D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "box-cutter_100.mp4",
-        "correctObjectName": "Box Cutter",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial7D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "sunglasses_65.mp4",
-        "correctObjectName": "Sunglasses",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial8D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "candle_65.mp4",
-        "correctObjectName": "Candle",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial9D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "pen_100.mp4",
-        "correctObjectName": "Pen",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial10D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "screwdriver_15.mp4",
-        "correctObjectName": "Screwdriver",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial11D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "apple_100.mp4",
-        "correctObjectName": "Apple",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial12D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "banana_100.mp4",
-        "correctObjectName": "Banana",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial13D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "lighter_65.mp4",
-        "correctObjectName": "Lighter",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial14D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "toothbrush_100.mp4",
-        "correctObjectName": "Toothbrush",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial15D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "calculator_15.mp4",
-        "correctObjectName": "Calculator",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial16D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "clock_65.mp4",
-        "correctObjectName": "Clock",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial17D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "computer-mouse_65.mp4",
-        "correctObjectName": "Computer Mouse",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial18D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "lemon_15.mp4",
-        "correctObjectName": "Lemon",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial19D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "usb-drive_100.mp4",
-        "correctObjectName": "Usb Drive",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial20D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "tin-can_100.mp4",
-        "correctObjectName": "Tin Can",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial21D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "cup_100.mp4",
-        "correctObjectName": "Cup",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial22D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "serving-spoon_100.mp4",
-        "correctObjectName": "Serving Spoon",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial23D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "book_100.mp4",
-        "correctObjectName": "Book",
-        "correctSourceName": "Real"
-      }
-    },
-
-    "trial24D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "hairdryer_15.mp4",
-        "correctObjectName": "Hairdryer",
-        "correctSourceName": "Virtual"
-      }
+    "EMQuestionnaire": {
+      "type": "questionnaire",
+      "instruction": "We are interested in what people do when learn something new, or acquire information in their everyday lives, and how they evaluate their own ideas and those of others.",
+      "instructionLocation": "aboveStimulus",
+      "response": [
+        {
+          "id": "ih-q",
+          "prompt": " Please read the following statements and circle the answer that best corresponds to you and reflects your behavior at work. Please answer as honestly as possible using this scale.",
+          "location": "aboveStimulus",
+          "type": "matrix-radio",
+          "questionOrder": "random",
+          "answerOptions": [
+            "Once or less in the last month.",
+            "More than once a month but less than once a week",
+            "About once a week",
+            "More that once a week or less than once a day",
+            "Once or more in a day"
+          ],
+          "questionOptions": [
+            "Having to check whether you have done something that you should have done.", "Forgetting when it was that something happened; for example, whether it was yesterday or last week.", "Forgetting that you were told something yesterday or a few days ago, and maybe having to be reminded about it.", "Starting to read something (a book or an article in a newspaper, or a magazine) without realizing you have already read it before.", "Finding that a word is ‘on the tip of your tongue’. You know what it is but cannot quite find it.", "Completely forgetting to do things you said you would do, and things you planned to do.", "Forgetting important details of what you did or what happened to you the day before.", "When talking to someone, forgetting what you have just said. Maybe saying ‘what was I talking about?’", "When reading a newspaper or magazine, being unable to follow the thread of a story; losing track of what it is about.", "Forgetting to tell somebody something important, perhaps forgetting to pass on a message or remind someone of something.", "Getting the details of what someone was told you mixed up and confused.", "Forgetting where things are normally kept or looking for them in the wrong place.", "Repeating to someone what you have just told them or asking someone the same question twice."]}]
     },
-
-    "Doubt": {
+    "SFQuestion": {
       "type": "questionnaire",
       "response": [
         {
-          "id": "doubtQ1",
-          "prompt": "1. Did you have any doubts about the purpose of the study ?",
+          "id": "q1",
+          "prompt": "How familiar are you with science fiction?",
           "location": "belowStimulus",
-          "type": "longText",
-          "placeholder": "Enter your answer here."
-        },
-        {
-          "id": "doubtQ2",
-          "prompt": "What do you think we hope to find with this experiment ? ",
-          "location": "belowStimulus",
-          "type": "longText",
-          "placeholder": "Enter your answer here."
-        }
-      ]
+          "required": true,
+          "type": "radio",
+          "options": ["Not at all familiar", "Slightly familiar", "Moderately familiar", "Fairly familiar", "Very familiar"],
+          "horizontal": true
+        }]
     },
-
+    "IHQuestionnaire1": {
+      "type": "questionnaire",
+      "instruction": "We are interested in what people do when learn something new, or acquire information in their everyday lives, and how they evaluate their own ideas and those of others.",
+      "instructionLocation": "aboveStimulus",
+      "response": [
+        {
+          "id": "ih-q1",
+          "prompt": " Please read the following statements and circle the answer that best corresponds to you and reflects your behavior at work. Please answer as honestly as possible using this scale.",
+          "location": "aboveStimulus",
+          "type": "matrix-radio",
+          "questionOrder": "random",
+          "answerOptions": [
+            "Strongly disagree",
+            "2",
+            "3",
+            "4",
+            "Strongly agree"
+          ],
+          "questionOptions": [
+            "I feel small when others disagree with me on topics that are close to my heart.",
+            "When someone contradicts my most important beliefs, it feels like a personal attack.",
+            "When someone disagrees with ideas that are important to me, it feels as though I'm being attacked.",
+            "I tend to feel threatened when others disagree with me on topics that are close to my heart.",
+            "When someone disagrees with ideas that are important to me, it makes me feel insignificant.",
+            "I am open to revising my important beliefs in the face of new information.",
+            "I am willing to change my position on an important issue in the face of good reasons.",
+            "I am willing to change my opinions on the basis of compelling reason.",
+            "I have at times changed opinions that were important to me, when someone showed me I was wrong.",
+            "I’m willing to change my mind once it’s made up about an important topic.",
+            "I can respect others, even if I disagree with them in important ways."          ]}]
+    },
+    "IHQuestionnaire2": {
+      "type": "questionnaire",
+      "instruction": "We are interested in what people do when learn something new, or acquire information in their everyday lives, and how they evaluate their own ideas and those of others.",
+      "instructionLocation": "aboveStimulus",
+      "response": [
+        {
+          "id": "ih-q2",
+          "prompt": " Please read the following statements and circle the answer that best corresponds to you and reflects your behavior at work. Please answer as honestly as possible using this scale.",
+          "location": "aboveStimulus",
+          "type": "matrix-radio",
+          "questionOrder": "random",
+          "answerOptions": [
+            "Strongly disagree",
+            "2",
+            "3",
+            "4",
+            "Strongly agree"
+          ],
+          "questionOptions": [
+            "I can have great respect for someone, even when we don't see eye-to-eye on important topics.",
+            "Even when I disagree with others, I can recognize that they have sound points.",
+            "I am willing to hear others out, even if I disagree with them.",
+            "I welcome different ways of thinking about important topics.",
+            "I respect that there are ways of making important decisions that are different from the way I make decisions.",
+            "My ideas are usually better than other people’s ideas.",
+            "For the most part, others have more to learn from me than I have to learn from them.",
+            "When I am really confident in a belief, there is very little chance that belief is wrong.",
+            "On important topics, I am not likely to be swayed by the viewpoints of others.",
+            "I’d rather rely on my own knowledge about most topics than turn to others for expertise.",
+            "Listening to perspectives of others seldom changes my important opinions."          ]}]
+    },
     "PostQuestionnaire": {
       "type": "questionnaire",
+
       "response": [
         {
           "id": "q1",
           "prompt": "Did you experience any problems with our tool?",
           "location": "belowStimulus",
           "type": "longText",
-          "placeholder": "Enter your answer here."
+          "placeholder": "Enter your answer here.",
+          "required": false
         },
         {
           "id": "q2",
           "prompt": "Did anything not render or display properly?",
           "location": "belowStimulus",
           "type": "longText",
-          "placeholder": "Enter your answer here"
+          "placeholder": "Enter your answer here",
+          "required": false
         },
         {
           "id": "q3",
           "prompt": "Any other issues or anything you would like to tell us?",
           "location": "belowStimulus",
           "type": "longText",
-          "placeholder": "Enter your answer here"
+          "placeholder": "Enter your answer here",
+          "required": false
         }
       ]
     },
     "EndPage": {
       "type": "markdown",
-      "path": "_real_virtual_study/assets/content/part1_end.md",
+      "path": "_real_virtual_study2_G1/assets/content/end.md",
       "response": []
     }
   },
@@ -965,71 +491,31 @@
       "ConsentPage",
       "IntroPage",
       {
-        "id": "group-assignment",
-        "order": "latinSquare",
-        "numSamples": 1,
+        "order": "fixed",
         "components": [
+          "trial1", "trial2", "trial3", "trial4",
+          "myAttentionCheckComponent",
+          "trial5", "trial6", "trial7", "trial8", "trial9", "trial10", "trial11",
+          "myAttentionCheckComponent",
+          "trial12", "trial13", "trial14", "trial15", "trial16", "trial17", "trial18", "trial19", "trial20", "trial21", "trial22", "trial23", "trial24",
+          "trial25", "trial26", "trial27", "trial28", "trial29", "trial30", "trial31", "trial32"
+        ],
+        "skip": [
           {
-            "id": "groupA",
-            "order": "fixed",
-            "components": ["trial1A", "trial2A", "trial3A", "trial4A", "myAttentionCheckComponent", "trial5A", "trial6A", "trial7A", "trial8A", "trial9A", "trial10A", "trial11A", "myAttentionCheckComponent", "trial12A", "trial13A", "trial14A", "trial15A", "trial16A", "trial17A", "trial18A", "trial19A", "trial20A", "trial21A", "trial22A", "trial23A", "trial24A"],
-            "skip": [
-              {
-                "name": "myAttentionCheckComponent",
-                "check": "repeatedComponent",
-                "condition": "numIncorrect",
-                "value": 2,
-                "to": "end"
-              }
-            ]
-          },
-          {
-            "id": "groupB",
-            "order": "fixed",
-            "components": ["trial1B", "trial2B", "trial3B", "trial4B", "myAttentionCheckComponent", "trial5B", "trial6B", "trial7B", "trial8B", "trial9B", "trial10B", "trial11B", "myAttentionCheckComponent", "trial12B", "trial13B", "trial14B", "trial15B", "trial16B", "trial17B", "trial18B", "trial19B", "trial20B", "trial21B", "trial22B", "trial23B", "trial24B"],
-            "skip": [
-              {
-                "name": "myAttentionCheckComponent",
-                "check": "repeatedComponent",
-                "condition": "numIncorrect",
-                "value": 2,
-                "to": "end"
-              }
-            ]
-          },
-          {
-            "id": "groupC",
-            "order": "fixed",
-            "components": ["trial1C", "trial2C", "trial3C", "trial4C", "myAttentionCheckComponent", "trial5C", "trial6C", "trial7C", "trial8C", "trial9C", "trial10C", "trial11C", "myAttentionCheckComponent", "trial12C", "trial13C", "trial14C", "trial15C", "trial16C", "trial17C", "trial18C", "trial19C", "trial20C", "trial21C", "trial22C", "trial23C", "trial24C"],
-            "skip": [
-              {
-                "name": "myAttentionCheckComponent",
-                "check": "repeatedComponent",
-                "condition": "numIncorrect",
-                "value": 2,
-                "to": "end"
-              }
-            ]
-          },
-          {
-            "id": "groupD",
-            "order": "fixed",
-            "components": ["trial1D", "trial2D", "trial3D", "trial4D", "myAttentionCheckComponent", "trial5D", "trial6D", "trial7D", "trial8D", "trial9D", "trial10D", "trial11D", "myAttentionCheckComponent", "trial12D", "trial13D", "trial14D", "trial15D", "trial16D", "trial17D", "trial18D", "trial19D", "trial20D", "trial21D", "trial22D", "trial23D", "trial24D"],
-            "skip": [
-              {
-                "name": "myAttentionCheckComponent",
-                "check": "repeatedComponent",
-                "condition": "numIncorrect",
-                "value": 2,
-                "to": "end"
-              }
-            ]
+            "name": "myAttentionCheckComponent",
+            "check": "repeatedComponent",
+            "condition": "numIncorrect",
+            "value": 2,
+            "to": "end"
           }
         ]
       },
-      "Doubt",
+      "EMQuestionnaire",
+      "SFQuestion",
+      "IHQuestionnaire1",
+      "IHQuestionnaire2",
       "PostQuestionnaire",
       "EndPage"
     ]
   }
-  }
+}
