@@ -16,6 +16,8 @@
     "autoDownloadStudy": false,
     "withSidebar": false,
     "enumerateQuestions": true,
+    "minWidthSize": 1280,
+    "minHeightSize": 720,
     "studyEndMsg": "Thank you for completing the study. You may click this link and return to Prolific: [https://app.prolific.com/submissions/complete?cc=CE96X7ST&PROLIFIC_ID={PARTICIPANT_ID}](https://app.prolific.com/submissions/complete?cc=CE96X7ST&PROLIFIC_ID={PARTICIPANT_ID})",
     "urlParticipantIdParam": "PROLIFIC_ID"
   },
@@ -24,10 +26,9 @@
       "type": "image",
       "style": {
         "textAlign": "center",
-        "width": "250px",
-        "maxWidth": "90%",
-        "margin": "auto"
-      },
+        "maxWidth": "250px",
+        "maxHeight": "250px",
+        "margin": "auto"},
       "response": [
         {
           "id": "q1_recognition",
@@ -75,7 +76,7 @@
       "response": [
         {
           "id": "AttentionCheck1",
-          "prompt": "The colour test you are about to take part in is very simple, when asked for your favorite colour you must select 'Green'. This is an attention check.\n\n[b]Based on the text you read above what colour have you been asked to enter ?",
+          "prompt": "The colour test you are about to take part in is very simple, when asked for your favorite colour you must select 'Green'. This is an attention check.\n\nBased on the text you read above what colour have you been asked to enter ?",
           "required": true,
           "type": "radio",
           "options": ["Blue", "Yellow", "Orange", "Red", "Green"]
@@ -139,10 +140,10 @@
     },
     "trial6": {
       "baseComponent": "memory_test_questionnaire",
-      "path": "_real_virtual_study2_G1/assets/icons/hairdryer.svg",
-      "instruction": "Hairdryer",
+      "path": "_real_virtual_study2_G1/assets/icons/hair-dryer.svg",
+      "instruction": "Hair dryer",
       "parameters": {
-        "objectName": "Hairdryer"
+        "objectName": "Hair dryer"
       }
     },
     "trial7": {
@@ -187,10 +188,10 @@
     },
     "trial12": {
       "baseComponent": "memory_test_questionnaire",
-      "path": "_real_virtual_study2_G1/assets/icons/rubberduck.svg",
-      "instruction": "Rubberduck",
+      "path": "_real_virtual_study2_G1/assets/icons/rubber-duck.svg",
+      "instruction": "Rubber duck",
       "parameters": {
-        "objectName": "Rubberduck"
+        "objectName": "Rubber duck"
       }
     },
     "trial13": {
