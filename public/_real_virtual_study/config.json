@@ -28,33 +28,33 @@
       "nextButtonLocation": "belowStimulus",
       "response": [
         {
-          "id": "objectName",
-          "type": "reactive",
-          "required": true,
-          "hidden": true,
-          "prompt": "Object Name"
-        },
-        {
-          "id": "sourceChoice",
-          "type": "reactive",
-          "required": true,
-          "hidden": true,
-          "prompt": "Real or Virtual"
-        },
-        {
-          "id": "confidence",
-          "type": "reactive",
-          "required": true,
-          "hidden": true,
-          "prompt": "Confidence Level"
-        },
-        {
           "id": "completionSignal",
           "type": "reactive",
           "location": "sidebar",
           "prompt": "Click on next to continue with another object",
           "required": true,
           "hidden": true
+        },
+        {
+          "id": "objectName",
+          "type": "reactive",
+          "required": false,
+          "hidden": true,
+          "prompt": "Object Name"
+        },
+        {
+          "id": "sourceChoice",
+          "type": "reactive",
+          "required": false,
+          "hidden": true,
+          "prompt": "Real or Virtual"
+        },
+        {
+          "id": "confidence",
+          "type": "reactive",
+          "required": false,
+          "hidden": true,
+          "prompt": "Confidence Level"
         }
       ]
     }
