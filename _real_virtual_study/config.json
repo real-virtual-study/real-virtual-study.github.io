@@ -63,6 +63,12 @@
   },
 
   "components": {
+    "PreLoader": {
+      "description": "XXX",
+      "type": "react-component",
+      "path": "_real_virtual_study/assets/preloader.tsx",
+      "response": []
+    },
     "myAttentionCheckComponent" : {
       "type": "questionnaire",
       "response": [
@@ -929,6 +935,7 @@
     "components": [
       "ConsentPage",
       "IntroPage",
+      "PreLoader",
       {
         "id": "group-assignment",
         "order": "latinSquare",
