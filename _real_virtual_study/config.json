@@ -28,6 +28,27 @@
       "nextButtonLocation": "belowStimulus",
       "response": [
         {
+          "id": "objectName",
+          "type": "reactive",
+          "required": true,
+          "hidden": true,
+          "prompt": "Object Name"
+        },
+        {
+          "id": "sourceChoice",
+          "type": "reactive",
+          "required": true,
+          "hidden": true,
+          "prompt": "Real or Virtual"
+        },
+        {
+          "id": "confidence",
+          "type": "reactive",
+          "required": true,
+          "hidden": true,
+          "prompt": "Confidence Level"
+        },
+        {
           "id": "completionSignal",
           "type": "reactive",
           "location": "sidebar",
