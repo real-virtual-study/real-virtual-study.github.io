@@ -16,6 +16,8 @@
     "autoDownloadStudy": false,
     "withSidebar": false,
     "enumerateQuestions": true,
+    "minWidthSize": 1280,
+    "minHeightSize": 720,
     "studyEndMsg": "Thank you for completing the study. You may click this link and return to Prolific: [https://app.prolific.com/submissions/complete?cc=CE96X7ST&PROLIFIC_ID={PARTICIPANT_ID}](https://app.prolific.com/submissions/complete?cc=CE96X7ST&PROLIFIC_ID={PARTICIPANT_ID})",
     "urlParticipantIdParam": "PROLIFIC_ID"
   },
@@ -66,7 +68,7 @@
       "response": [
         {
           "id": "AttentionCheck1",
-          "prompt": "The colour test you are about to take part in is very simple, when asked for your favorite colour you must select 'Green'. This is an attention check.\n\n[b]Based on the text you read above what colour have you been asked to enter ?[/b]",
+          "prompt": "The colour test you are about to take part in is very simple, when asked for your favorite colour you must select 'Green'. This is an attention check.\n\nBased on the text you read above what colour have you been asked to enter ?",
           "required": true,
           "type": "radio",
           "options": [
