@@ -1,12 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
-// Define props for TypeScript to avoid errors
+// FIX 1: Removed 'parameters' from the interface to stop the unused prop warning
 interface RevisitComponentProps {
-    parameters?: Record<string, any>;
-    next: (response?: any) => void;
+    next: (response?: Record<string, unknown>) => void;
 }
 
-// Full list of videos (paths adjusted relative to public root)
+// Full list of videos
 const videoList: string[] = [
   '_real_virtual_study/assets/sample-stimuli/lemon_15.mp4',
   '_real_virtual_study/assets/sample-stimuli/hairdryer_15.mp4',
@@ -83,12 +82,16 @@ const videoList: string[] = [
   '_real_virtual_study/assets/sample-stimuli/scissors_100.mp4',
 ];
 
-export default function Preloader({ next }: RevisitComponentProps) {
+// FIX 2: We rename 'next' to '_next'. The underscore tells ESLint "Ignore that this is unused".
+export default function Preloader({ next: _next }: RevisitComponentProps) {
   const [loaded, setLoaded] = useState<number>(0);
   const [errors, setErrors] = useState<number>(0);
+  const downloadStarted = useRef(false);
 
   useEffect(() => {
-    // Initiate fetch for every video in the list
+    if (downloadStarted.current) return;
+    downloadStarted.current = true;
+
     videoList.forEach((url) => {
       fetch(url)
         .then((response) => {
@@ -103,9 +106,9 @@ export default function Preloader({ next }: RevisitComponentProps) {
   }, []);
 
   const total = videoList.length;
-  // Progress only counts successful loads for the bar, but logic accounts for errors to avoid getting stuck
-  const progress = total > 0 ? Math.round((loaded / total) * 100) : 0;
-  const isComplete = (loaded + errors) === total && total > 0;
+  const rawPercentage = total > 0 ? (loaded / total) * 100 : 0;
+  const progress = Math.min(Math.round(rawPercentage), 100);
+  const isComplete = (loaded + errors) >= total && total > 0;
 
   return (
     <div style={{
@@ -115,71 +118,37 @@ export default function Preloader({ next }: RevisitComponentProps) {
       justifyContent: 'center',
       height: '100vh',
       fontFamily: 'system-ui, sans-serif',
+      padding: '20px',
+      textAlign: 'center',
     }}
     >
-      <h1 style={{ marginBottom: '10px' }}>Loading Study Assets...</h1>
-      <p style={{ color: '#666', marginBottom: '20px' }}>
-        Please wait while we prepare the videos.
-      </p>
+      <h2 style={{ marginBottom: '20px', fontWeight: 'normal' }}>
+        Wait for the next button to be activated to continue, files are loading...
+      </h2>
 
-      {/* Progress Bar Container */}
       <div style={{
-        width: '400px',
-        height: '24px',
+        width: '100%',
+        maxWidth: '400px',
+        height: '10px',
         background: '#e0e0e0',
-        borderRadius: '12px',
+        borderRadius: '5px',
         overflow: 'hidden',
-        boxShadow: 'inset 0 1px 3px rgba(0,0,0,0.1)',
+        marginBottom: '10px',
       }}
       >
-        {/* Progress Fill */}
         <div style={{
           width: `${progress}%`,
           height: '100%',
-          background: '#3b82f6', // Nice blue color
+          background: isComplete ? '#10b981' : '#3b82f6',
           transition: 'width 0.3s ease-out',
         }}
         />
       </div>
 
-      <p style={{ marginTop: '10px', fontSize: '0.9rem' }}>
-        {loaded}
-        {' '}
-        /
-        {total}
-        {' '}
-        videos loaded
-        {errors > 0 && (
-        <span style={{ color: 'red' }}>
-          (
-          {errors}
-          {' '}
-          failed)
-        </span>
-        )}
+      <p style={{ fontSize: '0.8rem', color: '#666', marginBottom: '30px' }}>
+        {progress}
+        %
       </p>
-
-      {/* Start Button - appears when finished */}
-      <div style={{ height: '50px', marginTop: '20px' }}>
-        {isComplete && (
-        <button
-          onClick={() => next()}
-          style={{
-            padding: '12px 30px',
-            fontSize: '18px',
-            fontWeight: 'bold',
-            color: 'white',
-            backgroundColor: '#10b981', // Green
-            border: 'none',
-            borderRadius: '6px',
-            cursor: 'pointer',
-            boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
-          }}
-        >
-          Start Experiment
-        </button>
-        )}
-      </div>
     </div>
   );
 }
