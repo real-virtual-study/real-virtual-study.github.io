@@ -1,11 +1,11 @@
 import { useEffect, useState, useRef } from 'react';
 
-// FIX 1: Removed 'parameters' from the interface to stop the unused prop warning
+// Define props
 interface RevisitComponentProps {
     next: (response?: Record<string, unknown>) => void;
 }
 
-// Full list of videos
+// Full list of videos (Keep your existing list exactly as is)
 const videoList: string[] = [
   '_real_virtual_study/assets/sample-stimuli/lemon_15.mp4',
   '_real_virtual_study/assets/sample-stimuli/hairdryer_15.mp4',
@@ -82,7 +82,6 @@ const videoList: string[] = [
   '_real_virtual_study/assets/sample-stimuli/scissors_100.mp4',
 ];
 
-// FIX 2: We rename 'next' to '_next'. The underscore tells ESLint "Ignore that this is unused".
 export default function Preloader({ next: _next }: RevisitComponentProps) {
   const [loaded, setLoaded] = useState<number>(0);
   const [errors, setErrors] = useState<number>(0);
@@ -93,13 +92,19 @@ export default function Preloader({ next: _next }: RevisitComponentProps) {
     downloadStarted.current = true;
 
     videoList.forEach((url) => {
-      fetch(url)
+      // -----------------------------------------------------------------
+      // THE FIX: If the path doesn't start with '/', add it.
+      // This forces the browser to look at the ROOT public folder.
+      // -----------------------------------------------------------------
+      const correctUrl = url.startsWith('/') ? url : `/${url}`;
+
+      fetch(correctUrl)
         .then((response) => {
-          if (!response.ok) throw new Error('HTTP error');
+          if (!response.ok) throw new Error(`HTTP error ${response.status}`);
           setLoaded((prev) => prev + 1);
         })
         .catch((e) => {
-          console.error(`Failed to load: ${url}`, e);
+          console.error(`Failed to load: ${correctUrl}`, e);
           setErrors((prev) => prev + 1);
         });
     });
@@ -108,7 +113,6 @@ export default function Preloader({ next: _next }: RevisitComponentProps) {
   const total = videoList.length;
   const rawPercentage = total > 0 ? (loaded / total) * 100 : 0;
   const progress = Math.min(Math.round(rawPercentage), 100);
-  const isComplete = (loaded + errors) >= total && total > 0;
 
   return (
     <div style={{
@@ -139,7 +143,8 @@ export default function Preloader({ next: _next }: RevisitComponentProps) {
         <div style={{
           width: `${progress}%`,
           height: '100%',
-          background: isComplete ? '#10b981' : '#3b82f6',
+          // Turn Red if we have errors, otherwise Blue -> Green
+          background: errors > 0 ? '#ef4444' : (progress === 100 ? '#10b981' : '#3b82f6'),
           transition: 'width 0.3s ease-out',
         }}
         />
@@ -148,6 +153,14 @@ export default function Preloader({ next: _next }: RevisitComponentProps) {
       <p style={{ fontSize: '0.8rem', color: '#666', marginBottom: '30px' }}>
         {progress}
         %
+        {errors > 0 && (
+        <span style={{ color: 'red', marginLeft: '5px' }}>
+          (
+          {errors}
+          {' '}
+          failed)
+        </span>
+        )}
       </p>
     </div>
   );
