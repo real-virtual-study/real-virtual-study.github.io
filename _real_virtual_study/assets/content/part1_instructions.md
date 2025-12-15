@@ -6,17 +6,17 @@ Here is one example of a real object and two examples of virtual objects:
 
 <table style="width:100%; text-align:center;">
   <tr>
-    <td style="padding: 10px;">
+    <td style="padding: 0px;">
         <strong>Real Object</strong><br>
         <img src="_real_virtual_study/assets/Instructions/stapler-r.png" style="width: 400%; max-width: 400px;"><br>
         Real stapler
     </td>
-    <td style="padding: 10px;">
+    <td style="padding: 0px;">
         <strong>Virtual (Subtle)</strong><br>
         <img src="_real_virtual_study/assets/Instructions/stapler-s.png" style="width: 400%; max-width: 400px;"><br>
         A virtual stapler (subtle)
     </td>
-    <td style="padding: 10px;">
+    <td style="padding: 0px;">
         <strong>Virtual (Obvious)</strong><br>
         <img src="_real_virtual_study/assets/Instructions/stapler-e.png" style="width: 400%; max-width: 400px;"><br>
         A virtual stapler (obvious)
