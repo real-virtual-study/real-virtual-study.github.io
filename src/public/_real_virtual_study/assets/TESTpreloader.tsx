@@ -82,7 +82,7 @@ const videoList: string[] = [
   '_real_virtual_study/assets/sample-stimuli/scissors_100.mp4',
 ];
 
-export default function Preloader({ next: _next }: RevisitComponentProps) {
+export default function TESTpreloader({ next: _next }: RevisitComponentProps) {
   const [loaded, setLoaded] = useState<number>(0);
   const [errors, setErrors] = useState<number>(0);
   const downloadStarted = useRef(false);

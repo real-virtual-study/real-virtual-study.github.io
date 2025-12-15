@@ -63,12 +63,6 @@
   },
 
   "components": {
-    "PreLoader": {
-      "description": "XXX",
-      "type": "react-component",
-      "path": "_real_virtual_study/assets/preloader.tsx",
-      "response": []
-    },
     "myAttentionCheckComponent" : {
       "type": "questionnaire",
       "response": [
@@ -96,11 +90,13 @@
     "IntroPage": {
       "type": "markdown",
       "path": "_real_virtual_study/assets/content/part1_instructions.md",
+      "nextButtonText": "Start",
       "response": []
     },
     "ConsentPage": {
       "type": "markdown",
       "path": "_real_virtual_study/assets/content/part1_consent.md",
+      "nextButtonText": "I agree",
       "response": []
     },
 
@@ -935,7 +931,6 @@
     "components": [
       "ConsentPage",
       "IntroPage",
-      "PreLoader",
       {
         "id": "group-assignment",
         "order": "latinSquare",
