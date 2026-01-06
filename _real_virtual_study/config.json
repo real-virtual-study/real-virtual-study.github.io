@@ -9,7 +9,7 @@
     "organizations": ["inria"]
   },
   "uiConfig": {
-    "contactEmail": "",
+    "contactEmail": "leana.petiot@inria.fr",
     "helpTextPath": "_real_virtual_study/assets/content/help.md",
     "logoPath": "revisitAssets/revisitLogoSquare.svg",
     "withProgressBar": true,

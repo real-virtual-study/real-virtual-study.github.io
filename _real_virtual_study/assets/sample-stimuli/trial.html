@@ -16,8 +16,13 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            font-size: 1.2em; /* Increased base text size */
-            text-align: center; /* Center text globally */
+            /* VERTICAL CENTERING ADDITIONS: */
+            justify-content: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+
+            font-size: 1.2em;
+            text-align: center;
         }
 
         /* Card Look */
@@ -26,20 +31,20 @@
             border: 1px solid #e0e0e0;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            padding: 40px; /* Larger padding */
-            margin-top: 20px;
+            padding: 40px;
+            /* margin-top: 20px; REMOVED to allow true centering */
             width: 100%;
             max-width: 700px;
             text-align: center;
-            font-size: 1.2em; /* Bigger text inside the card */
+            font-size: 1.2em;
             transition: all 0.3s ease;
         }
 
-        /* --- 3. VIDEO PLAYER (Bigger) --- */
+        /* --- 3. VIDEO PLAYER --- */
         video {
-            width: 120%;          /* Increase size beyond container */
-            max-width: 900px;     /* Prevent excessive growth */
-            margin: 20px auto;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
             display: block;
         }
 
@@ -48,8 +53,8 @@
             background-color: #1976d2;
             color: white;
             border: none;
-            padding: 14px 30px;  /* Bigger buttons */
-            font-size: 1.2em;     /* Bigger text */
+            padding: 14px 30px;
+            font-size: 1.2em;
             font-weight: 500;
             border-radius: 6px;
             cursor: pointer;
@@ -67,11 +72,24 @@
             transform: scale(0.98);
         }
 
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Choice Buttons (Real/Virtual) Selection State */
+        .choice-btn.selected {
+            background-color: #0d47a1; /* Darker blue */
+            box-shadow: inset 0 0 0 4px #82b1ff; /* Ring effect */
+            transform: scale(1.05);
+        }
+
         /* --- 5. INPUT FIELDS --- */
         input[type="text"] {
             width: 80%;
             padding: 16px;
-            font-size: 1.2em; /* Bigger input text */
+            font-size: 1.2em;
             border: 1px solid #ccc;
             border-radius: 4px;
             margin-bottom: 20px;
@@ -89,43 +107,46 @@
             margin-top: 0;
             font-weight: 600;
             color: #333;
-            font-size: 1.2em; /* Bigger heading */
+            font-size: 1.2em;
         }
 
         p {
             color: #555;
             line-height: 1.4;
             margin-bottom: 20px;
-            font-size: 1.2em; /* Slightly bigger paragraphs */
+            font-size: 1.2em;
         }
 
         /* Correction Box */
         .correction-message {
             border-left: 5px solid #ffb74d;
             background-color: #fff8e1;
+            padding: 15px;
+            margin-bottom: 20px;
+            text-align: left;
         }
 
         .correct-answer {
             color: #1976d2;
             font-weight: 600;
             font-size: 1.2em;
-            margin-bottom: 15px;
+            margin-bottom: 5px;
         }
 
         .participant-answer {
             color: #444;
             font-weight: 600;
             font-size: 1.2em;
-            margin-bottom: 15px;
+            margin-bottom: 5px;
         }
 
         /* Container layout */
         .likert-container {
             display: flex;
             justify-content: space-between;
-            align-items: flex-end; /* Aligns checkboxes at the bottom */
+            align-items: flex-end;
             width: 100%;
-            max-width: 800px; /* Adjust based on your layout width */
+            max-width: 800px;
             margin: 20px 0;
             font-family: sans-serif;
         }
@@ -137,37 +158,18 @@
             align-items: center;
             cursor: pointer;
             text-align: center;
-            width: 16%; /* Distributes space evenly */
+            width: 16%;
             position: relative;
         }
 
         /* The Label Text */
         .likert-text {
             margin-bottom: 15px;
-            font-size: 1.2em;
+            font-size: 1em;
             line-height: 1.2;
             color: #000;
         }
 
-        /* Hide default radio button */
-        .likert-option input[type="radio"] {
-            position: absolute;
-            opacity: 0;
-            cursor: pointer;
-            height: 0;
-            width: 0;
-        }
-
-        /* Custom Checkbox/Radio styling */
-        .custom-radio {
-            height: 24px;
-            width: 24px;
-            background-color: #fff;
-            border: 1px solid #aaa; /* Grey border like image */
-            border-radius: 6px; /* Rounded corners */
-            display: inline-block;
-            transition: all 0.2s ease;
-        }
 
         /* Hover effect */
         .likert-option:hover input ~ .custom-radio {
@@ -177,12 +179,19 @@
 
         /* Selected State */
         .likert-option input:checked ~ .custom-radio {
-            background-color: #333333; /* Light purple fill */
-            border-color: #333333; /* Darker purple border */
-            box-shadow: inset 0 0 0 4px white; /* Creates a ring effect if desired */
+            background-color: #333333;
+            border-color: #333333;
+            box-shadow: inset 0 0 0 4px white;
         }
 
         .hidden { display: none !important; }
+
+        /* Helper for the next button container */
+        .nav-controls {
+            margin-top: 25px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
 
     </style>
 
@@ -190,25 +199,21 @@
 </head>
 <body>
 
-<!-- VIDEO -->
 <div id="video-stage">
     <video id="stimulus-video" autoplay muted playsinline style="pointer-events:none; width:100%; max-width:1000px;">
     </video>
 </div>
 
-<!-- QUESTIONS -->
 <div id="question-stage" class="hidden">
 
-    <!-- STEP 1 -->
-    <div id="step1">
+    <div id="step1" class="question-container">
         <h3>Name the object in the video</h3>
-        <input type="text" id="objectInput">
+        <input type="text" id="objectInput" placeholder="Type your answer here...">
         <br>
         <button onclick="showStep1Correction()">Continue</button>
     </div>
 
-    <!-- STEP 1 CORRECTION -->
-    <div id="step1Correction" class="hidden">
+    <div id="step1Correction" class="question-container hidden">
         <div class="correction-message">
             <div class="participant-answer"><strong>Your answer:</strong> <span id="participantObjectName"></span></div>
             <div class="correct-answer">Suggested answer: <span id="correctObjectName"></span></div>
@@ -216,61 +221,68 @@
         <button onclick="goToStep2()">Next</button>
     </div>
 
-    <!-- STEP 2 QUESTION -->
-    <div id="step2" class="hidden">
+    <div id="step2" class="question-container hidden">
         <h3>Was it Real or Virtual?</h3>
-        <button onclick="goToConfidenceRating('Real')">Real</button>
-        <button onclick="goToConfidenceRating('Virtual')">Virtual</button>
+
+        <div>
+            <button class="choice-btn" id="btn-real" onclick="selectSource('Real')">Real</button>
+            <button class="choice-btn" id="btn-virtual" onclick="selectSource('Virtual')">Virtual</button>
+        </div>
+
+        <div class="nav-controls">
+            <button id="step2-next" onclick="confirmSourceSelection()" disabled>Next</button>
+        </div>
     </div>
 
-    <div id="rateConfidence" class="hidden">
+    <div id="rateConfidence" class="question-container hidden">
         <h3>How confident are you?</h3>
 
         <div class="likert-container">
-
             <label class="likert-option">
-                <span class="likert-text">0% (completely guessing)</span>
-                <input type="radio" name="confidence" value="0" onclick="showStep2Correction('0')">
+                <span class="likert-text">0%<br><small>(Completely guessing)</small></span>
+                <input type="radio" name="confidence" value="0" onclick="enableConfidenceNext()">
                 <span class="custom-radio"></span>
             </label>
 
             <label class="likert-option">
                 <span class="likert-text">20%</span>
-                <input type="radio" name="confidence" value="20" onclick="showStep2Correction('20')">
+                <input type="radio" name="confidence" value="20" onclick="enableConfidenceNext()">
                 <span class="custom-radio"></span>
             </label>
 
             <label class="likert-option">
                 <span class="likert-text">40%</span>
-                <input type="radio" name="confidence" value="40" onclick="showStep2Correction('40')">
+                <input type="radio" name="confidence" value="40" onclick="enableConfidenceNext()">
                 <span class="custom-radio"></span>
             </label>
 
             <label class="likert-option">
                 <span class="likert-text">60%</span>
-                <input type="radio" name="confidence" value="60" onclick="showStep2Correction('60')">
+                <input type="radio" name="confidence" value="60" onclick="enableConfidenceNext()">
                 <span class="custom-radio"></span>
             </label>
 
             <label class="likert-option">
                 <span class="likert-text">80%</span>
-                <input type="radio" name="confidence" value="80" onclick="showStep2Correction('80')">
+                <input type="radio" name="confidence" value="80" onclick="enableConfidenceNext()">
                 <span class="custom-radio"></span>
             </label>
 
             <label class="likert-option">
-                <span class="likert-text">100% (Completely confident that I am right)</span>
-                <input type="radio" name="confidence" value="100" onclick="showStep2Correction('100')">
+                <span class="likert-text">100%<br><small>(Completely confident that I am right)</small></span>
+                <input type="radio" name="confidence" value="100" onclick="enableConfidenceNext()">
                 <span class="custom-radio"></span>
             </label>
+        </div>
 
+        <div class="nav-controls">
+            <button id="confidence-next" onclick="showStep2Correction()" disabled>Next</button>
         </div>
 
     </div>
 
 
-    <!-- STEP 2 CORRECTION -->
-    <div id="step2Correction" class="hidden">
+    <div id="step2Correction" class="question-container hidden">
         <div class="correction-message">
             <div class="participant-answer"><strong>Your answer:</strong> <span id="participantSourceName"></span></div>
             <div class="correct-answer">Correct answer: <span id="correctSourceName"></span></div>
@@ -283,7 +295,6 @@
         <p>➔ Please click the <strong>Next</strong> button in the bottom right of the page to continue.</p>
     </div>
 
-
 </div>
 
 <script>
@@ -291,27 +302,34 @@
 
     let trialData = {
         objectName: "",
-        sourceChoice: ""
+        sourceChoice: "",
+        confidence: ""
     };
 
     // Values from Revisit
-    let suggestedObjectName = "";
-    let suggestedSourceName = "";
+    let suggestedObjectName = "Unknown";
+    let suggestedSourceName = "Unknown";
 
     // RECEIVE REVISIT PARAMETERS
-    Revisit.onDataReceive((data) => {
-        if (data.videoFile) video.src = data.videoFile;
-        if (data.correctObjectName) suggestedObjectName = data.correctObjectName;
-        if (data.correctSourceName) suggestedSourceName = data.correctSourceName;
-    });
+    if (typeof Revisit !== 'undefined') {
+        Revisit.onDataReceive((data) => {
+            if (data.videoFile) video.src = data.videoFile;
+            if (data.correctObjectName) suggestedObjectName = data.correctObjectName;
+            if (data.correctSourceName) suggestedSourceName = data.correctSourceName;
+        });
+    }
 
     // WHEN VIDEO ENDS → SHOW STEP 1
     video.addEventListener('ended', () => {
         document.getElementById('video-stage').classList.add('hidden');
         document.getElementById('question-stage').classList.remove('hidden');
+        // Ensure Step 1 is the visible starting point inside question-stage
+        document.getElementById('step1').classList.remove('hidden');
     });
 
-    // Object Naming → Object Correction
+    // ----------------------------------------
+    // STEP 1: Object Naming
+    // ----------------------------------------
     window.showStep1Correction = function () {
         const input = document.getElementById('objectInput').value.trim();
         trialData.objectName = input;
@@ -323,26 +341,51 @@
         document.getElementById('step1Correction').classList.remove('hidden');
     };
 
-    // Object Correction → Source Question
     window.goToStep2 = function () {
         document.getElementById('step1Correction').classList.add('hidden');
         document.getElementById('step2').classList.remove('hidden');
     };
 
-    // Source Question → Confidence
-    window.goToConfidenceRating = function(choice) {
-        trialData.sourceChoice = choice;  // Save Real/Virtual choice
+    // ----------------------------------------
+    // STEP 2: Real vs Virtual (Selection)
+    // ----------------------------------------
+    let tempSourceChoice = null;
+
+    window.selectSource = function(choice) {
+        tempSourceChoice = choice;
+
+        // Update UI to show selection
+        document.getElementById('btn-real').classList.remove('selected');
+        document.getElementById('btn-virtual').classList.remove('selected');
+
+        if(choice === 'Real') {
+            document.getElementById('btn-real').classList.add('selected');
+        } else {
+            document.getElementById('btn-virtual').classList.add('selected');
+        }
+
+        // Enable Next button
+        document.getElementById('step2-next').disabled = false;
+    };
+
+    window.confirmSourceSelection = function() {
+        if (!tempSourceChoice) return;
+
+        trialData.sourceChoice = tempSourceChoice;
         document.getElementById('step2').classList.add('hidden');
         document.getElementById('rateConfidence').classList.remove('hidden');
     };
 
-    // Confidence → Step 2 Correction
+    // ----------------------------------------
+    // STEP 3: Confidence (Selection)
+    // ----------------------------------------
+    window.enableConfidenceNext = function() {
+        document.getElementById('confidence-next').disabled = false;
+    };
+
     window.showStep2Correction = function() {
         const selectedConfidence = document.querySelector('input[name="confidence"]:checked');
-        if (!selectedConfidence) {
-            alert("Please select a confidence level before proceeding.");
-            return;
-        }
+        if (!selectedConfidence) return;
 
         trialData.confidence = selectedConfidence.value;
 
@@ -355,14 +398,19 @@
     };
 
 
-
-    // STEP 2 CORRECTION → FINISH
+    // ----------------------------------------
+    // FINISH
+    // ----------------------------------------
     window.finishTrial = function () {
-        Revisit.postAnswers({
-            ...trialData,
-            completionSignal: "Finished"
-        });
+        if (typeof Revisit !== 'undefined') {
+            Revisit.postAnswers({
+                ...trialData,
+                completionSignal: "Finished"
+            });
+        }
+
         document.getElementById('step2Correction').classList.add('hidden');
+        document.getElementById('finalMessage').classList.remove('hidden');
     };
 
 </script>

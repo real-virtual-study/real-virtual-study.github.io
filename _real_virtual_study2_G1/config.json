@@ -28,7 +28,10 @@
         "textAlign": "center",
         "maxWidth": "250px",
         "maxHeight": "250px",
-        "margin": "auto"},
+        "margin": "auto",
+        "position": "sticky"
+      },
+
       "response": [
         {
           "id": "q1_recognition",
