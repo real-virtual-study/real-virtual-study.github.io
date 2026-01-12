@@ -38,6 +38,14 @@
       },
       "response": [
         {
+          "id": "completionSignal",
+          "type": "reactive",
+          "location": "sidebar",
+          "prompt": "Click on next to continue with another object",
+          "required": true,
+          "hidden": true
+        },
+        {
           "id": "objectName",
           "type": "reactive",
           "required": false,
