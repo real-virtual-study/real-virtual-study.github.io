@@ -140,6 +140,7 @@
         "correctSourceName": "Virtual"
       }
     },
+
     "trial6A": {
       "baseComponent": "video-task-template",
       "parameters": {
