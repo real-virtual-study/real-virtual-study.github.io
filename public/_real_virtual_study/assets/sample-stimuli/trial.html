@@ -402,11 +402,18 @@
     // FINISH
     // ----------------------------------------
     window.finishTrial = function () {
+        // 1. Log what you are about to send to the browser console
+        console.log("Sending to Revisit:", { ...trialData, completionSignal: "Finished" });
+
         if (typeof Revisit !== 'undefined') {
             Revisit.postAnswers({
                 ...trialData,
                 completionSignal: "Finished"
             });
+        } else {
+            // 2. Alert if Revisit library isn't found (helps catch path errors)
+            console.error("Revisit library not loaded! Check script src path.");
+            alert("Error: Revisit communication library not found.");
         }
 
         document.getElementById('step2Correction').classList.add('hidden');
