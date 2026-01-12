@@ -117,12 +117,12 @@
     },
     "IntroPage": {
       "type": "markdown",
-      "path": "/_real_virtual_study2_G1/assets/content/instructions.md",
+      "path": "_real_virtual_study2_G1/assets/content/instructions.md",
       "response": []
     },
     "ConsentPage": {
       "type": "markdown",
-      "path": "/_real_virtual_study2_G1/assets/content/consent.md",
+      "path": "_real_virtual_study2_G1/assets/content/consent.md",
       "response": []
     },
     "trial1": {

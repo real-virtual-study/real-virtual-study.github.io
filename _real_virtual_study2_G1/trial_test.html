@@ -7,17 +7,16 @@
     <script src="../revisitUtilities/revisit-communicate.js"></script>
 
     <style>
-        /* --- 1. GLOBAL STYLES (From your Video Task) --- */
+        /* --- 1. GLOBAL STYLES --- */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: transparent; /* Revisit usually handles background, or set #f4f6f8 */
+            background-color: transparent;
             color: #212529;
             margin: 0;
             padding: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            /* Vertical Centering */
             justify-content: center;
             min-height: 100vh;
             box-sizing: border-box;
@@ -25,8 +24,7 @@
             text-align: center;
         }
 
-        /* --- 2. PERSISTENT HEADER (The Icon) --- */
-        /* This stays visible above the white card */
+        /* --- 2. PERSISTENT HEADER --- */
         .object-header {
             margin-bottom: 20px;
             display: flex;
@@ -35,13 +33,10 @@
         }
 
         .object-header img {
-            /* FORCE SVG SIZE (Fixes invisible image issue) */
             width: 200px;
             height: 200px;
             object-fit: contain;
             margin-bottom: 10px;
-            /* Optional: visual border to debug if image is missing */
-            /* border: 1px dashed #ccc; */
         }
 
         .object-name {
@@ -54,7 +49,7 @@
             border-radius: 15px;
         }
 
-        /* --- 3. CARD LOOK (From your Video Task) --- */
+        /* --- 3. CARD LOOK --- */
         .question-container {
             background: #ffffff;
             border: 1px solid #e0e0e0;
@@ -95,7 +90,6 @@
             transform: none;
         }
 
-        /* Selection State */
         .choice-btn.selected {
             background-color: #0d47a1;
             box-shadow: inset 0 0 0 4px #82b1ff;
@@ -129,7 +123,6 @@
             color: #000;
         }
 
-        /* Custom Radio Styling (from your video code) */
         .custom-radio {
             width: 20px;
             height: 20px;
@@ -144,7 +137,6 @@
             border-color: #333333;
             box-shadow: inset 0 0 0 4px white;
         }
-        /* Hide default radio */
         .likert-option input { display: none; }
 
         /* --- 6. TEXT AREA --- */
@@ -241,36 +233,12 @@
 <div id="stage-conf-2" class="question-container hidden">
     <h3>How confident are you about the source?</h3>
     <div class="likert-container">
-        <label class="likert-option">
-            <span class="likert-text">0%</span>
-            <input type="radio" name="conf2" value="0" onclick="enableNext('btn-next-4')">
-            <span class="custom-radio"></span>
-        </label>
-        <label class="likert-option">
-            <span class="likert-text">20%</span>
-            <input type="radio" name="conf2" value="20" onclick="enableNext('btn-next-4')">
-            <span class="custom-radio"></span>
-        </label>
-        <label class="likert-option">
-            <span class="likert-text">40%</span>
-            <input type="radio" name="conf2" value="40" onclick="enableNext('btn-next-4')">
-            <span class="custom-radio"></span>
-        </label>
-        <label class="likert-option">
-            <span class="likert-text">60%</span>
-            <input type="radio" name="conf2" value="60" onclick="enableNext('btn-next-4')">
-            <span class="custom-radio"></span>
-        </label>
-        <label class="likert-option">
-            <span class="likert-text">80%</span>
-            <input type="radio" name="conf2" value="80" onclick="enableNext('btn-next-4')">
-            <span class="custom-radio"></span>
-        </label>
-        <label class="likert-option">
-            <span class="likert-text">100%</span>
-            <input type="radio" name="conf2" value="100" onclick="enableNext('btn-next-4')">
-            <span class="custom-radio"></span>
-        </label>
+        <label class="likert-option"><span class="likert-text">0%</span><input type="radio" name="conf2" value="0" onclick="enableNext('btn-next-4')"><span class="custom-radio"></span></label>
+        <label class="likert-option"><span class="likert-text">20%</span><input type="radio" name="conf2" value="20" onclick="enableNext('btn-next-4')"><span class="custom-radio"></span></label>
+        <label class="likert-option"><span class="likert-text">40%</span><input type="radio" name="conf2" value="40" onclick="enableNext('btn-next-4')"><span class="custom-radio"></span></label>
+        <label class="likert-option"><span class="likert-text">60%</span><input type="radio" name="conf2" value="60" onclick="enableNext('btn-next-4')"><span class="custom-radio"></span></label>
+        <label class="likert-option"><span class="likert-text">80%</span><input type="radio" name="conf2" value="80" onclick="enableNext('btn-next-4')"><span class="custom-radio"></span></label>
+        <label class="likert-option"><span class="likert-text">100%</span><input type="radio" name="conf2" value="100" onclick="enableNext('btn-next-4')"><span class="custom-radio"></span></label>
     </div>
     <div class="nav-controls">
         <button id="btn-next-4" onclick="submitConf2()" disabled>Next</button>
@@ -283,13 +251,13 @@
     <textarea id="reason-input" placeholder="Type your answer here..." oninput="enableNext('btn-finish')"></textarea>
 
     <div class="nav-controls">
-        <button id="btn-finish" onclick="finishTrial()" disabled>Finish Object</button>
+        <button id="btn-finish" onclick="submitReasonAndFinish()" disabled>Finish Object</button>
     </div>
 </div>
 
 <div id="final-message" class="question-container hidden" style="border-left: 5px solid #28a745; background-color: #d4edda;">
     <h3 style="color: #155724;">Saved!</h3>
-    <p>Please click the <strong>Next</strong> button in the sidebar/bottom to continue.</p>
+    <p>Please click the <strong>Next</strong> button in the sidebar to continue.</p>
 </div>
 
 <script>
@@ -303,11 +271,10 @@
         reasoning: ""
     };
 
-    // 2. REVISIT CONNECTION
+    // 2. REVISIT INITIALIZATION
     if (typeof Revisit !== 'undefined') {
         Revisit.onDataReceive((data) => {
             if (data.imageFile) {
-                // We use the absolute path from JSON
                 document.getElementById('object-image').src = data.imageFile;
             }
             if (data.objectName) {
@@ -344,18 +311,25 @@
 
     // Stage 2: Confidence 1
     function submitConf1() {
+        // Save Confidence Level
         const conf = document.querySelector('input[name="conf1"]:checked').value;
         trialAnswers.seenConfidence = conf;
+
         document.getElementById('stage-conf-1').classList.add('hidden');
 
-        // BRANCHING
+        // BRANCHING LOGIC
         if (trialAnswers.seenAnswer === 'seen') {
+            // Path A: They SAW it -> Go to Source Question
             document.getElementById('stage-source').classList.remove('hidden');
         } else {
-            // Skip source if not seen
+            // Path B: They did NOT see it -> FINISH IMMEDIATELY
+            // Fill remaining data with "NA"
             trialAnswers.sourceAnswer = "NA";
             trialAnswers.sourceConfidence = "NA";
-            document.getElementById('stage-reason').classList.remove('hidden');
+            trialAnswers.reasoning = "NA";
+
+            // Save and Exit
+            saveAndFinish();
         }
     }
 
@@ -379,19 +353,22 @@
         const conf = document.querySelector('input[name="conf2"]:checked').value;
         trialAnswers.sourceConfidence = conf;
         document.getElementById('stage-conf-2').classList.add('hidden');
+        // Now go to Reason
         document.getElementById('stage-reason').classList.remove('hidden');
     }
 
-    // Stage 5: Finish
-    function finishTrial() {
+    // Stage 5: Reason (Only accessed if Seen)
+    function submitReasonAndFinish() {
         const reasonText = document.getElementById('reason-input').value;
         trialAnswers.reasoning = reasonText;
+        saveAndFinish();
+    }
 
-        // SEND DATA TO REVISIT
-        // Including 'completionSignal' enables the external Next button
+    // FINAL SAVE FUNCTION (Used by both paths)
+    function saveAndFinish() {
         const finalData = {
             ...trialAnswers,
-            completionSignal: "Finished"
+            completionSignal: "Finished" // Enables Revisit Next button
         };
 
         console.log("Sending to Revisit:", finalData);
@@ -400,7 +377,11 @@
             Revisit.postAnswers(finalData);
         }
 
-        document.getElementById('stage-reason').classList.add('hidden');
+        // Hide whatever stage was active
+        const stages = ['stage-identification', 'stage-conf-1', 'stage-source', 'stage-conf-2', 'stage-reason'];
+        stages.forEach(id => document.getElementById(id).classList.add('hidden'));
+
+        // Show final message
         document.getElementById('final-message').classList.remove('hidden');
     }
 </script>
