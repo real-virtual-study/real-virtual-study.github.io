@@ -313,7 +313,14 @@
     // RECEIVE REVISIT PARAMETERS
     if (typeof Revisit !== 'undefined') {
         Revisit.onDataReceive((data) => {
-            if (data.videoFile) video.src = data.videoFile;
+            const normalizeVideoFile = (videoFile) => {
+                if (!videoFile || typeof videoFile !== 'string') return '';
+                if (/^(https?:)?\/\//.test(videoFile) || videoFile.startsWith('/')) return videoFile;
+                if (!videoFile.includes('/')) return `assets/sample-stimuli/${videoFile}`;
+                return videoFile;
+            };
+
+            if (data.videoFile) video.src = normalizeVideoFile(data.videoFile);
             if (data.correctObjectName) suggestedObjectName = data.correctObjectName;
             if (data.correctSourceName) suggestedSourceName = data.correctSourceName;
         });
