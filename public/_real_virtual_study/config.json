@@ -24,7 +24,7 @@
   "baseComponents": {
     "video-task-template": {
       "type": "website",
-      "path": "_real_virtual_study/assets/sample-stimuli/trial.html",
+      "path": "_real_virtual_study/trial.html",
       "instruction": "Watch the video and answer the questions.",
       "forceCompletion": true,
       "nextButtonLocation": "belowStimulus",
