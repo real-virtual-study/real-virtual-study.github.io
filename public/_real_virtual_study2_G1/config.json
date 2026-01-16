@@ -377,9 +377,10 @@
         "objectName": "Hat"
       }
     },
+
     "Questionnaires": {
       "type": "markdown",
-      "path": "/_real_virtual_study2_G1/assets/content/questionnaire.md",
+      "path": "_real_virtual_study2_G1/assets/content/questionnaires.md",
       "response": []
     },
 
@@ -388,7 +389,7 @@
     "response": [
       {
         "id": "ih-q",
-        "prompt": " Please read the following statements and circle the answer that best corresponds to you and reflects your behavior at work. Please answer as honestly as possible using this scale.",
+        "prompt": "The statements set out below are about forgetting things, something everyone does to an extent. Please indicate how frequently the examples given have happened to you, over the last 3 months, using the following scale:",
         "location": "aboveStimulus",
         "type": "matrix-radio",
         "questionOrder": "random",
@@ -442,7 +443,7 @@
     "response": [
       {
         "id": "ih-q1",
-        "prompt": " Please read the following statements and check the answer that best corresponds to you and reflects your behavior at work. Please answer as honestly as possible using this scale.",
+        "prompt": "Carefully read each statement and indicate the degree to which you agree\neach statement is true for you.",
         "location": "aboveStimulus",
         "type": "matrix-radio",
         "questionOrder": "random",
