@@ -178,21 +178,21 @@
       "baseComponent": "icon-task",
       "parameters": {
         "imageFile": "/_real_virtual_study2_G1/assets/icons/box-cutter.svg",
-        "objectName": "Box Cutter"
+        "objectName": "Box cutter"
       }
     },
     "trial9": {
       "baseComponent": "icon-task",
       "parameters": {
         "imageFile": "/_real_virtual_study2_G1/assets/icons/tin-can.svg",
-        "objectName": "Tin Can"
+        "objectName": "Tin can"
       }
     },
     "trial10": {
       "baseComponent": "icon-task",
       "parameters": {
         "imageFile": "/_real_virtual_study2_G1/assets/icons/paint-palette.svg",
-        "objectName": "Paint Palette"
+        "objectName": "Paint palette"
       }
     },
     "trial11": {
@@ -248,14 +248,14 @@
       "baseComponent": "icon-task",
       "parameters": {
         "imageFile": "/_real_virtual_study2_G1/assets/icons/usb-drive.svg",
-        "objectName": "Usb Drive"
+        "objectName": "Usb drive"
       }
     },
     "trial19": {
       "baseComponent": "icon-task",
       "parameters": {
         "imageFile": "/_real_virtual_study2_G1/assets/icons/computer-mouse.svg",
-        "objectName": "Computer Mouse"
+        "objectName": "Computer mouse"
       }
     },
     "trial20": {
@@ -311,21 +311,21 @@
       "baseComponent": "icon-task",
       "parameters": {
         "imageFile": "/_real_virtual_study2_G1/assets/icons/spray-bottle.svg",
-        "objectName": "Spray Bottle"
+        "objectName": "Spray bottle"
       }
     },
     "trial28": {
       "baseComponent": "icon-task",
       "parameters": {
         "imageFile": "/_real_virtual_study2_G1/assets/icons/scotch-tape.svg",
-        "objectName": "Scotch Tape"
+        "objectName": "Scotch tape"
       }
     },
     "trial29": {
       "baseComponent": "icon-task",
       "parameters": {
         "imageFile": "/_real_virtual_study2_G1/assets/icons/tennis-ball.svg",
-        "objectName": "Tennis Ball"
+        "objectName": "Tennis ball"
       }
     },
     "trial30": {
@@ -349,11 +349,40 @@
         "objectName": "Fan"
       }
     },
+    "trial33": {
+      "baseComponent": "icon-task",
+      "parameters": {
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/bottle-opener.svg",
+        "objectName": "Bottle opener"
+      }
+    },
+    "trial34": {
+      "baseComponent": "icon-task",
+      "parameters": {
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/grapes.svg",
+        "objectName": "Grapes"
+      }
+    },
+    "trial35": {
+      "baseComponent": "icon-task",
+      "parameters": {
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/hammer.svg",
+        "objectName": "Hammer"
+      }
+    },
+    "trial36": {
+      "baseComponent": "icon-task",
+      "parameters": {
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/hat.svg",
+        "objectName": "Hat"
+      }
+    },
 
 
 
   "EMQuestionnaire": {
     "type": "questionnaire",
+    "instruction": "X",
     "instructionLocation": "aboveStimulus",
     "response": [
       {
@@ -409,6 +438,7 @@
   },
   "IHQuestionnaire1": {
     "type": "questionnaire",
+    "instruction": "X",
     "instructionLocation": "aboveStimulus",
     "response": [
       {
@@ -441,38 +471,39 @@
     ]
   },
   "IHQuestionnaire2": {
-  "type": "questionnaire",
-  "instructionLocation": "aboveStimulus",
-  "response": [
-    {
-      "id": "ih-q2",
-      "prompt": " Please read the following statements and circle the answer that best corresponds to you and reflects your behavior at work. Please answer as honestly as possible using this scale.",
-      "location": "aboveStimulus",
-      "type": "matrix-radio",
-      "questionOrder": "random",
-      "answerOptions": [
-        "Strongly disagree",
-        "2",
-        "3",
-        "4",
-        "Strongly agree"
-      ],
-      "questionOptions": [
-        "I can have great respect for someone, even when we don't see eye-to-eye on important topics.",
-        "Even when I disagree with others, I can recognize that they have sound points.",
-        "I am willing to hear others out, even if I disagree with them.",
-        "I welcome different ways of thinking about important topics.",
-        "I respect that there are ways of making important decisions that are different from the way I make decisions.",
-        "My ideas are usually better than other people’s ideas.",
-        "For the most part, others have more to learn from me than I have to learn from them.",
-        "When I am really confident in a belief, there is very little chance that belief is wrong.",
-        "On important topics, I am not likely to be swayed by the viewpoints of others.",
-        "I’d rather rely on my own knowledge about most topics than turn to others for expertise.",
-        "Listening to perspectives of others seldom changes my important opinions."
-      ]
-    }
-  ]
-},
+    "type": "questionnaire",
+    "instruction": "X",
+    "instructionLocation": "aboveStimulus",
+    "response": [
+      {
+        "id": "ih-q2",
+        "prompt": " Please read the following statements and circle the answer that best corresponds to you and reflects your behavior at work. Please answer as honestly as possible using this scale.",
+        "location": "aboveStimulus",
+        "type": "matrix-radio",
+        "questionOrder": "random",
+        "answerOptions": [
+          "Strongly disagree",
+          "2",
+          "3",
+          "4",
+          "Strongly agree"
+        ],
+        "questionOptions": [
+          "I can have great respect for someone, even when we don't see eye-to-eye on important topics.",
+          "Even when I disagree with others, I can recognize that they have sound points.",
+          "I am willing to hear others out, even if I disagree with them.",
+          "I welcome different ways of thinking about important topics.",
+          "I respect that there are ways of making important decisions that are different from the way I make decisions.",
+          "My ideas are usually better than other people’s ideas.",
+          "For the most part, others have more to learn from me than I have to learn from them.",
+          "When I am really confident in a belief, there is very little chance that belief is wrong.",
+          "On important topics, I am not likely to be swayed by the viewpoints of others.",
+          "I’d rather rely on my own knowledge about most topics than turn to others for expertise.",
+          "Listening to perspectives of others seldom changes my important opinions."
+        ]
+      }
+    ]
+  },
     "PostQuestionnaire": {
       "type": "questionnaire",
       "response": [
@@ -504,7 +535,7 @@
     },
   "EndPage": {
     "type": "markdown",
-    "path": "_real_virtual_study2_G1/assets/content/end.md",
+    "path": "/_real_virtual_study2_G1/assets/content/end.md",
     "response": []
   }
 
