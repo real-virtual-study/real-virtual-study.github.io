@@ -21,7 +21,7 @@
             min-height: 100vh;
             box-sizing: border-box;
 
-            font-size: 1.2em;
+            font-size: 1em;
             text-align: center;
         }
 
@@ -36,7 +36,7 @@
             width: 100%;
             max-width: 700px;
             text-align: center;
-            font-size: 1.2em;
+            font-size: 1em;
             transition: all 0.3s ease;
         }
 
@@ -54,7 +54,7 @@
             color: white;
             border: none;
             padding: 14px 30px;
-            font-size: 1.2em;
+            font-size: 1em;
             font-weight: 500;
             border-radius: 6px;
             cursor: pointer;
@@ -89,7 +89,7 @@
         input[type="text"] {
             width: 80%;
             padding: 16px;
-            font-size: 1.2em;
+            font-size: 1em;
             border: 1px solid #ccc;
             border-radius: 4px;
             margin-bottom: 20px;
@@ -107,14 +107,14 @@
             margin-top: 0;
             font-weight: 600;
             color: #333;
-            font-size: 1.2em;
+            font-size: 1em;
         }
 
         p {
             color: #555;
             line-height: 1.4;
             margin-bottom: 20px;
-            font-size: 1.2em;
+            font-size: 1em;
         }
 
         /* Correction Box */
@@ -123,20 +123,18 @@
             background-color: #fff8e1;
             padding: 15px;
             margin-bottom: 20px;
-            text-align: left;
+            text-align: center;
         }
 
         .correct-answer {
             color: #1976d2;
-            font-weight: 600;
-            font-size: 1.2em;
+            font-size: 1em;
             margin-bottom: 5px;
         }
 
         .participant-answer {
             color: #444;
-            font-weight: 600;
-            font-size: 1.2em;
+            font-size: 1em;
             margin-bottom: 5px;
         }
 
@@ -207,22 +205,39 @@
 <div id="question-stage" class="hidden">
 
     <div id="step1" class="question-container">
-        <h3>Name the object in the video</h3>
-        <input type="text" id="objectInput" placeholder="Type your answer here...">
-        <br>
+        <h3>Name the object you saw</h3>
+        <!-- Champ leurre pour tromper l’autofill -->
+        <input
+                type="text"
+                name="fake-object"
+                style="position:absolute; top:-9999px; left:-9999px;"
+                autocomplete="on"
+        >
+
+        <!-- Champ réel -->
+        <input
+                type="text"
+                id="objectInput"
+                name="object"
+                placeholder="Type your answer here..."
+                autocomplete="off"
+                autocorrect="off"
+                autocapitalize="off"
+                spellcheck="false"
+        >        <br>
         <button onclick="showStep1Correction()">Continue</button>
     </div>
 
     <div id="step1Correction" class="question-container hidden">
         <div class="correction-message">
             <div class="participant-answer"><strong>Your answer:</strong> <span id="participantObjectName"></span></div>
-            <div class="correct-answer">Suggested answer: <span id="correctObjectName"></span></div>
+            <div class="correct-answer"><strong>Suggested answer:</strong> <span id="correctObjectName"></span></div>
         </div>
         <button onclick="goToStep2()">Next</button>
     </div>
 
     <div id="step2" class="question-container hidden">
-        <h3>Was it Real or Virtual?</h3>
+        <h3>Was the object real or virtual?</h3>
 
         <div>
             <button class="choice-btn" id="btn-real" onclick="selectSource('Real')">Real</button>
@@ -292,7 +307,7 @@
 
     <div class="question-container hidden" id="finalMessage" style="border-color: #28a745; background-color: #d4edda;">
         <h3 style="color: #155724;">Trial Complete!</h3>
-        <p>➔ Please click the <strong>Next</strong> button in the bottom right of the page to continue.</p>
+        <p>➔ Please click the <strong>Next</strong> button to continue.</p>
     </div>
 
 </div>

@@ -112,7 +112,7 @@
       "baseComponent": "video-task-template",
       "parameters": {
         "videoFile": "paint-palette_100.mp4",
-        "correctObjectName": "Paint Palette",
+        "correctObjectName": "Paint palette",
         "correctSourceName": "Real"
       }
     },
@@ -145,7 +145,7 @@
       "baseComponent": "video-task-template",
       "parameters": {
         "videoFile": "box-cutter_15.mp4",
-        "correctObjectName": "Box Cutter",
+        "correctObjectName": "Box cutter",
         "correctSourceName": "Virtual"
       }
     },
@@ -233,7 +233,7 @@
       "baseComponent": "video-task-template",
       "parameters": {
         "videoFile": "computer-mouse_100.mp4",
-        "correctObjectName": "Computer Mouse",
+        "correctObjectName": "Computer mouse",
         "correctSourceName": "Real"
       }
     },
@@ -249,7 +249,7 @@
       "baseComponent": "video-task-template",
       "parameters": {
         "videoFile": "usb-drive_15.mp4",
-        "correctObjectName": "Usb Drive",
+        "correctObjectName": "Usb drive",
         "correctSourceName": "Virtual"
       }
     },
@@ -257,7 +257,7 @@
       "baseComponent": "video-task-template",
       "parameters": {
         "videoFile": "tin-can_15.mp4",
-        "correctObjectName": "Tin Can",
+        "correctObjectName": "Tin can",
         "correctSourceName": "Virtual"
       }
     },
@@ -273,7 +273,7 @@
       "baseComponent": "video-task-template",
       "parameters": {
         "videoFile": "serving-spoon_65.mp4",
-        "correctObjectName": "Serving Spoon",
+        "correctObjectName": "Serving spoon",
         "correctSourceName": "Virtual"
       }
     },
@@ -305,7 +305,7 @@
       "baseComponent": "video-task-template",
       "parameters": {
         "videoFile": "paint-palette_65.mp4",
-        "correctObjectName": "Paint Palette",
+        "correctObjectName": "Paint palette",
         "correctSourceName": "Virtual"
       }
     },
@@ -337,7 +337,7 @@
       "baseComponent": "video-task-template",
       "parameters": {
         "videoFile": "box-cutter_100.mp4",
-        "correctObjectName": "Box Cutter",
+        "correctObjectName": "Box cutter",
         "correctSourceName": "Real"
       }
     },
@@ -425,7 +425,7 @@
       "baseComponent": "video-task-template",
       "parameters": {
         "videoFile": "computer-mouse_15.mp4",
-        "correctObjectName": "Computer Mouse",
+        "correctObjectName": "Computer mouse",
         "correctSourceName": "Virtual"
       }
     },
@@ -441,7 +441,7 @@
       "baseComponent": "video-task-template",
       "parameters": {
         "videoFile": "usb-drive_100.mp4",
-        "correctObjectName": "Usb Drive",
+        "correctObjectName": "Usb drive",
         "correctSourceName": "Real"
       }
     },
@@ -449,7 +449,7 @@
       "baseComponent": "video-task-template",
       "parameters": {
         "videoFile": "tin-can_100.mp4",
-        "correctObjectName": "Tin Can",
+        "correctObjectName": "Tin can",
         "correctSourceName": "Real"
       }
     },
@@ -465,7 +465,7 @@
       "baseComponent": "video-task-template",
       "parameters": {
         "videoFile": "serving-spoon_100.mp4",
-        "correctObjectName": "Serving Spoon",
+        "correctObjectName": "Serving spoon",
         "correctSourceName": "Real"
       }
     },
@@ -497,7 +497,7 @@
       "baseComponent": "video-task-template",
       "parameters": {
         "videoFile": "paint-palette_100.mp4",
-        "correctObjectName": "Paint Palette",
+        "correctObjectName": "Paint palette",
         "correctSourceName": "Real"
       }
     },
@@ -529,7 +529,7 @@
       "baseComponent": "video-task-template",
       "parameters": {
         "videoFile": "box-cutter_65.mp4",
-        "correctObjectName": "Box Cutter",
+        "correctObjectName": "Box cutter",
         "correctSourceName": "Virtual"
       }
     },
@@ -617,7 +617,7 @@
       "baseComponent": "video-task-template",
       "parameters": {
         "videoFile": "computer-mouse_100.mp4",
-        "correctObjectName": "Computer Mouse",
+        "correctObjectName": "Computer mouse",
         "correctSourceName": "Real"
       }
     },
@@ -633,7 +633,7 @@
       "baseComponent": "video-task-template",
       "parameters": {
         "videoFile": "usb-drive_65.mp4",
-        "correctObjectName": "Usb Drive",
+        "correctObjectName": "Usb drive",
         "correctSourceName": "Virtual"
       }
     },
@@ -641,7 +641,7 @@
       "baseComponent": "video-task-template",
       "parameters": {
         "videoFile": "tin-can_65.mp4",
-        "correctObjectName": "Tin Can",
+        "correctObjectName": "Tin can",
         "correctSourceName": "Virtual"
       }
     },
@@ -657,7 +657,7 @@
       "baseComponent": "video-task-template",
       "parameters": {
         "videoFile": "serving-spoon_15.mp4",
-        "correctObjectName": "Serving Spoon",
+        "correctObjectName": "Serving spoon",
         "correctSourceName": "Virtual"
       }
     },
@@ -689,7 +689,7 @@
       "baseComponent": "video-task-template",
       "parameters": {
         "videoFile": "paint-palette_15.mp4",
-        "correctObjectName": "Paint Palette",
+        "correctObjectName": "Paint palette",
         "correctSourceName": "Virtual"
       }
     },
@@ -721,7 +721,7 @@
       "baseComponent": "video-task-template",
       "parameters": {
         "videoFile": "box-cutter_100.mp4",
-        "correctObjectName": "Box Cutter",
+        "correctObjectName": "Box cutter",
         "correctSourceName": "Real"
       }
     },
@@ -809,7 +809,7 @@
       "baseComponent": "video-task-template",
       "parameters": {
         "videoFile": "computer-mouse_65.mp4",
-        "correctObjectName": "Computer Mouse",
+        "correctObjectName": "Computer mouse",
         "correctSourceName": "Virtual"
       }
     },
@@ -825,7 +825,7 @@
       "baseComponent": "video-task-template",
       "parameters": {
         "videoFile": "usb-drive_100.mp4",
-        "correctObjectName": "Usb Drive",
+        "correctObjectName": "Usb drive",
         "correctSourceName": "Real"
       }
     },
@@ -833,7 +833,7 @@
       "baseComponent": "video-task-template",
       "parameters": {
         "videoFile": "tin-can_100.mp4",
-        "correctObjectName": "Tin Can",
+        "correctObjectName": "Tin can",
         "correctSourceName": "Real"
       }
     },
@@ -849,7 +849,7 @@
       "baseComponent": "video-task-template",
       "parameters": {
         "videoFile": "serving-spoon_100.mp4",
-        "correctObjectName": "Serving Spoon",
+        "correctObjectName": "Serving spoon",
         "correctSourceName": "Real"
       }
     },
@@ -876,7 +876,7 @@
       "response": [
         {
           "id": "doubtQ1",
-          "prompt": "1. Did you have any doubts about the purpose of the study ?",
+          "prompt": "Did you have any doubts about the purpose of the study ?",
           "location": "belowStimulus",
           "type": "longText",
           "placeholder": "Enter your answer here."
@@ -896,7 +896,7 @@
       "response": [
         {
           "id": "q1",
-          "prompt": "Did you experience any problems with our tool?",
+          "prompt": "Did you experience any problems with our study?",
           "location": "belowStimulus",
           "type": "longText",
           "placeholder": "Enter your answer here.",
@@ -904,7 +904,7 @@
         },
         {
           "id": "q2",
-          "prompt": "Did anything not render or display properly?",
+          "prompt": "For example, did anything not render or display properly?",
           "location": "belowStimulus",
           "type": "longText",
           "placeholder": "Enter your answer here",

@@ -10,43 +10,34 @@
         /* --- 1. GLOBAL STYLES --- */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: transparent;
+            background-color: #f8f9fa;
             color: #212529;
             margin: 0;
             padding: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
             min-height: 100vh;
             box-sizing: border-box;
-            font-size: 1.2em;
+            font-size: 1.1em;
             text-align: center;
         }
 
         /* --- 2. PERSISTENT HEADER --- */
         .object-header {
             margin-bottom: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            position: sticky;
+            top: 0;
+            background: #f8f9fa;
+            padding: 10px;
+            z-index: 10;
+            width: 100%;
         }
 
         .object-header img {
-            width: 200px;
-            height: 200px;
+            width: 150px;
+            height: 150px;
             object-fit: contain;
-            margin-bottom: 10px;
-        }
-
-        .object-name {
-            font-size: 1.5em;
-            font-weight: 700;
-            text-transform: capitalize;
-            color: #333;
-            background: rgba(255,255,255,0.8);
-            padding: 5px 15px;
-            border-radius: 15px;
         }
 
         /* --- 3. CARD LOOK --- */
@@ -55,12 +46,17 @@
             border: 1px solid #e0e0e0;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            padding: 40px;
+            padding: 30px;
             width: 100%;
             max-width: 700px;
             text-align: center;
-            font-size: 1em;
-            transition: all 0.3s ease;
+            margin-bottom: 20px;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         /* --- 4. BUTTONS --- */
@@ -68,98 +64,65 @@
             background-color: #1976d2;
             color: white;
             border: none;
-            padding: 14px 30px;
-            font-size: 1.1em;
+            padding: 12px 25px;
+            font-size: 1em;
             font-weight: 500;
             border-radius: 6px;
             cursor: pointer;
-            transition: background-color 0.2s, transform 0.1s;
+            transition: all 0.2s;
             margin: 10px;
         }
 
-        button:hover {
-            background-color: #1565c0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        button:active { transform: scale(0.98); }
-
-        button:disabled {
-            background-color: #ccc;
-            cursor: not-allowed;
-            transform: none;
-        }
+        button:hover:not(:disabled) { background-color: #1565c0; }
+        button:disabled { background-color: #ccc; cursor: not-allowed; opacity: 0.6; }
 
         .choice-btn.selected {
             background-color: #0d47a1;
-            box-shadow: inset 0 0 0 4px #82b1ff;
-            transform: scale(1.05);
+            box-shadow: inset 0 0 0 3px #82b1ff;
         }
 
         /* --- 5. LIKERT SCALE --- */
         .likert-container {
             display: flex;
             justify-content: space-between;
-            align-items: flex-end;
-            width: 100%;
             margin: 20px 0;
-            font-family: sans-serif;
         }
 
         .likert-option {
             display: flex;
             flex-direction: column;
             align-items: center;
-            cursor: pointer;
-            text-align: center;
             width: 16%;
-            position: relative;
+            cursor: pointer;
         }
 
-        .likert-text {
-            margin-bottom: 15px;
-            font-size: 0.9em;
-            line-height: 1.2;
-            color: #000;
-        }
+        .likert-text { font-size: 0.8em; margin-bottom: 8px; }
 
         .custom-radio {
             width: 20px;
             height: 20px;
             border: 2px solid #ccc;
             border-radius: 50%;
-            display: block;
         }
 
-        .likert-option:hover input ~ .custom-radio { border-color: #666; background-color: #f9f9f9; }
-        .likert-option input:checked ~ .custom-radio {
-            background-color: #333333;
-            border-color: #333333;
+        input:checked + .custom-radio {
+            background-color: #333;
+            border-color: #333;
             box-shadow: inset 0 0 0 4px white;
         }
-        .likert-option input { display: none; }
 
-        /* --- 6. TEXT AREA --- */
+        input { display: none; }
+
+        /* --- 6. UTILS --- */
+        .hidden { display: none !important; }
+        .disabled-section { pointer-events: none; opacity: 0.7; }
+
         textarea {
             width: 90%;
-            height: 100px;
-            padding: 16px;
-            font-size: 1em;
-            border: 1px solid #ccc;
+            height: 80px;
+            padding: 12px;
             border-radius: 4px;
-            margin-bottom: 20px;
-            outline: none;
-            resize: vertical;
-            font-family: inherit;
-        }
-        textarea:focus { border-color: #1976d2; box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.1); }
-
-        .hidden { display: none !important; }
-
-        .nav-controls {
-            margin-top: 25px;
-            border-top: 1px solid #eee;
-            padding-top: 20px;
+            border: 1px solid #ccc;
         }
     </style>
 </head>
@@ -167,6 +130,7 @@
 
 <div class="object-header">
     <img id="object-image" alt="Object">
+    <div id="object-name-display" class="object-name"></div>
 </div>
 
 <div id="stage-identification" class="question-container">
@@ -181,38 +145,14 @@
 </div>
 
 <div id="stage-conf-1" class="question-container hidden">
-    <h3>How confident are you in your answer?</h3>
+    <h3>How confident are you? (Seen/Not Seen)</h3>
     <div class="likert-container">
-        <label class="likert-option">
-            <span class="likert-text">0%<br><small>(Guessing)</small></span>
-            <input type="radio" name="conf1" value="0" onclick="enableNext('btn-next-2')">
-            <span class="custom-radio"></span>
-        </label>
-        <label class="likert-option">
-            <span class="likert-text">20%</span>
-            <input type="radio" name="conf1" value="20" onclick="enableNext('btn-next-2')">
-            <span class="custom-radio"></span>
-        </label>
-        <label class="likert-option">
-            <span class="likert-text">40%</span>
-            <input type="radio" name="conf1" value="40" onclick="enableNext('btn-next-2')">
-            <span class="custom-radio"></span>
-        </label>
-        <label class="likert-option">
-            <span class="likert-text">60%</span>
-            <input type="radio" name="conf1" value="60" onclick="enableNext('btn-next-2')">
-            <span class="custom-radio"></span>
-        </label>
-        <label class="likert-option">
-            <span class="likert-text">80%</span>
-            <input type="radio" name="conf1" value="80" onclick="enableNext('btn-next-2')">
-            <span class="custom-radio"></span>
-        </label>
-        <label class="likert-option">
-            <span class="likert-text">100%<br><small>(Certain)</small></span>
-            <input type="radio" name="conf1" value="100" onclick="enableNext('btn-next-2')">
-            <span class="custom-radio"></span>
-        </label>
+        <label class="likert-option"><span class="likert-text">0%</span><input type="radio" name="conf1" value="0" onclick="enableNext('btn-next-2')"><span class="custom-radio"></span></label>
+        <label class="likert-option"><span class="likert-text">20%</span><input type="radio" name="conf1" value="20" onclick="enableNext('btn-next-2')"><span class="custom-radio"></span></label>
+        <label class="likert-option"><span class="likert-text">40%</span><input type="radio" name="conf1" value="40" onclick="enableNext('btn-next-2')"><span class="custom-radio"></span></label>
+        <label class="likert-option"><span class="likert-text">60%</span><input type="radio" name="conf1" value="60" onclick="enableNext('btn-next-2')"><span class="custom-radio"></span></label>
+        <label class="likert-option"><span class="likert-text">80%</span><input type="radio" name="conf1" value="80" onclick="enableNext('btn-next-2')"><span class="custom-radio"></span></label>
+        <label class="likert-option"><span class="likert-text">100%</span><input type="radio" name="conf1" value="100" onclick="enableNext('btn-next-2')"><span class="custom-radio"></span></label>
     </div>
     <div class="nav-controls">
         <button id="btn-next-2" onclick="submitConf1()" disabled>Next</button>
@@ -220,10 +160,10 @@
 </div>
 
 <div id="stage-source" class="question-container hidden">
-    <h3>How did you see this object?</h3>
+    <h3>What kind of object was it?</h3>
     <div>
-        <button class="choice-btn" id="btn-source-real" onclick="selectSource('real')">It was Real</button>
-        <button class="choice-btn" id="btn-source-virtual" onclick="selectSource('virtual')">It was Virtual</button>
+        <button class="choice-btn" id="btn-source-real" onclick="selectSource('real')">It was real</button>
+        <button class="choice-btn" id="btn-source-virtual" onclick="selectSource('virtual')">It was virtual</button>
     </div>
     <div class="nav-controls">
         <button id="btn-next-3" onclick="submitSource()" disabled>Next</button>
@@ -231,7 +171,7 @@
 </div>
 
 <div id="stage-conf-2" class="question-container hidden">
-    <h3>How confident are you about the display?</h3>
+    <h3>How confident are you? (Real/Virtual)</h3>
     <div class="likert-container">
         <label class="likert-option"><span class="likert-text">0%</span><input type="radio" name="conf2" value="0" onclick="enableNext('btn-next-4')"><span class="custom-radio"></span></label>
         <label class="likert-option"><span class="likert-text">20%</span><input type="radio" name="conf2" value="20" onclick="enableNext('btn-next-4')"><span class="custom-radio"></span></label>
@@ -247,21 +187,18 @@
 
 <div id="stage-reason" class="question-container hidden">
     <h3>Please explain your answer.</h3>
-    <p>What helped you remember if the object was real or virtual, and why you were confident (or not)?</p>
     <textarea id="reason-input" placeholder="Type your answer here..." oninput="enableNext('btn-finish')"></textarea>
-
     <div class="nav-controls">
-        <button id="btn-finish" onclick="submitReasonAndFinish()" disabled>Finish Object</button>
+        <button id="btn-finish" onclick="submitReasonAndFinish()" disabled>Finish Trial</button>
     </div>
 </div>
 
 <div id="final-message" class="question-container hidden" style="border-left: 5px solid #28a745; background-color: #d4edda;">
-    <h3 style="color: #155724;">Saved!</h3>
-    <p>Please click the <strong>Next</strong> button in the sidebar to continue.</p>
+    <h3 style="color: #155724;">Trial finished</h3>
+    <p>Please click <strong>Next</strong> in the study interface to continue.</p>
 </div>
 
 <script>
-    // 1. DATA STORAGE
     let trialAnswers = {
         objectName: "",
         seenAnswer: null,
@@ -271,118 +208,91 @@
         reasoning: ""
     };
 
-    // 2. REVISIT INITIALIZATION
+    // Initialization
     if (typeof Revisit !== 'undefined') {
         Revisit.onDataReceive((data) => {
-            if (data.imageFile) {
-                document.getElementById('object-image').src = data.imageFile;
-            }
+            if (data.imageFile) document.getElementById('object-image').src = data.imageFile;
             if (data.objectName) {
                 document.getElementById('object-name-display').textContent = data.objectName;
                 trialAnswers.objectName = data.objectName;
             }
         });
     } else {
-        // Fallback for testing
-        document.getElementById('object-image').src = "https://placehold.co/200x200?text=Mock+Img";
-        document.getElementById('object-name-display').textContent = "Test Object";
+        document.getElementById('object-image').src = "https://placehold.co/200x200?text=Object";
     }
-
-    // --- INTERACTION LOGIC ---
 
     function enableNext(btnId) {
         document.getElementById(btnId).disabled = false;
     }
 
-    // Stage 1: Seen?
-    let tempSeenChoice = null;
+    function lockSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        section.classList.add('disabled-section');
+        // Hide the "Next" button in that section to keep UI clean
+        const btn = section.querySelector('.nav-controls button');
+        if (btn) btn.classList.add('hidden');
+    }
+
     function selectSeen(choice) {
-        tempSeenChoice = choice;
+        trialAnswers.seenAnswer = choice;
         document.getElementById('btn-seen-yes').classList.toggle('selected', choice === 'seen');
         document.getElementById('btn-seen-no').classList.toggle('selected', choice === 'not_seen');
         enableNext('btn-next-1');
     }
 
     function submitIdentification() {
-        trialAnswers.seenAnswer = tempSeenChoice;
-        document.getElementById('stage-identification').classList.add('hidden');
+        lockSection('stage-identification');
         document.getElementById('stage-conf-1').classList.remove('hidden');
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
     }
 
-    // Stage 2: Confidence 1
     function submitConf1() {
-        // Save Confidence Level
-        const conf = document.querySelector('input[name="conf1"]:checked').value;
-        trialAnswers.seenConfidence = conf;
+        trialAnswers.seenConfidence = document.querySelector('input[name="conf1"]:checked').value;
+        lockSection('stage-conf-1');
 
-        document.getElementById('stage-conf-1').classList.add('hidden');
-
-        // BRANCHING LOGIC
         if (trialAnswers.seenAnswer === 'seen') {
-            // Path A: They SAW it -> Go to Source Question
             document.getElementById('stage-source').classList.remove('hidden');
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
         } else {
-            // Path B: They did NOT see it -> FINISH IMMEDIATELY
-            // Fill remaining data with "NA"
             trialAnswers.sourceAnswer = "NA";
             trialAnswers.sourceConfidence = "NA";
             trialAnswers.reasoning = "NA";
-
-            // Save and Exit
             saveAndFinish();
         }
     }
 
-    // Stage 3: Source?
-    let tempSourceChoice = null;
     function selectSource(choice) {
-        tempSourceChoice = choice;
+        trialAnswers.sourceAnswer = choice;
         document.getElementById('btn-source-real').classList.toggle('selected', choice === 'real');
         document.getElementById('btn-source-virtual').classList.toggle('selected', choice === 'virtual');
         enableNext('btn-next-3');
     }
 
     function submitSource() {
-        trialAnswers.sourceAnswer = tempSourceChoice;
-        document.getElementById('stage-source').classList.add('hidden');
+        lockSection('stage-source');
         document.getElementById('stage-conf-2').classList.remove('hidden');
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
     }
 
-    // Stage 4: Confidence 2
     function submitConf2() {
-        const conf = document.querySelector('input[name="conf2"]:checked').value;
-        trialAnswers.sourceConfidence = conf;
-        document.getElementById('stage-conf-2').classList.add('hidden');
-        // Now go to Reason
+        trialAnswers.sourceConfidence = document.querySelector('input[name="conf2"]:checked').value;
+        lockSection('stage-conf-2');
         document.getElementById('stage-reason').classList.remove('hidden');
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
     }
 
-    // Stage 5: Reason (Only accessed if Seen)
     function submitReasonAndFinish() {
-        const reasonText = document.getElementById('reason-input').value;
-        trialAnswers.reasoning = reasonText;
+        trialAnswers.reasoning = document.getElementById('reason-input').value;
         saveAndFinish();
     }
 
-    // FINAL SAVE FUNCTION (Used by both paths)
     function saveAndFinish() {
-        const finalData = {
-            ...trialAnswers,
-            completionSignal: "Finished" // Enables Revisit Next button
-        };
-
-        console.log("Sending to Revisit:", finalData);
-
+        lockSection('stage-reason');
         if (typeof Revisit !== 'undefined') {
-            Revisit.postAnswers(finalData);
+            Revisit.postAnswers({ ...trialAnswers, completionSignal: "Finished" });
         }
-
-        // Hide whatever stage was active
-        const stages = ['stage-identification', 'stage-conf-1', 'stage-source', 'stage-conf-2', 'stage-reason'];
-        stages.forEach(id => document.getElementById(id).classList.add('hidden'));
-
-        // Show final message
         document.getElementById('final-message').classList.remove('hidden');
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
     }
 </script>
 </body>

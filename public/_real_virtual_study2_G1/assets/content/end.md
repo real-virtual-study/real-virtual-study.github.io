@@ -1,3 +1,6 @@
+
+# Thank you!
+
 ### End of Experiment & Study Information
 
 Thank you for completing this part of the experiment.

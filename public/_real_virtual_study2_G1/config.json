@@ -171,7 +171,7 @@
       "baseComponent": "icon-task",
       "parameters": {
         "imageFile": "/_real_virtual_study2_G1/assets/icons/serving-spoon.svg",
-        "objectName": "Serving Spoon"
+        "objectName": "Serving spoon"
       }
     },
     "trial8": {
@@ -349,9 +349,11 @@
         "objectName": "Fan"
       }
     },
+
+
+
   "EMQuestionnaire": {
     "type": "questionnaire",
-    "instruction": "We are interested in what people do when learn something new, or acquire information in their everyday lives, and how they evaluate their own ideas and those of others.",
     "instructionLocation": "aboveStimulus",
     "response": [
       {
@@ -407,12 +409,11 @@
   },
   "IHQuestionnaire1": {
     "type": "questionnaire",
-    "instruction": "We are interested in what people do when learn something new, or acquire information in their everyday lives, and how they evaluate their own ideas and those of others.",
     "instructionLocation": "aboveStimulus",
     "response": [
       {
         "id": "ih-q1",
-        "prompt": " Please read the following statements and circle the answer that best corresponds to you and reflects your behavior at work. Please answer as honestly as possible using this scale.",
+        "prompt": " Please read the following statements and check the answer that best corresponds to you and reflects your behavior at work. Please answer as honestly as possible using this scale.",
         "location": "aboveStimulus",
         "type": "matrix-radio",
         "questionOrder": "random",
@@ -440,71 +441,70 @@
     ]
   },
   "IHQuestionnaire2": {
-    "type": "questionnaire",
-    "instruction": "We are interested in what people do when learn something new, or acquire information in their everyday lives, and how they evaluate their own ideas and those of others.",
-    "instructionLocation": "aboveStimulus",
-    "response": [
-      {
-        "id": "ih-q2",
-        "prompt": " Please read the following statements and circle the answer that best corresponds to you and reflects your behavior at work. Please answer as honestly as possible using this scale.",
-        "location": "aboveStimulus",
-        "type": "matrix-radio",
-        "questionOrder": "random",
-        "answerOptions": [
-          "Strongly disagree",
-          "2",
-          "3",
-          "4",
-          "Strongly agree"
-        ],
-        "questionOptions": [
-          "I can have great respect for someone, even when we don't see eye-to-eye on important topics.",
-          "Even when I disagree with others, I can recognize that they have sound points.",
-          "I am willing to hear others out, even if I disagree with them.",
-          "I welcome different ways of thinking about important topics.",
-          "I respect that there are ways of making important decisions that are different from the way I make decisions.",
-          "My ideas are usually better than other people’s ideas.",
-          "For the most part, others have more to learn from me than I have to learn from them.",
-          "When I am really confident in a belief, there is very little chance that belief is wrong.",
-          "On important topics, I am not likely to be swayed by the viewpoints of others.",
-          "I’d rather rely on my own knowledge about most topics than turn to others for expertise.",
-          "Listening to perspectives of others seldom changes my important opinions."
-        ]
-      }
-    ]
-  },
-  "PostQuestionnaire": {
-    "type": "questionnaire",
-    "response": [
-      {
-        "id": "q1",
-        "prompt": "Did you experience any problems with our tool?",
-        "location": "belowStimulus",
-        "type": "longText",
-        "placeholder": "Enter your answer here.",
-        "required": false
-      },
-      {
-        "id": "q2",
-        "prompt": "Did anything not render or display properly?",
-        "location": "belowStimulus",
-        "type": "longText",
-        "placeholder": "Enter your answer here",
-        "required": false
-      },
-      {
-        "id": "q3",
-        "prompt": "Any other issues or anything you would like to tell us?",
-        "location": "belowStimulus",
-        "type": "longText",
-        "placeholder": "Enter your answer here",
-        "required": false
-      }
-    ]
-  },
+  "type": "questionnaire",
+  "instructionLocation": "aboveStimulus",
+  "response": [
+    {
+      "id": "ih-q2",
+      "prompt": " Please read the following statements and circle the answer that best corresponds to you and reflects your behavior at work. Please answer as honestly as possible using this scale.",
+      "location": "aboveStimulus",
+      "type": "matrix-radio",
+      "questionOrder": "random",
+      "answerOptions": [
+        "Strongly disagree",
+        "2",
+        "3",
+        "4",
+        "Strongly agree"
+      ],
+      "questionOptions": [
+        "I can have great respect for someone, even when we don't see eye-to-eye on important topics.",
+        "Even when I disagree with others, I can recognize that they have sound points.",
+        "I am willing to hear others out, even if I disagree with them.",
+        "I welcome different ways of thinking about important topics.",
+        "I respect that there are ways of making important decisions that are different from the way I make decisions.",
+        "My ideas are usually better than other people’s ideas.",
+        "For the most part, others have more to learn from me than I have to learn from them.",
+        "When I am really confident in a belief, there is very little chance that belief is wrong.",
+        "On important topics, I am not likely to be swayed by the viewpoints of others.",
+        "I’d rather rely on my own knowledge about most topics than turn to others for expertise.",
+        "Listening to perspectives of others seldom changes my important opinions."
+      ]
+    }
+  ]
+},
+    "PostQuestionnaire": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "q1",
+          "prompt": "Did you experience any problems with our study?",
+          "location": "belowStimulus",
+          "type": "longText",
+          "placeholder": "Enter your answer here.",
+          "required": false
+        },
+        {
+          "id": "q2",
+          "prompt": "For example, did anything not render or display properly?",
+          "location": "belowStimulus",
+          "type": "longText",
+          "placeholder": "Enter your answer here",
+          "required": false
+        },
+        {
+          "id": "q3",
+          "prompt": "Any other issues or anything you would like to tell us?",
+          "location": "belowStimulus",
+          "type": "longText",
+          "placeholder": "Enter your answer here",
+          "required": false
+        }
+      ]
+    },
   "EndPage": {
     "type": "markdown",
-    "path": "/_real_virtual_study2_G1/assets/content/end.md",
+    "path": "_real_virtual_study2_G1/assets/content/end.md",
     "response": []
   }
 
