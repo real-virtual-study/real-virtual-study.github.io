@@ -896,26 +896,10 @@
       "response": [
         {
           "id": "q1",
-          "prompt": "Did you experience any problems with our study?",
+          "prompt": "Did you experience any problems with our study? For example, did anything not render or display properly? Any other issues or anything you would like to tell us?",
           "location": "belowStimulus",
           "type": "longText",
           "placeholder": "Enter your answer here.",
-          "required": false
-        },
-        {
-          "id": "q2",
-          "prompt": "For example, did anything not render or display properly?",
-          "location": "belowStimulus",
-          "type": "longText",
-          "placeholder": "Enter your answer here",
-          "required": false
-        },
-        {
-          "id": "q3",
-          "prompt": "Any other issues or anything you would like to tell us?",
-          "location": "belowStimulus",
-          "type": "longText",
-          "placeholder": "Enter your answer here",
           "required": false
         }
       ]
