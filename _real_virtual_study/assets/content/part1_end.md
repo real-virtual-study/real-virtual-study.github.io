@@ -10,3 +10,5 @@ Once you receive our message, you’ll have a **48-hour window** to take part. P
 
 As a thank-you for your continued participation, **Part 2 will be compensated at a higher rate than Part 1**.
 We hope to see you again soon,  thank you once more for your help!
+
+**Click “Next” to validate your submission. A link will appear and redirect you to Prolific.**

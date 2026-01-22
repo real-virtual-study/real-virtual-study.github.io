@@ -15,7 +15,7 @@
   "uiConfig": {
     "contactEmail": "",
     "helpTextPath": "_real_virtual_study2_G1/assets/content/help.md",
-    "logoPath": "revisitAssets/revisitLogoSquare.svg",
+    "logoPath": "revisitAssets/revisitLogoSquare.png",
     "withProgressBar": true,
     "autoDownloadStudy": false,
     "withSidebar": false,
@@ -123,257 +123,258 @@
     "ConsentPage": {
       "type": "markdown",
       "path": "_real_virtual_study2_G1/assets/content/consent.md",
+      "nextButtonText": "I agree",
       "response": []
     },
     "trial1": {
       "baseComponent": "icon-task",
       "parameters": {
-        "imageFile": "/_real_virtual_study2_G1/assets/icons/screwdriver.svg",
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/screwdriver.png",
         "objectName": "Screwdriver"
       }
     },
     "trial2": {
       "baseComponent": "icon-task",
       "parameters": {
-        "imageFile": "/_real_virtual_study2_G1/assets/icons/lighter.svg",
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/lighter.png",
         "objectName": "Lighter"
       }
     },
     "trial3": {
       "baseComponent": "icon-task",
       "parameters": {
-        "imageFile": "/_real_virtual_study2_G1/assets/icons/sunglasses.svg",
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/sunglasses.png",
         "objectName": "Sunglasses"
       }
     },
     "trial4": {
       "baseComponent": "icon-task",
       "parameters": {
-        "imageFile": "/_real_virtual_study2_G1/assets/icons/pen.svg",
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/pen.png",
         "objectName": "Pen"
       }
     },
     "trial5": {
       "baseComponent": "icon-task",
       "parameters": {
-        "imageFile": "/_real_virtual_study2_G1/assets/icons/cup.svg",
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/cup.png",
         "objectName": "Cup"
       }
     },
     "trial6": {
       "baseComponent": "icon-task",
       "parameters": {
-        "imageFile": "/_real_virtual_study2_G1/assets/icons/hair-dryer.svg",
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/hair-dryer.png",
         "objectName": "Hair dryer"
       }
     },
     "trial7": {
       "baseComponent": "icon-task",
       "parameters": {
-        "imageFile": "/_real_virtual_study2_G1/assets/icons/serving-spoon.svg",
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/serving-spoon.png",
         "objectName": "Serving spoon"
       }
     },
     "trial8": {
       "baseComponent": "icon-task",
       "parameters": {
-        "imageFile": "/_real_virtual_study2_G1/assets/icons/box-cutter.svg",
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/box-cutter.png",
         "objectName": "Box cutter"
       }
     },
     "trial9": {
       "baseComponent": "icon-task",
       "parameters": {
-        "imageFile": "/_real_virtual_study2_G1/assets/icons/tin-can.svg",
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/tin-can.png",
         "objectName": "Tin can"
       }
     },
     "trial10": {
       "baseComponent": "icon-task",
       "parameters": {
-        "imageFile": "/_real_virtual_study2_G1/assets/icons/paint-palette.svg",
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/paint-palette.png",
         "objectName": "Paint palette"
       }
     },
     "trial11": {
       "baseComponent": "icon-task",
       "parameters": {
-        "imageFile": "/_real_virtual_study2_G1/assets/icons/book.svg",
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/book.png",
         "objectName": "Book"
       }
     },
     "trial12": {
       "baseComponent": "icon-task",
       "parameters": {
-        "imageFile": "/_real_virtual_study2_G1/assets/icons/rubber-duck.svg",
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/rubber-duck.png",
         "objectName": "Rubber duck"
       }
     },
     "trial13": {
       "baseComponent": "icon-task",
       "parameters": {
-        "imageFile": "/_real_virtual_study2_G1/assets/icons/candle.svg",
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/candle.png",
         "objectName": "Candle"
       }
     },
     "trial14": {
       "baseComponent": "icon-task",
       "parameters": {
-        "imageFile": "/_real_virtual_study2_G1/assets/icons/calculator.svg",
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/calculator.png",
         "objectName": "Calculator"
       }
     },
     "trial15": {
       "baseComponent": "icon-task",
       "parameters": {
-        "imageFile": "/_real_virtual_study2_G1/assets/icons/hanger.svg",
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/hanger.png",
         "objectName": "Hanger"
       }
     },
     "trial16": {
       "baseComponent": "icon-task",
       "parameters": {
-        "imageFile": "/_real_virtual_study2_G1/assets/icons/clock.svg",
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/clock.png",
         "objectName": "Clock"
       }
     },
     "trial17": {
       "baseComponent": "icon-task",
       "parameters": {
-        "imageFile": "/_real_virtual_study2_G1/assets/icons/scissors.svg",
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/scissors.png",
         "objectName": "Scissors"
       }
     },
     "trial18": {
       "baseComponent": "icon-task",
       "parameters": {
-        "imageFile": "/_real_virtual_study2_G1/assets/icons/usb-drive.svg",
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/usb-drive.png",
         "objectName": "Usb drive"
       }
     },
     "trial19": {
       "baseComponent": "icon-task",
       "parameters": {
-        "imageFile": "/_real_virtual_study2_G1/assets/icons/computer-mouse.svg",
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/computer-mouse.png",
         "objectName": "Computer mouse"
       }
     },
     "trial20": {
       "baseComponent": "icon-task",
       "parameters": {
-        "imageFile": "/_real_virtual_study2_G1/assets/icons/toothbrush.svg",
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/toothbrush.png",
         "objectName": "Toothbrush"
       }
     },
     "trial21": {
       "baseComponent": "icon-task",
       "parameters": {
-        "imageFile": "/_real_virtual_study2_G1/assets/icons/banana.svg",
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/banana.png",
         "objectName": "Banana"
       }
     },
     "trial22": {
       "baseComponent": "icon-task",
       "parameters": {
-        "imageFile": "/_real_virtual_study2_G1/assets/icons/lemon.svg",
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/lemon.png",
         "objectName": "Lemon"
       }
     },
     "trial23": {
       "baseComponent": "icon-task",
       "parameters": {
-        "imageFile": "/_real_virtual_study2_G1/assets/icons/keys.svg",
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/keys.png",
         "objectName": "Keys"
       }
     },
     "trial24": {
       "baseComponent": "icon-task",
       "parameters": {
-        "imageFile": "/_real_virtual_study2_G1/assets/icons/apple.svg",
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/apple.png",
         "objectName": "Apple"
       }
     },
     "trial25": {
       "baseComponent": "icon-task",
       "parameters": {
-        "imageFile": "/_real_virtual_study2_G1/assets/icons/pear.svg",
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/pear.png",
         "objectName": "Pear"
       }
     },
     "trial26": {
       "baseComponent": "icon-task",
       "parameters": {
-        "imageFile": "/_real_virtual_study2_G1/assets/icons/potato.svg",
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/potato.png",
         "objectName": "Potato"
       }
     },
     "trial27": {
       "baseComponent": "icon-task",
       "parameters": {
-        "imageFile": "/_real_virtual_study2_G1/assets/icons/spray-bottle.svg",
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/spray-bottle.png",
         "objectName": "Spray bottle"
       }
     },
     "trial28": {
       "baseComponent": "icon-task",
       "parameters": {
-        "imageFile": "/_real_virtual_study2_G1/assets/icons/scotch-tape.svg",
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/scotch-tape.png",
         "objectName": "Scotch tape"
       }
     },
     "trial29": {
       "baseComponent": "icon-task",
       "parameters": {
-        "imageFile": "/_real_virtual_study2_G1/assets/icons/tennis-ball.svg",
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/tennis-ball.png",
         "objectName": "Tennis ball"
       }
     },
     "trial30": {
       "baseComponent": "icon-task",
       "parameters": {
-        "imageFile": "/_real_virtual_study2_G1/assets/icons/vase.svg",
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/vase.png",
         "objectName": "Vase"
       }
     },
     "trial31": {
       "baseComponent": "icon-task",
       "parameters": {
-        "imageFile": "/_real_virtual_study2_G1/assets/icons/comb.svg",
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/comb.png",
         "objectName": "Comb"
       }
     },
     "trial32": {
       "baseComponent": "icon-task",
       "parameters": {
-        "imageFile": "/_real_virtual_study2_G1/assets/icons/fan.svg",
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/fan.png",
         "objectName": "Fan"
       }
     },
     "trial33": {
       "baseComponent": "icon-task",
       "parameters": {
-        "imageFile": "/_real_virtual_study2_G1/assets/icons/bottle-opener.svg",
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/bottle-opener.png",
         "objectName": "Bottle opener"
       }
     },
     "trial34": {
       "baseComponent": "icon-task",
       "parameters": {
-        "imageFile": "/_real_virtual_study2_G1/assets/icons/grapes.svg",
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/grapes.png",
         "objectName": "Grapes"
       }
     },
     "trial35": {
       "baseComponent": "icon-task",
       "parameters": {
-        "imageFile": "/_real_virtual_study2_G1/assets/icons/hammer.svg",
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/hammer.png",
         "objectName": "Hammer"
       }
     },
     "trial36": {
       "baseComponent": "icon-task",
       "parameters": {
-        "imageFile": "/_real_virtual_study2_G1/assets/icons/hat.svg",
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/hat.png",
         "objectName": "Hat"
       }
     },
@@ -475,7 +476,7 @@
     "response": [
       {
         "id": "ih-q2",
-        "prompt": " Please read the following statements and circle the answer that best corresponds to you and reflects your behavior at work. Please answer as honestly as possible using this scale.",
+        "prompt": "This is the second of the part of the previous questionnaire. Please read the following statements and circle the answer that best corresponds to you and reflects your behavior at work. Please answer as honestly as possible using this scale.",
         "location": "aboveStimulus",
         "type": "matrix-radio",
         "questionOrder": "random",
