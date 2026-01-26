@@ -5,7 +5,7 @@ Now, the goal is to assess how well you remember whether an object was real or v
 <img src="_real_virtual_study2_G1/assets/content/item.png" width="750" style="box-shadow:0 2px 6px rgba(0,0,0,0.25); margin:16px 0;" />
 
 For each object, you will first indicate whether it was already shown in the videos last week or if it is a new object, and then rate how confident you are in your answer :
-aa
+
 <img src="_real_virtual_study2_G1/assets/content/Q1Q2.png" width="750" style="box-shadow:0 2px 6px rgba(0,0,0,0.25); margin:16px 0;" />
 
 Afterward, you will indicate whether the object was real or virtual, and then rate how confident you are in your answer :
