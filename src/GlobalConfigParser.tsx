@@ -21,6 +21,7 @@ import { initializeStorageEngine } from './storage/initialize';
 import { useStorageEngine } from './storage/storageEngineHooks';
 import { PageTitle } from './utils/PageTitle';
 import { isCloudStorageEngine } from './storage/engines/utils';
+import { ResourceNotFound } from './ResourceNotFound';
 
 async function fetchGlobalConfigArray() {
   const globalFile = await fetch(`${PREFIX}global.json`);
@@ -81,9 +82,13 @@ export function GlobalConfigParser() {
           <Routes>
             <Route
               path="/"
+              element={<ResourceNotFound />}
+            />
+            <Route
+              path="/admincenter"
               element={(
                 <>
-                  <PageTitle title="ReVISit | Home" />
+                  <PageTitle title="ReVISit | Admin Center" />
                   <AppShell
                     padding="md"
                     header={{ height: 70 }}

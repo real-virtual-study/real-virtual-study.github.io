@@ -43,7 +43,7 @@ export function Login() {
   const engine = useMemo(() => storageEngine?.getEngine(), [storageEngine]);
 
   if (!user.determiningStatus && user.isAdmin) {
-    return <Navigate to="/" />;
+    return <Navigate to="/admincenter" />;
   }
 
   return (
