@@ -33,5 +33,5 @@ This research will be published in a scientific journal or at a conference. The 
 Please contact Pierre Dragicevic (pierre.dragicevic@inria.fr) if you have any questions, complaints, suggestions or concerns about this research. Concerns can also be filed to the ethical committee of the University of Bordeaux, which has approved this study: cer.ub@u-bordeaux.fr. For data protection concerns, contact the data protection officer at Inria: dpo@inria.fr.
 
 ### Consent
-By clicking on the "Next" button below, you certify that you have read and understood the above information, and that you are free to withdraw your consent or withdraw from the research at any time.
+By clicking on the "I agree" button below, you certify that you have read and understood the above information, and that you are free to withdraw your consent or withdraw from the research at any time.
 
