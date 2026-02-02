@@ -8,12 +8,12 @@ Here is one example of a real object and two examples of virtual objects:
 style="display: block; margin: 0 auto; width: 100%; max-width: 1200px; height: auto;">
 
 
-**Please watch carefully the video until the end.** They last only 8 seconds and will disappear before you need to answer the questions.
+**Please watch carefully each video until the end.** They last only 8 seconds and will disappear before you need to answer the questions.
 
 After each video, you will be asked to:
 
-1. Name the object you saw. **You do not need to search for the perfect word."** Afterward, you will receive a suggested answer for comparison; this does not mean your response is incorrect.
-2. Indicate whether you think it is **real** or **virtual**.
+1. Name the object you saw. **You do not need to search for the perfect word.** Afterward, you will receive a suggested answer for comparison; this does not mean your response is incorrect.
+2. Indicate whether you think the objest is **real** or **virtual**.
 3. Rate your confidence in your choice from 0% (completely guessing) to 100% (completely certain).
 4. The correct answer for the real/virtual question will be revealed.
 
