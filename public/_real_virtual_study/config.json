@@ -875,6 +875,26 @@
       "type": "questionnaire",
       "response": [
         {
+        "id": "attentionQ",
+        "prompt": "On average, how focused were you on the videos?",
+        "location": "belowStimulus",
+        "type": "slider",
+        "options": [
+          {
+            "label": "Very distracted",
+            "value": 0
+          },
+          {
+            "label": "Somewhat focused",
+            "value": 50
+          },
+          {
+            "label": "Extremely focused",
+            "value": 100
+          }
+        ]
+        },
+        {
           "id": "doubtQ1",
           "prompt": "Did you have any doubts about the purpose of the study ?",
           "location": "belowStimulus",
