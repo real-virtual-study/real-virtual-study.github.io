@@ -126,252 +126,252 @@
       "nextButtonText": "I agree",
       "response": []
     },
-    "trial1": {
+    "trial1C": {
       "baseComponent": "icon-task",
       "parameters": {
         "imageFile": "/_real_virtual_study2_G1/assets/icons/screwdriver.png",
         "objectName": "Screwdriver"
       }
     },
-    "trial2": {
+    "trial2C": {
       "baseComponent": "icon-task",
       "parameters": {
         "imageFile": "/_real_virtual_study2_G1/assets/icons/lighter.png",
         "objectName": "Lighter"
       }
     },
-    "trial3": {
+    "trial3C": {
       "baseComponent": "icon-task",
       "parameters": {
         "imageFile": "/_real_virtual_study2_G1/assets/icons/sunglasses.png",
         "objectName": "Sunglasses"
       }
     },
-    "trial4": {
+    "trial4C": {
       "baseComponent": "icon-task",
       "parameters": {
         "imageFile": "/_real_virtual_study2_G1/assets/icons/pen.png",
         "objectName": "Pen"
       }
     },
-    "trial5": {
+    "trial5C": {
       "baseComponent": "icon-task",
       "parameters": {
         "imageFile": "/_real_virtual_study2_G1/assets/icons/cup.png",
         "objectName": "Cup"
       }
     },
-    "trial6": {
+    "trial6C": {
       "baseComponent": "icon-task",
       "parameters": {
         "imageFile": "/_real_virtual_study2_G1/assets/icons/hair-dryer.png",
         "objectName": "Hair dryer"
       }
     },
-    "trial7": {
+    "trial7C": {
       "baseComponent": "icon-task",
       "parameters": {
         "imageFile": "/_real_virtual_study2_G1/assets/icons/serving-spoon.png",
         "objectName": "Serving spoon"
       }
     },
-    "trial8": {
+    "trial8C": {
       "baseComponent": "icon-task",
       "parameters": {
         "imageFile": "/_real_virtual_study2_G1/assets/icons/box-cutter.png",
         "objectName": "Box cutter"
       }
     },
-    "trial9": {
+    "trial9C": {
       "baseComponent": "icon-task",
       "parameters": {
         "imageFile": "/_real_virtual_study2_G1/assets/icons/tin-can.png",
         "objectName": "Tin can"
       }
     },
-    "trial10": {
+    "trial10C": {
       "baseComponent": "icon-task",
       "parameters": {
         "imageFile": "/_real_virtual_study2_G1/assets/icons/paint-palette.png",
         "objectName": "Paint palette"
       }
     },
-    "trial11": {
+    "trial11C": {
       "baseComponent": "icon-task",
       "parameters": {
         "imageFile": "/_real_virtual_study2_G1/assets/icons/book.png",
         "objectName": "Book"
       }
     },
-    "trial12": {
+    "trial12C": {
       "baseComponent": "icon-task",
       "parameters": {
         "imageFile": "/_real_virtual_study2_G1/assets/icons/rubber-duck.png",
         "objectName": "Rubber duck"
       }
     },
-    "trial13": {
+    "trial13C": {
       "baseComponent": "icon-task",
       "parameters": {
         "imageFile": "/_real_virtual_study2_G1/assets/icons/candle.png",
         "objectName": "Candle"
       }
     },
-    "trial14": {
+    "trial14C": {
       "baseComponent": "icon-task",
       "parameters": {
         "imageFile": "/_real_virtual_study2_G1/assets/icons/calculator.png",
         "objectName": "Calculator"
       }
     },
-    "trial15": {
+    "trial15C": {
       "baseComponent": "icon-task",
       "parameters": {
         "imageFile": "/_real_virtual_study2_G1/assets/icons/hanger.png",
         "objectName": "Hanger"
       }
     },
-    "trial16": {
+    "trial16C": {
       "baseComponent": "icon-task",
       "parameters": {
         "imageFile": "/_real_virtual_study2_G1/assets/icons/clock.png",
         "objectName": "Clock"
       }
     },
-    "trial17": {
+    "trial17C": {
       "baseComponent": "icon-task",
       "parameters": {
         "imageFile": "/_real_virtual_study2_G1/assets/icons/scissors.png",
         "objectName": "Scissors"
       }
     },
-    "trial18": {
+    "trial18C": {
       "baseComponent": "icon-task",
       "parameters": {
         "imageFile": "/_real_virtual_study2_G1/assets/icons/usb-drive.png",
         "objectName": "Usb drive"
       }
     },
-    "trial19": {
+    "trial19C": {
       "baseComponent": "icon-task",
       "parameters": {
         "imageFile": "/_real_virtual_study2_G1/assets/icons/computer-mouse.png",
         "objectName": "Computer mouse"
       }
     },
-    "trial20": {
+    "trial20C": {
       "baseComponent": "icon-task",
       "parameters": {
         "imageFile": "/_real_virtual_study2_G1/assets/icons/toothbrush.png",
         "objectName": "Toothbrush"
       }
     },
-    "trial21": {
+    "trial21C": {
       "baseComponent": "icon-task",
       "parameters": {
         "imageFile": "/_real_virtual_study2_G1/assets/icons/banana.png",
         "objectName": "Banana"
       }
     },
-    "trial22": {
+    "trial22C": {
       "baseComponent": "icon-task",
       "parameters": {
         "imageFile": "/_real_virtual_study2_G1/assets/icons/lemon.png",
         "objectName": "Lemon"
       }
     },
-    "trial23": {
+    "trial23C": {
       "baseComponent": "icon-task",
       "parameters": {
         "imageFile": "/_real_virtual_study2_G1/assets/icons/keys.png",
         "objectName": "Keys"
       }
     },
-    "trial24": {
+    "trial24C": {
       "baseComponent": "icon-task",
       "parameters": {
         "imageFile": "/_real_virtual_study2_G1/assets/icons/apple.png",
         "objectName": "Apple"
       }
     },
-    "trial25": {
+    "trial25C": {
       "baseComponent": "icon-task",
       "parameters": {
         "imageFile": "/_real_virtual_study2_G1/assets/icons/pear.png",
         "objectName": "Pear"
       }
     },
-    "trial26": {
+    "trial26C": {
       "baseComponent": "icon-task",
       "parameters": {
         "imageFile": "/_real_virtual_study2_G1/assets/icons/potato.png",
         "objectName": "Potato"
       }
     },
-    "trial27": {
+    "trial27C": {
       "baseComponent": "icon-task",
       "parameters": {
         "imageFile": "/_real_virtual_study2_G1/assets/icons/spray-bottle.png",
         "objectName": "Spray bottle"
       }
     },
-    "trial28": {
+    "trial28C": {
       "baseComponent": "icon-task",
       "parameters": {
         "imageFile": "/_real_virtual_study2_G1/assets/icons/scotch-tape.png",
         "objectName": "Scotch tape"
       }
     },
-    "trial29": {
+    "trial29C": {
       "baseComponent": "icon-task",
       "parameters": {
         "imageFile": "/_real_virtual_study2_G1/assets/icons/tennis-ball.png",
         "objectName": "Tennis ball"
       }
     },
-    "trial30": {
+    "trial30C": {
       "baseComponent": "icon-task",
       "parameters": {
         "imageFile": "/_real_virtual_study2_G1/assets/icons/vase.png",
         "objectName": "Vase"
       }
     },
-    "trial31": {
+    "trial31C": {
       "baseComponent": "icon-task",
       "parameters": {
         "imageFile": "/_real_virtual_study2_G1/assets/icons/comb.png",
         "objectName": "Comb"
       }
     },
-    "trial32": {
+    "trial32C": {
       "baseComponent": "icon-task",
       "parameters": {
         "imageFile": "/_real_virtual_study2_G1/assets/icons/fan.png",
         "objectName": "Fan"
       }
     },
-    "trial33": {
+    "trial33C": {
       "baseComponent": "icon-task",
       "parameters": {
         "imageFile": "/_real_virtual_study2_G1/assets/icons/bottle-opener.png",
         "objectName": "Bottle opener"
       }
     },
-    "trial34": {
+    "trial34C": {
       "baseComponent": "icon-task",
       "parameters": {
         "imageFile": "/_real_virtual_study2_G1/assets/icons/grapes.png",
         "objectName": "Grapes"
       }
     },
-    "trial35": {
+    "trial35C": {
       "baseComponent": "icon-task",
       "parameters": {
         "imageFile": "/_real_virtual_study2_G1/assets/icons/hammer.png",
         "objectName": "Hammer"
       }
     },
-    "trial36": {
+    "trial36C": {
       "baseComponent": "icon-task",
       "parameters": {
         "imageFile": "/_real_virtual_study2_G1/assets/icons/hat.png",
@@ -547,12 +547,12 @@
       {
         "order": "random",
         "components": [
-          "trial1", "trial2", "trial3", "trial4",
+          "trial1C", "trial2C", "trial3C", "trial4C",
           "myAttentionCheckComponent",
-          "trial5", "trial6", "trial7", "trial8", "trial9", "trial10", "trial11",
+          "trial5C", "trial6C", "trial7C", "trial8C", "trial9C", "trial10C", "trial11C",
           "myAttentionCheckComponent",
-          "trial12", "trial13", "trial14", "trial15", "trial16", "trial17", "trial18", "trial19", "trial20", "trial21", "trial22", "trial23", "trial24",
-          "trial25", "trial26", "trial27", "trial28", "trial29", "trial30", "trial31", "trial32", "trial33", "trial34", "trial35", "trial36"
+          "trial12C", "trial13C", "trial14C", "trial15C", "trial16C", "trial17C", "trial18C", "trial19C", "trial20C", "trial21C", "trial22C", "trial23C", "trial24C",
+          "trial25C", "trial26C", "trial27C", "trial28C", "trial29C", "trial30C", "trial31C", "trial32C", "trial33C", "trial34C", "trial35C", "trial36C"
         ],
         "skip": [
           {

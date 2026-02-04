@@ -920,8 +920,9 @@
           "location": "belowStimulus",
           "type": "longText",
           "placeholder": "Enter your answer here.",
-          "required": false
+          "required": true
         }
+
       ]
     },
     "EndPage": {
