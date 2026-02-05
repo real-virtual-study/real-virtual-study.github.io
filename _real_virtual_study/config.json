@@ -289,7 +289,7 @@
       "baseComponent": "video-task-template",
       "parameters": {
         "videoFile": "hairdryer_100.mp4",
-        "correctObjectName": "Hairdryer",
+        "correctObjectName": "Hair dryer",
         "correctSourceName": "Real"
       }
     },
@@ -481,7 +481,7 @@
       "baseComponent": "video-task-template",
       "parameters": {
         "videoFile": "hairdryer_65.mp4",
-        "correctObjectName": "Hairdryer",
+        "correctObjectName": "Hair dryer",
         "correctSourceName": "Virtual"
       }
     },
@@ -673,7 +673,7 @@
       "baseComponent": "video-task-template",
       "parameters": {
         "videoFile": "hairdryer_100.mp4",
-        "correctObjectName": "Hairdryer",
+        "correctObjectName": "Hair dryer",
         "correctSourceName": "Real"
       }
     },
@@ -866,7 +866,7 @@
       "baseComponent": "video-task-template",
       "parameters": {
         "videoFile": "hairdryer_15.mp4",
-        "correctObjectName": "Hairdryer",
+        "correctObjectName": "Hair dryer",
         "correctSourceName": "Virtual"
       }
     },
