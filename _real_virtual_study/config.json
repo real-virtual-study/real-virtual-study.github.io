@@ -94,7 +94,7 @@
       "response": [
         {
           "id": "prolificId",
-          "prompt": "Please enter your Prolific ID",
+          "prompt": "Your Prolific ID (automatically filled in)",
           "required": true,
           "location": "belowStimulus",
           "type": "shortText",
