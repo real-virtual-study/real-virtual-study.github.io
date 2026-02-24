@@ -24,7 +24,7 @@ A self-assessment questionnaire about your perceived memory abilities in daily l
 A self-assessment of your familiarity with augmented reality
 A brief sociodemographic questionnaire
 
-This study should take about X minutes to complete. Please complete it without distractions or pauses.
+This study should take about 20 minutes to complete. Please complete it without distractions or pauses.
 One or more attention check questions will be included to filter out bots or participants who click randomly or rush through the study.
 
 ### Eligibility
@@ -52,7 +52,7 @@ Once the research project is completed, all anonymized data will be made publicl
 
 ### Potential Benefits
 
-You will receive £X for participating, provided that you:
+You will receive £4 for participating, provided that you:
 Complete the study
 Do not rush
 Answer attention check questions correctly

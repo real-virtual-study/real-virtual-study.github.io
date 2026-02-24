@@ -9,7 +9,7 @@ Main researcher: Pierre Dragicevic, Research Scientist at Inria Bordeaux, France
 This study aims to enhance our understanding of how real and virtual objects are perceived in an augmented reality context, when visual effects are used to help distinguish between real and virtual objects.
 
 ### What we expect from you
-You will be asked to watch 24 short videos (10-second) of familiar objects. Objects will remain static while the camera moves. Some videos will depict real objects with a normal visual appearance, while other videos will depict virtual objects displayed in augmented reality (with a visual effect applied to them). After each video, you will be asked to name the object and indicate whether it is real or virtual. The study takes approximately X minutes to complete. We ask you to complete the study without any distraction or pause. There will be one or more easy attention check questions which are trivial if you pay attention to the study, and whose sole purpose is to filter out bots and participants who click randomly or rush through the study.
+You will be asked to watch 24 short videos (10-second) of familiar objects. Objects will remain static while the camera moves. Some videos will depict real objects with a normal visual appearance, while other videos will depict virtual objects displayed in augmented reality (with a visual effect applied to them). After each video, you will be asked to name the object and indicate whether it is real or virtual. The study takes approximately 14 minutes to complete. We ask you to complete the study without any distraction or pause. There will be one or more easy attention check questions which are trivial if you pay attention to the study, and whose sole purpose is to filter out bots and participants who click randomly or rush through the study.
 
 ### Eligibility
 To take part in this study, you must speak English, be 18 years of age or older, and have normal or corrected-to-normal vision.
@@ -21,7 +21,7 @@ Your participation in this study is entirely voluntary and you may stop at any t
 We (researchers) do not have access to your personally identifiable information. All your responses will be stored anonymously. We will check your open-text responses to confirm that no identifiable information is provided. After you paste your completion code, you will not be able to access or delete your data. We will delete your Prolific ID from our data after we verify your response. Once our research project is completed, all anonymized data will be made publicly available on an open science platform. 
 
 ### Potential benefits
-You will receive £X for participating in this study, under the condition that you complete the study, do not rush through the study, and answer the attention check questions correctly.
+You will receive £2.10 for participating in this study, under the condition that you complete the study, do not rush through the study, and answer the attention check questions correctly.
 
 ### Risks and discomforts
 Your participation in this study does not present any foreseeable risks beyond those experienced in daily life.
