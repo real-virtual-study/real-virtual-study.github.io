@@ -4,9 +4,9 @@ Please read this information notice carefully. We recommend that you save or pri
 
 ### Main Researcher
 
-Pierre Dragicevic
-Research Scientist at Inria Bordeaux, France
-Email: pierre.dragicevic@inria.fr
+* Pierre Dragicevic
+* Research Scientist at Inria Bordeaux, France
+* Email: pierre.dragicevic@inria.fr
 
 ### Research Goal
 
@@ -20,9 +20,9 @@ Each time, you will be asked to remember whether you saw the object as real, vir
 For each object you identified as real or virtual, you will be asked to explain what cues informed your choice.
 
 You will then complete three questionnaires:
-A self-assessment questionnaire about your perceived memory abilities in daily life
-A self-assessment of your familiarity with augmented reality
-A brief sociodemographic questionnaire
+* A self-assessment questionnaire about your perceived memory abilities in daily life
+* A self-assessment of your familiarity with augmented reality
+* A brief sociodemographic questionnaire
 
 This study should take about 20 minutes to complete. Please complete it without distractions or pauses.
 One or more attention check questions will be included to filter out bots or participants who click randomly or rush through the study.
@@ -30,10 +30,10 @@ One or more attention check questions will be included to filter out bots or par
 ### Eligibility
 
 To participate in this study, you must:
-Speak English
-Be 18 years of age or older
-Have normal or corrected-to-normal vision
-Have participated in the previous study on the perception of real and virtual objects
+* Speak English
+* Be 18 years of age or older
+* Have normal or corrected-to-normal vision
+* Have participated in the previous study on the perception of real and virtual objects
 
 ### Your Right to Withdraw
 
@@ -53,9 +53,9 @@ Once the research project is completed, all anonymized data will be made publicl
 ### Potential Benefits
 
 You will receive £4 for participating, provided that you:
-Complete the study
-Do not rush
-Answer attention check questions correctly
+* Complete the study
+* Do not rush
+* Answer attention check questions correctly
 
 ### Risks and Discomforts
 
@@ -69,9 +69,9 @@ All anonymized data will be made publicly available on an open science platform.
 ### Right to Ask Questions
 
 If you have any questions, complaints, suggestions, or concerns, please contact:
-Pierre Dragicevic — pierre.dragicevic@inria.fr
-University of Bordeaux Ethical Committee — cer.ub@u-bordeaux.fr
-Inria Data Protection Officer — dpo@inria.fr
+* Pierre Dragicevic — pierre.dragicevic@inria.fr
+* University of Bordeaux Ethical Committee — cer.ub@u-bordeaux.fr
+* Inria Data Protection Officer — dpo@inria.fr
 
 ### Consent
 
