@@ -96,7 +96,7 @@
       "response": [
         {
           "id": "AttentionCheck1",
-          "prompt": "The colour test you are about to take part in is very simple, when asked for your favorite colour you must select 'Green'. This is an attention check.\n\nBased on the text you read above what colour have you been asked to enter ?",
+          "prompt": "The colour test you are about to take part in is very simple, when asked for your favorite colour you must select 'Orange'. This is an attention check.\n\nBased on the text you read above what colour have you been asked to enter ?",
           "required": true,
           "type": "radio",
           "options": [
@@ -111,7 +111,7 @@
       "correctAnswer": [
         {
           "id": "AttentionCheck1",
-          "answer": "Green"
+          "answer": "Orange"
         }
       ]
     },
@@ -544,7 +544,7 @@
     },
   "EndPage": {
     "type": "markdown",
-    "path": "/_real_virtual_study2_G1/assets/content/end.md",
+    "path": "_real_virtual_study2_G1/assets/content/end.md",
     "response": []
   }
 
