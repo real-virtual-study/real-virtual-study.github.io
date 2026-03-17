@@ -187,7 +187,7 @@
 </div>
 
 <div id="stage-reason" class="question-container hidden">
-    <h3>Please explain your answer.</h3>
+    <h3 id="reason-title">Please explain your answer.</h3>
     <textarea id="reason-input" placeholder="Type your answer here..." oninput="enableNext('btn-finish')"></textarea>
     <div class="nav-controls">
         <button id="btn-finish" onclick="submitReasonAndFinish()" disabled>Finish Trial</button>
@@ -278,6 +278,8 @@
     function submitConf2() {
         trialAnswers.sourceConfidence = document.querySelector('input[name="conf2"]:checked').value;
         lockSection('stage-conf-2');
+        const label = trialAnswers.sourceAnswer === 'virtual' ? 'Virtual' : 'Real';
+        document.getElementById('reason-title').textContent = `Please explain why you chose ${label}.`;
         document.getElementById('stage-reason').classList.remove('hidden');
         window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
     }
