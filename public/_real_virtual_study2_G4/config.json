@@ -28,7 +28,7 @@
   "baseComponents": {
     "icon-task": {
       "type": "website",
-      "path": "_real_virtual_study2_G1/trial_test.html",
+      "path": "_real_virtual_study2_G4/trial_test.html",
       "instruction": "Look at the image and answer the questions.",
       "forceCompletion": true,
       "nextButtonLocation": "belowStimulus",
