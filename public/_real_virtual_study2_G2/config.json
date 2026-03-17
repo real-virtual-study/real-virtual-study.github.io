@@ -449,97 +449,45 @@
       }
     ]
   },
-  "IHQuestionnaire1": {
-    "type": "questionnaire",
-    "response": [
-      {
-        "id": "ih-q1",
-        "prompt": "Carefully read each statement and indicate the degree to which you agree\neach statement is true for you.",
-        "location": "aboveStimulus",
-        "type": "matrix-radio",
-        "questionOrder": "random",
-        "answerOptions": [
-          "Strongly disagree",
-          "2",
-          "3",
-          "4",
-          "Strongly agree"
-        ],
-        "questionOptions": [
-          "I feel small when others disagree with me on topics that are close to my heart.",
-          "When someone contradicts my most important beliefs, it feels like a personal attack.",
-          "When someone disagrees with ideas that are important to me, it feels as though I'm being attacked.",
-          "I tend to feel threatened when others disagree with me on topics that are close to my heart.",
-          "When someone disagrees with ideas that are important to me, it makes me feel insignificant.",
-          "I am open to revising my important beliefs in the face of new information.",
-          "I am willing to change my position on an important issue in the face of good reasons.",
-          "I am willing to change my opinions on the basis of compelling reason.",
-          "I have at times changed opinions that were important to me, when someone showed me I was wrong.",
-          "I’m willing to change my mind once it’s made up about an important topic.",
-          "I can respect others, even if I disagree with them in important ways."
-        ]
-      }
-    ]
-  },
-  "IHQuestionnaire2": {
-    "type": "questionnaire",
-    "response": [
-      {
-        "id": "ih-q2",
-        "prompt": "This is the second of the part of the previous questionnaire. Please read the following statements and circle the answer that best corresponds to you and reflects your behavior at work. Please answer as honestly as possible using this scale.",
-        "location": "aboveStimulus",
-        "type": "matrix-radio",
-        "questionOrder": "random",
-        "answerOptions": [
-          "Strongly disagree",
-          "2",
-          "3",
-          "4",
-          "Strongly agree"
-        ],
-        "questionOptions": [
-          "I can have great respect for someone, even when we don't see eye-to-eye on important topics.",
-          "Even when I disagree with others, I can recognize that they have sound points.",
-          "I am willing to hear others out, even if I disagree with them.",
-          "I welcome different ways of thinking about important topics.",
-          "I respect that there are ways of making important decisions that are different from the way I make decisions.",
-          "My ideas are usually better than other people’s ideas.",
-          "For the most part, others have more to learn from me than I have to learn from them.",
-          "When I am really confident in a belief, there is very little chance that belief is wrong.",
-          "On important topics, I am not likely to be swayed by the viewpoints of others.",
-          "I’d rather rely on my own knowledge about most topics than turn to others for expertise.",
-          "Listening to perspectives of others seldom changes my important opinions."
-        ]
-      }
-    ]
-  },
+    "IHQuestionnaire1": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "ih-q1",
+          "prompt": "Carefully read each statement and indicate the degree to which you agree\neach statement is true for you.",
+          "location": "aboveStimulus",
+          "type": "matrix-radio",
+          "questionOrder": "random",
+          "answerOptions": [
+            "Not at all like me",
+            "2",
+            "3",
+            "4",
+            "Very much like me"
+          ],
+          "questionOptions": [
+            "I question my own opinions, positions, and viewpoints because they could be wrong.",
+            "I reconsider my opinions when presented with new evidence.",
+            "I recognize the value in opinions that are different from my own.",
+            "I accept that my beliefs and attitudes may be wrong.",
+            "In the face of conflicting evidence, I am open to changing my opinions.",
+            "I like finding out new information that differs from what I already think is true."
+          ]
+        }
+      ]
+    },
     "PostQuestionnaire": {
       "type": "questionnaire",
       "response": [
         {
           "id": "q1",
-          "prompt": "Did you experience any problems with our study?",
+          "prompt": "Did you experience any problems with our study? For example, did anything not render or display properly? Any other issues or anything you would like to tell us?",
           "location": "belowStimulus",
           "type": "longText",
           "placeholder": "Enter your answer here.",
-          "required": false
-        },
-        {
-          "id": "q2",
-          "prompt": "For example, did anything not render or display properly?",
-          "location": "belowStimulus",
-          "type": "longText",
-          "placeholder": "Enter your answer here",
-          "required": false
-        },
-        {
-          "id": "q3",
-          "prompt": "Any other issues or anything you would like to tell us?",
-          "location": "belowStimulus",
-          "type": "longText",
-          "placeholder": "Enter your answer here",
-          "required": false
+          "required": true
         }
+
       ]
     },
   "EndPage": {
@@ -578,7 +526,6 @@
       "EMQuestionnaire",
       "SFQuestion",
       "IHQuestionnaire1",
-      "IHQuestionnaire2",
       "PostQuestionnaire",
       "EndPage"
     ]
