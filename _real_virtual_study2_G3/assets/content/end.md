@@ -1,39 +1,41 @@
+# Thank You for Participating!
 
-# Thank you!
+Thank you for completing this part of the experiment. Before you go, please take a moment to read the following important information about the study.
 
-### End of Experiment & Study Information
+---
 
-Thank you for completing this part of the experiment.
-As mentioned in the initial consent form, you were told that the purpose of the study was to better understand the perception of virtual objects in an augmented reality setting.
+## What the Study Was Actually About
 
-### Actual Purpose of the Study
+As stated in the consent form, you were initially told that this study examined the perception of virtual objects in augmented reality. In reality, this study investigates how accurately people remember digitally altered content — such as augmented reality visuals and AI-edited images — over time. For example: will you come to misremember a virtual object as real?
 
-In reality, this study aims to understand how accurately virtual objects are remembered over time.
-For this reason, we will contact you again in 10 days to participate in the second part of the study.
+In Part 1, we manipulated the intensity of the visual effect applied to altered content at two levels: subtle and evident. We aimed to determine (1) whether a visual effect reduces the tendency to misremember altered content as real, and (2) which intensity level — subtle or evident — is more effective at doing so.
 
-All measurements collected in this session will be used to draw conclusions about this effect.
+All data collected in this session will be used to draw conclusions about this effect.
 
-### Reason for Deception
+---
 
-To properly test our hypothesis, we could not provide full details of the study beforehand.
-This ensured that your responses remained spontaneous and were not influenced by prior knowledge of the study’s true objective.
-We regret this necessary deception and appreciate your understanding.
+## Why We Could Not Tell You This Beforehand
 
-### Confidentiality
+To properly test our hypotheses, full details of the study could not be disclosed in advance. This ensured that your responses remained spontaneous and were not influenced by prior knowledge of the study's true objective. We regret this necessary deception and sincerely appreciate your understanding.
 
-Please note that although the purpose of the study differed from what was stated initially, all other parts of the consent form remain accurate. This includes how we ensure the confidentiality of your data.
+---
 
-Your data is not linked to any identifying information.
+## Your Data & Confidentiality
 
-It does not constitute personal data.
+All other aspects of the original consent form remain fully accurate. Your data is protected as follows:
 
-Participants are referred to only as Participant 1, Participant 2, etc.
+- Your responses are not linked to any identifying information
+- Your data does not constitute personal data
+- Participants are referred to only as Participant 1, Participant 2, etc.
 
-### Right to Withdraw Your Data
+---
 
-Now that you are fully informed of the study’s true purpose, you may choose to withdraw your data.
-If you wish to have your data removed and permanently deleted, please inform the investigator.
+## Right to Withdraw
 
-### Request for Confidentiality About the Study
+Now that you are fully informed of the study's true purpose, you have the right to withdraw your data. If you wish to have your data permanently deleted, please inform the investigator before leaving.
 
-Please do not disclose the procedures or research hypotheses to others who may participate in the future, as this could influence their behavior and affect the validity of the study’s results.
+---
+
+## One Last Request
+
+Please do not discuss the study's procedures or hypotheses with anyone who may participate in the future. Doing so could influence their responses and affect the validity of our results. Thank you for helping us maintain the integrity of this research.
