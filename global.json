@@ -5,7 +5,12 @@
     "_real_virtual_study2_G1",
     "_real_virtual_study2_G2",
     "_real_virtual_study2_G3",
-    "_real_virtual_study2_G4"
+    "_real_virtual_study2_G4",
+    "_mr-confusion",
+    "_mr-confusion_G1",
+    "_mr-confusion_G2",
+    "_mr-confusion_G3",
+    "_mr-confusion_G4"
   ],
   "configs": {
     "_real_virtual_study": {
@@ -22,6 +27,21 @@
     },
     "_real_virtual_study2_G4": {
       "path": "_real_virtual_study2_G4/config.json"
+    },
+    "_mr-confusion": {
+      "path": "_mr-confusion/config.json"
+    },
+    "_mr-confusion_G1": {
+      "path": "_mr-confusion_G1/config.json"
+    },
+    "_mr-confusion_G2": {
+      "path": "_mr-confusion_G2/config.json"
+    },
+    "_mr-confusion_G3": {
+      "path": "_mr-confusion_G3/config.json"
+    },
+    "_mr-confusion_G4": {
+      "path": "_mr-confusion_G4/config.json"
     }
   }
 }
