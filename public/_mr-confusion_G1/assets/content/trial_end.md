@@ -1,1 +1,0 @@
-Click next to continue
