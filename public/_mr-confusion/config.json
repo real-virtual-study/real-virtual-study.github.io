@@ -1,0 +1,188 @@
+{
+  "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.3.2/src/parser/StudyConfigSchema.json",
+  "studyMetadata": {
+    "title": "MR conversational task - part 1",
+    "version": "1",
+    "authors": ["Leana"],
+    "date": "2025-12-02",
+    "description": "First Part",
+    "organizations": ["inria"]
+  },
+  "uiConfig": {
+    "contactEmail": "leana.petiot@inria.fr",
+    "helpTextPath": "_mr-confusion/assets/content/help.md",
+    "logoPath": "revisitAssets/revisitLogoSquare.svg",
+    "withProgressBar": true,
+    "autoDownloadStudy": false,
+    "withSidebar": false,
+    "enumerateQuestions": true,
+    "minWidthSize": 0,
+    "minHeightSize": 0,
+    "studyEndMsg": "Merci ! Nous te contacterons par mail pour t'envoyer la deuxième partie dans 48h",
+  },
+
+
+  "components": {
+    "IntroPage": {
+      "type": "markdown",
+      "path": "_mr-confusion/assets/content/part1_instructions.md",
+      "nextButtonText": "Start",
+      "response": []
+    },
+    "Doubt": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "doubtQ1",
+          "prompt": "Did you have any doubts about the purpose of the study ?",
+          "location": "belowStimulus",
+          "type": "longText",
+          "placeholder": "Enter your answer here."
+        },
+        {
+          "id": "doubtQ2",
+          "prompt": "What do you think we hope to find with this experiment ? ",
+          "location": "belowStimulus",
+          "type": "longText",
+          "placeholder": "Enter your answer here."
+        }
+      ]
+    },
+    "Feedback": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "q1",
+          "prompt": "Did you experience any problems with our study? For example, did anything not render or display properly? Any other issues or anything you would like to tell us?",
+          "location": "belowStimulus",
+          "type": "longText",
+          "placeholder": "Enter your answer here.",
+          "required": true
+        }
+      ]
+    },
+
+    "Presence": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "presence-psi-nevertomostofthetime",
+          "prompt": "Thinking about your experience in the virtual environment, please rate the following (1 = Never, 7 = Almost all the time):",
+          "location": "aboveStimulus",
+          "type": "matrix-radio",
+          "answerOptions": [
+            "1 - Never",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7 - Almost all the time"
+          ],
+          "questionOptions": [
+            "How much was your emotional response in the conversation the same as if it had been real?",
+            "How much were the thoughts you had within the room the same as if it had been a real situation?",
+            "How much were you thinking 'I know this isn't real' but surprisingly found yourself behaving as if it was real?",
+            "To what extent were your physical responses (heart rate, sweating, etc.) the same as if it had been a real situation?"
+          ]
+        },
+        {
+          "id": "presence-psi-notalltoverymuch",
+          "prompt": "Please rate the following regarding your behaviour and responses (1 = Not at all, 7 = Very much):",
+          "location": "aboveStimulus",
+          "type": "matrix-radio",
+          "answerOptions": [
+            "1 - Not at all",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7 - Very much"
+          ],
+          "questionOptions": [
+            "How much did you behave within the room as if the situation were real?",
+            "How much did you behave as if the other was a real person?",
+            "How much was your emotional response to the other as if they were real?",
+            "How much were your thoughts in relation to the other as if they were real?",
+            "How much did you have physical responses (heart rate, etc.) to the other as if they were real?",
+            "How much were you thinking 'I know this person is not real' but surprisingly found yourself behaving as if they were?"
+          ]
+        }
+      ]
+    },
+
+    "Embodiment": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "embodiment-body",
+          "prompt": "Thinking about your virtual body, please rate how much you agree with the following statements (1 = Strongly disagree, 7 = Strongly agree):",
+          "location": "aboveStimulus",
+          "type": "matrix-radio",
+          "answerOptions": [
+            "1 - Strongly disagree",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7 - Strongly agree"
+          ],
+          "questionOptions": [
+            "I felt that the virtual body I saw when looking at myself in the mirror was my own body",
+            "I felt that my virtual body resembled my own (real) body in terms of shape, skin tone, or other visual features",
+            "I felt as if I had two bodies",
+            "I felt that if I moved my real body (arms, hands), the virtual one would also move accordingly"
+          ]
+        },
+        {
+          "id": "embodiment-voice",
+          "prompt": "Thinking about the voice you heard, please rate how much you agree with the following statements (1 = Strongly disagree, 7 = Strongly agree):",
+          "location": "aboveStimulus",
+          "type": "matrix-radio",
+          "answerOptions": [
+            "1 - Strongly disagree",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7 - Strongly agree"
+          ],
+          "questionOptions": [
+            "It felt as if the voice I heard was coming from somewhere in the room",
+            "It felt as if the voice I heard was coming from inside my head",
+            "It felt as if the voice I heard was my own voice",
+            "It felt as if the voice I heard was a modified version of my own voice",
+            "It felt as if I was speaking out the words I heard"
+          ]
+        }
+      ]
+    },
+    "EndPage": {
+      "type": "markdown",
+      "path": "_mr-confusion/assets/content/part1_end.md",
+      "response": [
+        {
+          "id": "mail",
+          "prompt": "Your mail address ",
+          "required": true,
+          "location": "belowStimulus",
+          "type": "shortText"
+        }
+      ]
+    }
+  },
+  "sequence": {
+    "order": "fixed",
+    "components": [
+      "IntroPage",
+      "Presence",
+      "Embodiment",
+      "Doubt",
+      "Feedback",
+      "EndPage"
+    ]
+  }
+  }

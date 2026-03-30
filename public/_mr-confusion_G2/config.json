@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.3.2/src/parser/StudyConfigSchema.json",
   "studyMetadata": {
-    "title": "MR conversational task - Part 2 Group1",
+    "title": "MR conversational task - Part 2 Group2",
     "version": "1",
     "authors": [
       "Leana"
@@ -14,7 +14,7 @@
   },
   "uiConfig": {
     "contactEmail": "",
-    "helpTextPath": "_mr-confusion_G1/assets/content/help.md",
+    "helpTextPath": "_mr-confusion_G2/assets/content/help.md",
     "logoPath": "revisitAssets/revisitLogoSquare.svg",
     "withProgressBar": true,
     "autoDownloadStudy": false,
@@ -27,7 +27,7 @@
   "baseComponents": {
     "sentence-task": {
       "type": "website",
-      "path": "_mr-confusion_G1/trial_test.html",
+      "path": "_mr-confusion_G2/trial_test.html",
       "instruction": "Read the sentence and answer the questions.",
       "forceCompletion": true,
       "nextButtonLocation": "belowStimulus",
@@ -91,7 +91,7 @@
   "components": {
     "IntroPage": {
       "type": "markdown",
-      "path": "_mr-confusion_G1/assets/content/instructions.md",
+      "path": "_mr-confusion_G2/assets/content/instructions.md",
       "response": []
     },
     "trial1A":  { "baseComponent": "sentence-task", "parameters": { "sentence": "Have you noticed how today's news seems to fly by faster than we can keep up? I feel like I'm constantly chasing information." } },
@@ -137,7 +137,7 @@
 
     "Questionnaires": {
       "type": "markdown",
-      "path": "_mr-confusion_G1/assets/content/questionnaires.md",
+      "path": "_mr-confusion_G2/assets/content/questionnaires.md",
       "response": []
     },
     "EMQuestionnaire": {
@@ -252,7 +252,7 @@
     },
     "EndPage": {
       "type": "markdown",
-      "path": "_mr-confusion_G1/assets/content/end.md",
+      "path": "_mr-confusion_G2/assets/content/end.md",
       "response": []
     }
   },
