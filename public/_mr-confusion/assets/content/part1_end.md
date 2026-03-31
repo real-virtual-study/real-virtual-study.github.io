@@ -1,13 +1,12 @@
+# Merci !
 
-# Thank you!
+Merci d'avoir complété la première partie de notre étude, **nous apprécions vraiment ton temps et ta participation !**
 
-Thank you for completing the first part of our study, **we really appreciate your time and participation!**
+Comme indiqué dans la description de l'étude, **il y aura une session de suivi**. La deuxième partie se déroulera en ligne, et nous te communiquerons plus de détails le moment venu.
 
-As noted in the study description, **there will be a follow-up session**. The second part will be online, and we’ll share more details when the time comes.
+**Nous te recontacterons dans 48 heures** avec une invitation à continuer.
+Une fois notre message reçu, tu auras une **fenêtre de 48 heures** pour y participer.
 
-**We’ll reach out to you again in 48 hours** with an invitation to continue. 
-Once you receive our message, you’ll have a **48-hour window** to take part. 
+Nous espérons te revoir bientôt, merci encore pour ton aide !
 
-We hope to see you again soon,  thank you once more for your help!
-
-**Click “Next” to validate your submission.**
+**Clique sur "Suivant" pour valider ta soumission.**

@@ -5,7 +5,7 @@
     "version": "1",
     "authors": ["Leana"],
     "date": "2025-12-02",
-    "description": "First Part",
+    "description": "Première partie",
     "organizations": ["inria"]
   },
   "uiConfig": {
@@ -18,15 +18,14 @@
     "enumerateQuestions": true,
     "minWidthSize": 0,
     "minHeightSize": 0,
-    "studyEndMsg": "Merci ! Nous te contacterons par mail pour t'envoyer la deuxième partie dans 48h",
+    "studyEndMsg": "Merci ! Nous te contacterons par mail pour t'envoyer la deuxième partie dans 48h"
   },
-
 
   "components": {
     "IntroPage": {
       "type": "markdown",
       "path": "_mr-confusion/assets/content/part1_instructions.md",
-      "nextButtonText": "Start",
+      "nextButtonText": "Commencer",
       "response": []
     },
     "Doubt": {
@@ -34,17 +33,17 @@
       "response": [
         {
           "id": "doubtQ1",
-          "prompt": "Did you have any doubts about the purpose of the study ?",
+          "prompt": "Avais-tu des doutes sur le but de l'étude ?",
           "location": "belowStimulus",
           "type": "longText",
-          "placeholder": "Enter your answer here."
+          "placeholder": "Entre ta réponse ici."
         },
         {
           "id": "doubtQ2",
-          "prompt": "What do you think we hope to find with this experiment ? ",
+          "prompt": "Que penses-tu que nous espérons trouver avec cette expérience ?",
           "location": "belowStimulus",
           "type": "longText",
-          "placeholder": "Enter your answer here."
+          "placeholder": "Entre ta réponse ici."
         }
       ]
     },
@@ -53,10 +52,10 @@
       "response": [
         {
           "id": "q1",
-          "prompt": "Did you experience any problems with our study? For example, did anything not render or display properly? Any other issues or anything you would like to tell us?",
+          "prompt": "As-tu rencontré des problèmes avec notre étude ? Par exemple, est-ce que quelque chose ne s'est pas affiché ou rendu correctement ? D'autres problèmes ou autre chose que tu voudrais nous dire ?",
           "location": "belowStimulus",
           "type": "longText",
-          "placeholder": "Enter your answer here.",
+          "placeholder": "Entre ta réponse ici.",
           "required": true
         }
       ]
@@ -67,46 +66,46 @@
       "response": [
         {
           "id": "presence-psi-nevertomostofthetime",
-          "prompt": "Thinking about your experience in the virtual environment, please rate the following (1 = Never, 7 = Almost all the time):",
+          "prompt": "En pensant à ton expérience dans l'environnement virtuel, merci d'évaluer les éléments suivants (1 = Jamais, 7 = Presque tout le temps) :",
           "location": "aboveStimulus",
           "type": "matrix-radio",
           "answerOptions": [
-            "1 - Never",
+            "1 - Jamais",
             "2",
             "3",
             "4",
             "5",
             "6",
-            "7 - Almost all the time"
+            "7 - Presque tout le temps"
           ],
           "questionOptions": [
-            "How much was your emotional response in the conversation the same as if it had been real?",
-            "How much were the thoughts you had within the room the same as if it had been a real situation?",
-            "How much were you thinking 'I know this isn't real' but surprisingly found yourself behaving as if it was real?",
-            "To what extent were your physical responses (heart rate, sweating, etc.) the same as if it had been a real situation?"
+            "Dans quelle mesure ta réponse émotionnelle dans la conversation était-elle la même que si elle avait été réelle ?",
+            "Dans quelle mesure les pensées que tu avais dans la pièce étaient-elles les mêmes que si la situation avait été réelle ?",
+            "Dans quelle mesure te disais-tu « je sais que ce n'est pas réel », tout en te retrouvant à te comporter comme si c'était réel ?",
+            "Dans quelle mesure tes réponses physiques (rythme cardiaque, transpiration, etc.) étaient-elles les mêmes que si la situation avait été réelle ?"
           ]
         },
         {
           "id": "presence-psi-notalltoverymuch",
-          "prompt": "Please rate the following regarding your behaviour and responses (1 = Not at all, 7 = Very much):",
+          "prompt": "Merci d'évaluer les éléments suivants concernant ton comportement et tes réponses (1 = Pas du tout, 7 = Tout à fait) :",
           "location": "aboveStimulus",
           "type": "matrix-radio",
           "answerOptions": [
-            "1 - Not at all",
+            "1 - Pas du tout",
             "2",
             "3",
             "4",
             "5",
             "6",
-            "7 - Very much"
+            "7 - Tout à fait"
           ],
           "questionOptions": [
-            "How much did you behave within the room as if the situation were real?",
-            "How much did you behave as if the other was a real person?",
-            "How much was your emotional response to the other as if they were real?",
-            "How much were your thoughts in relation to the other as if they were real?",
-            "How much did you have physical responses (heart rate, etc.) to the other as if they were real?",
-            "How much were you thinking 'I know this person is not real' but surprisingly found yourself behaving as if they were?"
+            "Dans quelle mesure t'es-tu comporté(e) dans la pièce comme si la situation était réelle ?",
+            "Dans quelle mesure t'es-tu comporté(e) comme si l'autre était une vraie personne ?",
+            "Dans quelle mesure ta réponse émotionnelle envers l'autre était-elle comme si cette personne était réelle ?",
+            "Dans quelle mesure tes pensées en lien avec l'autre étaient-elles comme si cette personne était réelle ?",
+            "Dans quelle mesure as-tu eu des réponses physiques (rythme cardiaque, etc.) envers l'autre comme si cette personne était réelle ?",
+            "Dans quelle mesure te disais-tu « je sais que cette personne n'est pas réelle », tout en te retrouvant à te comporter comme si elle l'était ?"
           ]
         }
       ]
@@ -117,45 +116,45 @@
       "response": [
         {
           "id": "embodiment-body",
-          "prompt": "Thinking about your virtual body, please rate how much you agree with the following statements (1 = Strongly disagree, 7 = Strongly agree):",
+          "prompt": "En pensant à ton corps virtuel, merci d'indiquer dans quelle mesure tu es d'accord avec les affirmations suivantes (1 = Pas du tout d'accord, 7 = Tout à fait d'accord) :",
           "location": "aboveStimulus",
           "type": "matrix-radio",
           "answerOptions": [
-            "1 - Strongly disagree",
+            "1 - Pas du tout d'accord",
             "2",
             "3",
             "4",
             "5",
             "6",
-            "7 - Strongly agree"
+            "7 - Tout à fait d'accord"
           ],
           "questionOptions": [
-            "I felt that the virtual body I saw when looking at myself in the mirror was my own body",
-            "I felt that my virtual body resembled my own (real) body in terms of shape, skin tone, or other visual features",
-            "I felt as if I had two bodies",
-            "I felt that if I moved my real body (arms, hands), the virtual one would also move accordingly"
+            "J'avais l'impression que le corps virtuel que je voyais dans le miroir était mon propre corps",
+            "J'avais l'impression que mon corps virtuel ressemblait à mon propre corps (réel) en termes de forme, de teint de peau ou d'autres caractéristiques visuelles",
+            "J'avais l'impression d'avoir deux corps",
+            "J'avais l'impression que si je bougeais mon corps réel (bras, mains), le corps virtuel bougerait également en conséquence"
           ]
         },
         {
           "id": "embodiment-voice",
-          "prompt": "Thinking about the voice you heard, please rate how much you agree with the following statements (1 = Strongly disagree, 7 = Strongly agree):",
+          "prompt": "En pensant à la voix que tu as entendue, merci d'indiquer dans quelle mesure tu es d'accord avec les affirmations suivantes (1 = Pas du tout d'accord, 7 = Tout à fait d'accord) :",
           "location": "aboveStimulus",
           "type": "matrix-radio",
           "answerOptions": [
-            "1 - Strongly disagree",
+            "1 - Pas du tout d'accord",
             "2",
             "3",
             "4",
             "5",
             "6",
-            "7 - Strongly agree"
+            "7 - Tout à fait d'accord"
           ],
           "questionOptions": [
-            "It felt as if the voice I heard was coming from somewhere in the room",
-            "It felt as if the voice I heard was coming from inside my head",
-            "It felt as if the voice I heard was my own voice",
-            "It felt as if the voice I heard was a modified version of my own voice",
-            "It felt as if I was speaking out the words I heard"
+            "J'avais l'impression que la voix que j'entendais provenait d'un endroit dans la pièce",
+            "J'avais l'impression que la voix que j'entendais venait de l'intérieur de ma tête",
+            "J'avais l'impression que la voix que j'entendais était ma propre voix",
+            "J'avais l'impression que la voix que j'entendais était une version modifiée de ma propre voix",
+            "J'avais l'impression de prononcer moi-même les mots que j'entendais"
           ]
         }
       ]
@@ -166,7 +165,7 @@
       "response": [
         {
           "id": "mail",
-          "prompt": "Your mail address ",
+          "prompt": "Ton adresse mail",
           "required": true,
           "location": "belowStimulus",
           "type": "shortText"
@@ -185,4 +184,4 @@
       "EndPage"
     ]
   }
-  }
+}
