@@ -1,19 +1,21 @@
-Last week, you were asked to take part in a conversation with a simulated virtual interlocutor. Both of you were reflected in a virtual mirror under avatars. At some point, your own avatar spoke and took part in the conversation.
+When you click **Next**, the first trial of the task will begin.
 
-Now, the goal is to assess how well you remember whether each sentence was said by you, your self-avatar, or the virtual interlocutor. The sentences will be presented in written form. In addition, some of the sentences will be new and were not part of the conversation in Part 1.
+La semaine dernière, on vous a demandé de participer à une conversation avec un interlocuteur virtuel simulé. Vous apparaissiez tous les deux sous forme d'avatars dans un miroir virtuel. À un moment donné, votre propre avatar a pris la parole et a participé à la conversation.
+
+L'objectif est maintenant d'évaluer dans quelle mesure vous vous souvenez si chaque phrase a été prononcée par vous, par votre avatar ou par l'interlocuteur virtuel. Les phrases vous seront présentées sous forme écrite. De plus, certaines phrases seront nouvelles et ne faisaient pas partie de la conversation de la partie 1.
 
 <img src="_mr-confusion_G1/assets/content/item.png" width="750" style="box-shadow:0 2px 6px rgba(0,0,0,0.25); margin:16px 0;" />
 
-For each sentence, you will first indicate whether it was already said during the conversation last week, or whether it is a new sentence. You will then rate how confident you are in your answer:
+Pour chaque phrase, vous devrez d'abord indiquer si elle a déjà été prononcée lors de la conversation de la semaine dernière ou s'il s'agit d'une nouvelle phrase. Vous évaluerez ensuite votre niveau de certitude quant à votre réponse :
 
 <img src="_mr-confusion_G1/assets/content/Q1Q2.png" width="750" style="box-shadow:0 2px 6px rgba(0,0,0,0.25); margin:16px 0;" />
 
-If you recognised the sentence, you will then indicate who said it — the virtual interlocutor, yourself, or your self-avatar — and rate how confident you are in your answer:
+Si vous avez reconnu la phrase, vous indiquerez ensuite qui l'a prononcée — l'interlocuteur virtuel, vous-même ou votre avatar — et évaluerez votre niveau de confiance dans votre réponse :
 
 <img src="_mr-confusion_G1/assets/content/Q3Q4.png" width="750" style="box-shadow:0 2px 6px rgba(0,0,0,0.25); margin:16px 0;" />
 
-Finally, to better understand your answer, we will ask you to briefly explain your reasoning. Please be as specific as possible:
+Enfin, pour mieux comprendre votre réponse, nous vous demanderons d'expliquer brièvement votre raisonnement. Veuillez être aussi précis que possible :
 
 <img src="_mr-confusion_G1/assets/content/Q5.png" width="750" style="box-shadow:0 2px 6px rgba(0,0,0,0.25); margin:16px 0;" />
 
-When you click **Next**, the first trial of the task will begin.
+Lorsque vous cliquez sur **Suivant**, la première tentative de la tâche commencera.
