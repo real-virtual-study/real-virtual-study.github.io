@@ -1,0 +1,533 @@
+{
+  "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.3.2/src/parser/StudyConfigSchema.json",
+  "studyMetadata": {
+    "title": "Real vs Virtual Study Part 2 GroupA",
+    "version": "1",
+    "authors": [
+      "Leana"
+    ],
+    "date": "2025-12-02",
+    "description": "First Part",
+    "organizations": [
+      "inria"
+    ]
+  },
+  "uiConfig": {
+    "contactEmail": "",
+    "helpTextPath": "_real_virtual_study2_G1/assets/content/help.md",
+    "logoPath": "revisitAssets/revisitLogoSquare.svg",
+    "withProgressBar": true,
+    "autoDownloadStudy": false,
+    "withSidebar": false,
+    "enumerateQuestions": true,
+    "minWidthSize": 0,
+    "minHeightSize": 0,
+    "studyEndMsg": "Thank you for completing the study. You may click this link and return to Prolific: [X](X)",
+    "urlParticipantIdParam": "PROLIFIC_PID"
+  },
+  "baseComponents": {
+    "icon-task": {
+      "type": "website",
+      "path": "_real_virtual_study2_G1/trial_test.html",
+      "instruction": "Look at the image and answer the questions.",
+      "forceCompletion": true,
+      "nextButtonLocation": "belowStimulus",
+      "parameters": {
+        "imageFile": "file",
+        "objectName": "value"
+      },
+      "response": [
+        {
+          "id": "completionSignal",
+          "type": "reactive",
+          "location": "sidebar",
+          "prompt": "Click on next to continue with another object",
+          "required": true,
+          "hidden": true
+        },
+        {
+          "id": "objectName",
+          "type": "reactive",
+          "required": false,
+          "hidden": true,
+          "prompt": "Object Name"
+        },
+        {
+          "id": "seenAnswer",
+          "type": "reactive",
+          "required": false,
+          "hidden": true,
+          "prompt": "Seen in Part 1?"
+        },
+        {
+          "id": "seenConfidence",
+          "type": "reactive",
+          "required": false,
+          "hidden": true,
+          "prompt": "Confidence (Seen)"
+        },
+        {
+          "id": "sourceAnswer",
+          "type": "reactive",
+          "required": false,
+          "hidden": true,
+          "prompt": "Real or Virtual"
+        },
+        {
+          "id": "sourceConfidence",
+          "type": "reactive",
+          "required": false,
+          "hidden": true,
+          "prompt": "Confidence (Source)"
+        },
+        {
+          "id": "reasoning",
+          "type": "reactive",
+          "required": false,
+          "hidden": true,
+          "prompt": "Explanation"
+        }
+      ]
+    }
+  },
+  "components": {
+    "myAttentionCheckComponent": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "AttentionCheck1",
+          "prompt": "The colour test you are about to take part in is very simple, when asked for your favorite colour you must select 'Orange'. This is an attention check.\n\nBased on the text you read above what colour have you been asked to enter ?",
+          "required": true,
+          "type": "radio",
+          "options": [
+            "Blue",
+            "Yellow",
+            "Orange",
+            "Red",
+            "Green"
+          ]
+        }
+      ],
+      "correctAnswer": [
+        {
+          "id": "AttentionCheck1",
+          "answer": "Orange"
+        }
+      ]
+    },
+    "IntroPage": {
+      "type": "markdown",
+      "path": "_real_virtual_study2_G1/assets/content/instructions.md",
+      "response": [
+        {
+          "id": "prolificId",
+          "prompt": "Your Prolific ID (automatically filled in)",
+          "required": true,
+          "location": "belowStimulus",
+          "type": "shortText",
+          "placeholder": "Prolific ID",
+          "paramCapture": "PROLIFIC_PID"
+        }
+      ]
+    },
+    "ConsentPage": {
+      "type": "markdown",
+      "path": "_real_virtual_study2_G1/assets/content/consent.md",
+      "nextButtonText": "I agree",
+      "response": []
+    },
+    "trial1A": {
+      "baseComponent": "icon-task",
+      "parameters": {
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/screwdriver.png",
+        "objectName": "Screwdriver"
+      }
+    },
+    "trial2A": {
+      "baseComponent": "icon-task",
+      "parameters": {
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/lighter.png",
+        "objectName": "Lighter"
+      }
+    },
+    "trial3A": {
+      "baseComponent": "icon-task",
+      "parameters": {
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/sunglasses.png",
+        "objectName": "Sunglasses"
+      }
+    },
+    "trial4A": {
+      "baseComponent": "icon-task",
+      "parameters": {
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/pen.png",
+        "objectName": "Pen"
+      }
+    },
+    "trial5A": {
+      "baseComponent": "icon-task",
+      "parameters": {
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/cup.png",
+        "objectName": "Cup"
+      }
+    },
+    "trial6A": {
+      "baseComponent": "icon-task",
+      "parameters": {
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/hair-dryer.png",
+        "objectName": "Hair dryer"
+      }
+    },
+    "trial7A": {
+      "baseComponent": "icon-task",
+      "parameters": {
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/serving-spoon.png",
+        "objectName": "Serving spoon"
+      }
+    },
+    "trial8A": {
+      "baseComponent": "icon-task",
+      "parameters": {
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/box-cutter.png",
+        "objectName": "Box cutter"
+      }
+    },
+    "trial9A": {
+      "baseComponent": "icon-task",
+      "parameters": {
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/tin-can.png",
+        "objectName": "Tin can"
+      }
+    },
+    "trial10A": {
+      "baseComponent": "icon-task",
+      "parameters": {
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/paint-palette.png",
+        "objectName": "Paint palette"
+      }
+    },
+    "trial11A": {
+      "baseComponent": "icon-task",
+      "parameters": {
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/book.png",
+        "objectName": "Book"
+      }
+    },
+    "trial12A": {
+      "baseComponent": "icon-task",
+      "parameters": {
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/rubber-duck.png",
+        "objectName": "Rubber duck"
+      }
+    },
+    "trial13A": {
+      "baseComponent": "icon-task",
+      "parameters": {
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/candle.png",
+        "objectName": "Candle"
+      }
+    },
+    "trial14A": {
+      "baseComponent": "icon-task",
+      "parameters": {
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/calculator.png",
+        "objectName": "Calculator"
+      }
+    },
+    "trial15A": {
+      "baseComponent": "icon-task",
+      "parameters": {
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/hanger.png",
+        "objectName": "Hanger"
+      }
+    },
+    "trial16A": {
+      "baseComponent": "icon-task",
+      "parameters": {
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/clock.png",
+        "objectName": "Clock"
+      }
+    },
+    "trial17A": {
+      "baseComponent": "icon-task",
+      "parameters": {
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/scissors.png",
+        "objectName": "Scissors"
+      }
+    },
+    "trial18A": {
+      "baseComponent": "icon-task",
+      "parameters": {
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/usb-drive.png",
+        "objectName": "Usb drive"
+      }
+    },
+    "trial19A": {
+      "baseComponent": "icon-task",
+      "parameters": {
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/computer-mouse.png",
+        "objectName": "Computer mouse"
+      }
+    },
+    "trial20A": {
+      "baseComponent": "icon-task",
+      "parameters": {
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/toothbrush.png",
+        "objectName": "Toothbrush"
+      }
+    },
+    "trial21A": {
+      "baseComponent": "icon-task",
+      "parameters": {
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/banana.png",
+        "objectName": "Banana"
+      }
+    },
+    "trial22A": {
+      "baseComponent": "icon-task",
+      "parameters": {
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/lemon.png",
+        "objectName": "Lemon"
+      }
+    },
+    "trial23A": {
+      "baseComponent": "icon-task",
+      "parameters": {
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/keys.png",
+        "objectName": "Keys"
+      }
+    },
+    "trial24A": {
+      "baseComponent": "icon-task",
+      "parameters": {
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/apple.png",
+        "objectName": "Apple"
+      }
+    },
+    "trial25A": {
+      "baseComponent": "icon-task",
+      "parameters": {
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/pear.png",
+        "objectName": "Pear"
+      }
+    },
+    "trial26A": {
+      "baseComponent": "icon-task",
+      "parameters": {
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/potato.png",
+        "objectName": "Potato"
+      }
+    },
+    "trial27A": {
+      "baseComponent": "icon-task",
+      "parameters": {
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/spray-bottle.png",
+        "objectName": "Spray bottle"
+      }
+    },
+    "trial28A": {
+      "baseComponent": "icon-task",
+      "parameters": {
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/scotch-tape.png",
+        "objectName": "Scotch tape"
+      }
+    },
+    "trial29A": {
+      "baseComponent": "icon-task",
+      "parameters": {
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/tennis-ball.png",
+        "objectName": "Tennis ball"
+      }
+    },
+    "trial30A": {
+      "baseComponent": "icon-task",
+      "parameters": {
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/vase.png",
+        "objectName": "Vase"
+      }
+    },
+    "trial31A": {
+      "baseComponent": "icon-task",
+      "parameters": {
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/comb.png",
+        "objectName": "Comb"
+      }
+    },
+    "trial32A": {
+      "baseComponent": "icon-task",
+      "parameters": {
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/fan.png",
+        "objectName": "Fan"
+      }
+    },
+    "trial33A": {
+      "baseComponent": "icon-task",
+      "parameters": {
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/bottle-opener.png",
+        "objectName": "Bottle opener"
+      }
+    },
+    "trial34A": {
+      "baseComponent": "icon-task",
+      "parameters": {
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/grapes.png",
+        "objectName": "Grapes"
+      }
+    },
+    "trial35A": {
+      "baseComponent": "icon-task",
+      "parameters": {
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/hammer.png",
+        "objectName": "Hammer"
+      }
+    },
+    "trial36A": {
+      "baseComponent": "icon-task",
+      "parameters": {
+        "imageFile": "/_real_virtual_study2_G1/assets/icons/hat.png",
+        "objectName": "Hat"
+      }
+    },
+
+    "Questionnaires": {
+      "type": "markdown",
+      "path": "_real_virtual_study2_G1/assets/content/questionnaires.md",
+      "response": []
+    },
+
+  "EMQuestionnaire": {
+    "type": "questionnaire",
+    "response": [
+      {
+        "id": "ih-q",
+        "prompt": "The statements set out below are about forgetting things, something everyone does to an extent. Please indicate how frequently the examples given have happened to you, over the last 3 months, using the following scale:",
+        "location": "aboveStimulus",
+        "type": "matrix-radio",
+        "questionOrder": "random",
+        "answerOptions": [
+          "Once or less in the last month.",
+          "More than once a month but less than once a week",
+          "About once a week",
+          "More that once a week or less than once a day",
+          "Once or more in a day"
+        ],
+        "questionOptions": [
+          "Having to check whether you have done something that you should have done.",
+          "Forgetting when it was that something happened; for example, whether it was yesterday or last week.",
+          "Forgetting that you were told something yesterday or a few days ago, and maybe having to be reminded about it.",
+          "Starting to read something (a book or an article in a newspaper, or a magazine) without realizing you have already read it before.",
+          "Finding that a word is ‘on the tip of your tongue’. You know what it is but cannot quite find it.",
+          "Completely forgetting to do things you said you would do, and things you planned to do.",
+          "Forgetting important details of what you did or what happened to you the day before.",
+          "When talking to someone, forgetting what you have just said. Maybe saying ‘what was I talking about?’",
+          "When reading a newspaper or magazine, being unable to follow the thread of a story; losing track of what it is about.",
+          "Forgetting to tell somebody something important, perhaps forgetting to pass on a message or remind someone of something.",
+          "Getting the details of what someone was told you mixed up and confused.",
+          "Forgetting where things are normally kept or looking for them in the wrong place.",
+          "Repeating to someone what you have just told them or asking someone the same question twice."
+        ]
+      }
+    ]
+  },
+  "SFQuestion": {
+    "type": "questionnaire",
+    "response": [
+      {
+        "id": "q1",
+        "prompt": "How familiar are you with science fiction?",
+        "location": "belowStimulus",
+        "required": true,
+        "type": "radio",
+        "options": [
+          "Not at all familiar",
+          "Slightly familiar",
+          "Moderately familiar",
+          "Fairly familiar",
+          "Very familiar"
+        ],
+        "horizontal": true
+      }
+    ]
+  },
+  "IHQuestionnaire1": {
+    "type": "questionnaire",
+    "response": [
+      {
+        "id": "ih-q1",
+        "prompt": "Carefully read each statement and indicate the degree to which you agree\neach statement is true for you.",
+        "location": "aboveStimulus",
+        "type": "matrix-radio",
+        "questionOrder": "random",
+        "answerOptions": [
+          "Not at all like me",
+          "2",
+          "3",
+          "4",
+          "Very much like me"
+        ],
+        "questionOptions": [
+          "I question my own opinions, positions, and viewpoints because they could be wrong.",
+          "I reconsider my opinions when presented with new evidence.",
+          "I recognize the value in opinions that are different from my own.",
+          "I accept that my beliefs and attitudes may be wrong.",
+          "In the face of conflicting evidence, I am open to changing my opinions.",
+          "I like finding out new information that differs from what I already think is true."
+        ]
+      }
+    ]
+  },
+    "PostQuestionnaire": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "q1",
+          "prompt": "Did you experience any problems with our study? For example, did anything not render or display properly? Any other issues or anything you would like to tell us?",
+          "location": "belowStimulus",
+          "type": "longText",
+          "placeholder": "Enter your answer here.",
+          "required": true
+        }
+
+      ]
+    },
+  "EndPage": {
+    "type": "markdown",
+    "path": "_real_virtual_study2_G1/assets/content/end.md",
+    "response": []
+  }
+
+},
+  "sequence": {
+    "order": "fixed",
+    "components": [
+      "ConsentPage",
+      "IntroPage",
+      {
+        "order": "random",
+        "components": [
+          "trial1A", "trial2A", "trial3A", "trial4A",
+          "myAttentionCheckComponent",
+          "trial5A", "trial6A", "trial7A", "trial8A", "trial9A", "trial10A", "trial11A",
+          "myAttentionCheckComponent",
+          "trial12A", "trial13A", "trial14A", "trial15A", "trial16A", "trial17A", "trial18A", "trial19A", "trial20A", "trial21A", "trial22A", "trial23A", "trial24A",
+          "trial25A", "trial26A", "trial27A", "trial28A", "trial29A", "trial30A", "trial31A", "trial32A", "trial33A", "trial34A", "trial35A", "trial36A"
+        ],
+        "skip": [
+          {
+            "name": "myAttentionCheckComponent",
+            "check": "repeatedComponent",
+            "condition": "numIncorrect",
+            "value": 2,
+            "to": "end"
+          }
+        ]
+      },
+      "Questionnaires",
+      "EMQuestionnaire",
+      "SFQuestion",
+      "IHQuestionnaire1",
+      "PostQuestionnaire",
+      "EndPage"
+    ]
+  }
+}
