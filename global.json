@@ -10,7 +10,10 @@
     "_mr-confusion_G1",
     "_mr-confusion_G2",
     "_mr-confusion_G3",
-    "_mr-confusion_G4"
+    "_mr-confusion_G4",
+    "_fam-study",
+    "_fam-study_G1",
+    "_fam-study_G2"
   ],
   "configs": {
     "_real_virtual_study": {
@@ -42,6 +45,15 @@
     },
     "_mr-confusion_G4": {
       "path": "_mr-confusion_G4/config.json"
+    },
+    "_fam-study": {
+      "path": "_fam-study/config.json"
+    },
+    "_fam-study_G1": {
+      "path": "_fam-study_G1/config.json"
+    },
+    "_fam-study_G2": {
+      "path": "fam-study_G2/config.json"
     }
   }
 }
