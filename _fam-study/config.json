@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.3.2/src/parser/StudyConfigSchema.json",
   "studyMetadata": {
-    "title": "Real vs Virtual Study Part1",
+    "title": "Fam Part1 (à changer)",
     "version": "1",
     "authors": ["Leana"],
     "date": "2025-12-02",
@@ -10,7 +10,7 @@
   },
   "uiConfig": {
     "contactEmail": "amandine",
-    "helpTextPath": "_real_virtual_study/assets/content/help.md",
+    "helpTextPath": "_fam-study/assets/content/help.md",
     "logoPath": "revisitAssets/revisitLogoSquare.svg",
     "withProgressBar": true,
     "autoDownloadStudy": false,
@@ -24,7 +24,7 @@
   "baseComponents": {
     "video-task-template": {
       "type": "website",
-      "path": "_real_virtual_study/trial.html",
+      "path": "_fam-study/trial.html",
       "instruction": "Watch the video and answer the questions.",
       "forceCompletion": true,
       "nextButtonLocation": "belowStimulus",
@@ -89,7 +89,7 @@
     },
     "IntroPage": {
       "type": "markdown",
-      "path": "_real_virtual_study/assets/content/part1_instructions.md",
+      "path": "_fam-study/assets/content/part1_instructions.md",
       "nextButtonText": "Start",
       "response": [
         {
@@ -105,7 +105,7 @@
     },
     "ConsentPage": {
       "type": "markdown",
-      "path": "_real_virtual_study/assets/content/part1_consent.md",
+      "path": "_fam-study/assets/content/part1_consent.md",
       "nextButtonText": "I agree",
       "response": []
     },
@@ -936,7 +936,7 @@
     },
     "EndPage": {
       "type": "markdown",
-      "path": "_real_virtual_study/assets/content/part1_end.md",
+      "path": "_fam-study/assets/content/part1_end.md",
       "response": []
     }
 
