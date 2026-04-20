@@ -1,0 +1,165 @@
+{
+  "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.3.2/src/parser/StudyConfigSchema.json",
+  "studyMetadata": {
+    "title": "MR conversational task - part 1 TODO ajouter question similarité visuelle likert",
+    "version": "1",
+    "authors": ["Leana"],
+    "date": "2025-12-02",
+    "description": "Première partie",
+    "organizations": ["inria"]
+  },
+  "uiConfig": {
+    "contactEmail": "leana.petiot@inria.fr",
+    "helpTextPath": "_mr-confusion/assets/content/help.md",
+    "logoPath": "revisitAssets/revisitLogoSquare.svg",
+    "withProgressBar": true,
+    "autoDownloadStudy": false,
+    "withSidebar": false,
+    "enumerateQuestions": true,
+    "minWidthSize": 0,
+    "minHeightSize": 0,
+    "studyEndMsg": "Merci ! Nous te contacterons par mail pour t'envoyer la deuxième partie dans 48h"
+  },
+
+  "components": {
+    "IntroPage": {
+      "type": "markdown",
+      "path": "_mr-confusion/assets/content/part1_instructions.md",
+      "nextButtonText": "Commencer",
+      "response": []
+    },
+    "Doubt": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "doubtQ1",
+          "prompt": "Avais-tu des doutes sur le but de l'étude ?",
+          "location": "belowStimulus",
+          "type": "longText",
+          "placeholder": "Entre ta réponse ici."
+        },
+        {
+          "id": "doubtQ2",
+          "prompt": "Que penses-tu que nous espérons trouver avec cette expérience ?",
+          "location": "belowStimulus",
+          "type": "longText",
+          "placeholder": "Entre ta réponse ici."
+        }
+      ]
+    },
+    "Feedback": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "q1",
+          "prompt": "As-tu rencontré des problèmes avec notre étude ? Par exemple, est-ce que quelque chose ne s'est pas affiché ou rendu correctement ? D'autres problèmes ou autre chose que tu voudrais nous dire ?",
+          "location": "belowStimulus",
+          "type": "longText",
+          "placeholder": "Entre ta réponse ici.",
+          "required": true
+        }
+      ]
+    },
+
+    "Similarity": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "similarity-avatar-visual-voice",
+          "prompt": "En pensant à l'avatar qui te représentait dans l'environnement virtuel, merci d'indiquer dans quelle mesure tu es d'accord avec les affirmations suivantes (1 = Pas du tout d'accord, 7 = Tout à fait d'accord) :",
+          "location": "aboveStimulus",
+          "type": "matrix-radio",
+          "answerOptions": [
+            "1 - Pas du tout d'accord",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7 - Tout à fait d'accord"
+          ],
+          "questionOptions": [
+            "L'apparence visuelle de l'avatar me ressemblait.",
+            "La voix de l'avatar ressemblait à ma propre voix."
+          ]
+        }
+      ]
+    },
+
+    "EmbodimentAgency": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "agency-synchrony",
+          "prompt": "Durant la conversation, l'avatar pouvait parler de deux manières différentes. Merci d'évaluer chacune des situations suivantes (1 = Pas du tout d'accord, 7 = Tout à fait d'accord) :",
+          "location": "aboveStimulus",
+          "type": "matrix-radio",
+          "answerOptions": [
+            "1 - Pas du tout d'accord",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7 - Tout à fait d'accord"
+          ],
+          "questionOptions": [
+            "Lorsque l'avatar parlait et bougeait en même temps que moi, j'avais l'impression que c'était moi qui parlais.",
+            "Lorsque l'avatar parlait et bougeait indépendamment de moi, j'avais l'impression que c'était moi qui parlais."
+          ]
+        }
+      ]
+    },
+
+    "PSI": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "presence",
+          "prompt": "Merci d'évaluer chacune des situations suivantes (1 = Pas du tout d'accord, 7 = Tout à fait d'accord) :",
+          "location": "aboveStimulus",
+          "type": "matrix-radio",
+          "answerOptions": [
+            "1 - Pas du tout d'accord",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7 - Tout à fait d'accord"
+          ],
+          "questionOptions": [
+            "Dans quelle mesure t'es-tu comporté(e) dans la pièce comme si la situation était réelle ?",
+            "Dans quelle mesure t'es-tu comporté(e) comme si la personne à côté de vous était une vraie personne ?"
+          ]
+        }
+      ]
+    },
+
+
+    "EndPage": {
+      "type": "markdown",
+      "path": "_mr-confusion/assets/content/part1_end.md",
+      "response": [
+        {
+          "id": "mail",
+          "prompt": "Ton adresse mail",
+          "required": true,
+          "location": "belowStimulus",
+          "type": "shortText"
+        }
+      ]
+    }
+  },
+  "sequence": {
+    "order": "fixed",
+    "components": [
+      "IntroPage",
+      "EmbodimentAgency",
+      "Similarity",
+      "Doubt",
+      "Feedback",
+      "EndPage"
+    ]
+  }
+}
