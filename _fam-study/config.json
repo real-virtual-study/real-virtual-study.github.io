@@ -67,16 +67,16 @@
         {
           "id": "knowledgeLevel",
           "prompt": "{{itemName}} ({{itemCategory}})",
-          "type": "slider",
+          "type": "radio",
           "required": true,
           "options": [
-            { "value": 0, "label": "I have never heard of it." },
-            { "value": 1, "label": "I have heard of it, but I don't know what it is." },
-            { "value": 2, "label": "I have a very vague idea of what it is." },
-            { "value": 3, "label": "I have a moderate idea of what it is." },
-            { "value": 4, "label": "I know fairly well what it is." },
-            { "value": 5, "label": "I know this term very well." },
-            { "value": 6, "label": "I know this term perfectly and could explain it to someone else." }
+            { "value": "0", "label": "I have never heard of it." },
+            { "value": "1", "label": "I have heard of it, but I don't know what it is." },
+            { "value": "2", "label": "I have a very vague idea of what it is." },
+            { "value": "3", "label": "I have a moderate idea of what it is." },
+            { "value": "4", "label": "I know fairly well what it is." },
+            { "value": "5", "label": "I know this term very well." },
+            { "value": "6", "label": "I know this term perfectly and could explain it to someone else." }
           ]
         }
       ]
