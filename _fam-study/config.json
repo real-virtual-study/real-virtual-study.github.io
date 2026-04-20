@@ -66,10 +66,10 @@
       "response": [
         {
           "id": "knowledgeLevel",
-          "prompt": "{{itemName}} ({{itemCategory}})",
+          "prompt": "{itemName} ({itemCategory})",
           "type": "slider",
           "required": true,
-          "answerOptions": {
+          "options": {
               "min": 0,
               "max": 6,
               "step": 1
