@@ -67,7 +67,7 @@
         {
           "id": "knowledgeLevel",
           "prompt": "{{itemName}} ({{itemCategory}})",
-          "type": "likert",
+          "type": "slider",
           "required": true,
           "options": [
             { "value": 0, "label": "I have never heard of it." },
