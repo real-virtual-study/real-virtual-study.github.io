@@ -1,5 +1,4 @@
-﻿{
-  "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.3.2/src/parser/StudyConfigSchema.json",
+﻿  "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.3.2/src/parser/StudyConfigSchema.json",
   "studyMetadata": {
     "title": "Familiarity study - Part 1",
     "version": "1",
@@ -949,5 +948,4 @@
       "EndPage"
     ]
   }
-}
 }
