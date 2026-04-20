@@ -1,7 +1,7 @@
-{
+﻿{
   "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.3.2/src/parser/StudyConfigSchema.json",
   "studyMetadata": {
-    "title": "Fam Part1 (à changer)",
+    "title": "Familiarity study - Part 1",
     "version": "1",
     "authors": ["Leana"],
     "date": "2025-12-02",
@@ -59,6 +59,27 @@
           "prompt": "Confidence Level"
         }
       ]
+    },
+    "overclaiming-question-template": {
+      "type": "questionnaire",
+      "instruction": "Indicate your level of knowledge of this item on a scale from 0 to 6",
+      "response": [
+        {
+          "id": "knowledgeLevel",
+          "prompt": "{{itemName}}",
+          "type": "likert",
+          "required": true,
+          "options": [
+            { "value": 0, "label": "I have never heard of it." },
+            { "value": 1, "label": "I have heard of it, but I don't know what it is." },
+            { "value": 2, "label": "I have a very vague idea of what it is." },
+            { "value": 3, "label": "I have a moderate idea of what it is." },
+            { "value": 4, "label": "I know fairly well what it is." },
+            { "value": 5, "label": "I know this term very well." },
+            { "value": 6, "label": "I know this term perfectly and could explain it to someone else." }
+          ]
+        }
+      ]
     }
   },
 
@@ -108,6 +129,294 @@
       "path": "_fam-study/assets/content/part1_consent.md",
       "nextButtonText": "I agree",
       "response": []
+    },
+
+    "overclaiming1": {
+      "baseComponent": "overclaiming-question-template",
+      "parameters": {
+        "itemName": "Hologram",
+        "itemCategory": "Category"
+      }
+    },
+    "overclaiming2": {
+      "baseComponent": "overclaiming-question-template",
+      "parameters": {
+        "itemName": "Hologram",
+        "itemCategory": "Category"
+      }
+    },
+    "overclaiming3": {
+      "baseComponent": "overclaiming-question-template",
+      "parameters": {
+        "itemName": "Hologram",
+        "itemCategory": "Category"
+      }
+    },
+    "overclaiming4": {
+      "baseComponent": "overclaiming-question-template",
+      "parameters": {
+        "itemName": "Hologram",
+        "itemCategory": "Category"
+      }
+    },
+    "overclaiming5": {
+      "baseComponent": "overclaiming-question-template",
+      "parameters": {
+        "itemName": "Hologram",
+        "itemCategory": "Category"
+      }
+    },
+    "overclaiming6": {
+      "baseComponent": "overclaiming-question-template",
+      "parameters": {
+        "itemName": "Hologram",
+        "itemCategory": "Category"
+      }
+    },
+    "overclaiming7": {
+      "baseComponent": "overclaiming-question-template",
+      "parameters": {
+        "itemName": "Hologram",
+        "itemCategory": "Category"
+      }
+    },
+    "overclaiming8": {
+      "baseComponent": "overclaiming-question-template",
+      "parameters": {
+        "itemName": "Hologram",
+        "itemCategory": "Category"
+      }
+    },
+    "overclaiming9": {
+      "baseComponent": "overclaiming-question-template",
+      "parameters": {
+        "itemName": "Hologram",
+        "itemCategory": "Category"
+      }
+    },
+    "overclaiming10": {
+      "baseComponent": "overclaiming-question-template",
+      "parameters": {
+        "itemName": "Hologram",
+        "itemCategory": "Category"
+      }
+    },
+    "overclaiming11": {
+      "baseComponent": "overclaiming-question-template",
+      "parameters": {
+        "itemName": "Hologram",
+        "itemCategory": "Category"
+      }
+    },
+    "overclaiming12": {
+      "baseComponent": "overclaiming-question-template",
+      "parameters": {
+        "itemName": "Hologram",
+        "itemCategory": "Category"
+      }
+    },
+    "overclaiming13": {
+      "baseComponent": "overclaiming-question-template",
+      "parameters": {
+        "itemName": "Hologram",
+        "itemCategory": "Category"
+      }
+    },
+    "overclaiming14": {
+      "baseComponent": "overclaiming-question-template",
+      "parameters": {
+        "itemName": "Hologram",
+        "itemCategory": "Category"
+      }
+    },
+    "overclaiming15": {
+      "baseComponent": "overclaiming-question-template",
+      "parameters": {
+        "itemName": "Hologram",
+        "itemCategory": "Category"
+      }
+    },
+    "overclaiming16": {
+      "baseComponent": "overclaiming-question-template",
+      "parameters": {
+        "itemName": "Hologram",
+        "itemCategory": "Category"
+      }
+    },
+    "overclaiming17": {
+      "baseComponent": "overclaiming-question-template",
+      "parameters": {
+        "itemName": "Hologram",
+        "itemCategory": "Category"
+      }
+    },
+    "overclaiming18": {
+      "baseComponent": "overclaiming-question-template",
+      "parameters": {
+        "itemName": "Hologram",
+        "itemCategory": "Category"
+      }
+    },
+    "overclaiming19": {
+      "baseComponent": "overclaiming-question-template",
+      "parameters": {
+        "itemName": "Hologram",
+        "itemCategory": "Category"
+      }
+    },
+    "overclaiming20": {
+      "baseComponent": "overclaiming-question-template",
+      "parameters": {
+        "itemName": "Hologram",
+        "itemCategory": "Category"
+      }
+    },
+    "overclaiming21": {
+      "baseComponent": "overclaiming-question-template",
+      "parameters": {
+        "itemName": "Hologram",
+        "itemCategory": "Category"
+      }
+    },
+    "overclaiming22": {
+      "baseComponent": "overclaiming-question-template",
+      "parameters": {
+        "itemName": "Hologram",
+        "itemCategory": "Category"
+      }
+    },
+    "overclaiming23": {
+      "baseComponent": "overclaiming-question-template",
+      "parameters": {
+        "itemName": "Hologram",
+        "itemCategory": "Category"
+      }
+    },
+    "overclaiming24": {
+      "baseComponent": "overclaiming-question-template",
+      "parameters": {
+        "itemName": "Hologram",
+        "itemCategory": "Category"
+      }
+    },
+    "overclaiming25": {
+      "baseComponent": "overclaiming-question-template",
+      "parameters": {
+        "itemName": "Hologram",
+        "itemCategory": "Category"
+      }
+    },
+    "overclaiming26": {
+      "baseComponent": "overclaiming-question-template",
+      "parameters": {
+        "itemName": "Hologram",
+        "itemCategory": "Category"
+      }
+    },
+    "overclaiming27": {
+      "baseComponent": "overclaiming-question-template",
+      "parameters": {
+        "itemName": "Hologram",
+        "itemCategory": "Category"
+      }
+    },
+    "overclaiming28": {
+      "baseComponent": "overclaiming-question-template",
+      "parameters": {
+        "itemName": "Hologram",
+        "itemCategory": "Category"
+      }
+    },
+    "overclaiming29": {
+      "baseComponent": "overclaiming-question-template",
+      "parameters": {
+        "itemName": "Hologram",
+        "itemCategory": "Category"
+      }
+    },
+    "overclaiming30": {
+      "baseComponent": "overclaiming-question-template",
+      "parameters": {
+        "itemName": "Hologram",
+        "itemCategory": "Category"
+      }
+    },
+    "overclaiming31": {
+      "baseComponent": "overclaiming-question-template",
+      "parameters": {
+        "itemName": "Hologram",
+        "itemCategory": "Category"
+      }
+    },
+    "overclaiming32": {
+      "baseComponent": "overclaiming-question-template",
+      "parameters": {
+        "itemName": "Hologram",
+        "itemCategory": "Category"
+      }
+    },
+    "overclaiming33": {
+      "baseComponent": "overclaiming-question-template",
+      "parameters": {
+        "itemName": "Hologram",
+        "itemCategory": "Category"
+      }
+    },
+    "overclaiming34": {
+      "baseComponent": "overclaiming-question-template",
+      "parameters": {
+        "itemName": "Hologram",
+        "itemCategory": "Category"
+      }
+    },
+    "overclaiming35": {
+      "baseComponent": "overclaiming-question-template",
+      "parameters": {
+        "itemName": "Hologram",
+        "itemCategory": "Category"
+      }
+    },
+    "overclaiming36": {
+      "baseComponent": "overclaiming-question-template",
+      "parameters": {
+        "itemName": "Hologram",
+        "itemCategory": "Category"
+      }
+    },
+    "overclaiming37": {
+      "baseComponent": "overclaiming-question-template",
+      "parameters": {
+        "itemName": "Hologram",
+        "itemCategory": "Category"
+      }
+    },
+    "overclaiming38": {
+      "baseComponent": "overclaiming-question-template",
+      "parameters": {
+        "itemName": "Hologram",
+        "itemCategory": "Category"
+      }
+    },
+    "overclaiming39": {
+      "baseComponent": "overclaiming-question-template",
+      "parameters": {
+        "itemName": "Hologram",
+        "itemCategory": "Category"
+      }
+    },
+    "overclaiming40": {
+      "baseComponent": "overclaiming-question-template",
+      "parameters": {
+        "itemName": "Hologram",
+        "itemCategory": "Category"
+      }
+    },
+    "overclaiming41": {
+      "baseComponent": "overclaiming-question-template",
+      "parameters": {
+        "itemName": "Hologram",
+        "itemCategory": "Category"
+      }
     },
 
     "trial1A": {
@@ -495,391 +804,6 @@
         "correctSourceName": "Virtual"
       }
     },
-    "trial1C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "hanger_100.mp4",
-        "correctObjectName": "Hanger",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial2C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "paint-palette_100.mp4",
-        "correctObjectName": "Paint palette",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial3C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "scissors_100.mp4",
-        "correctObjectName": "Scissors",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial4C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "keys_65.mp4",
-        "correctObjectName": "Keys",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial5C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "rubber-duck_15.mp4",
-        "correctObjectName": "Rubber duck",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial6C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "box-cutter_65.mp4",
-        "correctObjectName": "Box cutter",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial7C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "sunglasses_100.mp4",
-        "correctObjectName": "Sunglasses",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial8C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "candle_100.mp4",
-        "correctObjectName": "Candle",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial9C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "pen_65.mp4",
-        "correctObjectName": "Pen",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial10C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "screwdriver_100.mp4",
-        "correctObjectName": "Screwdriver",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial11C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "apple_15.mp4",
-        "correctObjectName": "Apple",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial12C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "banana_15.mp4",
-        "correctObjectName": "Banana",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial13C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "lighter_100.mp4",
-        "correctObjectName": "Lighter",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial14C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "toothbrush_15.mp4",
-        "correctObjectName": "Toothbrush",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial15C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "calculator_100.mp4",
-        "correctObjectName": "Calculator",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial16C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "clock_100.mp4",
-        "correctObjectName": "Clock",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial17C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "computer-mouse_100.mp4",
-        "correctObjectName": "Computer mouse",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial18C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "lemon_100.mp4",
-        "correctObjectName": "Lemon",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial19C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "usb-drive_65.mp4",
-        "correctObjectName": "Usb drive",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial20C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "tin-can_65.mp4",
-        "correctObjectName": "Tin can",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial21C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "cup_65.mp4",
-        "correctObjectName": "Cup",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial22C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "serving-spoon_15.mp4",
-        "correctObjectName": "Serving spoon",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial23C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "book_15.mp4",
-        "correctObjectName": "Book",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial24C": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "hairdryer_100.mp4",
-        "correctObjectName": "Hair dryer",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial1D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "hanger_65.mp4",
-        "correctObjectName": "Hanger",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial2D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "paint-palette_15.mp4",
-        "correctObjectName": "Paint palette",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial3D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "scissors_15.mp4",
-        "correctObjectName": "Scissors",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial4D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "keys_100.mp4",
-        "correctObjectName": "Keys",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial5D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "rubber-duck_100.mp4",
-        "correctObjectName": "Rubber duck",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial6D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "box-cutter_100.mp4",
-        "correctObjectName": "Box cutter",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial7D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "sunglasses_65.mp4",
-        "correctObjectName": "Sunglasses",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial8D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "candle_65.mp4",
-        "correctObjectName": "Candle",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial9D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "pen_100.mp4",
-        "correctObjectName": "Pen",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial10D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "screwdriver_15.mp4",
-        "correctObjectName": "Screwdriver",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial11D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "apple_100.mp4",
-        "correctObjectName": "Apple",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial12D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "banana_100.mp4",
-        "correctObjectName": "Banana",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial13D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "lighter_65.mp4",
-        "correctObjectName": "Lighter",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial14D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "toothbrush_100.mp4",
-        "correctObjectName": "Toothbrush",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial15D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "calculator_15.mp4",
-        "correctObjectName": "Calculator",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial16D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "clock_65.mp4",
-        "correctObjectName": "Clock",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial17D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "computer-mouse_65.mp4",
-        "correctObjectName": "Computer mouse",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial18D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "lemon_15.mp4",
-        "correctObjectName": "Lemon",
-        "correctSourceName": "Virtual"
-      }
-    },
-    "trial19D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "usb-drive_100.mp4",
-        "correctObjectName": "Usb drive",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial20D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "tin-can_100.mp4",
-        "correctObjectName": "Tin can",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial21D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "cup_100.mp4",
-        "correctObjectName": "Cup",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial22D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "serving-spoon_100.mp4",
-        "correctObjectName": "Serving spoon",
-        "correctSourceName": "Real"
-      }
-    },
-    "trial23D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "book_100.mp4",
-        "correctObjectName": "Book",
-        "correctSourceName": "Real"
-      }
-    },
-
-    "trial24D": {
-      "baseComponent": "video-task-template",
-      "parameters": {
-        "videoFile": "hairdryer_15.mp4",
-        "correctObjectName": "Hair dryer",
-        "correctSourceName": "Virtual"
-      }
-    },
     "Doubt": {
       "type": "questionnaire",
       "response": [
@@ -946,6 +870,47 @@
     "components": [
       "ConsentPage",
       "IntroPage",
+      "overclaiming1",
+      "overclaiming2",
+      "overclaiming3",
+      "overclaiming4",
+      "overclaiming5",
+      "overclaiming6",
+      "overclaiming7",
+      "overclaiming8",
+      "overclaiming9",
+      "overclaiming10",
+      "overclaiming11",
+      "overclaiming12",
+      "overclaiming13",
+      "overclaiming14",
+      "overclaiming15",
+      "overclaiming16",
+      "overclaiming17",
+      "overclaiming18",
+      "overclaiming19",
+      "overclaiming20",
+      "overclaiming21",
+      "overclaiming22",
+      "overclaiming23",
+      "overclaiming24",
+      "overclaiming25",
+      "overclaiming26",
+      "overclaiming27",
+      "overclaiming28",
+      "overclaiming29",
+      "overclaiming30",
+      "overclaiming31",
+      "overclaiming32",
+      "overclaiming33",
+      "overclaiming34",
+      "overclaiming35",
+      "overclaiming36",
+      "overclaiming37",
+      "overclaiming38",
+      "overclaiming39",
+      "overclaiming40",
+      "overclaiming41",
       {
         "id": "group-assignment",
         "order": "latinSquare",
@@ -969,34 +934,6 @@
             "id": "groupB",
             "order": "fixed",
             "components": ["trial1B", "trial2B", "trial3B", "trial4B", "myAttentionCheckComponent", "trial5B", "trial6B", "trial7B", "trial8B", "trial9B", "trial10B", "trial11B", "myAttentionCheckComponent", "trial12B", "trial13B", "trial14B", "trial15B", "trial16B", "trial17B", "trial18B", "trial19B", "trial20B", "trial21B", "trial22B", "trial23B", "trial24B"],
-            "skip": [
-              {
-                "name": "myAttentionCheckComponent",
-                "check": "repeatedComponent",
-                "condition": "numIncorrect",
-                "value": 2,
-                "to": "end"
-              }
-            ]
-          },
-          {
-            "id": "groupC",
-            "order": "fixed",
-            "components": ["trial1C", "trial2C", "trial3C", "trial4C", "myAttentionCheckComponent", "trial5C", "trial6C", "trial7C", "trial8C", "trial9C", "trial10C", "trial11C", "myAttentionCheckComponent", "trial12C", "trial13C", "trial14C", "trial15C", "trial16C", "trial17C", "trial18C", "trial19C", "trial20C", "trial21C", "trial22C", "trial23C", "trial24C"],
-            "skip": [
-              {
-                "name": "myAttentionCheckComponent",
-                "check": "repeatedComponent",
-                "condition": "numIncorrect",
-                "value": 2,
-                "to": "end"
-              }
-            ]
-          },
-          {
-            "id": "groupD",
-            "order": "fixed",
-            "components": ["trial1D", "trial2D", "trial3D", "trial4D", "myAttentionCheckComponent", "trial5D", "trial6D", "trial7D", "trial8D", "trial9D", "trial10D", "trial11D", "myAttentionCheckComponent", "trial12D", "trial13D", "trial14D", "trial15D", "trial16D", "trial17D", "trial18D", "trial19D", "trial20D", "trial21D", "trial22D", "trial23D", "trial24D"],
             "skip": [
               {
                 "name": "myAttentionCheckComponent",
