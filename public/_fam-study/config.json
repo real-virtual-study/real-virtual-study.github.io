@@ -1549,7 +1549,7 @@
       "IntroPage",
       {
         "id": "overclaiming-block",
-        "order": "random",
+        "order": "latinSquare",
         "components": [
           "overclaiming1",
           "overclaiming2",
