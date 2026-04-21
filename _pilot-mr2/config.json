@@ -1,0 +1,181 @@
+{
+  "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.3.2/src/parser/StudyConfigSchema.json",
+  "studyMetadata": {
+    "title": "pilot Part 2",
+    "version": "2",
+    "authors": [
+      "Leana"
+    ],
+    "date": "2025-12-02",
+    "description": "Second Part - Sentence Source Memory",
+    "organizations": [
+      "inria"
+    ]
+  },
+  "uiConfig": {
+    "contactEmail": "",
+    "helpTextPath": "_pilot-mr2/assets/content/help.md",
+    "logoPath": "revisitAssets/revisitLogoSquare.svg",
+    "withProgressBar": true,
+    "autoDownloadStudy": false,
+    "withSidebar": false,
+    "enumerateQuestions": true,
+    "minWidthSize": 0,
+    "minHeightSize": 0,
+    "studyEndMsg": "",
+    "urlParticipantIdParam": ""
+  },
+  "baseComponents": {
+    "sentence-task": {
+      "type": "website",
+      "path": "_pilot-mr2/trial_test.html",
+      "instruction": "Read the sentence and answer the questions.",
+      "forceCompletion": true,
+      "nextButtonLocation": "belowStimulus",
+      "parameters": {
+        "sentence": "value"
+      },
+      "response": [
+        {
+          "id": "completionSignal",
+          "type": "reactive",
+          "location": "sidebar",
+          "prompt": "Click on next to continue with another sentence",
+          "required": true,
+          "hidden": true
+        },
+        {
+          "id": "sentence",
+          "type": "reactive",
+          "required": false,
+          "hidden": true,
+          "prompt": "Sentence Text"
+        },
+        {
+          "id": "seenAnswer",
+          "type": "reactive",
+          "required": false,
+          "hidden": true,
+          "prompt": "Seen in Part 1?"
+        },
+        {
+          "id": "seenConfidence",
+          "type": "reactive",
+          "required": false,
+          "hidden": true,
+          "prompt": "Confidence (Seen)"
+        },
+        {
+          "id": "sourceAnswer",
+          "type": "reactive",
+          "required": false,
+          "hidden": true,
+          "prompt": "Interlocutor or Self-Avatar"
+        },
+        {
+          "id": "sourceConfidence",
+          "type": "reactive",
+          "required": false,
+          "hidden": true,
+          "prompt": "Confidence (Source)"
+        },
+        {
+          "id": "reasoning",
+          "type": "reactive",
+          "required": false,
+          "hidden": true,
+          "prompt": "Explanation"
+        }
+      ]
+    }
+  },
+  "components": {
+    "IntroPage": {
+      "type": "markdown",
+      "path": "_pilot-mr2/assets/content/instructions.md",
+      "response": [
+
+      ]
+    },
+    "trial01A": { "baseComponent": "sentence-task", "parameters": { "speaker": "I", "sentence": "Tu as remarqué à quel point l’actualité d’aujourd’hui semble défiler plus vite qu’on ne peut la suivre ? J’ai l’impression de courir derrière les infos." } },
+    "trial02A": { "baseComponent": "sentence-task", "parameters": { "speaker": "SA", "sentence": "Complètement. Moi, j’écoute un podcast chaque matin pour voir ce qui s’est passé dans le monde. Sinon, je me sens largué dès le petit-déjeuner." } },
+    "trial03A": { "baseComponent": "sentence-task", "parameters": { "speaker": "I", "sentence": "En ce moment, la politique locale devient carrément le sujet principal des journaux télévisés. On ne parle presque plus que de ça." } },
+    "trial04A": { "baseComponent": "sentence-task", "parameters": { "speaker": "SA", "sentence": "Oui, surtout avec les deux candidats qui veulent prendre la tête dans les derniers sondages. C’est serré." } },
+    "trial05A": { "baseComponent": "sentence-task", "parameters": { "speaker": "I", "sentence": "Et ils ont tous les deux promis de réparer les routes avant l’hiver prochain… On verra bien si ça se concrétise." } },
+    "trial06A": { "baseComponent": "sentence-task", "parameters": { "speaker": "SA", "sentence": "En parlant de promesses ambitieuses, tu as vu pour l’exploration spatiale ? La nouvelle base lunaire marque une étape majeure." } },
+    "trial07A": { "baseComponent": "sentence-task", "parameters": { "speaker": "I", "sentence": "Oui ! Des astronautes se préparent à y vivre pendant au moins six mois consécutifs. C’est fascinant." } },
+    "trial08A": { "baseComponent": "sentence-task", "parameters": { "speaker": "SA", "sentence": "Cette mission pourrait vraiment nous aider à mieux comprendre l’histoire de notre système solaire. On vit une époque incroyable." } },
+    "trial09A": { "baseComponent": "sentence-task", "parameters": { "speaker": "I", "sentence": "Incroyable… et un peu instable aussi. Les valeurs technologiques ont chuté d’un coup lors des échanges en fin d’après-midi." } },
+    "trial10A": { "baseComponent": "sentence-task", "parameters": { "speaker": "SA", "sentence": "Les investisseurs s’inquiètent des nouvelles réglementations sur les outils d’intelligence artificielle, apparemment." } },
+    "trial11A": { "baseComponent": "sentence-task", "parameters": { "speaker": "I", "sentence": "Les experts économiques disent quand même de rester calmes malgré la volatilité du marché. Plus facile à dire qu’à faire." } },
+    "trial12A": { "baseComponent": "sentence-task", "parameters": { "speaker": "SA", "sentence": "C’est sûr. Tiens, dans un tout autre registre, un tableau rare a été découvert dans un vieux grenier poussiéreux aujourd’hui." } },
+    "trial13A": { "baseComponent": "sentence-task", "parameters": { "speaker": "I", "sentence": "Oui, j’ai lu ça ! Les historiens de l’art pensent qu’il appartiendrait à un célèbre maître italien." } },
+    "trial14A": { "baseComponent": "sentence-task", "parameters": { "speaker": "SA", "sentence": "Et la maison d’enchères s’attend à un prix de plusieurs millions. Comme quoi, il faut toujours fouiller les greniers de ses grands-parents…" } },
+    "trial15A": { "baseComponent": "sentence-task", "parameters": { "speaker": "I", "sentence": "Si seulement ! À propos de découvertes, le changement climatique affecte les schémas de migration de nombreux oiseaux sauvages." } },
+    "trial16A": { "baseComponent": "sentence-task", "parameters": { "speaker": "SA", "sentence": "Oui, et ils arrivent bien plus tôt qu’il y a une dizaine d’années." } },
+    "trial17A": { "baseComponent": "sentence-task", "parameters": { "speaker": "I", "sentence": "Les scientifiques suivent leurs mouvements grâce à de petites balises satellites, c’est impressionnant." } },
+    "trial18A": { "baseComponent": "sentence-task", "parameters": { "speaker": "SA", "sentence": "Exactement. Les schémas de migration sont complètement bouleversés." } },
+    "trial19A": { "baseComponent": "sentence-task", "parameters": { "speaker": "I", "sentence": "Ça me fait penser au rapport du ministère de la Santé sur le sommeil. Ils disent que la plupart des gens ont besoin de sept heures pour rester efficaces." } },
+    "trial20A": { "baseComponent": "sentence-task", "parameters": { "speaker": "SA", "sentence": "Oui, et qu’il faut consommer moins de caféine le soir pour améliorer la qualité du repos. Je devrais peut-être arrêter les expressos après 18 heures…" } },
+    "trial21A": { "baseComponent": "sentence-task", "parameters": { "speaker": "I", "sentence": "Bonne résolution ! Sinon, tu as vu que le grand festival de cinéma a annoncé sa sélection officielle ?" } },
+    "trial22A": { "baseComponent": "sentence-task", "parameters": { "speaker": "SA", "sentence": "Oui, et ce sont surtout des réalisateurs indépendants qui attirent l’attention cette année, plus que les stars des gros studios." } },
+    "trial23A": { "baseComponent": "sentence-task", "parameters": { "speaker": "I", "sentence": "Tant mieux. J’espère voir des histoires vraiment créatives sur le grand écran cet été." } },
+    "trial24A": { "baseComponent": "sentence-task", "parameters": { "speaker": "SA", "sentence": "En attendant, le stade national accueillera les finales mondiales le week-end prochain." } },
+    "trial25A": { "baseComponent": "sentence-task", "parameters": { "speaker": "I", "sentence": "Je sais ! Les billets ont été épuisés cinq minutes après leur mise en ligne. C’est fou." } },
+    "trial26A": { "baseComponent": "sentence-task", "parameters": { "speaker": "SA", "sentence": "Des fans viennent de chaque continent pour soutenir leurs équipes favorites. L’ambiance va être électrique." } },
+    "trial27A": { "baseComponent": "sentence-task", "parameters": { "speaker": "I", "sentence": "Notre ville va encore changer de visage avec tout ça. L’architecture moderne transforme déjà la silhouette de notre magnifique bord de mer." } },
+    "trial28A": { "baseComponent": "sentence-task", "parameters": { "speaker": "SA", "sentence": "Oui, ces nouvelles tours de verre qui s’élèvent au-dessus du vieux quartier portuaire… c’est impressionnant, même si je suis un peu nostalgique." } },
+    "trial29A": { "baseComponent": "sentence-task", "parameters": { "speaker": "I", "sentence": "Moi aussi. C’est peut-être pour ça que je préfère lire le journal en papier avec un bon café chaud." } },
+    "trial30A": { "baseComponent": "sentence-task", "parameters": { "speaker": "SA", "sentence": "Pareil. Ça fait du bien de déconnecter du monde numérique pendant un moment… surtout quand l’actualité va à cent à l’heure." } },
+    "trial31A": { "baseComponent": "sentence-task", "parameters": { "speaker": "new", "sentence": "Le débat d'hier soir n'a pas vraiment clarifié la position des deux candidats sur le prochain budget de la ville." } },
+    "trial32A": { "baseComponent": "sentence-task", "parameters": { "speaker": "new", "sentence": "J'ai entendu dire qu'ils prévoient aussi de lancer un nouveau rover pour explorer les calottes glaciaires de Mars." } },
+    "trial33A": { "baseComponent": "sentence-task", "parameters": { "speaker": "new", "sentence": "Certains analystes prédisent que le marché va vite rebondir une fois que ces directives sur l'IA seront finalisées." } },
+    "trial34A": { "baseComponent": "sentence-task", "parameters": { "speaker": "new", "sentence": "Apparemment, le cadre en bois sculpté qui entoure le tableau est une antiquité qui vaut elle-même une petite fortune." } },
+    "trial35A": { "baseComponent": "sentence-task", "parameters": { "speaker": "new", "sentence": "Même la faune marine locale montre des changements de comportement étranges à cause du réchauffement des courants océaniques." } },
+    "trial36A": { "baseComponent": "sentence-task", "parameters": { "speaker": "new", "sentence": "J'ai commencé à laisser mon téléphone dans la cuisine la nuit pour éviter la lumière bleue avant de dormir." } },
+    "trial37A": { "baseComponent": "sentence-task", "parameters": { "speaker": "new", "sentence": "Les critiques disent déjà que l'un des films en langue étrangère va remporter le prix principal." } },
+    "trial38A": { "baseComponent": "sentence-task", "parameters": { "speaker": "new", "sentence": "Ils s'attendent à ce que les transports en commun autour du stade soient complètement paralysés dès vendredi matin." } },
+    "trial39A": { "baseComponent": "sentence-task", "parameters": { "speaker": "new", "sentence": "Le conseil municipal veut planter plus d'arbres autour du quartier d'affaires pour adoucir tout ce béton." } },
+    "trial40A": { "baseComponent": "sentence-task", "parameters": { "speaker": "new", "sentence": "Il y a vraiment quelque chose d'incroyablement réconfortant dans l'odeur de l'encre fraîche sur une page imprimée." } }
+  },
+  "sequence": {
+    "order": "fixed",
+    "components": [
+      "IntroPage",
+      {
+        "order": "random",
+        "components": [
+          "trial01A",
+          "trial02A",
+          "trial03A",
+          "trial04A",
+          "trial05A",
+          "trial06A",
+          "trial07A",
+          "trial08A",
+          "trial09A",
+          "trial10A",
+          "trial11A",
+          "trial12A",
+          "trial13A",
+          "trial14A",
+          "trial15A",
+          "trial16A",
+          "trial17A",
+          "trial18A",
+          "trial19A",
+          "trial20A",
+          "trial21A",
+          "trial22A",
+          "trial23A",
+          "trial24A",
+          "trial25A",
+          "trial26A",
+          "trial27A",
+          "trial28A",
+          "trial29A",
+          "trial30A"
+        ]
+      }
+      ]
+}}

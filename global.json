@@ -8,7 +8,9 @@
     "_mr-confusion_G4",
     "_fam-study",
     "_fam-study_G1",
-    "_fam-study_G2"
+    "_fam-study_G2",
+    "_pilot-mr",
+    "_pilot-mr2"
   ],
   "configs": {
     "_mr-confusion": {
@@ -34,6 +36,12 @@
     },
     "_fam-study_G2": {
       "path": "fam-study_G2/config.json"
+    },
+    "_pilot-mr": {
+      "path": "_pilot-mr/config.json"
+    },
+    "_pilot-mr2": {
+      "path": "_pilot-mr2/config.json"
     }
   }
 }

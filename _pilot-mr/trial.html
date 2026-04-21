@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Task</title>
+
+    <style>
+        /* --- 1. GLOBAL STYLES --- */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #212529;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+            font-size: 1em;
+            text-align: center;
+        }
+
+        /* --- 2. CARD --- */
+        .stimulus-container {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            padding: 40px 40px 32px 40px;
+            width: 100%;
+            max-width: 480px;
+            text-align: center;
+        }
+
+        /* --- 3. SPEAKER IMAGE --- */
+        .speaker-image-wrapper {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 20px auto;
+            border: 3px solid #e0e0e0;
+            background: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .speaker-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* hide broken-image icon when src is empty */
+            color: transparent;
+        }
+
+        /* --- 4. SPEAKER LABEL --- */
+        .speaker-label {
+            font-size: 0.85em;
+            font-weight: 700;
+            color: #1976d2;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 28px;
+            min-height: 1.2em;
+        }
+
+        /* --- 5. PLAY BUTTON (required – browser blocks audio autoplay in iframes) --- */
+        #btn-play {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #1976d2;
+            color: white;
+            border: none;
+            padding: 14px 32px;
+            font-size: 1em;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.1s;
+            margin-bottom: 8px;
+        }
+
+        #btn-play:hover  { background-color: #1565c0; }
+        #btn-play:active { transform: scale(0.97); }
+
+        #btn-play svg {
+            flex-shrink: 0;
+        }
+
+        /* --- 6. SOUND BARS (shown only while playing) --- */
+        .sound-bars {
+            display: none;             /* hidden until playback starts */
+            justify-content: center;
+            align-items: flex-end;
+            gap: 5px;
+            height: 36px;
+            margin-bottom: 12px;
+        }
+
+        .sound-bars.playing {
+            display: flex;
+        }
+
+        .bar {
+            width: 6px;
+            border-radius: 3px;
+            background: #1976d2;
+            animation: bounce 0.8s ease-in-out infinite;
+        }
+
+        .bar:nth-child(1) { height: 12px; animation-delay: 0.00s; }
+        .bar:nth-child(2) { height: 24px; animation-delay: 0.10s; }
+        .bar:nth-child(3) { height: 32px; animation-delay: 0.20s; }
+        .bar:nth-child(4) { height: 20px; animation-delay: 0.30s; }
+        .bar:nth-child(5) { height: 28px; animation-delay: 0.15s; }
+        .bar:nth-child(6) { height: 14px; animation-delay: 0.25s; }
+        .bar:nth-child(7) { height: 22px; animation-delay: 0.05s; }
+
+        @keyframes bounce {
+            0%, 100% { transform: scaleY(0.4); }
+            50%       { transform: scaleY(1.0); }
+        }
+
+        /* --- 7. STATUS / DONE --- */
+        .status-label {
+            font-size: 0.88em;
+            color: #999;
+            min-height: 1.4em;
+            margin-top: 4px;
+        }
+
+        .done-message {
+            display: none;
+            font-size: 0.9em;
+            color: #28a745;
+            font-weight: 600;
+            margin-top: 16px;
+        }
+
+        .done-message.visible { display: block; }
+
+        .hidden { display: none !important; }
+    </style>
+
+    <script src="../revisitUtilities/revisit-communicate.js"></script>
+</head>
+<body>
+
+<div class="stimulus-container">
+
+    <!-- Speaker portrait -->
+    <div class="speaker-image-wrapper">
+        <img id="speaker-image" src="" alt="Speaker">
+    </div>
+
+    <!-- Speaker role (Interlocutor / Self-Avatar) -->
+    <div class="speaker-label" id="speaker-label">Loading…</div>
+
+    <!-- Play button — REQUIRED because browsers block audio autoplay inside iframes -->
+    <button id="btn-play" onclick="startAudio()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
+            <polygon points="5,3 19,12 5,21"/>
+        </svg>
+        Écoutez la phrase.
+    </button>
+
+    <!-- Animated bars (visible only during playback) -->
+    <div class="sound-bars" id="sound-bars">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+    <!-- Status hint -->
+    <div class="status-label" id="status-label">Cliquez sur Play pour écouter la phrase.</div>
+
+    <!-- Shown once audio finishes -->
+    <div class="done-message" id="done-message">
+        ✓ Audio terminé — cliquez sur <strong>Next</strong> pour continuer.
+    </div>
+
+</div>
+
+<!-- Audio element — no controls, never visible to participant -->
+<audio id="trial-audio" preload="auto"></audio>
+
+<script>
+    const audio       = document.getElementById('trial-audio');
+    const speakerImg  = document.getElementById('speaker-image');
+    const speakerLbl  = document.getElementById('speaker-label');
+    const btnPlay     = document.getElementById('btn-play');
+    const soundBars   = document.getElementById('sound-bars');
+    const statusLabel = document.getElementById('status-label');
+    const doneMsg     = document.getElementById('done-message');
+
+    const SPEAKER_LABELS = { I: 'Alexandre', SA: 'Cécile' };
+
+    /* ------------------------------------------------------------------ */
+    /* 1. Receive trial parameters from Revisit                            */
+    /* ------------------------------------------------------------------ */
+    Revisit.onDataReceive((data) => {
+        if (data.imageFile) speakerImg.src = data.imageFile;
+        if (data.speaker)   speakerLbl.textContent = SPEAKER_LABELS[data.speaker] || data.speaker;
+        if (data.audioFile) audio.src = data.audioFile;
+        // Do NOT call play() here — browser requires an explicit user gesture
+        // inside the iframe. The Play button below provides that gesture.
+    });
+
+    /* ------------------------------------------------------------------ */
+    /* 2. Play — triggered by the button (satisfies browser autoplay policy) */
+    /* ------------------------------------------------------------------ */
+    function startAudio() {
+        if (!audio.src) {
+            statusLabel.textContent = 'Audio not ready yet, please wait…';
+            return;
+        }
+        btnPlay.classList.add('hidden');
+        statusLabel.textContent = 'Listen carefully…';
+
+        audio.play().catch((err) => {
+            // Shouldn't happen since we're inside a click handler, but just in case
+            btnPlay.classList.remove('hidden');
+            statusLabel.textContent = 'Could not play audio. Try pressing Play again.';
+            console.error('Audio play error:', err);
+        });
+    }
+
+    /* ------------------------------------------------------------------ */
+    /* 3. Audio events                                                      */
+    /* ------------------------------------------------------------------ */
+    audio.addEventListener('play', () => {
+        soundBars.classList.add('playing');
+    });
+
+    audio.addEventListener('ended', () => {
+        soundBars.classList.remove('playing');
+        statusLabel.textContent = '';
+        doneMsg.classList.add('visible');
+        Revisit.postAnswers({ completionSignal: 'Finished' });
+    });
+
+    audio.addEventListener('error', () => {
+        soundBars.classList.remove('playing');
+        btnPlay.classList.remove('hidden');
+        statusLabel.textContent = 'Error loading audio file. Check the file path.';
+    });
+</script>
+</body>
+</html>
