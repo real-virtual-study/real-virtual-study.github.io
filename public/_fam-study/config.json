@@ -94,9 +94,53 @@
         }
       ]
     },
-    "IntroPage": {
+
+    "SelfAssessment": {
+      "type": "questionnaire",
+      "instruction": "Please answer the following two questions of self-assessment.",
+      "response": [
+        {
+          "id": "SelfAssessedQ1",
+          "prompt": "How familiar are you with new technologies?",
+          "type": "likert",
+          "required": true,
+          "scale": 7,
+          "minLabel": "Not at all",
+          "maxLabel": "Extremely",
+          "location": "belowStimulus"
+        },
+        {
+          "id": "SelfAssessedQ2",
+          "prompt": "How would you define your level of expertise in new technologies?",
+          "type": "likert",
+          "required": true,
+          "scale": 7,
+          "minLabel": "No expertise",
+          "maxLabel": "Expert",
+          "location": "belowStimulus"
+        }
+      ]
+    },
+
+    "IntroPageOCT": {
       "type": "markdown",
-      "path": "_fam-study/assets/content/part1_instructions.md",
+      "path": "_fam-study/assets/content/part1_instructions_OCT.md",
+      "nextButtonText": "Start",
+      "response": [
+        {
+          "id": "prolificId",
+          "prompt": "Your Prolific ID (automatically filled in)",
+          "required": true,
+          "location": "belowStimulus",
+          "type": "shortText",
+          "placeholder": "Prolific ID",
+          "paramCapture": "PROLIFIC_PID"
+        }
+      ]
+    },
+    "IntroPageWatchingTask": {
+      "type": "markdown",
+      "path": "_fam-study/assets/content/part1_instructions_watching_task.md",
       "nextButtonText": "Start",
       "response": [
         {
@@ -1546,7 +1590,8 @@
     "order": "fixed",
     "components": [
       "ConsentPage",
-      "IntroPage",
+      "SelfAssessment",
+      "IntroPageOCT",
       {
         "id": "overclaiming-block",
         "order": "latinSquare",
@@ -1594,6 +1639,7 @@
           "overclaiming41"
         ]
       },
+      "IntroPageWatchingTask",
       {
         "id": "group-assignment",
         "order": "latinSquare",
