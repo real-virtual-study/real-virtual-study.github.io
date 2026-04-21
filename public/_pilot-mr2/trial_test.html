@@ -166,7 +166,7 @@
 <div id="stage-source" class="question-container hidden">
     <h3>Qui a prononcé cette phrase ?</h3>
     <div>
-        <button class="choice-btn" id="btn-source-interlocutor" onclick="selectSource('interlocutor')">Simon</button>
+        <button class="choice-btn" id="btn-source-interlocutor" onclick="selectSource('interlocutor')">Alexandre</button>
         <button class="choice-btn" id="btn-source-self" onclick="selectSource('self_avatar')">Cécile</button>
     </div>
     <div class="nav-controls">
@@ -282,7 +282,7 @@
         lockSection('stage-conf-2');
 
         // Update the dynamic text based on the French choice
-        const label = trialAnswers.sourceAnswer === 'interlocutor' ? 'Simon' : 'Cécile';
+        const label = trialAnswers.sourceAnswer === 'interlocutor' ? 'Alexandre' : 'Cécile';
         document.getElementById('reason-title').textContent = `Veuillez expliquer pourquoi vous avez choisi "${label}".`;
 
         document.getElementById('stage-reason').classList.remove('hidden');
