@@ -1,4 +1,4 @@
-{
+﻿{
   "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.3.2/src/parser/StudyConfigSchema.json",
   "studyMetadata": {
     "title": "Familiarity study - Part 1",
@@ -80,8 +80,7 @@
             "4: I know fairly well what it is.",
             "5: I know this term very well.",
             "6: I know this term perfectly and could explain it to someone else."
-          ],
-          "prompt": "Indicate your level of knowledge of this item"
+          ]
         }
       ]
     }
