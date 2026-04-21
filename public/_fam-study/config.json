@@ -66,23 +66,7 @@
     },
     "overclaiming-question-template": {
       "type": "questionnaire",
-      "response": [
-        {
-          "id": "q-dropdown",
-          "location": "aboveStimulus",
-          "type": "dropdown",
-          "placeholder": "Indicate your level of knowledge of this item",
-          "options": [
-            "0: I have never heard of it.",
-            "1: I have heard of it, but I don't know what it is.",
-            "2: I have a very vague idea of what it is.",
-            "3: I have a moderate idea of what it is.",
-            "4: I know fairly well what it is.",
-            "5: I know this term very well.",
-            "6: I know this term perfectly and could explain it to someone else."
-          ]
-        }
-      ]
+      "response": []
     }
   },
   "components": {
