@@ -66,24 +66,7 @@
     },
     "overclaiming-question-template": {
       "type": "questionnaire",
-      "response": [
-        {
-          "id": "q-dropdown",
-          "promptKey": "itemLabel",
-          "location": "aboveStimulus",
-          "type": "dropdown",
-          "placeholder": "Indicate your level of knowledge of this item",
-          "options": [
-            "0: I have never heard of it.",
-            "1: I have heard of it, but I don't know what it is.",
-            "2: I have a very vague idea of what it is.",
-            "3: I have a moderate idea of what it is.",
-            "4: I know fairly well what it is.",
-            "5: I know this term very well.",
-            "6: I know this term perfectly and could explain it to someone else."
-          ]
-        }
-      ]
+      "response": []
     }
   },
   "components": {
@@ -111,9 +94,51 @@
         }
       ]
     },
-    "IntroPage": {
+    "SelfAssessment": {
+      "type": "questionnaire",
+      "instruction": "Please answer the following two questions of self-assessment.",
+      "response": [
+        {
+          "id": "SelfAssessedQ1",
+          "prompt": "How familiar are you with new technologies?",
+          "type": "likert",
+          "required": true,
+          "scale": 7,
+          "minLabel": "Not at all",
+          "maxLabel": "Extremely",
+          "location": "belowStimulus"
+        },
+        {
+          "id": "SelfAssessedQ2",
+          "prompt": "How would you define your level of expertise in new technologies?",
+          "type": "likert",
+          "required": true,
+          "scale": 7,
+          "minLabel": "No expertise",
+          "maxLabel": "Expert",
+          "location": "belowStimulus"
+        }
+      ]
+    },
+    "IntroPageOCT": {
       "type": "markdown",
-      "path": "_fam-study/assets/content/part1_instructions.md",
+      "path": "_fam-study/assets/content/part1_instructions_OCT.md",
+      "nextButtonText": "Start",
+      "response": [
+        {
+          "id": "prolificId",
+          "prompt": "Your Prolific ID (automatically filled in)",
+          "required": true,
+          "location": "belowStimulus",
+          "type": "shortText",
+          "placeholder": "Prolific ID",
+          "paramCapture": "PROLIFIC_PID"
+        }
+      ]
+    },
+    "IntroPageWatchingTask": {
+      "type": "markdown",
+      "path": "_fam-study/assets/content/part1_instructions_watching_task.md",
       "nextButtonText": "Start",
       "response": [
         {
@@ -136,288 +161,986 @@
     "overclaiming1": {
       "baseComponent": "overclaiming-question-template",
       "parameters": {
-        "itemLabel": "Hologram (Category)"
-      }
+        "itemLabel": "Windows 11 (Logiciels / Système)"
+      },
+      "response": [
+        {
+          "id": "q-dropdown",
+          "prompt": "Windows 11 (Logiciels / Système)",
+          "location": "aboveStimulus",
+          "type": "dropdown",
+          "placeholder": "Indicate your level of knowledge of this item",
+          "options": [
+            "0: I have never heard of it.",
+            "1: I have heard of it, but I don't know what it is.",
+            "2: I have a very vague idea of what it is.",
+            "3: I have a moderate idea of what it is.",
+            "4: I know fairly well what it is.",
+            "5: I know this term very well.",
+            "6: I know this term perfectly and could explain it to someone else."
+          ]
+        }
+      ]
     },
     "overclaiming2": {
       "baseComponent": "overclaiming-question-template",
       "parameters": {
-        "itemName": "Hologram",
-        "itemCategory": "Category"
-      }
+        "itemLabel": "macOS (Logiciels / Système)"
+      },
+      "response": [
+        {
+          "id": "q-dropdown",
+          "prompt": "macOS (Logiciels / Système)",
+          "location": "aboveStimulus",
+          "type": "dropdown",
+          "placeholder": "Indicate your level of knowledge of this item",
+          "options": [
+            "0: I have never heard of it.",
+            "1: I have heard of it, but I don't know what it is.",
+            "2: I have a very vague idea of what it is.",
+            "3: I have a moderate idea of what it is.",
+            "4: I know fairly well what it is.",
+            "5: I know this term very well.",
+            "6: I know this term perfectly and could explain it to someone else."
+          ]
+        }
+      ]
     },
     "overclaiming3": {
       "baseComponent": "overclaiming-question-template",
       "parameters": {
-        "itemName": "Hologram",
-        "itemCategory": "Category"
-      }
+        "itemLabel": "API (Logiciels / Système)"
+      },
+      "response": [
+        {
+          "id": "q-dropdown",
+          "prompt": "API (Logiciels / Système)",
+          "location": "aboveStimulus",
+          "type": "dropdown",
+          "placeholder": "Indicate your level of knowledge of this item",
+          "options": [
+            "0: I have never heard of it.",
+            "1: I have heard of it, but I don't know what it is.",
+            "2: I have a very vague idea of what it is.",
+            "3: I have a moderate idea of what it is.",
+            "4: I know fairly well what it is.",
+            "5: I know this term very well.",
+            "6: I know this term perfectly and could explain it to someone else."
+          ]
+        }
+      ]
     },
     "overclaiming4": {
       "baseComponent": "overclaiming-question-template",
       "parameters": {
-        "itemName": "Hologram",
-        "itemCategory": "Category"
-      }
+        "itemLabel": "Firmware (Logiciels / Système)"
+      },
+      "response": [
+        {
+          "id": "q-dropdown",
+          "prompt": "Firmware (Logiciels / Système)",
+          "location": "aboveStimulus",
+          "type": "dropdown",
+          "placeholder": "Indicate your level of knowledge of this item",
+          "options": [
+            "0: I have never heard of it.",
+            "1: I have heard of it, but I don't know what it is.",
+            "2: I have a very vague idea of what it is.",
+            "3: I have a moderate idea of what it is.",
+            "4: I know fairly well what it is.",
+            "5: I know this term very well.",
+            "6: I know this term perfectly and could explain it to someone else."
+          ]
+        }
+      ]
     },
     "overclaiming5": {
       "baseComponent": "overclaiming-question-template",
       "parameters": {
-        "itemName": "Hologram",
-        "itemCategory": "Category"
-      }
+        "itemLabel": "iOS (Logiciels / Système)"
+      },
+      "response": [
+        {
+          "id": "q-dropdown",
+          "prompt": "iOS (Logiciels / Système)",
+          "location": "aboveStimulus",
+          "type": "dropdown",
+          "placeholder": "Indicate your level of knowledge of this item",
+          "options": [
+            "0: I have never heard of it.",
+            "1: I have heard of it, but I don't know what it is.",
+            "2: I have a very vague idea of what it is.",
+            "3: I have a moderate idea of what it is.",
+            "4: I know fairly well what it is.",
+            "5: I know this term very well.",
+            "6: I know this term perfectly and could explain it to someone else."
+          ]
+        }
+      ]
     },
     "overclaiming6": {
       "baseComponent": "overclaiming-question-template",
       "parameters": {
-        "itemName": "Hologram",
-        "itemCategory": "Category"
-      }
+        "itemLabel": "Android (Logiciels / Système)"
+      },
+      "response": [
+        {
+          "id": "q-dropdown",
+          "prompt": "Android (Logiciels / Système)",
+          "location": "aboveStimulus",
+          "type": "dropdown",
+          "placeholder": "Indicate your level of knowledge of this item",
+          "options": [
+            "0: I have never heard of it.",
+            "1: I have heard of it, but I don't know what it is.",
+            "2: I have a very vague idea of what it is.",
+            "3: I have a moderate idea of what it is.",
+            "4: I know fairly well what it is.",
+            "5: I know this term very well.",
+            "6: I know this term perfectly and could explain it to someone else."
+          ]
+        }
+      ]
     },
     "overclaiming7": {
       "baseComponent": "overclaiming-question-template",
       "parameters": {
-        "itemName": "Hologram",
-        "itemCategory": "Category"
-      }
+        "itemLabel": "Linux (Logiciels / Système)"
+      },
+      "response": [
+        {
+          "id": "q-dropdown",
+          "prompt": "Linux (Logiciels / Système)",
+          "location": "aboveStimulus",
+          "type": "dropdown",
+          "placeholder": "Indicate your level of knowledge of this item",
+          "options": [
+            "0: I have never heard of it.",
+            "1: I have heard of it, but I don't know what it is.",
+            "2: I have a very vague idea of what it is.",
+            "3: I have a moderate idea of what it is.",
+            "4: I know fairly well what it is.",
+            "5: I know this term very well.",
+            "6: I know this term perfectly and could explain it to someone else."
+          ]
+        }
+      ]
     },
     "overclaiming8": {
       "baseComponent": "overclaiming-question-template",
       "parameters": {
-        "itemName": "Hologram",
-        "itemCategory": "Category"
-      }
+        "itemLabel": "Impulse OS (Logiciels / Système)"
+      },
+      "response": [
+        {
+          "id": "q-dropdown",
+          "prompt": "Impulse OS (Logiciels / Système)",
+          "location": "aboveStimulus",
+          "type": "dropdown",
+          "placeholder": "Indicate your level of knowledge of this item",
+          "options": [
+            "0: I have never heard of it.",
+            "1: I have heard of it, but I don't know what it is.",
+            "2: I have a very vague idea of what it is.",
+            "3: I have a moderate idea of what it is.",
+            "4: I know fairly well what it is.",
+            "5: I know this term very well.",
+            "6: I know this term perfectly and could explain it to someone else."
+          ]
+        }
+      ]
     },
     "overclaiming9": {
       "baseComponent": "overclaiming-question-template",
       "parameters": {
-        "itemName": "Hologram",
-        "itemCategory": "Category"
-      }
+        "itemLabel": "CoreView Media (Logiciels / Système)"
+      },
+      "response": [
+        {
+          "id": "q-dropdown",
+          "prompt": "CoreView Media (Logiciels / Système)",
+          "location": "aboveStimulus",
+          "type": "dropdown",
+          "placeholder": "Indicate your level of knowledge of this item",
+          "options": [
+            "0: I have never heard of it.",
+            "1: I have heard of it, but I don't know what it is.",
+            "2: I have a very vague idea of what it is.",
+            "3: I have a moderate idea of what it is.",
+            "4: I know fairly well what it is.",
+            "5: I know this term very well.",
+            "6: I know this term perfectly and could explain it to someone else."
+          ]
+        }
+      ]
     },
     "overclaiming10": {
       "baseComponent": "overclaiming-question-template",
       "parameters": {
-        "itemName": "Hologram",
-        "itemCategory": "Category"
-      }
+        "itemLabel": "Disque SSD (Matériel / Hardware)"
+      },
+      "response": [
+        {
+          "id": "q-dropdown",
+          "prompt": "Disque SSD (Matériel / Hardware)",
+          "location": "aboveStimulus",
+          "type": "dropdown",
+          "placeholder": "Indicate your level of knowledge of this item",
+          "options": [
+            "0: I have never heard of it.",
+            "1: I have heard of it, but I don't know what it is.",
+            "2: I have a very vague idea of what it is.",
+            "3: I have a moderate idea of what it is.",
+            "4: I know fairly well what it is.",
+            "5: I know this term very well.",
+            "6: I know this term perfectly and could explain it to someone else."
+          ]
+        }
+      ]
     },
     "overclaiming11": {
       "baseComponent": "overclaiming-question-template",
       "parameters": {
-        "itemName": "Hologram",
-        "itemCategory": "Category"
-      }
+        "itemLabel": "Mémoire vive (RAM) (Matériel / Hardware)"
+      },
+      "response": [
+        {
+          "id": "q-dropdown",
+          "prompt": "Mémoire vive (RAM) (Matériel / Hardware)",
+          "location": "aboveStimulus",
+          "type": "dropdown",
+          "placeholder": "Indicate your level of knowledge of this item",
+          "options": [
+            "0: I have never heard of it.",
+            "1: I have heard of it, but I don't know what it is.",
+            "2: I have a very vague idea of what it is.",
+            "3: I have a moderate idea of what it is.",
+            "4: I know fairly well what it is.",
+            "5: I know this term very well.",
+            "6: I know this term perfectly and could explain it to someone else."
+          ]
+        }
+      ]
     },
     "overclaiming12": {
       "baseComponent": "overclaiming-question-template",
       "parameters": {
-        "itemName": "Hologram",
-        "itemCategory": "Category"
-      }
+        "itemLabel": "Carte mère (Matériel / Hardware)"
+      },
+      "response": [
+        {
+          "id": "q-dropdown",
+          "prompt": "Carte mère (Matériel / Hardware)",
+          "location": "aboveStimulus",
+          "type": "dropdown",
+          "placeholder": "Indicate your level of knowledge of this item",
+          "options": [
+            "0: I have never heard of it.",
+            "1: I have heard of it, but I don't know what it is.",
+            "2: I have a very vague idea of what it is.",
+            "3: I have a moderate idea of what it is.",
+            "4: I know fairly well what it is.",
+            "5: I know this term very well.",
+            "6: I know this term perfectly and could explain it to someone else."
+          ]
+        }
+      ]
     },
     "overclaiming13": {
       "baseComponent": "overclaiming-question-template",
       "parameters": {
-        "itemName": "Hologram",
-        "itemCategory": "Category"
-      }
+        "itemLabel": "BIOS / UEFI (Matériel / Hardware)"
+      },
+      "response": [
+        {
+          "id": "q-dropdown",
+          "prompt": "BIOS / UEFI (Matériel / Hardware)",
+          "location": "aboveStimulus",
+          "type": "dropdown",
+          "placeholder": "Indicate your level of knowledge of this item",
+          "options": [
+            "0: I have never heard of it.",
+            "1: I have heard of it, but I don't know what it is.",
+            "2: I have a very vague idea of what it is.",
+            "3: I have a moderate idea of what it is.",
+            "4: I know fairly well what it is.",
+            "5: I know this term very well.",
+            "6: I know this term perfectly and could explain it to someone else."
+          ]
+        }
+      ]
     },
     "overclaiming14": {
       "baseComponent": "overclaiming-question-template",
       "parameters": {
-        "itemName": "Hologram",
-        "itemCategory": "Category"
-      }
+        "itemLabel": "Processeur (CPU) (Matériel / Hardware)"
+      },
+      "response": [
+        {
+          "id": "q-dropdown",
+          "prompt": "Processeur (CPU) (Matériel / Hardware)",
+          "location": "aboveStimulus",
+          "type": "dropdown",
+          "placeholder": "Indicate your level of knowledge of this item",
+          "options": [
+            "0: I have never heard of it.",
+            "1: I have heard of it, but I don't know what it is.",
+            "2: I have a very vague idea of what it is.",
+            "3: I have a moderate idea of what it is.",
+            "4: I know fairly well what it is.",
+            "5: I know this term very well.",
+            "6: I know this term perfectly and could explain it to someone else."
+          ]
+        }
+      ]
     },
     "overclaiming15": {
       "baseComponent": "overclaiming-question-template",
       "parameters": {
-        "itemName": "Hologram",
-        "itemCategory": "Category"
-      }
+        "itemLabel": "Port HDMI (Matériel / Hardware)"
+      },
+      "response": [
+        {
+          "id": "q-dropdown",
+          "prompt": "Port HDMI (Matériel / Hardware)",
+          "location": "aboveStimulus",
+          "type": "dropdown",
+          "placeholder": "Indicate your level of knowledge of this item",
+          "options": [
+            "0: I have never heard of it.",
+            "1: I have heard of it, but I don't know what it is.",
+            "2: I have a very vague idea of what it is.",
+            "3: I have a moderate idea of what it is.",
+            "4: I know fairly well what it is.",
+            "5: I know this term very well.",
+            "6: I know this term perfectly and could explain it to someone else."
+          ]
+        }
+      ]
     },
     "overclaiming16": {
       "baseComponent": "overclaiming-question-template",
       "parameters": {
-        "itemName": "Hologram",
-        "itemCategory": "Category"
-      }
+        "itemLabel": "Carte graphique (GPU) (Matériel / Hardware)"
+      },
+      "response": [
+        {
+          "id": "q-dropdown",
+          "prompt": "Carte graphique (GPU) (Matériel / Hardware)",
+          "location": "aboveStimulus",
+          "type": "dropdown",
+          "placeholder": "Indicate your level of knowledge of this item",
+          "options": [
+            "0: I have never heard of it.",
+            "1: I have heard of it, but I don't know what it is.",
+            "2: I have a very vague idea of what it is.",
+            "3: I have a moderate idea of what it is.",
+            "4: I know fairly well what it is.",
+            "5: I know this term very well.",
+            "6: I know this term perfectly and could explain it to someone else."
+          ]
+        }
+      ]
     },
     "overclaiming17": {
       "baseComponent": "overclaiming-question-template",
       "parameters": {
-        "itemName": "Hologram",
-        "itemCategory": "Category"
-      }
+        "itemLabel": "Capteur de flux ionique (Matériel / Hardware)"
+      },
+      "response": [
+        {
+          "id": "q-dropdown",
+          "prompt": "Capteur de flux ionique (Matériel / Hardware)",
+          "location": "aboveStimulus",
+          "type": "dropdown",
+          "placeholder": "Indicate your level of knowledge of this item",
+          "options": [
+            "0: I have never heard of it.",
+            "1: I have heard of it, but I don't know what it is.",
+            "2: I have a very vague idea of what it is.",
+            "3: I have a moderate idea of what it is.",
+            "4: I know fairly well what it is.",
+            "5: I know this term very well.",
+            "6: I know this term perfectly and could explain it to someone else."
+          ]
+        }
+      ]
     },
     "overclaiming18": {
       "baseComponent": "overclaiming-question-template",
       "parameters": {
-        "itemName": "Hologram",
-        "itemCategory": "Category"
-      }
+        "itemLabel": "Batterie au Graphène-X (Matériel / Hardware)"
+      },
+      "response": [
+        {
+          "id": "q-dropdown",
+          "prompt": "Batterie au Graphène-X (Matériel / Hardware)",
+          "location": "aboveStimulus",
+          "type": "dropdown",
+          "placeholder": "Indicate your level of knowledge of this item",
+          "options": [
+            "0: I have never heard of it.",
+            "1: I have heard of it, but I don't know what it is.",
+            "2: I have a very vague idea of what it is.",
+            "3: I have a moderate idea of what it is.",
+            "4: I know fairly well what it is.",
+            "5: I know this term very well.",
+            "6: I know this term perfectly and could explain it to someone else."
+          ]
+        }
+      ]
     },
     "overclaiming19": {
       "baseComponent": "overclaiming-question-template",
       "parameters": {
-        "itemName": "Hologram",
-        "itemCategory": "Category"
-      }
+        "itemLabel": "Adresse IP (Internet / Réseaux)"
+      },
+      "response": [
+        {
+          "id": "q-dropdown",
+          "prompt": "Adresse IP (Internet / Réseaux)",
+          "location": "aboveStimulus",
+          "type": "dropdown",
+          "placeholder": "Indicate your level of knowledge of this item",
+          "options": [
+            "0: I have never heard of it.",
+            "1: I have heard of it, but I don't know what it is.",
+            "2: I have a very vague idea of what it is.",
+            "3: I have a moderate idea of what it is.",
+            "4: I know fairly well what it is.",
+            "5: I know this term very well.",
+            "6: I know this term perfectly and could explain it to someone else."
+          ]
+        }
+      ]
     },
     "overclaiming20": {
       "baseComponent": "overclaiming-question-template",
       "parameters": {
-        "itemName": "Hologram",
-        "itemCategory": "Category"
-      }
+        "itemLabel": "Serveur DNS (Internet / Réseaux)"
+      },
+      "response": [
+        {
+          "id": "q-dropdown",
+          "prompt": "Serveur DNS (Internet / Réseaux)",
+          "location": "aboveStimulus",
+          "type": "dropdown",
+          "placeholder": "Indicate your level of knowledge of this item",
+          "options": [
+            "0: I have never heard of it.",
+            "1: I have heard of it, but I don't know what it is.",
+            "2: I have a very vague idea of what it is.",
+            "3: I have a moderate idea of what it is.",
+            "4: I know fairly well what it is.",
+            "5: I know this term very well.",
+            "6: I know this term perfectly and could explain it to someone else."
+          ]
+        }
+      ]
     },
     "overclaiming21": {
       "baseComponent": "overclaiming-question-template",
       "parameters": {
-        "itemName": "Hologram",
-        "itemCategory": "Category"
-      }
+        "itemLabel": "Chiffrement SSL/TLS (Internet / Réseaux)"
+      },
+      "response": [
+        {
+          "id": "q-dropdown",
+          "prompt": "Chiffrement SSL/TLS (Internet / Réseaux)",
+          "location": "aboveStimulus",
+          "type": "dropdown",
+          "placeholder": "Indicate your level of knowledge of this item",
+          "options": [
+            "0: I have never heard of it.",
+            "1: I have heard of it, but I don't know what it is.",
+            "2: I have a very vague idea of what it is.",
+            "3: I have a moderate idea of what it is.",
+            "4: I know fairly well what it is.",
+            "5: I know this term very well.",
+            "6: I know this term perfectly and could explain it to someone else."
+          ]
+        }
+      ]
     },
     "overclaiming22": {
       "baseComponent": "overclaiming-question-template",
       "parameters": {
-        "itemName": "Hologram",
-        "itemCategory": "Category"
-      }
+        "itemLabel": "Bande passante (Internet / Réseaux)"
+      },
+      "response": [
+        {
+          "id": "q-dropdown",
+          "prompt": "Bande passante (Internet / Réseaux)",
+          "location": "aboveStimulus",
+          "type": "dropdown",
+          "placeholder": "Indicate your level of knowledge of this item",
+          "options": [
+            "0: I have never heard of it.",
+            "1: I have heard of it, but I don't know what it is.",
+            "2: I have a very vague idea of what it is.",
+            "3: I have a moderate idea of what it is.",
+            "4: I know fairly well what it is.",
+            "5: I know this term very well.",
+            "6: I know this term perfectly and could explain it to someone else."
+          ]
+        }
+      ]
     },
     "overclaiming23": {
       "baseComponent": "overclaiming-question-template",
       "parameters": {
-        "itemName": "Hologram",
-        "itemCategory": "Category"
-      }
+        "itemLabel": "Wifi 6 (Internet / Réseaux)"
+      },
+      "response": [
+        {
+          "id": "q-dropdown",
+          "prompt": "Wifi 6 (Internet / Réseaux)",
+          "location": "aboveStimulus",
+          "type": "dropdown",
+          "placeholder": "Indicate your level of knowledge of this item",
+          "options": [
+            "0: I have never heard of it.",
+            "1: I have heard of it, but I don't know what it is.",
+            "2: I have a very vague idea of what it is.",
+            "3: I have a moderate idea of what it is.",
+            "4: I know fairly well what it is.",
+            "5: I know this term very well.",
+            "6: I know this term perfectly and could explain it to someone else."
+          ]
+        }
+      ]
     },
     "overclaiming24": {
       "baseComponent": "overclaiming-question-template",
       "parameters": {
-        "itemName": "Hologram",
-        "itemCategory": "Category"
-      }
+        "itemLabel": "Protocole HTTP (Internet / Réseaux)"
+      },
+      "response": [
+        {
+          "id": "q-dropdown",
+          "prompt": "Protocole HTTP (Internet / Réseaux)",
+          "location": "aboveStimulus",
+          "type": "dropdown",
+          "placeholder": "Indicate your level of knowledge of this item",
+          "options": [
+            "0: I have never heard of it.",
+            "1: I have heard of it, but I don't know what it is.",
+            "2: I have a very vague idea of what it is.",
+            "3: I have a moderate idea of what it is.",
+            "4: I know fairly well what it is.",
+            "5: I know this term very well.",
+            "6: I know this term perfectly and could explain it to someone else."
+          ]
+        }
+      ]
     },
     "overclaiming25": {
       "baseComponent": "overclaiming-question-template",
       "parameters": {
-        "itemName": "Hologram",
-        "itemCategory": "Category"
-      }
+        "itemLabel": "Cloud Computing (Internet / Réseaux)"
+      },
+      "response": [
+        {
+          "id": "q-dropdown",
+          "prompt": "Cloud Computing (Internet / Réseaux)",
+          "location": "aboveStimulus",
+          "type": "dropdown",
+          "placeholder": "Indicate your level of knowledge of this item",
+          "options": [
+            "0: I have never heard of it.",
+            "1: I have heard of it, but I don't know what it is.",
+            "2: I have a very vague idea of what it is.",
+            "3: I have a moderate idea of what it is.",
+            "4: I know fairly well what it is.",
+            "5: I know this term very well.",
+            "6: I know this term perfectly and could explain it to someone else."
+          ]
+        }
+      ]
     },
     "overclaiming26": {
       "baseComponent": "overclaiming-question-template",
       "parameters": {
-        "itemName": "Hologram",
-        "itemCategory": "Category"
-      }
+        "itemLabel": "Passerelle Proxy-S (Internet / Réseaux)"
+      },
+      "response": [
+        {
+          "id": "q-dropdown",
+          "prompt": "Passerelle Proxy-S (Internet / Réseaux)",
+          "location": "aboveStimulus",
+          "type": "dropdown",
+          "placeholder": "Indicate your level of knowledge of this item",
+          "options": [
+            "0: I have never heard of it.",
+            "1: I have heard of it, but I don't know what it is.",
+            "2: I have a very vague idea of what it is.",
+            "3: I have a moderate idea of what it is.",
+            "4: I know fairly well what it is.",
+            "5: I know this term very well.",
+            "6: I know this term perfectly and could explain it to someone else."
+          ]
+        }
+      ]
     },
     "overclaiming27": {
       "baseComponent": "overclaiming-question-template",
       "parameters": {
-        "itemName": "Hologram",
-        "itemCategory": "Category"
-      }
+        "itemLabel": "Algorithme de compression Bio-S (Internet / Réseaux)"
+      },
+      "response": [
+        {
+          "id": "q-dropdown",
+          "prompt": "Algorithme de compression Bio-S (Internet / Réseaux)",
+          "location": "aboveStimulus",
+          "type": "dropdown",
+          "placeholder": "Indicate your level of knowledge of this item",
+          "options": [
+            "0: I have never heard of it.",
+            "1: I have heard of it, but I don't know what it is.",
+            "2: I have a very vague idea of what it is.",
+            "3: I have a moderate idea of what it is.",
+            "4: I know fairly well what it is.",
+            "5: I know this term very well.",
+            "6: I know this term perfectly and could explain it to someone else."
+          ]
+        }
+      ]
     },
     "overclaiming28": {
       "baseComponent": "overclaiming-question-template",
       "parameters": {
-        "itemName": "Hologram",
-        "itemCategory": "Category"
-      }
+        "itemLabel": "Machine Learning (Intelligence Artificielle)"
+      },
+      "response": [
+        {
+          "id": "q-dropdown",
+          "prompt": "Machine Learning (Intelligence Artificielle)",
+          "location": "aboveStimulus",
+          "type": "dropdown",
+          "placeholder": "Indicate your level of knowledge of this item",
+          "options": [
+            "0: I have never heard of it.",
+            "1: I have heard of it, but I don't know what it is.",
+            "2: I have a very vague idea of what it is.",
+            "3: I have a moderate idea of what it is.",
+            "4: I know fairly well what it is.",
+            "5: I know this term very well.",
+            "6: I know this term perfectly and could explain it to someone else."
+          ]
+        }
+      ]
     },
     "overclaiming29": {
       "baseComponent": "overclaiming-question-template",
       "parameters": {
-        "itemName": "Hologram",
-        "itemCategory": "Category"
-      }
+        "itemLabel": "Réseaux de neurones (Intelligence Artificielle)"
+      },
+      "response": [
+        {
+          "id": "q-dropdown",
+          "prompt": "Réseaux de neurones (Intelligence Artificielle)",
+          "location": "aboveStimulus",
+          "type": "dropdown",
+          "placeholder": "Indicate your level of knowledge of this item",
+          "options": [
+            "0: I have never heard of it.",
+            "1: I have heard of it, but I don't know what it is.",
+            "2: I have a very vague idea of what it is.",
+            "3: I have a moderate idea of what it is.",
+            "4: I know fairly well what it is.",
+            "5: I know this term very well.",
+            "6: I know this term perfectly and could explain it to someone else."
+          ]
+        }
+      ]
     },
     "overclaiming30": {
       "baseComponent": "overclaiming-question-template",
       "parameters": {
-        "itemName": "Hologram",
-        "itemCategory": "Category"
-      }
+        "itemLabel": "NLP (Intelligence Artificielle)"
+      },
+      "response": [
+        {
+          "id": "q-dropdown",
+          "prompt": "NLP (Intelligence Artificielle)",
+          "location": "aboveStimulus",
+          "type": "dropdown",
+          "placeholder": "Indicate your level of knowledge of this item",
+          "options": [
+            "0: I have never heard of it.",
+            "1: I have heard of it, but I don't know what it is.",
+            "2: I have a very vague idea of what it is.",
+            "3: I have a moderate idea of what it is.",
+            "4: I know fairly well what it is.",
+            "5: I know this term very well.",
+            "6: I know this term perfectly and could explain it to someone else."
+          ]
+        }
+      ]
     },
     "overclaiming31": {
       "baseComponent": "overclaiming-question-template",
       "parameters": {
-        "itemName": "Hologram",
-        "itemCategory": "Category"
-      }
+        "itemLabel": "Vision par ordinateur (Intelligence Artificielle)"
+      },
+      "response": [
+        {
+          "id": "q-dropdown",
+          "prompt": "Vision par ordinateur (Intelligence Artificielle)",
+          "location": "aboveStimulus",
+          "type": "dropdown",
+          "placeholder": "Indicate your level of knowledge of this item",
+          "options": [
+            "0: I have never heard of it.",
+            "1: I have heard of it, but I don't know what it is.",
+            "2: I have a very vague idea of what it is.",
+            "3: I have a moderate idea of what it is.",
+            "4: I know fairly well what it is.",
+            "5: I know this term very well.",
+            "6: I know this term perfectly and could explain it to someone else."
+          ]
+        }
+      ]
     },
     "overclaiming32": {
       "baseComponent": "overclaiming-question-template",
       "parameters": {
-        "itemName": "Hologram",
-        "itemCategory": "Category"
-      }
+        "itemLabel": "ChatGPT (Intelligence Artificielle)"
+      },
+      "response": [
+        {
+          "id": "q-dropdown",
+          "prompt": "ChatGPT (Intelligence Artificielle)",
+          "location": "aboveStimulus",
+          "type": "dropdown",
+          "placeholder": "Indicate your level of knowledge of this item",
+          "options": [
+            "0: I have never heard of it.",
+            "1: I have heard of it, but I don't know what it is.",
+            "2: I have a very vague idea of what it is.",
+            "3: I have a moderate idea of what it is.",
+            "4: I know fairly well what it is.",
+            "5: I know this term very well.",
+            "6: I know this term perfectly and could explain it to someone else."
+          ]
+        }
+      ]
     },
     "overclaiming33": {
       "baseComponent": "overclaiming-question-template",
       "parameters": {
-        "itemName": "Hologram",
-        "itemCategory": "Category"
-      }
+        "itemLabel": "Deepfake (Intelligence Artificielle)"
+      },
+      "response": [
+        {
+          "id": "q-dropdown",
+          "prompt": "Deepfake (Intelligence Artificielle)",
+          "location": "aboveStimulus",
+          "type": "dropdown",
+          "placeholder": "Indicate your level of knowledge of this item",
+          "options": [
+            "0: I have never heard of it.",
+            "1: I have heard of it, but I don't know what it is.",
+            "2: I have a very vague idea of what it is.",
+            "3: I have a moderate idea of what it is.",
+            "4: I know fairly well what it is.",
+            "5: I know this term very well.",
+            "6: I know this term perfectly and could explain it to someone else."
+          ]
+        }
+      ]
     },
     "overclaiming34": {
       "baseComponent": "overclaiming-question-template",
       "parameters": {
-        "itemName": "Hologram",
-        "itemCategory": "Category"
-      }
+        "itemLabel": "Algorithme de Vision-Sync (Intelligence Artificielle)"
+      },
+      "response": [
+        {
+          "id": "q-dropdown",
+          "prompt": "Algorithme de Vision-Sync (Intelligence Artificielle)",
+          "location": "aboveStimulus",
+          "type": "dropdown",
+          "placeholder": "Indicate your level of knowledge of this item",
+          "options": [
+            "0: I have never heard of it.",
+            "1: I have heard of it, but I don't know what it is.",
+            "2: I have a very vague idea of what it is.",
+            "3: I have a moderate idea of what it is.",
+            "4: I know fairly well what it is.",
+            "5: I know this term very well.",
+            "6: I know this term perfectly and could explain it to someone else."
+          ]
+        }
+      ]
     },
     "overclaiming35": {
       "baseComponent": "overclaiming-question-template",
       "parameters": {
-        "itemName": "Hologram",
-        "itemCategory": "Category"
-      }
+        "itemLabel": "Métavers (Réalité Augmentée / Virtuelle)"
+      },
+      "response": [
+        {
+          "id": "q-dropdown",
+          "prompt": "Métavers (Réalité Augmentée / Virtuelle)",
+          "location": "aboveStimulus",
+          "type": "dropdown",
+          "placeholder": "Indicate your level of knowledge of this item",
+          "options": [
+            "0: I have never heard of it.",
+            "1: I have heard of it, but I don't know what it is.",
+            "2: I have a very vague idea of what it is.",
+            "3: I have a moderate idea of what it is.",
+            "4: I know fairly well what it is.",
+            "5: I know this term very well.",
+            "6: I know this term perfectly and could explain it to someone else."
+          ]
+        }
+      ]
     },
     "overclaiming36": {
       "baseComponent": "overclaiming-question-template",
       "parameters": {
-        "itemName": "Hologram",
-        "itemCategory": "Category"
-      }
+        "itemLabel": "Suivi oculaire (Eye-tracking) (Réalité Augmentée / Virtuelle)"
+      },
+      "response": [
+        {
+          "id": "q-dropdown",
+          "prompt": "Suivi oculaire (Eye-tracking) (Réalité Augmentée / Virtuelle)",
+          "location": "aboveStimulus",
+          "type": "dropdown",
+          "placeholder": "Indicate your level of knowledge of this item",
+          "options": [
+            "0: I have never heard of it.",
+            "1: I have heard of it, but I don't know what it is.",
+            "2: I have a very vague idea of what it is.",
+            "3: I have a moderate idea of what it is.",
+            "4: I know fairly well what it is.",
+            "5: I know this term very well.",
+            "6: I know this term perfectly and could explain it to someone else."
+          ]
+        }
+      ]
     },
     "overclaiming37": {
       "baseComponent": "overclaiming-question-template",
       "parameters": {
-        "itemName": "Hologram",
-        "itemCategory": "Category"
-      }
+        "itemLabel": "Latence (Réalité Augmentée / Virtuelle)"
+      },
+      "response": [
+        {
+          "id": "q-dropdown",
+          "prompt": "Latence (Réalité Augmentée / Virtuelle)",
+          "location": "aboveStimulus",
+          "type": "dropdown",
+          "placeholder": "Indicate your level of knowledge of this item",
+          "options": [
+            "0: I have never heard of it.",
+            "1: I have heard of it, but I don't know what it is.",
+            "2: I have a very vague idea of what it is.",
+            "3: I have a moderate idea of what it is.",
+            "4: I know fairly well what it is.",
+            "5: I know this term very well.",
+            "6: I know this term perfectly and could explain it to someone else."
+          ]
+        }
+      ]
     },
     "overclaiming38": {
       "baseComponent": "overclaiming-question-template",
       "parameters": {
-        "itemName": "Hologram",
-        "itemCategory": "Category"
-      }
+        "itemLabel": "Photogrammétrie (Réalité Augmentée / Virtuelle)"
+      },
+      "response": [
+        {
+          "id": "q-dropdown",
+          "prompt": "Photogrammétrie (Réalité Augmentée / Virtuelle)",
+          "location": "aboveStimulus",
+          "type": "dropdown",
+          "placeholder": "Indicate your level of knowledge of this item",
+          "options": [
+            "0: I have never heard of it.",
+            "1: I have heard of it, but I don't know what it is.",
+            "2: I have a very vague idea of what it is.",
+            "3: I have a moderate idea of what it is.",
+            "4: I know fairly well what it is.",
+            "5: I know this term very well.",
+            "6: I know this term perfectly and could explain it to someone else."
+          ]
+        }
+      ]
     },
     "overclaiming39": {
       "baseComponent": "overclaiming-question-template",
       "parameters": {
-        "itemName": "Hologram",
-        "itemCategory": "Category"
-      }
+        "itemLabel": "Casque VR (Réalité Augmentée / Virtuelle)"
+      },
+      "response": [
+        {
+          "id": "q-dropdown",
+          "prompt": "Casque VR (Réalité Augmentée / Virtuelle)",
+          "location": "aboveStimulus",
+          "type": "dropdown",
+          "placeholder": "Indicate your level of knowledge of this item",
+          "options": [
+            "0: I have never heard of it.",
+            "1: I have heard of it, but I don't know what it is.",
+            "2: I have a very vague idea of what it is.",
+            "3: I have a moderate idea of what it is.",
+            "4: I know fairly well what it is.",
+            "5: I know this term very well.",
+            "6: I know this term perfectly and could explain it to someone else."
+          ]
+        }
+      ]
     },
     "overclaiming40": {
       "baseComponent": "overclaiming-question-template",
       "parameters": {
-        "itemName": "Hologram",
-        "itemCategory": "Category"
-      }
+        "itemLabel": "Hologramme (Réalité Augmentée / Virtuelle)"
+      },
+      "response": [
+        {
+          "id": "q-dropdown",
+          "prompt": "Hologramme (Réalité Augmentée / Virtuelle)",
+          "location": "aboveStimulus",
+          "type": "dropdown",
+          "placeholder": "Indicate your level of knowledge of this item",
+          "options": [
+            "0: I have never heard of it.",
+            "1: I have heard of it, but I don't know what it is.",
+            "2: I have a very vague idea of what it is.",
+            "3: I have a moderate idea of what it is.",
+            "4: I know fairly well what it is.",
+            "5: I know this term very well.",
+            "6: I know this term perfectly and could explain it to someone else."
+          ]
+        }
+      ]
     },
     "overclaiming41": {
       "baseComponent": "overclaiming-question-template",
       "parameters": {
-        "itemName": "Hologram",
-        "itemCategory": "Category"
-      }
+        "itemLabel": "Filtres Snapchat/Instagram (Réalité Augmentée / Virtuelle)"
+      },
+      "response": [
+        {
+          "id": "q-dropdown",
+          "prompt": "Filtres Snapchat/Instagram (Réalité Augmentée / Virtuelle)",
+          "location": "aboveStimulus",
+          "type": "dropdown",
+          "placeholder": "Indicate your level of knowledge of this item",
+          "options": [
+            "0: I have never heard of it.",
+            "1: I have heard of it, but I don't know what it is.",
+            "2: I have a very vague idea of what it is.",
+            "3: I have a moderate idea of what it is.",
+            "4: I know fairly well what it is.",
+            "5: I know this term very well.",
+            "6: I know this term perfectly and could explain it to someone else."
+          ]
+        }
+      ]
     },
     "trial1A": {
       "baseComponent": "video-task-template",
@@ -865,48 +1588,56 @@
     "order": "fixed",
     "components": [
       "ConsentPage",
-      "IntroPage",
-      "overclaiming1",
-      "overclaiming2",
-      "overclaiming3",
-      "overclaiming4",
-      "overclaiming5",
-      "overclaiming6",
-      "overclaiming7",
-      "overclaiming8",
-      "overclaiming9",
-      "overclaiming10",
-      "overclaiming11",
-      "overclaiming12",
-      "overclaiming13",
-      "overclaiming14",
-      "overclaiming15",
-      "overclaiming16",
-      "overclaiming17",
-      "overclaiming18",
-      "overclaiming19",
-      "overclaiming20",
-      "overclaiming21",
-      "overclaiming22",
-      "overclaiming23",
-      "overclaiming24",
-      "overclaiming25",
-      "overclaiming26",
-      "overclaiming27",
-      "overclaiming28",
-      "overclaiming29",
-      "overclaiming30",
-      "overclaiming31",
-      "overclaiming32",
-      "overclaiming33",
-      "overclaiming34",
-      "overclaiming35",
-      "overclaiming36",
-      "overclaiming37",
-      "overclaiming38",
-      "overclaiming39",
-      "overclaiming40",
-      "overclaiming41",
+      "SelfAssessment",
+      "IntroPageOCT",
+      {
+        "id": "overclaiming-block",
+        "order": "latinSquare",
+        "components": [
+          "overclaiming1",
+          "overclaiming2",
+          "overclaiming3",
+          "overclaiming4",
+          "overclaiming5",  
+          "overclaiming6",
+          "overclaiming7",
+          "overclaiming8",
+          "overclaiming9",
+          "overclaiming10",
+          "overclaiming11",
+          "overclaiming12",
+          "overclaiming13",
+          "overclaiming14",
+          "overclaiming15",
+          "overclaiming16",
+          "overclaiming17",
+          "overclaiming18",
+          "overclaiming19",
+          "overclaiming20",
+          "overclaiming21",
+          "overclaiming22",
+          "overclaiming23",
+          "overclaiming24",
+          "overclaiming25",
+          "overclaiming26",
+          "overclaiming27",
+          "overclaiming28",
+          "overclaiming29",
+          "overclaiming30",
+          "overclaiming31",
+          "overclaiming32",
+          "overclaiming33",
+          "overclaiming34",
+          "overclaiming35",
+          "overclaiming36",
+          "overclaiming37",
+          "overclaiming38",
+          "overclaiming39",
+          "overclaiming40",
+          "overclaiming41"
+        ]
+      },
+      "IntroPageWatchingTask",
       {
         "id": "group-assignment",
         "order": "latinSquare",
