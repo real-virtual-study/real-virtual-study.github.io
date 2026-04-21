@@ -1,4 +1,4 @@
-{
+﻿{
   "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.3.2/src/parser/StudyConfigSchema.json",
   "studyMetadata": {
     "title": "Familiarity study - Part 1",
@@ -861,145 +861,145 @@
       "response": []
     }
   },
-    "sequence": {
-      "order": "fixed",
-      "components": [
-        "ConsentPage",
-        "IntroPage",
-        "overclaiming1",
-        "overclaiming2",
-        "overclaiming3",
-        "overclaiming4",
-        "overclaiming5",
-        "overclaiming6",
-        "overclaiming7",
-        "overclaiming8",
-        "overclaiming9",
-        "overclaiming10",
-        "overclaiming11",
-        "overclaiming12",
-        "overclaiming13",
-        "overclaiming14",
-        "overclaiming15",
-        "overclaiming16",
-        "overclaiming17",
-        "overclaiming18",
-        "overclaiming19",
-        "overclaiming20",
-        "overclaiming21",
-        "overclaiming22",
-        "overclaiming23",
-        "overclaiming24",
-        "overclaiming25",
-        "overclaiming26",
-        "overclaiming27",
-        "overclaiming28",
-        "overclaiming29",
-        "overclaiming30",
-        "overclaiming31",
-        "overclaiming32",
-        "overclaiming33",
-        "overclaiming34",
-        "overclaiming35",
-        "overclaiming36",
-        "overclaiming37",
-        "overclaiming38",
-        "overclaiming39",
-        "overclaiming40",
-        "overclaiming41",
-        {
-          "id": "group-assignment",
-          "order": "latinSquare",
-          "numSamples": 1,
-          "components": [
-            {
-              "id": "groupA",
-              "order": "fixed",
-              "components": [
-                "trial1A",
-                "trial2A",
-                "trial3A",
-                "trial4A",
-                "myAttentionCheckComponent",
-                "trial5A",
-                "trial6A",
-                "trial7A",
-                "trial8A",
-                "trial9A",
-                "trial10A",
-                "trial11A",
-                "myAttentionCheckComponent",
-                "trial12A",
-                "trial13A",
-                "trial14A",
-                "trial15A",
-                "trial16A",
-                "trial17A",
-                "trial18A",
-                "trial19A",
-                "trial20A",
-                "trial21A",
-                "trial22A",
-                "trial23A",
-                "trial24A"
-              ],
-              "skip": [
-                {
-                  "name": "myAttentionCheckComponent",
-                  "check": "repeatedComponent",
-                  "condition": "numIncorrect",
-                  "value": 2,
-                  "to": "end"
-                }
-              ]
-            },
-            {
-              "id": "groupB",
-              "order": "fixed",
-              "components": [
-                "trial1B",
-                "trial2B",
-                "trial3B",
-                "trial4B",
-                "myAttentionCheckComponent",
-                "trial5B",
-                "trial6B",
-                "trial7B",
-                "trial8B",
-                "trial9B",
-                "trial10B",
-                "trial11B",
-                "myAttentionCheckComponent",
-                "trial12B",
-                "trial13B",
-                "trial14B",
-                "trial15B",
-                "trial16B",
-                "trial17B",
-                "trial18B",
-                "trial19B",
-                "trial20B",
-                "trial21B",
-                "trial22B",
-                "trial23B",
-                "trial24B"
-              ],
-              "skip": [
-                {
-                  "name": "myAttentionCheckComponent",
-                  "check": "repeatedComponent",
-                  "condition": "numIncorrect",
-                  "value": 2,
-                  "to": "end"
-                }
-              ]
-            }
-          ]
-        },
-        "Doubt",
-        "PostQuestionnaire",
-        "EndPage"
-      ]
-    }
-}
 
+  "sequence": {
+    "order": "fixed",
+    "components": [
+      "ConsentPage",
+      "IntroPage",
+      "overclaiming1",
+      "overclaiming2",
+      "overclaiming3",
+      "overclaiming4",
+      "overclaiming5",
+      "overclaiming6",
+      "overclaiming7",
+      "overclaiming8",
+      "overclaiming9",
+      "overclaiming10",
+      "overclaiming11",
+      "overclaiming12",
+      "overclaiming13",
+      "overclaiming14",
+      "overclaiming15",
+      "overclaiming16",
+      "overclaiming17",
+      "overclaiming18",
+      "overclaiming19",
+      "overclaiming20",
+      "overclaiming21",
+      "overclaiming22",
+      "overclaiming23",
+      "overclaiming24",
+      "overclaiming25",
+      "overclaiming26",
+      "overclaiming27",
+      "overclaiming28",
+      "overclaiming29",
+      "overclaiming30",
+      "overclaiming31",
+      "overclaiming32",
+      "overclaiming33",
+      "overclaiming34",
+      "overclaiming35",
+      "overclaiming36",
+      "overclaiming37",
+      "overclaiming38",
+      "overclaiming39",
+      "overclaiming40",
+      "overclaiming41",
+      {
+        "id": "group-assignment",
+        "order": "latinSquare",
+        "numSamples": 1,
+        "components": [
+          {
+            "id": "groupA",
+            "order": "fixed",
+            "components": [
+              "trial1A",
+              "trial2A",
+              "trial3A",
+              "trial4A",
+              "myAttentionCheckComponent",
+              "trial5A",
+              "trial6A",
+              "trial7A",
+              "trial8A",
+              "trial9A",
+              "trial10A",
+              "trial11A",
+              "myAttentionCheckComponent",
+              "trial12A",
+              "trial13A",
+              "trial14A",
+              "trial15A",
+              "trial16A",
+              "trial17A",
+              "trial18A",
+              "trial19A",
+              "trial20A",
+              "trial21A",
+              "trial22A",
+              "trial23A",
+              "trial24A"
+            ],
+            "skip": [
+              {
+                "name": "myAttentionCheckComponent",
+                "check": "repeatedComponent",
+                "condition": "numIncorrect",
+                "value": 2,
+                "to": "end"
+              }
+            ]
+          },
+          {
+            "id": "groupB",
+            "order": "fixed",
+            "components": [
+              "trial1B",
+              "trial2B",
+              "trial3B",
+              "trial4B",
+              "myAttentionCheckComponent",
+              "trial5B",
+              "trial6B",
+              "trial7B",
+              "trial8B",
+              "trial9B",
+              "trial10B",
+              "trial11B",
+              "myAttentionCheckComponent",
+              "trial12B",
+              "trial13B",
+              "trial14B",
+              "trial15B",
+              "trial16B",
+              "trial17B",
+              "trial18B",
+              "trial19B",
+              "trial20B",
+              "trial21B",
+              "trial22B",
+              "trial23B",
+              "trial24B"
+            ],
+            "skip": [
+              {
+                "name": "myAttentionCheckComponent",
+                "check": "repeatedComponent",
+                "condition": "numIncorrect",
+                "value": 2,
+                "to": "end"
+              }
+            ]
+          }
+        ]
+      },
+      "Doubt",
+      "PostQuestionnaire",
+      "EndPage"
+    ]
+  }
+}
