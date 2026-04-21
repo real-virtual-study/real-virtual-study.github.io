@@ -94,7 +94,6 @@
         }
       ]
     },
-
     "SelfAssessment": {
       "type": "questionnaire",
       "instruction": "Please answer the following two questions of self-assessment.",
@@ -121,7 +120,6 @@
         }
       ]
     },
-
     "IntroPageOCT": {
       "type": "markdown",
       "path": "_fam-study/assets/content/part1_instructions_OCT.md",

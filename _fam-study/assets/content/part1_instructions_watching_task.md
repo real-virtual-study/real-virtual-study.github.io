@@ -1,5 +1,4 @@
-### Instructions:
-
+### Instructions for the video watching task:
 You will watch a series of short video clips. Each clip will show a single object on a table. The object may be **real** or **virtual**. Virtual objects have a visual effect applied to them: they tend to be blue, translucent, luminous, and glowing. The effect may be subtle or obvious.
 
 Here is one example of a real object and two examples of virtual objects:
