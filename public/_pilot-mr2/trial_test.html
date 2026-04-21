@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tâche de Mémoire Source (Partie 2)</title>
+    <script src="../revisitUtilities/revisit-communicate.js"></script>
+
+    <style>
+        /* --- 1. GLOBAL STYLES --- */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #212529;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+            font-size: 1.1em;
+            text-align: center;
+        }
+
+        /* --- 2. PERSISTENT HEADER (Modified for Sentences) --- */
+        .sentence-header {
+            margin-bottom: 20px;
+            position: relative;
+            top: 0;
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            padding: 30px;
+            z-index: 10;
+            width: 100%;
+            max-width: 700px;
+        }
+
+        #sentence-display {
+            font-size: 1.5em;
+            font-style: italic;
+            color: #333;
+            line-height: 1.4;
+        }
+
+        /* --- 3. CARD LOOK --- */
+        .question-container {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            padding: 30px;
+            width: 100%;
+            max-width: 700px;
+            text-align: center;
+            margin-bottom: 20px;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- 4. BUTTONS --- */
+        button {
+            background-color: #1976d2;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1em;
+            font-weight: 500;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin: 10px;
+        }
+
+        button:hover:not(:disabled) { background-color: #1565c0; }
+        button:disabled { background-color: #ccc; cursor: not-allowed; opacity: 0.6; }
+
+        .choice-btn.selected {
+            background-color: #0d47a1;
+            box-shadow: inset 0 0 0 3px #82b1ff;
+        }
+
+        /* --- 5. LIKERT SCALE --- */
+        .likert-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+
+        .likert-option {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 16%;
+            cursor: pointer;
+        }
+
+        .likert-text { font-size: 0.8em; margin-bottom: 8px; }
+
+        .custom-radio {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #ccc;
+            border-radius: 50%;
+        }
+
+        input:checked + .custom-radio {
+            background-color: #333;
+            border-color: #333;
+            box-shadow: inset 0 0 0 4px white;
+        }
+
+        input { display: none; }
+
+        /* --- 6. UTILS --- */
+        .hidden { display: none !important; }
+        .disabled-section { pointer-events: none; opacity: 0.7; }
+
+        textarea {
+            width: 90%;
+            height: 80px;
+            padding: 12px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+<div class="sentence-header">
+    <div id="sentence-display">Chargement de la phrase...</div>
+</div>
+
+<div id="stage-identification" class="question-container">
+    <h3>Avez-vous entendu cette phrase dans la Partie 1 ?</h3>
+    <div>
+        <button class="choice-btn" id="btn-seen-yes" onclick="selectSeen('seen')">Oui</button>
+        <button class="choice-btn" id="btn-seen-no" onclick="selectSeen('not_seen')">Non</button>
+    </div>
+    <div class="nav-controls">
+        <button id="btn-next-1" onclick="submitIdentification()" disabled>Suivant</button>
+    </div>
+</div>
+
+<div id="stage-conf-1" class="question-container hidden">
+    <h3>Quel est votre niveau de certitude ?</h3>
+    <div class="likert-container">
+        <label class="likert-option"><span class="likert-text">0%</span><input type="radio" name="conf1" value="0" onclick="enableNext('btn-next-2')"><span class="custom-radio"></span></label>
+        <label class="likert-option"><span class="likert-text">20%</span><input type="radio" name="conf1" value="20" onclick="enableNext('btn-next-2')"><span class="custom-radio"></span></label>
+        <label class="likert-option"><span class="likert-text">40%</span><input type="radio" name="conf1" value="40" onclick="enableNext('btn-next-2')"><span class="custom-radio"></span></label>
+        <label class="likert-option"><span class="likert-text">60%</span><input type="radio" name="conf1" value="60" onclick="enableNext('btn-next-2')"><span class="custom-radio"></span></label>
+        <label class="likert-option"><span class="likert-text">80%</span><input type="radio" name="conf1" value="80" onclick="enableNext('btn-next-2')"><span class="custom-radio"></span></label>
+        <label class="likert-option"><span class="likert-text">100%</span><input type="radio" name="conf1" value="100" onclick="enableNext('btn-next-2')"><span class="custom-radio"></span></label>
+    </div>
+    <div class="nav-controls">
+        <button id="btn-next-2" onclick="submitConf1()" disabled>Suivant</button>
+    </div>
+</div>
+
+<div id="stage-source" class="question-container hidden">
+    <h3>Qui a prononcé cette phrase ?</h3>
+    <div>
+        <button class="choice-btn" id="btn-source-interlocutor" onclick="selectSource('interlocutor')">Simon</button>
+        <button class="choice-btn" id="btn-source-self" onclick="selectSource('self_avatar')">Cécile</button>
+    </div>
+    <div class="nav-controls">
+        <button id="btn-next-3" onclick="submitSource()" disabled>Suivant</button>
+    </div>
+</div>
+
+<div id="stage-conf-2" class="question-container hidden">
+    <h3>Quel est votre niveau de certitude ?</h3>
+    <div class="likert-container">
+        <label class="likert-option"><span class="likert-text">0%</span><input type="radio" name="conf2" value="0" onclick="enableNext('btn-next-4')"><span class="custom-radio"></span></label>
+        <label class="likert-option"><span class="likert-text">20%</span><input type="radio" name="conf2" value="20" onclick="enableNext('btn-next-4')"><span class="custom-radio"></span></label>
+        <label class="likert-option"><span class="likert-text">40%</span><input type="radio" name="conf2" value="40" onclick="enableNext('btn-next-4')"><span class="custom-radio"></span></label>
+        <label class="likert-option"><span class="likert-text">60%</span><input type="radio" name="conf2" value="60" onclick="enableNext('btn-next-4')"><span class="custom-radio"></span></label>
+        <label class="likert-option"><span class="likert-text">80%</span><input type="radio" name="conf2" value="80" onclick="enableNext('btn-next-4')"><span class="custom-radio"></span></label>
+        <label class="likert-option"><span class="likert-text">100%</span><input type="radio" name="conf2" value="100" onclick="enableNext('btn-next-4')"><span class="custom-radio"></span></label>
+    </div>
+    <div class="nav-controls">
+        <button id="btn-next-4" onclick="submitConf2()" disabled>Suivant</button>
+    </div>
+</div>
+
+<div id="stage-reason" class="question-container hidden">
+    <h3 id="reason-title">Veuillez expliquer votre réponse.</h3>
+    <textarea id="reason-input" placeholder="Tapez votre réponse ici..." oninput="enableNext('btn-finish')"></textarea>
+    <div class="nav-controls">
+        <button id="btn-finish" onclick="submitReasonAndFinish()" disabled>Terminer l'essai</button>
+    </div>
+</div>
+
+<div id="final-message" class="question-container hidden" style="border-left: 5px solid #28a745; background-color: #d4edda;">
+    <h3 style="color: #155724;">Essai terminé</h3>
+    <p>Veuillez cliquer sur <strong>Suivant</strong> dans l'interface de l'étude pour continuer.</p>
+</div>
+
+<script>
+    let trialAnswers = {
+        sentence: "",
+        seenAnswer: null,
+        seenConfidence: null,
+        sourceAnswer: null,
+        sourceConfidence: null,
+        reasoning: ""
+    };
+
+    // Initialization
+    if (typeof Revisit !== 'undefined') {
+        Revisit.onDataReceive((data) => {
+            if (data.sentence) {
+                document.getElementById('sentence-display').textContent = `"${data.sentence}"`;
+                trialAnswers.sentence = data.sentence;
+            }
+        });
+    } else {
+        document.getElementById('sentence-display').textContent = '"Ceci est une phrase fictive pour montrer à quoi cela ressemble."';
+    }
+
+    function enableNext(btnId) {
+        document.getElementById(btnId).disabled = false;
+    }
+
+    function lockSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        section.classList.add('disabled-section');
+        // Hide the "Next" button in that section to keep UI clean
+        const btn = section.querySelector('.nav-controls button');
+        if (btn) btn.classList.add('hidden');
+    }
+
+    function selectSeen(choice) {
+        trialAnswers.seenAnswer = choice;
+        document.getElementById('btn-seen-yes').classList.toggle('selected', choice === 'seen');
+        document.getElementById('btn-seen-no').classList.toggle('selected', choice === 'not_seen');
+        enableNext('btn-next-1');
+    }
+
+    function submitIdentification() {
+        lockSection('stage-identification');
+        document.getElementById('stage-conf-1').classList.remove('hidden');
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+
+    function submitConf1() {
+        trialAnswers.seenConfidence = document.querySelector('input[name="conf1"]:checked').value;
+        lockSection('stage-conf-1');
+
+        if (trialAnswers.seenAnswer === 'seen') {
+            document.getElementById('stage-source').classList.remove('hidden');
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        } else {
+            trialAnswers.sourceAnswer = "NA";
+            trialAnswers.sourceConfidence = "NA";
+            trialAnswers.reasoning = "NA";
+            saveAndFinish();
+        }
+    }
+
+    function selectSource(choice) {
+        trialAnswers.sourceAnswer = choice;
+        document.getElementById('btn-source-interlocutor').classList.toggle('selected', choice === 'interlocutor');
+        document.getElementById('btn-source-self').classList.toggle('selected', choice === 'self_avatar');
+        enableNext('btn-next-3');
+    }
+
+    function submitSource() {
+        lockSection('stage-source');
+        document.getElementById('stage-conf-2').classList.remove('hidden');
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+
+    function submitConf2() {
+        trialAnswers.sourceConfidence = document.querySelector('input[name="conf2"]:checked').value;
+        lockSection('stage-conf-2');
+
+        // Update the dynamic text based on the French choice
+        const label = trialAnswers.sourceAnswer === 'interlocutor' ? 'Simon' : 'Cécile';
+        document.getElementById('reason-title').textContent = `Veuillez expliquer pourquoi vous avez choisi "${label}".`;
+
+        document.getElementById('stage-reason').classList.remove('hidden');
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+
+    function submitReasonAndFinish() {
+        trialAnswers.reasoning = document.getElementById('reason-input').value;
+        saveAndFinish();
+    }
+
+    function saveAndFinish() {
+        lockSection('stage-reason');
+        if (typeof Revisit !== 'undefined') {
+            Revisit.postAnswers({ ...trialAnswers, completionSignal: "Finished" });
+        }
+        document.getElementById('final-message').classList.remove('hidden');
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+</script>
+</body>
+</html>

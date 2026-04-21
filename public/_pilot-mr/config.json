@@ -1,0 +1,340 @@
+{
+  "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.3.2/src/parser/StudyConfigSchema.json",
+  "studyMetadata": {
+    "title": "Pilot part1",
+    "version": "1",
+    "authors": ["Leana"],
+    "date": "2025-12-02",
+    "description": "First Part",
+    "organizations": ["inria"]
+  },
+  "uiConfig": {
+    "contactEmail": "leana.petiot@inria.fr",
+    "helpTextPath": "/_pilot-mr/assets/content/help.md",
+    "logoPath": "revisitAssets/revisitLogoSquare.svg",
+    "withProgressBar": true,
+    "autoDownloadStudy": false,
+    "withSidebar": false,
+    "enumerateQuestions": true,
+    "minWidthSize": 0,
+    "minHeightSize": 0,
+    "studyEndMsg": "",
+    "urlParticipantIdParam": ""
+  },
+  "baseComponents": {
+    "audio-trial-template": {
+      "type": "website",
+      "path": "_pilot-mr/trial.html",
+      "instruction": "Listen to the sentence carefully.",
+      "forceCompletion": true,
+      "nextButtonLocation": "belowStimulus",
+      "response": [
+        {
+          "id": "completionSignal",
+          "type": "reactive",
+          "location": "sidebar",
+          "prompt": "Click Next to hear the next sentence.",
+          "required": true,
+          "hidden": true
+        }
+      ]
+    }
+  },
+
+  "components": {
+    "IntroPage": {
+      "type": "markdown",
+      "path": "/_pilot-mr/assets/content/part1_instructions.md",
+      "nextButtonText": "Start",
+      "response": [
+      ]
+    },
+    "trial01": {
+      "baseComponent": "audio-trial-template",
+      "parameters": {
+        "speaker":   "I",
+        "audioFile": "/_pilot-mr/assets/audio/I_1.mp3",
+        "imageFile": "/_pilot-mr/assets/images/interlocutor.png",
+        "sentence":  "Tu as remarqué à quel point l’actualité d’aujourd’hui semble défiler plus vite qu’on ne peut la suivre ? J’ai l’impression de courir derrière les infos."
+      }
+    },
+    "trial02": {
+      "baseComponent": "audio-trial-template",
+      "parameters": {
+        "speaker":   "SA",
+        "audioFile": "/_pilot-mr/assets/audio/SA_2.mp3",
+        "imageFile": "/_pilot-mr/assets/images/self_avatar.png",
+        "sentence":  "Complètement. Moi, j’écoute un podcast chaque matin pour voir ce qui s’est passé dans le monde. Sinon, je me sens largué dès le petit-déjeuner."
+      }
+    },
+    "trial03": {
+      "baseComponent": "audio-trial-template",
+      "parameters": {
+        "speaker":   "I",
+        "audioFile": "/_pilot-mr/assets/audio/I_3.mp3",
+        "imageFile": "/_pilot-mr/assets/images/interlocutor.png",
+        "sentence":  "En ce moment, la politique locale devient carrément le sujet principal des journaux télévisés. On ne parle presque plus que de ça."
+      }
+    },
+    "trial04": {
+      "baseComponent": "audio-trial-template",
+      "parameters": {
+        "speaker":   "SA",
+        "audioFile": "/_pilot-mr/assets/audio/SA_4.mp3",
+        "imageFile": "/_pilot-mr/assets/images/self_avatar.png",
+        "sentence":  "Oui, surtout avec les deux candidats qui veulent prendre la tête dans les derniers sondages. C’est serré."
+      }
+    },
+    "trial05": {
+      "baseComponent": "audio-trial-template",
+      "parameters": {
+        "speaker":   "I",
+        "audioFile": "/_pilot-mr/assets/audio/I_5.mp3",
+        "imageFile": "/_pilot-mr/assets/images/interlocutor.png",
+        "sentence":  "Et ils ont tous les deux promis de réparer les routes avant l’hiver prochain… On verra bien si ça se concrétise."
+      }
+    },
+    "trial06": {
+      "baseComponent": "audio-trial-template",
+      "parameters": {
+        "speaker":   "SA",
+        "audioFile": "/_pilot-mr/assets/audio/SA_6.mp3",
+        "imageFile": "/_pilot-mr/assets/images/self_avatar.png",
+        "sentence":  "En parlant de promesses ambitieuses, tu as vu pour l’exploration spatiale ? La nouvelle base lunaire marque une étape majeure."
+      }
+    },
+    "trial07": {
+      "baseComponent": "audio-trial-template",
+      "parameters": {
+        "speaker":   "I",
+        "audioFile": "/_pilot-mr/assets/audio/I_7.mp3",
+        "imageFile": "/_pilot-mr/assets/images/interlocutor.png",
+        "sentence":  "Oui ! Des astronautes se préparent à y vivre pendant au moins six mois consécutifs. C’est fascinant."
+      }
+    },
+    "trial08": {
+      "baseComponent": "audio-trial-template",
+      "parameters": {
+        "speaker":   "SA",
+        "audioFile": "/_pilot-mr/assets/audio/SA_8.mp3",
+        "imageFile": "/_pilot-mr/assets/images/self_avatar.png",
+        "sentence":  "Cette mission pourrait vraiment nous aider à mieux comprendre l’histoire de notre système solaire. On vit une époque incroyable."
+      }
+    },
+    "trial09": {
+      "baseComponent": "audio-trial-template",
+      "parameters": {
+        "speaker":   "I",
+        "audioFile": "/_pilot-mr/assets/audio/I_9.mp3",
+        "imageFile": "/_pilot-mr/assets/images/interlocutor.png",
+        "sentence":  "Incroyable… et un peu instable aussi. Les valeurs technologiques ont chuté d’un coup lors des échanges en fin d’après-midi."
+      }
+    },
+    "trial10": {
+      "baseComponent": "audio-trial-template",
+      "parameters": {
+        "speaker":   "SA",
+        "audioFile": "/_pilot-mr/assets/audio/SA_10.mp3",
+        "imageFile": "/_pilot-mr/assets/images/self_avatar.png",
+        "sentence":  "Les investisseurs s’inquiètent des nouvelles réglementations sur les outils d’intelligence artificielle, apparemment."
+      }
+    },
+    "trial11": {
+      "baseComponent": "audio-trial-template",
+      "parameters": {
+        "speaker":   "I",
+        "audioFile": "/_pilot-mr/assets/audio/I_11.mp3",
+        "imageFile": "/_pilot-mr/assets/images/interlocutor.png",
+        "sentence":  "Les experts économiques disent quand même de rester calmes malgré la volatilité du marché. Plus facile à dire qu’à faire."
+      }
+    },
+    "trial12": {
+      "baseComponent": "audio-trial-template",
+      "parameters": {
+        "speaker":   "SA",
+        "audioFile": "/_pilot-mr/assets/audio/SA_12.mp3",
+        "imageFile": "/_pilot-mr/assets/images/self_avatar.png",
+        "sentence":  "C’est sûr. Tiens, dans un tout autre registre, un tableau rare a été découvert dans un vieux grenier poussiéreux aujourd’hui."
+      }
+    },
+    "trial13": {
+      "baseComponent": "audio-trial-template",
+      "parameters": {
+        "speaker":   "I",
+        "audioFile": "/_pilot-mr/assets/audio/I_13.mp3",
+        "imageFile": "/_pilot-mr/assets/images/interlocutor.png",
+        "sentence":  "Oui, j’ai lu ça ! Les historiens de l’art pensent qu’il appartiendrait à un célèbre maître italien."
+      }
+    },
+    "trial14": {
+      "baseComponent": "audio-trial-template",
+      "parameters": {
+        "speaker":   "SA",
+        "audioFile": "/_pilot-mr/assets/audio/SA_14.mp3",
+        "imageFile": "/_pilot-mr/assets/images/self_avatar.png",
+        "sentence":  "Et la maison d’enchères s’attend à un prix de plusieurs millions. Comme quoi, il faut toujours fouiller les greniers de ses grands-parents…"
+      }
+    },
+    "trial15": {
+      "baseComponent": "audio-trial-template",
+      "parameters": {
+        "speaker":   "I",
+        "audioFile": "/_pilot-mr/assets/audio/I_15.mp3",
+        "imageFile": "/_pilot-mr/assets/images/interlocutor.png",
+        "sentence":  "Si seulement ! À propos de découvertes, le changement climatique affecte les schémas de migration de nombreux oiseaux sauvages."
+      }
+    },
+    "trial16": {
+      "baseComponent": "audio-trial-template",
+      "parameters": {
+        "speaker":   "SA",
+        "audioFile": "/_pilot-mr/assets/audio/SA_16.mp3",
+        "imageFile": "/_pilot-mr/assets/images/self_avatar.png",
+        "sentence":  "Oui, et ils arrivent bien plus tôt qu’il y a une dizaine d’années."
+      }
+    },
+    "trial17": {
+      "baseComponent": "audio-trial-template",
+      "parameters": {
+        "speaker":   "I",
+        "audioFile": "/_pilot-mr/assets/audio/I_17.mp3",
+        "imageFile": "/_pilot-mr/assets/images/interlocutor.png",
+        "sentence":  "Les scientifiques suivent leurs mouvements grâce à de petites balises satellites, c’est impressionnant."
+      }
+    },
+    "trial18": {
+      "baseComponent": "audio-trial-template",
+      "parameters": {
+        "speaker":   "SA",
+        "audioFile": "/_pilot-mr/assets/audio/SA_18.mp3",
+        "imageFile": "/_pilot-mr/assets/images/self_avatar.png",
+        "sentence":  "Exactement. Les schémas de migration sont complètement bouleversés."
+      }
+    },
+    "trial19": {
+      "baseComponent": "audio-trial-template",
+      "parameters": {
+        "speaker":   "I",
+        "audioFile": "/_pilot-mr/assets/audio/I_19.mp3",
+        "imageFile": "/_pilot-mr/assets/images/interlocutor.png",
+        "sentence":  "Ça me fait penser au rapport du ministère de la Santé sur le sommeil. Ils disent que la plupart des gens ont besoin de sept heures pour rester efficaces."
+      }
+    },
+    "trial20": {
+      "baseComponent": "audio-trial-template",
+      "parameters": {
+        "speaker":   "SA",
+        "audioFile": "/_pilot-mr/assets/audio/SA_20.mp3",
+        "imageFile": "/_pilot-mr/assets/images/self_avatar.png",
+        "sentence":  "Oui, et qu’il faut consommer moins de caféine le soir pour améliorer la qualité du repos. Je devrais peut-être arrêter les expressos après 18 heures…"
+      }
+    },
+    "trial21": {
+      "baseComponent": "audio-trial-template",
+      "parameters": {
+        "speaker":   "I",
+        "audioFile": "/_pilot-mr/assets/audio/I_21.mp3",
+        "imageFile": "/_pilot-mr/assets/images/interlocutor.png",
+        "sentence":  "Bonne résolution ! Sinon, tu as vu que le grand festival de cinéma a annoncé sa sélection officielle ?"
+      }
+    },
+    "trial22": {
+      "baseComponent": "audio-trial-template",
+      "parameters": {
+        "speaker":   "SA",
+        "audioFile": "/_pilot-mr/assets/audio/SA_22.mp3",
+        "imageFile": "/_pilot-mr/assets/images/self_avatar.png",
+        "sentence":  "Oui, et ce sont surtout des réalisateurs indépendants qui attirent l’attention cette année, plus que les stars des gros studios."
+      }
+    },
+    "trial23": {
+      "baseComponent": "audio-trial-template",
+      "parameters": {
+        "speaker":   "I",
+        "audioFile": "/_pilot-mr/assets/audio/I_23.mp3",
+        "imageFile": "/_pilot-mr/assets/images/interlocutor.png",
+        "sentence":  "Tant mieux. J’espère voir des histoires vraiment créatives sur le grand écran cet été."
+      }
+    },
+    "trial24": {
+      "baseComponent": "audio-trial-template",
+      "parameters": {
+        "speaker":   "SA",
+        "audioFile": "/_pilot-mr/assets/audio/SA_24.mp3",
+        "imageFile": "/_pilot-mr/assets/images/self_avatar.png",
+        "sentence":  "En attendant, le stade national accueillera les finales mondiales le week-end prochain."
+      }
+    },
+    "trial25": {
+      "baseComponent": "audio-trial-template",
+      "parameters": {
+        "speaker":   "I",
+        "audioFile": "/_pilot-mr/assets/audio/I_25.mp3",
+        "imageFile": "/_pilot-mr/assets/images/interlocutor.png",
+        "sentence":  "Je sais ! Les billets ont été épuisés cinq minutes après leur mise en ligne. C’est fou."
+      }
+    },
+    "trial26": {
+      "baseComponent": "audio-trial-template",
+      "parameters": {
+        "speaker":   "SA",
+        "audioFile": "/_pilot-mr/assets/audio/SA_26.mp3",
+        "imageFile": "/_pilot-mr/assets/images/self_avatar.png",
+        "sentence":  "Des fans viennent de chaque continent pour soutenir leurs équipes favorites. L’ambiance va être électrique."
+      }
+    },
+    "trial27": {
+      "baseComponent": "audio-trial-template",
+      "parameters": {
+        "speaker":   "I",
+        "audioFile": "/_pilot-mr/assets/audio/I_27.mp3",
+        "imageFile": "/_pilot-mr/assets/images/interlocutor.png",
+        "sentence":  "Notre ville va encore changer de visage avec tout ça. L’architecture moderne transforme déjà la silhouette de notre magnifique bord de mer."
+      }
+    },
+    "trial28": {
+      "baseComponent": "audio-trial-template",
+      "parameters": {
+        "speaker":   "SA",
+        "audioFile": "/_pilot-mr/assets/audio/SA_28.mp3",
+        "imageFile": "/_pilot-mr/assets/images/self_avatar.png",
+        "sentence":  "Oui, ces nouvelles tours de verre qui s’élèvent au-dessus du vieux quartier portuaire… c’est impressionnant, même si je suis un peu nostalgique."
+      }
+    },
+    "trial29": {
+      "baseComponent": "audio-trial-template",
+      "parameters": {
+        "speaker":   "I",
+        "audioFile": "/_pilot-mr/assets/audio/I_29.mp3",
+        "imageFile": "/_pilot-mr/assets/images/interlocutor.png",
+        "sentence":  "Moi aussi. C’est peut-être pour ça que je préfère lire le journal en papier avec un bon café chaud."
+      }
+    },
+    "trial30": {
+      "baseComponent": "audio-trial-template",
+      "parameters": {
+        "speaker":   "SA",
+        "audioFile": "/_pilot-mr/assets/audio/SA_30.mp3",
+        "imageFile": "/_pilot-mr/assets/images/self_avatar.png",
+        "sentence":  "Pareil. Ça fait du bien de déconnecter du monde numérique pendant un moment… surtout quand l’actualité va à cent à l’heure."
+      }
+    }
+  },
+  "sequence": {
+    "order": "fixed",
+    "components": [
+      "IntroPage",
+      {
+        "order": "fixed",
+        "components": [
+          "trial01", "trial02", "trial03", "trial04", "trial05",
+          "trial06", "trial07", "trial08", "trial09", "trial10",
+          "trial11", "trial12", "trial13", "trial14", "trial15",
+          "trial16", "trial17", "trial18", "trial19", "trial20",
+          "trial21", "trial22", "trial23", "trial24", "trial25",
+          "trial26", "trial27", "trial28", "trial29", "trial30"
+        ]
+      }
+    ]
+  }
+}
