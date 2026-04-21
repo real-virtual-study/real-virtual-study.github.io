@@ -1548,6 +1548,7 @@
       "ConsentPage",
       "IntroPage",
       {
+        "id": "overclaiming-block",
         "order": "random",
         "components": [
           "overclaiming1",
