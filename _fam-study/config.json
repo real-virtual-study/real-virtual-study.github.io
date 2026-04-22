@@ -103,9 +103,9 @@
           "prompt": "How familiar are you with new technologies?",
           "type": "likert",
           "required": true,
-          "scale": 7,
-          "minLabel": "Not at all",
-          "maxLabel": "Extremely",
+          "numItems": 7,
+          "rightLabel": "Not at all",
+          "leftLabel": "Extremely",
           "location": "belowStimulus"
         },
         {
@@ -113,9 +113,9 @@
           "prompt": "How would you define your level of expertise in new technologies?",
           "type": "likert",
           "required": true,
-          "scale": 7,
-          "minLabel": "No expertise",
-          "maxLabel": "Expert",
+          "numItems": 7,
+          "rightLabel": "Not at all",
+          "leftLabel": "Extremely",
           "location": "belowStimulus"
         }
       ]
