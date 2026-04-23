@@ -1432,7 +1432,7 @@
       "IntroPageOCT",
       {
         "id": "overclaiming-block",
-        "order": "latinSquare",
+        "order": "random",
         "components": [
           "overclaiming1",
           "overclaiming2",
