@@ -120,7 +120,7 @@
         }
       ]
     },
-    "IntroPageOCT": {
+    "IntroGlobal": {
       "type": "markdown",
       "path": "_fam-study/assets/content/part1_instructions_OCT.md",
       "nextButtonText": "Start",
@@ -136,21 +136,17 @@
         }
       ]
     },
+    "IntroPageOCT": {
+      "type": "markdown",
+      "path": "_fam-study/assets/content/part1_instructions_OCT.md",
+      "nextButtonText": "Start",
+      "response": []
+    },
     "IntroPageWatchingTask": {
       "type": "markdown",
       "path": "_fam-study/assets/content/part1_instructions_watching_task.md",
       "nextButtonText": "Start",
-      "response": [
-        {
-          "id": "prolificId",
-          "prompt": "Your Prolific ID (automatically filled in)",
-          "required": true,
-          "location": "belowStimulus",
-          "type": "shortText",
-          "placeholder": "Prolific ID",
-          "paramCapture": "PROLIFIC_PID"
-        }
-      ]
+      "response": []
     },
     "ConsentPage": {
       "type": "markdown",
@@ -1428,6 +1424,7 @@
     "order": "fixed",
     "components": [
       "ConsentPage",
+      "IntroGlobal",
       "SelfAssessment",
       "IntroPageOCT",
       {
