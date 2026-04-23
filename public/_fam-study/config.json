@@ -1,4 +1,4 @@
-﻿{
+{
   "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.3.2/src/parser/StudyConfigSchema.json",
   "studyMetadata": {
     "title": "Familiarity study - Part 1",
@@ -104,8 +104,8 @@
           "type": "likert",
           "required": true,
           "numItems": 7,
-          "rightLabel": "Not at all",
-          "leftLabel": "Extremely",
+          "rightLabel": "Extremely",
+          "leftLabel": "Not at all",
           "location": "belowStimulus"
         },
         {
@@ -114,8 +114,8 @@
           "type": "likert",
           "required": true,
           "numItems": 7,
-          "rightLabel": "Not at all",
-          "leftLabel": "Extremely",
+          "rightLabel": "Extremely",
+          "leftLabel": "Not at all",
           "location": "belowStimulus"
         }
       ]
@@ -160,16 +160,12 @@
     },
     "overclaiming1": {
       "baseComponent": "overclaiming-question-template",
-      "parameters": {
-        "itemLabel": "Windows 11 (Logiciels / Système)"
-      },
       "response": [
         {
-          "id": "q-dropdown",
+          "id": "q-radio",
           "prompt": "Windows 11 (Logiciels / Système)",
           "location": "aboveStimulus",
-          "type": "dropdown",
-          "placeholder": "Indicate your level of knowledge of this item",
+          "type": "radio",
           "options": [
             "0: I have never heard of it.",
             "1: I have heard of it, but I don't know what it is.",
@@ -184,16 +180,12 @@
     },
     "overclaiming2": {
       "baseComponent": "overclaiming-question-template",
-      "parameters": {
-        "itemLabel": "macOS (Logiciels / Système)"
-      },
       "response": [
         {
-          "id": "q-dropdown",
+          "id": "q-radio",
           "prompt": "macOS (Logiciels / Système)",
           "location": "aboveStimulus",
-          "type": "dropdown",
-          "placeholder": "Indicate your level of knowledge of this item",
+          "type": "radio",
           "options": [
             "0: I have never heard of it.",
             "1: I have heard of it, but I don't know what it is.",
@@ -208,16 +200,12 @@
     },
     "overclaiming3": {
       "baseComponent": "overclaiming-question-template",
-      "parameters": {
-        "itemLabel": "API (Logiciels / Système)"
-      },
       "response": [
         {
-          "id": "q-dropdown",
+          "id": "q-radio",
           "prompt": "API (Logiciels / Système)",
           "location": "aboveStimulus",
-          "type": "dropdown",
-          "placeholder": "Indicate your level of knowledge of this item",
+          "type": "radio",
           "options": [
             "0: I have never heard of it.",
             "1: I have heard of it, but I don't know what it is.",
@@ -232,16 +220,12 @@
     },
     "overclaiming4": {
       "baseComponent": "overclaiming-question-template",
-      "parameters": {
-        "itemLabel": "Firmware (Logiciels / Système)"
-      },
       "response": [
         {
-          "id": "q-dropdown",
+          "id": "q-radio",
           "prompt": "Firmware (Logiciels / Système)",
           "location": "aboveStimulus",
-          "type": "dropdown",
-          "placeholder": "Indicate your level of knowledge of this item",
+          "type": "radio",
           "options": [
             "0: I have never heard of it.",
             "1: I have heard of it, but I don't know what it is.",
@@ -256,16 +240,12 @@
     },
     "overclaiming5": {
       "baseComponent": "overclaiming-question-template",
-      "parameters": {
-        "itemLabel": "iOS (Logiciels / Système)"
-      },
       "response": [
         {
-          "id": "q-dropdown",
+          "id": "q-radio",
           "prompt": "iOS (Logiciels / Système)",
           "location": "aboveStimulus",
-          "type": "dropdown",
-          "placeholder": "Indicate your level of knowledge of this item",
+          "type": "radio",
           "options": [
             "0: I have never heard of it.",
             "1: I have heard of it, but I don't know what it is.",
@@ -280,16 +260,12 @@
     },
     "overclaiming6": {
       "baseComponent": "overclaiming-question-template",
-      "parameters": {
-        "itemLabel": "Android (Logiciels / Système)"
-      },
       "response": [
         {
-          "id": "q-dropdown",
+          "id": "q-radio",
           "prompt": "Android (Logiciels / Système)",
           "location": "aboveStimulus",
-          "type": "dropdown",
-          "placeholder": "Indicate your level of knowledge of this item",
+          "type": "radio",
           "options": [
             "0: I have never heard of it.",
             "1: I have heard of it, but I don't know what it is.",
@@ -304,16 +280,12 @@
     },
     "overclaiming7": {
       "baseComponent": "overclaiming-question-template",
-      "parameters": {
-        "itemLabel": "Linux (Logiciels / Système)"
-      },
       "response": [
         {
-          "id": "q-dropdown",
+          "id": "q-radio",
           "prompt": "Linux (Logiciels / Système)",
           "location": "aboveStimulus",
-          "type": "dropdown",
-          "placeholder": "Indicate your level of knowledge of this item",
+          "type": "radio",
           "options": [
             "0: I have never heard of it.",
             "1: I have heard of it, but I don't know what it is.",
@@ -328,16 +300,12 @@
     },
     "overclaiming8": {
       "baseComponent": "overclaiming-question-template",
-      "parameters": {
-        "itemLabel": "Impulse OS (Logiciels / Système)"
-      },
       "response": [
         {
-          "id": "q-dropdown",
+          "id": "q-radio",
           "prompt": "Impulse OS (Logiciels / Système)",
           "location": "aboveStimulus",
-          "type": "dropdown",
-          "placeholder": "Indicate your level of knowledge of this item",
+          "type": "radio",
           "options": [
             "0: I have never heard of it.",
             "1: I have heard of it, but I don't know what it is.",
@@ -352,16 +320,12 @@
     },
     "overclaiming9": {
       "baseComponent": "overclaiming-question-template",
-      "parameters": {
-        "itemLabel": "CoreView Media (Logiciels / Système)"
-      },
       "response": [
         {
-          "id": "q-dropdown",
+          "id": "q-radio",
           "prompt": "CoreView Media (Logiciels / Système)",
           "location": "aboveStimulus",
-          "type": "dropdown",
-          "placeholder": "Indicate your level of knowledge of this item",
+          "type": "radio",
           "options": [
             "0: I have never heard of it.",
             "1: I have heard of it, but I don't know what it is.",
@@ -376,16 +340,12 @@
     },
     "overclaiming10": {
       "baseComponent": "overclaiming-question-template",
-      "parameters": {
-        "itemLabel": "Disque SSD (Matériel / Hardware)"
-      },
       "response": [
         {
-          "id": "q-dropdown",
+          "id": "q-radio",
           "prompt": "Disque SSD (Matériel / Hardware)",
           "location": "aboveStimulus",
-          "type": "dropdown",
-          "placeholder": "Indicate your level of knowledge of this item",
+          "type": "radio",
           "options": [
             "0: I have never heard of it.",
             "1: I have heard of it, but I don't know what it is.",
@@ -400,16 +360,12 @@
     },
     "overclaiming11": {
       "baseComponent": "overclaiming-question-template",
-      "parameters": {
-        "itemLabel": "Mémoire vive (RAM) (Matériel / Hardware)"
-      },
       "response": [
         {
-          "id": "q-dropdown",
+          "id": "q-radio",
           "prompt": "Mémoire vive (RAM) (Matériel / Hardware)",
           "location": "aboveStimulus",
-          "type": "dropdown",
-          "placeholder": "Indicate your level of knowledge of this item",
+          "type": "radio",
           "options": [
             "0: I have never heard of it.",
             "1: I have heard of it, but I don't know what it is.",
@@ -424,16 +380,12 @@
     },
     "overclaiming12": {
       "baseComponent": "overclaiming-question-template",
-      "parameters": {
-        "itemLabel": "Carte mère (Matériel / Hardware)"
-      },
       "response": [
         {
-          "id": "q-dropdown",
+          "id": "q-radio",
           "prompt": "Carte mère (Matériel / Hardware)",
           "location": "aboveStimulus",
-          "type": "dropdown",
-          "placeholder": "Indicate your level of knowledge of this item",
+          "type": "radio",
           "options": [
             "0: I have never heard of it.",
             "1: I have heard of it, but I don't know what it is.",
@@ -472,16 +424,12 @@
     },
     "overclaiming14": {
       "baseComponent": "overclaiming-question-template",
-      "parameters": {
-        "itemLabel": "Processeur (CPU) (Matériel / Hardware)"
-      },
       "response": [
         {
-          "id": "q-dropdown",
+          "id": "q-radio",
           "prompt": "Processeur (CPU) (Matériel / Hardware)",
           "location": "aboveStimulus",
-          "type": "dropdown",
-          "placeholder": "Indicate your level of knowledge of this item",
+          "type": "radio",
           "options": [
             "0: I have never heard of it.",
             "1: I have heard of it, but I don't know what it is.",
@@ -496,16 +444,12 @@
     },
     "overclaiming15": {
       "baseComponent": "overclaiming-question-template",
-      "parameters": {
-        "itemLabel": "Port HDMI (Matériel / Hardware)"
-      },
       "response": [
         {
-          "id": "q-dropdown",
+          "id": "q-radio",
           "prompt": "Port HDMI (Matériel / Hardware)",
           "location": "aboveStimulus",
-          "type": "dropdown",
-          "placeholder": "Indicate your level of knowledge of this item",
+          "type": "radio",
           "options": [
             "0: I have never heard of it.",
             "1: I have heard of it, but I don't know what it is.",
@@ -520,16 +464,12 @@
     },
     "overclaiming16": {
       "baseComponent": "overclaiming-question-template",
-      "parameters": {
-        "itemLabel": "Carte graphique (GPU) (Matériel / Hardware)"
-      },
       "response": [
         {
-          "id": "q-dropdown",
+          "id": "q-radio",
           "prompt": "Carte graphique (GPU) (Matériel / Hardware)",
           "location": "aboveStimulus",
-          "type": "dropdown",
-          "placeholder": "Indicate your level of knowledge of this item",
+          "type": "radio",
           "options": [
             "0: I have never heard of it.",
             "1: I have heard of it, but I don't know what it is.",
@@ -544,16 +484,12 @@
     },
     "overclaiming17": {
       "baseComponent": "overclaiming-question-template",
-      "parameters": {
-        "itemLabel": "Capteur de flux ionique (Matériel / Hardware)"
-      },
       "response": [
         {
-          "id": "q-dropdown",
+          "id": "q-radio",
           "prompt": "Capteur de flux ionique (Matériel / Hardware)",
           "location": "aboveStimulus",
-          "type": "dropdown",
-          "placeholder": "Indicate your level of knowledge of this item",
+          "type": "radio",
           "options": [
             "0: I have never heard of it.",
             "1: I have heard of it, but I don't know what it is.",
@@ -568,16 +504,12 @@
     },
     "overclaiming18": {
       "baseComponent": "overclaiming-question-template",
-      "parameters": {
-        "itemLabel": "Batterie au Graphène-X (Matériel / Hardware)"
-      },
       "response": [
         {
-          "id": "q-dropdown",
+          "id": "q-radio",
           "prompt": "Batterie au Graphène-X (Matériel / Hardware)",
           "location": "aboveStimulus",
-          "type": "dropdown",
-          "placeholder": "Indicate your level of knowledge of this item",
+          "type": "radio",
           "options": [
             "0: I have never heard of it.",
             "1: I have heard of it, but I don't know what it is.",
@@ -592,16 +524,12 @@
     },
     "overclaiming19": {
       "baseComponent": "overclaiming-question-template",
-      "parameters": {
-        "itemLabel": "Adresse IP (Internet / Réseaux)"
-      },
       "response": [
         {
-          "id": "q-dropdown",
+          "id": "q-radio",
           "prompt": "Adresse IP (Internet / Réseaux)",
           "location": "aboveStimulus",
-          "type": "dropdown",
-          "placeholder": "Indicate your level of knowledge of this item",
+          "type": "radio",
           "options": [
             "0: I have never heard of it.",
             "1: I have heard of it, but I don't know what it is.",
@@ -616,16 +544,12 @@
     },
     "overclaiming20": {
       "baseComponent": "overclaiming-question-template",
-      "parameters": {
-        "itemLabel": "Serveur DNS (Internet / Réseaux)"
-      },
       "response": [
         {
-          "id": "q-dropdown",
+          "id": "q-radio",
           "prompt": "Serveur DNS (Internet / Réseaux)",
           "location": "aboveStimulus",
-          "type": "dropdown",
-          "placeholder": "Indicate your level of knowledge of this item",
+          "type": "radio",
           "options": [
             "0: I have never heard of it.",
             "1: I have heard of it, but I don't know what it is.",
@@ -640,16 +564,12 @@
     },
     "overclaiming21": {
       "baseComponent": "overclaiming-question-template",
-      "parameters": {
-        "itemLabel": "Chiffrement SSL/TLS (Internet / Réseaux)"
-      },
       "response": [
         {
-          "id": "q-dropdown",
+          "id": "q-radio",
           "prompt": "Chiffrement SSL/TLS (Internet / Réseaux)",
           "location": "aboveStimulus",
-          "type": "dropdown",
-          "placeholder": "Indicate your level of knowledge of this item",
+          "type": "radio",
           "options": [
             "0: I have never heard of it.",
             "1: I have heard of it, but I don't know what it is.",
@@ -664,16 +584,12 @@
     },
     "overclaiming22": {
       "baseComponent": "overclaiming-question-template",
-      "parameters": {
-        "itemLabel": "Bande passante (Internet / Réseaux)"
-      },
       "response": [
         {
-          "id": "q-dropdown",
+          "id": "q-radio",
           "prompt": "Bande passante (Internet / Réseaux)",
           "location": "aboveStimulus",
-          "type": "dropdown",
-          "placeholder": "Indicate your level of knowledge of this item",
+          "type": "radio",
           "options": [
             "0: I have never heard of it.",
             "1: I have heard of it, but I don't know what it is.",
@@ -688,16 +604,12 @@
     },
     "overclaiming23": {
       "baseComponent": "overclaiming-question-template",
-      "parameters": {
-        "itemLabel": "Wifi 6 (Internet / Réseaux)"
-      },
       "response": [
         {
-          "id": "q-dropdown",
+          "id": "q-radio",
           "prompt": "Wifi 6 (Internet / Réseaux)",
           "location": "aboveStimulus",
-          "type": "dropdown",
-          "placeholder": "Indicate your level of knowledge of this item",
+          "type": "radio",
           "options": [
             "0: I have never heard of it.",
             "1: I have heard of it, but I don't know what it is.",
@@ -712,16 +624,12 @@
     },
     "overclaiming24": {
       "baseComponent": "overclaiming-question-template",
-      "parameters": {
-        "itemLabel": "Protocole HTTP (Internet / Réseaux)"
-      },
       "response": [
         {
-          "id": "q-dropdown",
+          "id": "q-radio",
           "prompt": "Protocole HTTP (Internet / Réseaux)",
           "location": "aboveStimulus",
-          "type": "dropdown",
-          "placeholder": "Indicate your level of knowledge of this item",
+          "type": "radio",
           "options": [
             "0: I have never heard of it.",
             "1: I have heard of it, but I don't know what it is.",
@@ -736,16 +644,12 @@
     },
     "overclaiming25": {
       "baseComponent": "overclaiming-question-template",
-      "parameters": {
-        "itemLabel": "Cloud Computing (Internet / Réseaux)"
-      },
       "response": [
         {
-          "id": "q-dropdown",
+          "id": "q-radio",
           "prompt": "Cloud Computing (Internet / Réseaux)",
           "location": "aboveStimulus",
-          "type": "dropdown",
-          "placeholder": "Indicate your level of knowledge of this item",
+          "type": "radio",
           "options": [
             "0: I have never heard of it.",
             "1: I have heard of it, but I don't know what it is.",
@@ -760,16 +664,12 @@
     },
     "overclaiming26": {
       "baseComponent": "overclaiming-question-template",
-      "parameters": {
-        "itemLabel": "Passerelle Proxy-S (Internet / Réseaux)"
-      },
       "response": [
         {
-          "id": "q-dropdown",
+          "id": "q-radio",
           "prompt": "Passerelle Proxy-S (Internet / Réseaux)",
           "location": "aboveStimulus",
-          "type": "dropdown",
-          "placeholder": "Indicate your level of knowledge of this item",
+          "type": "radio",
           "options": [
             "0: I have never heard of it.",
             "1: I have heard of it, but I don't know what it is.",
@@ -784,16 +684,12 @@
     },
     "overclaiming27": {
       "baseComponent": "overclaiming-question-template",
-      "parameters": {
-        "itemLabel": "Algorithme de compression Bio-S (Internet / Réseaux)"
-      },
       "response": [
         {
-          "id": "q-dropdown",
+          "id": "q-radio",
           "prompt": "Algorithme de compression Bio-S (Internet / Réseaux)",
           "location": "aboveStimulus",
-          "type": "dropdown",
-          "placeholder": "Indicate your level of knowledge of this item",
+          "type": "radio",
           "options": [
             "0: I have never heard of it.",
             "1: I have heard of it, but I don't know what it is.",
@@ -808,16 +704,12 @@
     },
     "overclaiming28": {
       "baseComponent": "overclaiming-question-template",
-      "parameters": {
-        "itemLabel": "Machine Learning (Intelligence Artificielle)"
-      },
       "response": [
         {
-          "id": "q-dropdown",
+          "id": "q-radio",
           "prompt": "Machine Learning (Intelligence Artificielle)",
           "location": "aboveStimulus",
-          "type": "dropdown",
-          "placeholder": "Indicate your level of knowledge of this item",
+          "type": "radio",
           "options": [
             "0: I have never heard of it.",
             "1: I have heard of it, but I don't know what it is.",
@@ -832,16 +724,12 @@
     },
     "overclaiming29": {
       "baseComponent": "overclaiming-question-template",
-      "parameters": {
-        "itemLabel": "Réseaux de neurones (Intelligence Artificielle)"
-      },
       "response": [
         {
-          "id": "q-dropdown",
+          "id": "q-radio",
           "prompt": "Réseaux de neurones (Intelligence Artificielle)",
           "location": "aboveStimulus",
-          "type": "dropdown",
-          "placeholder": "Indicate your level of knowledge of this item",
+          "type": "radio",
           "options": [
             "0: I have never heard of it.",
             "1: I have heard of it, but I don't know what it is.",
@@ -856,16 +744,12 @@
     },
     "overclaiming30": {
       "baseComponent": "overclaiming-question-template",
-      "parameters": {
-        "itemLabel": "NLP (Intelligence Artificielle)"
-      },
       "response": [
         {
-          "id": "q-dropdown",
+          "id": "q-radio",
           "prompt": "NLP (Intelligence Artificielle)",
           "location": "aboveStimulus",
-          "type": "dropdown",
-          "placeholder": "Indicate your level of knowledge of this item",
+          "type": "radio",
           "options": [
             "0: I have never heard of it.",
             "1: I have heard of it, but I don't know what it is.",
@@ -880,16 +764,12 @@
     },
     "overclaiming31": {
       "baseComponent": "overclaiming-question-template",
-      "parameters": {
-        "itemLabel": "Vision par ordinateur (Intelligence Artificielle)"
-      },
       "response": [
         {
-          "id": "q-dropdown",
+          "id": "q-radio",
           "prompt": "Vision par ordinateur (Intelligence Artificielle)",
           "location": "aboveStimulus",
-          "type": "dropdown",
-          "placeholder": "Indicate your level of knowledge of this item",
+          "type": "radio",
           "options": [
             "0: I have never heard of it.",
             "1: I have heard of it, but I don't know what it is.",
@@ -904,16 +784,12 @@
     },
     "overclaiming32": {
       "baseComponent": "overclaiming-question-template",
-      "parameters": {
-        "itemLabel": "ChatGPT (Intelligence Artificielle)"
-      },
       "response": [
         {
-          "id": "q-dropdown",
+          "id": "q-radio",
           "prompt": "ChatGPT (Intelligence Artificielle)",
           "location": "aboveStimulus",
-          "type": "dropdown",
-          "placeholder": "Indicate your level of knowledge of this item",
+          "type": "radio",
           "options": [
             "0: I have never heard of it.",
             "1: I have heard of it, but I don't know what it is.",
@@ -928,16 +804,12 @@
     },
     "overclaiming33": {
       "baseComponent": "overclaiming-question-template",
-      "parameters": {
-        "itemLabel": "Deepfake (Intelligence Artificielle)"
-      },
       "response": [
         {
-          "id": "q-dropdown",
+          "id": "q-radio",
           "prompt": "Deepfake (Intelligence Artificielle)",
           "location": "aboveStimulus",
-          "type": "dropdown",
-          "placeholder": "Indicate your level of knowledge of this item",
+          "type": "radio",
           "options": [
             "0: I have never heard of it.",
             "1: I have heard of it, but I don't know what it is.",
@@ -952,16 +824,12 @@
     },
     "overclaiming34": {
       "baseComponent": "overclaiming-question-template",
-      "parameters": {
-        "itemLabel": "Algorithme de Vision-Sync (Intelligence Artificielle)"
-      },
       "response": [
         {
-          "id": "q-dropdown",
+          "id": "q-radio",
           "prompt": "Algorithme de Vision-Sync (Intelligence Artificielle)",
           "location": "aboveStimulus",
-          "type": "dropdown",
-          "placeholder": "Indicate your level of knowledge of this item",
+          "type": "radio",
           "options": [
             "0: I have never heard of it.",
             "1: I have heard of it, but I don't know what it is.",
@@ -976,16 +844,12 @@
     },
     "overclaiming35": {
       "baseComponent": "overclaiming-question-template",
-      "parameters": {
-        "itemLabel": "Métavers (Réalité Augmentée / Virtuelle)"
-      },
       "response": [
         {
-          "id": "q-dropdown",
+          "id": "q-radio",
           "prompt": "Métavers (Réalité Augmentée / Virtuelle)",
           "location": "aboveStimulus",
-          "type": "dropdown",
-          "placeholder": "Indicate your level of knowledge of this item",
+          "type": "radio",
           "options": [
             "0: I have never heard of it.",
             "1: I have heard of it, but I don't know what it is.",
@@ -1000,16 +864,12 @@
     },
     "overclaiming36": {
       "baseComponent": "overclaiming-question-template",
-      "parameters": {
-        "itemLabel": "Suivi oculaire (Eye-tracking) (Réalité Augmentée / Virtuelle)"
-      },
       "response": [
         {
-          "id": "q-dropdown",
+          "id": "q-radio",
           "prompt": "Suivi oculaire (Eye-tracking) (Réalité Augmentée / Virtuelle)",
           "location": "aboveStimulus",
-          "type": "dropdown",
-          "placeholder": "Indicate your level of knowledge of this item",
+          "type": "radio",
           "options": [
             "0: I have never heard of it.",
             "1: I have heard of it, but I don't know what it is.",
@@ -1024,16 +884,12 @@
     },
     "overclaiming37": {
       "baseComponent": "overclaiming-question-template",
-      "parameters": {
-        "itemLabel": "Latence (Réalité Augmentée / Virtuelle)"
-      },
       "response": [
         {
-          "id": "q-dropdown",
+          "id": "q-radio",
           "prompt": "Latence (Réalité Augmentée / Virtuelle)",
           "location": "aboveStimulus",
-          "type": "dropdown",
-          "placeholder": "Indicate your level of knowledge of this item",
+          "type": "radio",
           "options": [
             "0: I have never heard of it.",
             "1: I have heard of it, but I don't know what it is.",
@@ -1048,16 +904,12 @@
     },
     "overclaiming38": {
       "baseComponent": "overclaiming-question-template",
-      "parameters": {
-        "itemLabel": "Photogrammétrie (Réalité Augmentée / Virtuelle)"
-      },
       "response": [
         {
-          "id": "q-dropdown",
+          "id": "q-radio",
           "prompt": "Photogrammétrie (Réalité Augmentée / Virtuelle)",
           "location": "aboveStimulus",
-          "type": "dropdown",
-          "placeholder": "Indicate your level of knowledge of this item",
+          "type": "radio",
           "options": [
             "0: I have never heard of it.",
             "1: I have heard of it, but I don't know what it is.",
@@ -1072,16 +924,12 @@
     },
     "overclaiming39": {
       "baseComponent": "overclaiming-question-template",
-      "parameters": {
-        "itemLabel": "Casque VR (Réalité Augmentée / Virtuelle)"
-      },
       "response": [
         {
-          "id": "q-dropdown",
+          "id": "q-radio",
           "prompt": "Casque VR (Réalité Augmentée / Virtuelle)",
           "location": "aboveStimulus",
-          "type": "dropdown",
-          "placeholder": "Indicate your level of knowledge of this item",
+          "type": "radio",
           "options": [
             "0: I have never heard of it.",
             "1: I have heard of it, but I don't know what it is.",
@@ -1096,16 +944,12 @@
     },
     "overclaiming40": {
       "baseComponent": "overclaiming-question-template",
-      "parameters": {
-        "itemLabel": "Hologramme (Réalité Augmentée / Virtuelle)"
-      },
       "response": [
         {
-          "id": "q-dropdown",
+          "id": "q-radio",
           "prompt": "Hologramme (Réalité Augmentée / Virtuelle)",
           "location": "aboveStimulus",
-          "type": "dropdown",
-          "placeholder": "Indicate your level of knowledge of this item",
+          "type": "radio",
           "options": [
             "0: I have never heard of it.",
             "1: I have heard of it, but I don't know what it is.",
@@ -1120,16 +964,12 @@
     },
     "overclaiming41": {
       "baseComponent": "overclaiming-question-template",
-      "parameters": {
-        "itemLabel": "Filtres Snapchat/Instagram (Réalité Augmentée / Virtuelle)"
-      },
       "response": [
         {
-          "id": "q-dropdown",
+          "id": "q-radio",
           "prompt": "Filtres Snapchat/Instagram (Réalité Augmentée / Virtuelle)",
           "location": "aboveStimulus",
-          "type": "dropdown",
-          "placeholder": "Indicate your level of knowledge of this item",
+          "type": "radio",
           "options": [
             "0: I have never heard of it.",
             "1: I have heard of it, but I don't know what it is.",
@@ -1598,7 +1438,7 @@
           "overclaiming2",
           "overclaiming3",
           "overclaiming4",
-          "overclaiming5",  
+          "overclaiming5",
           "overclaiming6",
           "overclaiming7",
           "overclaiming8",
