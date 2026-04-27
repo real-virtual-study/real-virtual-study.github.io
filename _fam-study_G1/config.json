@@ -394,6 +394,13 @@
           "prompt": "General extent"
         },
         {
+          "id": "explanation",
+          "type": "reactive",
+          "required": false,
+          "hidden": true,
+          "prompt": "Additional explanation"
+        },
+        {
           "id": "completionSignal",
           "type": "reactive",
           "location": "sidebar",
