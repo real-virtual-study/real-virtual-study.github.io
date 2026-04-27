@@ -6,7 +6,8 @@ Now, the goal is to assess how well you remember whether an object was real or v
 
 For each object, you will indicate whether it was real or virtual or if it is a new object. You will then rate how confident you are in your answer :
 
-<img src="_real_virtual_study2_G1/assets/content/Q1Q2.png" width="750" style="box-shadow:0 2px 6px rgba(0,0,0,0.25); margin:16px 0;" />
+<img src="_real_virtual_study2_G1/assets/content/Q1.png" width="750" style="box-shadow:0 2px 6px rgba(0,0,0,0.25); margin:16px 0;" />
+<img src="_real_virtual_study2_G1/assets/content/Q2.png" width="750" style="box-shadow:0 2px 6px rgba(0,0,0,0.25); margin:16px 0;" />
 
 Finally, to better understand your answer, we will ask you to provide more details. When answering, please be as specific as possible :
 
