@@ -4,15 +4,11 @@ Now, the goal is to assess how well you remember whether an object was real or v
 
 <img src="_real_virtual_study2_G1/assets/content/item.png" width="750" style="box-shadow:0 2px 6px rgba(0,0,0,0.25); margin:16px 0;" />
 
-For each object, you will first indicate whether it was already shown in the videos last week or if it is a new object, and then rate how confident you are in your answer :
+For each object, you will indicate whether it was real or virtual or if it is a new object. You will then rate how confident you are in your answer :
 
 <img src="_real_virtual_study2_G1/assets/content/Q1Q2.png" width="750" style="box-shadow:0 2px 6px rgba(0,0,0,0.25); margin:16px 0;" />
 
-Afterward, you will indicate whether the object was real or virtual, and then rate how confident you are in your answer :
-
-<img src="_real_virtual_study2_G1/assets/content/Q3Q4.png" width="750" style="box-shadow:0 2px 6px rgba(0,0,0,0.25); margin:16px 0;" />
-
-Finally, to better understand why you answered “real” or “virtual”, we will ask you to provide more details. When answering, please be as specific as possible :
+Finally, to better understand your answer, we will ask you to provide more details. When answering, please be as specific as possible :
 
 <img src="_real_virtual_study2_G1/assets/content/Q5.png" width="750" style="box-shadow:0 2px 6px rgba(0,0,0,0.25); margin:16px 0;" />
 
