@@ -376,9 +376,32 @@
     },
 
     "BlindSpotQuestionnaire": {
-      "type": "markdown",
-      "path": "_fam-study_G1/assets/content/questionnaires.md",
-      "response": []
+      "type": "website",
+      "path": "_fam-study_G1/blindspot.html",
+      "response": [
+        {
+          "id": "personalExtent",
+          "type": "reactive",
+          "required": false,
+          "hidden": true,
+          "prompt": "Personal extent"
+        },
+        {
+          "id": "generalExtent",
+          "type": "reactive",
+          "required": false,
+          "hidden": true,
+          "prompt": "General extent"
+        },
+        {
+          "id": "completionSignal",
+          "type": "reactive",
+          "location": "sidebar",
+          "prompt": "Click on next to continue",
+          "required": true,
+          "hidden": true
+        }
+      ]
     },
     
     "PostQuestionnaire": {
