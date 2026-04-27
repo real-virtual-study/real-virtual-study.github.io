@@ -53,32 +53,18 @@
           "prompt": "Object Name"
         },
         {
-          "id": "seenAnswer",
+          "id": "retrievalAnswer",
           "type": "reactive",
           "required": false,
           "hidden": true,
-          "prompt": "Seen in Part 1?"
+          "prompt": "Choose an answer"
         },
         {
-          "id": "seenConfidence",
+          "id": "confidence",
           "type": "reactive",
           "required": false,
           "hidden": true,
-          "prompt": "Confidence (Seen)"
-        },
-        {
-          "id": "sourceAnswer",
-          "type": "reactive",
-          "required": false,
-          "hidden": true,
-          "prompt": "Real or Virtual"
-        },
-        {
-          "id": "sourceConfidence",
-          "type": "reactive",
-          "required": false,
-          "hidden": true,
-          "prompt": "Confidence (Source)"
+          "prompt": "Confidence"
         },
         {
           "id": "reasoning",
