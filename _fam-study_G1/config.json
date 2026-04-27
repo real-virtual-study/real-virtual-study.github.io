@@ -56,8 +56,7 @@
           "id": "retrievalAnswer",
           "type": "reactive",
           "required": false,
-          "hidden": true,
-          "prompt": "Choose an answer"
+          "hidden": true
         },
         {
           "id": "confidence",
