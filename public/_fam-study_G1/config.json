@@ -389,93 +389,12 @@
       }
     },
 
-    "Questionnaires": {
+    "BlindSpotQuestionnaire": {
       "type": "markdown",
       "path": "_fam-study_G1/assets/content/questionnaires.md",
       "response": []
     },
-
-  "EMQuestionnaire": {
-    "type": "questionnaire",
-    "response": [
-      {
-        "id": "ih-q",
-        "prompt": "The statements set out below are about forgetting things, something everyone does to an extent. Please indicate how frequently the examples given have happened to you, over the last 3 months, using the following scale:",
-        "location": "aboveStimulus",
-        "type": "matrix-radio",
-        "questionOrder": "random",
-        "answerOptions": [
-          "Once or less in the last month.",
-          "More than once a month but less than once a week",
-          "About once a week",
-          "More that once a week or less than once a day",
-          "Once or more in a day"
-        ],
-        "questionOptions": [
-          "Having to check whether you have done something that you should have done.",
-          "Forgetting when it was that something happened; for example, whether it was yesterday or last week.",
-          "Forgetting that you were told something yesterday or a few days ago, and maybe having to be reminded about it.",
-          "Starting to read something (a book or an article in a newspaper, or a magazine) without realizing you have already read it before.",
-          "Finding that a word is ‘on the tip of your tongue’. You know what it is but cannot quite find it.",
-          "Completely forgetting to do things you said you would do, and things you planned to do.",
-          "Forgetting important details of what you did or what happened to you the day before.",
-          "When talking to someone, forgetting what you have just said. Maybe saying ‘what was I talking about?’",
-          "When reading a newspaper or magazine, being unable to follow the thread of a story; losing track of what it is about.",
-          "Forgetting to tell somebody something important, perhaps forgetting to pass on a message or remind someone of something.",
-          "Getting the details of what someone was told you mixed up and confused.",
-          "Forgetting where things are normally kept or looking for them in the wrong place.",
-          "Repeating to someone what you have just told them or asking someone the same question twice."
-        ]
-      }
-    ]
-  },
-  "SFQuestion": {
-    "type": "questionnaire",
-    "response": [
-      {
-        "id": "q1",
-        "prompt": "How familiar are you with science fiction?",
-        "location": "belowStimulus",
-        "required": true,
-        "type": "radio",
-        "options": [
-          "Not at all familiar",
-          "Slightly familiar",
-          "Moderately familiar",
-          "Fairly familiar",
-          "Very familiar"
-        ],
-        "horizontal": true
-      }
-    ]
-  },
-  "IHQuestionnaire1": {
-    "type": "questionnaire",
-    "response": [
-      {
-        "id": "ih-q1",
-        "prompt": "Carefully read each statement and indicate the degree to which you agree\neach statement is true for you.",
-        "location": "aboveStimulus",
-        "type": "matrix-radio",
-        "questionOrder": "random",
-        "answerOptions": [
-          "Not at all like me",
-          "2",
-          "3",
-          "4",
-          "Very much like me"
-        ],
-        "questionOptions": [
-          "I question my own opinions, positions, and viewpoints because they could be wrong.",
-          "I reconsider my opinions when presented with new evidence.",
-          "I recognize the value in opinions that are different from my own.",
-          "I accept that my beliefs and attitudes may be wrong.",
-          "In the face of conflicting evidence, I am open to changing my opinions.",
-          "I like finding out new information that differs from what I already think is true."
-        ]
-      }
-    ]
-  },
+    
     "PostQuestionnaire": {
       "type": "questionnaire",
       "response": [
@@ -522,10 +441,7 @@
           }
         ]
       },
-      "Questionnaires",
-      "EMQuestionnaire",
-      "SFQuestion",
-      "IHQuestionnaire1",
+      "BlindSpotQuestionnaire",
       "PostQuestionnaire",
       "EndPage"
     ]
