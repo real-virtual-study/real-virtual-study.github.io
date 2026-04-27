@@ -136,13 +136,10 @@
 
 <div id="stage-retrieval" class="question-container">
     <h3>Choose an answer</h3>
-    <div>
-        <select id="retrieval-dropdown" onchange="enableNext('btn-next-1')" style="font-size: 1em; padding: 12px; width: 100%; max-width: 500px;">
-            <option value="" selected disabled>Select your answer</option>
-            <option value="not_in_part_1">This object was not in Part 1</option>
-            <option value="real">This object was real</option>
-            <option value="virtual">This object was virtuel</option>
-        </select>
+    <div class="likert-container" style="justify-content: space-around;">
+        <label class="likert-option"><span class="likert-text">This object was not in Part 1</span><input type="radio" name="retrievalAnswer" value="not_in_part_1" onchange="enableNext('btn-next-1')"><span class="custom-radio"></span></label>
+        <label class="likert-option"><span class="likert-text">This object was real</span><input type="radio" name="retrievalAnswer" value="real" onchange="enableNext('btn-next-1')"><span class="custom-radio"></span></label>
+        <label class="likert-option"><span class="likert-text">This object was virtuel</span><input type="radio" name="retrievalAnswer" value="virtual" onchange="enableNext('btn-next-1')"><span class="custom-radio"></span></label>
     </div>
     <div class="nav-controls">
         <button id="btn-next-1" onclick="submitRetrieval()" disabled>Next</button>
@@ -210,8 +207,8 @@
     }
 
     function submitRetrieval() {
-        const dropdown = document.getElementById('retrieval-dropdown');
-        trialAnswers.retrievalAnswer = dropdown.value;
+        const selected = document.querySelector('input[name="retrievalAnswer"]:checked');
+        trialAnswers.retrievalAnswer = selected ? selected.value : null;
         lockSection('stage-retrieval');
         document.getElementById('stage-confidence').classList.remove('hidden');
         window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
