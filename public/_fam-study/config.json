@@ -1,4 +1,4 @@
-{
+﻿{
   "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.3.2/src/parser/StudyConfigSchema.json",
   "studyMetadata": {
     "title": "Familiarity study - Part 1",
@@ -159,7 +159,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Windows 11 (Logiciels / Système)",
+          "prompt": "Windows 11 (Software / System)",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -179,7 +179,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "macOS (Logiciels / Système)",
+          "prompt": "macOS (Software / System)",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -199,7 +199,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "API (Logiciels / Système)",
+          "prompt": "API (Software / System)",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -219,7 +219,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Firmware (Logiciels / Système)",
+          "prompt": "Firmware (Software / System)",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -239,7 +239,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "iOS (Logiciels / Système)",
+          "prompt": "iOS (Software / System)",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -259,7 +259,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Android (Logiciels / Système)",
+          "prompt": "Android (Software / System)",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -279,7 +279,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Linux (Logiciels / Système)",
+          "prompt": "Linux (Software / System)",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -299,7 +299,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Impulse OS (Logiciels / Système)",
+          "prompt": "Impulse OS (Software / System)",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -319,7 +319,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "CoreView Media (Logiciels / Système)",
+          "prompt": "CoreView Media (Software / System)",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -339,7 +339,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Disque SSD (Matériel / Hardware)",
+          "prompt": "SSD Disk (Hardware)",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -359,7 +359,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Mémoire vive (RAM) (Matériel / Hardware)",
+          "prompt": "Random-access Memory (RAM) (Hardware)",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -379,7 +379,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Carte mère (Matériel / Hardware)",
+          "prompt": "Motherboard (Hardware)",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -397,15 +397,14 @@
     "overclaiming13": {
       "baseComponent": "overclaiming-question-template",
       "parameters": {
-        "itemLabel": "BIOS / UEFI (Matériel / Hardware)"
+        "itemLabel": "BIOS / UEFI (Hardware)"
       },
       "response": [
         {
-          "id": "q-dropdown",
-          "prompt": "BIOS / UEFI (Matériel / Hardware)",
+          "id": "q-radio",
+          "prompt": "BIOS / UEFI (Hardware)",
           "location": "aboveStimulus",
-          "type": "dropdown",
-          "placeholder": "Indicate your level of knowledge of this item",
+          "type": "radio",
           "options": [
             "0: I have never heard of it.",
             "1: I have heard of it, but I don't know what it is.",
@@ -423,7 +422,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Processeur (CPU) (Matériel / Hardware)",
+          "prompt": "Processor (CPU) (Hardware)",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -443,7 +442,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Port HDMI (Matériel / Hardware)",
+          "prompt": "HDMI Port (Hardware)",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -463,7 +462,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Carte graphique (GPU) (Matériel / Hardware)",
+          "prompt": "Graphics Card (GPU) (Hardware)",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -483,7 +482,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Capteur de flux ionique (Matériel / Hardware)",
+          "prompt": "Ion Flux Sensor (Hardware)",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -503,7 +502,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Batterie au Graphène-X (Matériel / Hardware)",
+          "prompt": "Graphene-X Battery (Hardware)",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -523,7 +522,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Adresse IP (Internet / Réseaux)",
+          "prompt": "IP Address (Internet / Networks)",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -543,7 +542,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Serveur DNS (Internet / Réseaux)",
+          "prompt": "DNS Server (Internet / Networks)",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -563,7 +562,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Chiffrement SSL/TLS (Internet / Réseaux)",
+          "prompt": "SSL/TLS Encryption (Internet / Networks)",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -583,7 +582,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Bande passante (Internet / Réseaux)",
+          "prompt": "Bandwidth (Internet / Networks)",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -603,7 +602,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Wifi 6 (Internet / Réseaux)",
+          "prompt": "Wifi 6 (Internet / Networks)",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -623,7 +622,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Protocole HTTP (Internet / Réseaux)",
+          "prompt": "HTTP Protocol (Internet / Networks)",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -643,7 +642,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Cloud Computing (Internet / Réseaux)",
+          "prompt": "Cloud Computing (Internet / Networks)",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -663,7 +662,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Passerelle Proxy-S (Internet / Réseaux)",
+          "prompt": "Proxy-S Gateway (Internet / Networks)",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -683,7 +682,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Algorithme de compression Bio-S (Internet / Réseaux)",
+          "prompt": "Bio-S Compression Algorithm (Internet / Networks)",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -703,7 +702,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Machine Learning (Intelligence Artificielle)",
+          "prompt": "Machine Learning (Artificial Intelligence)",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -723,7 +722,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Réseaux de neurones (Intelligence Artificielle)",
+          "prompt": "Neural Networks (Artificial Intelligence)",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -743,7 +742,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "NLP (Intelligence Artificielle)",
+          "prompt": "NLP (Artificial Intelligence)",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -763,7 +762,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Vision par ordinateur (Intelligence Artificielle)",
+          "prompt": "Computer Vision (Artificial Intelligence)",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -783,7 +782,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "ChatGPT (Intelligence Artificielle)",
+          "prompt": "ChatGPT (Artificial Intelligence)",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -803,7 +802,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Deepfake (Intelligence Artificielle)",
+          "prompt": "Deepfake (Artificial Intelligence)",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -823,7 +822,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Algorithme de Vision-Sync (Intelligence Artificielle)",
+          "prompt": "Vision-Sync Algorithm (Artificial Intelligence)",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -843,7 +842,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Métavers (Réalité Augmentée / Virtuelle)",
+          "prompt": "Metaverse (Augmented / Virtual Reality)",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -863,7 +862,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Suivi oculaire (Eye-tracking) (Réalité Augmentée / Virtuelle)",
+          "prompt": "Eye Tracking (Eye-tracking) (Augmented / Virtual Reality)",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -883,7 +882,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Latence (Réalité Augmentée / Virtuelle)",
+          "prompt": "Latency (Augmented / Virtual Reality)",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -903,7 +902,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Photogrammétrie (Réalité Augmentée / Virtuelle)",
+          "prompt": "Photogrammetry (Augmented / Virtual Reality)",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -923,7 +922,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Casque VR (Réalité Augmentée / Virtuelle)",
+          "prompt": "VR Headset (Augmented / Virtual Reality)",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -943,7 +942,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Hologramme (Réalité Augmentée / Virtuelle)",
+          "prompt": "Hologram (Augmented / Virtual Reality)",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -963,7 +962,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Filtres Snapchat/Instagram (Réalité Augmentée / Virtuelle)",
+          "prompt": "Snapchat/Instagram Filters (Augmented / Virtual Reality)",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
