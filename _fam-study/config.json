@@ -66,12 +66,14 @@
     },
     "overclaiming-question-template": {
       "type": "questionnaire",
+      "nextButtonLocation": "aboveStimulus",
       "response": []
     }
   },
   "components": {
     "myAttentionCheckComponent": {
       "type": "questionnaire",
+      "nextButtonLocation": "aboveStimulus",
       "response": [
         {
           "id": "AttentionCheck1",
@@ -1430,6 +1432,7 @@
         "id": "overclaiming-block",
         "order": "random",
         "components": [
+          "myAttentionCheckComponent",
           "overclaiming1",
           "overclaiming2",
           "overclaiming3",
@@ -1487,7 +1490,6 @@
               "trial2A",
               "trial3A",
               "trial4A",
-              "myAttentionCheckComponent",
               "trial5A",
               "trial6A",
               "trial7A",
@@ -1528,7 +1530,6 @@
               "trial2B",
               "trial3B",
               "trial4B",
-              "myAttentionCheckComponent",
               "trial5B",
               "trial6B",
               "trial7B",
