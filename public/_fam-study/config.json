@@ -122,7 +122,7 @@
     },
     "IntroGlobal": {
       "type": "markdown",
-      "path": "_fam-study/assets/content/part1_instructions_OCT.md",
+      "path": "_fam-study/assets/content/part1_instructions_global.md",
       "nextButtonText": "Start",
       "response": [
         {

@@ -1,12 +1,19 @@
-### Instructions for the questionnaire:
-
-You will be asked to rate your familiarity with 41 items related to new technologies, using a scale from 0 to 6, where 0 means no knowledge at all and 6 means expert-level knowledge.
-These items are drawn from 5 categories covering a wide range of technological domains:
-
-Software / Operating Systems
-Hardware
-Internet / Networks
-Artificial Intelligence
-Augmented / Virtual Reality
-
-Note that some items may be unfamiliar or may not exist at all — simply rate them as honestly as possible."
+# Part 1 — Questionnaire
+ 
+In this part, you will rate your familiarity with **41 items** related to new technologies.
+ 
+For each item, use a scale from **0 to 6**:
+ 
+| Score | Meaning |
+|-------|---------|
+| 0 | No knowledge at all |
+| 6 | Expert-level knowledge |
+ 
+The items span **5 categories** covering a wide range of technological domains:
+ 
+-  Software & Operating Systems
+-  Hardware
+-  Internet & Networks
+-  Artificial Intelligence
+-  Augmented & Virtual Reality
+> There are no right or wrong answers — simply rate each item as honestly as possible based on your own experience.
