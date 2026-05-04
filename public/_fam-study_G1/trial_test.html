@@ -161,13 +161,6 @@
     </div>
 </div>
 
-<div id="stage-reason" class="question-container hidden">
-    <h3 id="reason-title">Please explain your answer.</h3>
-    <textarea id="reason-input" placeholder="Type your answer here..." oninput="enableNext('btn-finish')"></textarea>
-    <div class="nav-controls">
-        <button id="btn-finish" onclick="submitReasonAndFinish()" disabled>Finish Trial</button>
-    </div>
-</div>
 
 <div id="final-message" class="question-container hidden" style="border-left: 5px solid #28a745; background-color: #d4edda;">
     <h3 style="color: #155724;">Trial finished</h3>
@@ -178,8 +171,7 @@
     let trialAnswers = {
         objectName: "",
         retrievalAnswer: null,
-        confidence: null,
-        reasoning: ""
+        confidence: null
     };
 
     // Initialization
@@ -216,18 +208,10 @@
 
     function submitConfidence() {
         trialAnswers.confidence = document.querySelector('input[name="confidence"]:checked').value;
-        lockSection('stage-confidence');
-        document.getElementById('stage-reason').classList.remove('hidden');
-        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-    }
-
-    function submitReasonAndFinish() {
-        trialAnswers.reasoning = document.getElementById('reason-input').value;
         saveAndFinish();
     }
 
     function saveAndFinish() {
-        lockSection('stage-reason');
         if (typeof Revisit !== 'undefined') {
             Revisit.postAnswers({ ...trialAnswers, completionSignal: "Finished" });
         }
