@@ -66,14 +66,14 @@
     },
     "overclaiming-question-template": {
       "type": "questionnaire",
-      "nextButtonLocation": "aboveStimulus",
+      "nextButtonLocation": "belowStimulus",
       "response": []
     }
   },
   "components": {
     "myAttentionCheckComponent": {
       "type": "questionnaire",
-      "nextButtonLocation": "aboveStimulus",
+      "nextButtonLocation": "belowStimulus",
       "response": [
         {
           "id": "AttentionCheck1",
