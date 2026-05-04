@@ -9,8 +9,4 @@ For each object, you will indicate whether it was real or virtual or if it is a 
 <img src="_fam-study_G1/assets/content/Q1.png" width="750" style="box-shadow:0 2px 6px rgba(0,0,0,0.25); margin:16px 0;" />
 <img src="_fam-study_G1/assets/content/Q2.png" width="750" style="box-shadow:0 2px 6px rgba(0,0,0,0.25); margin:16px 0;" />
 
-Finally, to better understand your answer, we will ask you to provide more details. When answering, please be as specific as possible :
-
-<img src="_fam-study_G1/assets/content/Q5.png" width="750" style="box-shadow:0 2px 6px rgba(0,0,0,0.25); margin:16px 0;" />
-
 When you click Next, the first trial of the task will begin.
