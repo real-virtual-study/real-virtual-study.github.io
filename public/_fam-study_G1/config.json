@@ -55,14 +55,14 @@
         {
           "id": "retrievalAnswer",
           "type": "reactive",
-          "required": false,
+          "required": true,
           "hidden": true,
           "prompt": "Choose an answer"
         },
         {
           "id": "confidence",
           "type": "reactive",
-          "required": false,
+          "required": true,
           "hidden": true,
           "prompt": "Confidence"
         }
