@@ -14,7 +14,7 @@ This study aims to enhance our understanding of how real and virtual objects are
 
 ### What We Expect From You
 
-You will be asked to answer questions related to the previous experiment on the perception of real and virtual objects, which you participated in about 10 days ago.
+You will be asked to answer questions related to the previous experiment on the perception of real and virtual objects, which you participated in about X days ago.
 You will first see a sequence of icons and words, some referring to objects you have seen, others to new objects.
 Each time, you will be asked to remember whether you saw the object as real, virtual, or new.
 For each object you will be asked to explain what cues informed your choice.
@@ -49,7 +49,7 @@ Once the research project is completed, all anonymized data will be made publicl
 
 ### Potential Benefits
 
-You will receive £4 for participating, provided that you:
+You will receive £X for participating, provided that you:
 * Complete the study
 * Do not rush
 * Answer attention check questions correctly
