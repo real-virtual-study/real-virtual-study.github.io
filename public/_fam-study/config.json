@@ -161,7 +161,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Windows 11 (Software / System)",
+          "prompt": "Android",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -181,7 +181,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "macOS (Software / System)",
+          "prompt": "iOS",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -201,7 +201,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "API (Software / System)",
+          "prompt": "Windows 11",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -221,7 +221,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Firmware (Software / System)",
+          "prompt": "macOS",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -241,7 +241,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "iOS (Software / System)",
+          "prompt": "Linux",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -261,7 +261,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Android (Software / System)",
+          "prompt": "Dark mode",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -281,7 +281,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Linux (Software / System)",
+          "prompt": "LumenOS",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -301,7 +301,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Impulse OS (Software / System)",
+          "prompt": "GPU (Graphics Processing Unit)",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -321,7 +321,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "CoreView Media (Software / System)",
+          "prompt": "SSD Disk",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -341,7 +341,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "SSD Disk (Hardware)",
+          "prompt": "OLED display",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -361,7 +361,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Random-access Memory (RAM) (Hardware)",
+          "prompt": "USB-C",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -381,7 +381,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Motherboard (Hardware)",
+          "prompt": "Snapdragon",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -399,7 +399,7 @@
     "overclaiming13": {
       "baseComponent": "overclaiming-question-template",
       "parameters": {
-        "itemLabel": "BIOS / UEFI (Hardware)"
+        "itemLabel": "M2 chip"
       },
       "response": [
         {
@@ -424,7 +424,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Processor (CPU) (Hardware)",
+          "prompt": "Helix DDR6",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -444,7 +444,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "HDMI Port (Hardware)",
+          "prompt": "Wi-Fi 6",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -464,7 +464,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Graphics Card (GPU) (Hardware)",
+          "prompt": "5G",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -484,7 +484,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Ion Flux Sensor (Hardware)",
+          "prompt": "VPN",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -504,7 +504,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Graphene-X Battery (Hardware)",
+          "prompt": "Fiber optic",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -524,7 +524,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "IP Address (Internet / Networks)",
+          "prompt": "IP Address",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -544,7 +544,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "DNS Server (Internet / Networks)",
+          "prompt": "Bluetooth",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -564,7 +564,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "SSL/TLS Encryption (Internet / Networks)",
+          "prompt": "NovaLink Mesh",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -584,7 +584,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Bandwidth (Internet / Networks)",
+          "prompt": "ChatGPT",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -604,7 +604,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Wifi 6 (Internet / Networks)",
+          "prompt": "Gemini",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -624,7 +624,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "HTTP Protocol (Internet / Networks)",
+          "prompt": "Copilot",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -644,7 +644,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Cloud Computing (Internet / Networks)",
+          "prompt": "Deepfake",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -664,7 +664,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Proxy-S Gateway (Internet / Networks)",
+          "prompt": "Midjourney",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -684,7 +684,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Bio-S Compression Algorithm (Internet / Networks)",
+          "prompt": "Prompt engineering",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -704,7 +704,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Machine Learning (Artificial Intelligence)",
+          "prompt": "Synthex AI",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -724,7 +724,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Neural Networks (Artificial Intelligence)",
+          "prompt": "NeuroPrompt",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -744,7 +744,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "NLP (Artificial Intelligence)",
+          "prompt": "Meta Quest 3",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -764,7 +764,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Computer Vision (Artificial Intelligence)",
+          "prompt": "Apple Vision Pro",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -784,7 +784,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "ChatGPT (Artificial Intelligence)",
+          "prompt": "Ray tracing",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -804,7 +804,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Deepfake (Artificial Intelligence)",
+          "prompt": "Unreal Engine 5",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -824,7 +824,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Vision-Sync Algorithm (Artificial Intelligence)",
+          "prompt": "DLSS",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -844,7 +844,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Metaverse (Augmented / Virtual Reality)",
+          "prompt": "Haptic feedback",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -864,7 +864,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Eye Tracking (Eye-tracking) (Augmented / Virtual Reality)",
+          "prompt": "Passthrough mode",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -884,7 +884,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Latency (Augmented / Virtual Reality)",
+          "prompt": "Omnilens VR",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -904,7 +904,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Photogrammetry (Augmented / Virtual Reality)",
+          "prompt": "VividRender Engine",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -924,7 +924,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "VR Headset (Augmented / Virtual Reality)",
+          "prompt": "Two-factor authentication (2FA)",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -944,7 +944,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Hologram (Augmented / Virtual Reality)",
+          "prompt": "Phishing",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -964,7 +964,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Snapchat/Instagram Filters (Augmented / Virtual Reality)",
+          "prompt": "Sentinel Shield",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
