@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blind Spot Questionnaire</title>
+    <script src="../revisitUtilities/revisit-communicate.js"></script>
+
+    <style>
+        /* --- 1. GLOBAL STYLES --- */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #212529;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+            font-size: 1.1em;
+            text-align: center;
+        }
+
+        /* --- 2. INSTRUCTION --- */
+        .instruction {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            padding: 30px;
+            width: 100%;
+            max-width: 700px;
+            text-align: center;
+            margin-bottom: 20px;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .assertion {
+            font-style: italic;
+            font-weight: bold;
+            margin: 20px 0;
+            padding: 15px;
+            background: #f0f0f0;
+            border-radius: 4px;
+        }
+
+        /* --- 3. CARD LOOK --- */
+        .question-container {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            padding: 30px;
+            width: 100%;
+            max-width: 700px;
+            text-align: center;
+            margin-bottom: 20px;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- 4. BUTTONS --- */
+        button {
+            background-color: #1976d2;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1em;
+            font-weight: 500;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin: 10px;
+        }
+
+        button:hover:not(:disabled) { background-color: #1565c0; }
+        button:disabled { background-color: #ccc; cursor: not-allowed; opacity: 0.6; }
+
+        /* --- 5. LIKERT SCALE --- */
+        .likert-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+
+        .likert-option {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 11%; /* for 9 options */
+            cursor: pointer;
+        }
+
+        .likert-text { font-size: 0.8em; margin-bottom: 8px; }
+
+        .custom-radio {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #ccc;
+            border-radius: 50%;
+        }
+
+        input:checked + .custom-radio {
+            background-color: #333;
+            border-color: #333;
+            box-shadow: inset 0 0 0 4px white;
+        }
+
+        input { display: none; }
+
+        /* --- 6. UTILS --- */
+        .hidden { display: none !important; }
+        .disabled-section { pointer-events: none; opacity: 0.7; }
+    </style>
+</head>
+<body>
+
+<div class="instruction">
+    <h2>Questionnaire</h2>
+    <p>Read the following assertion and answer the two questions carefully:</p>
+    <div class="assertion">"Greater familiarity with new technologies increases individuals' confidence in their ability to distinguish between memories of real and virtual objects"</div>
+</div>
+
+<div id="stage-personal" class="question-container">
+    <h3>To what extent do you think this might be the case for you?</h3>
+    <div class="likert-container">
+        <label class="likert-option"><span class="likert-text">1<br>Not at all</span><input type="radio" name="personalExtent" value="1" onchange="enableNext('btn-next-1')"><span class="custom-radio"></span></label>
+        <label class="likert-option"><span class="likert-text">2</span><input type="radio" name="personalExtent" value="2" onchange="enableNext('btn-next-1')"><span class="custom-radio"></span></label>
+        <label class="likert-option"><span class="likert-text">3</span><input type="radio" name="personalExtent" value="3" onchange="enableNext('btn-next-1')"><span class="custom-radio"></span></label>
+        <label class="likert-option"><span class="likert-text">4</span><input type="radio" name="personalExtent" value="4" onchange="enableNext('btn-next-1')"><span class="custom-radio"></span></label>
+        <label class="likert-option"><span class="likert-text">5<br>Moderately</span><input type="radio" name="personalExtent" value="5" onchange="enableNext('btn-next-1')"><span class="custom-radio"></span></label>
+        <label class="likert-option"><span class="likert-text">6</span><input type="radio" name="personalExtent" value="6" onchange="enableNext('btn-next-1')"><span class="custom-radio"></span></label>
+        <label class="likert-option"><span class="likert-text">7</span><input type="radio" name="personalExtent" value="7" onchange="enableNext('btn-next-1')"><span class="custom-radio"></span></label>
+        <label class="likert-option"><span class="likert-text">8</span><input type="radio" name="personalExtent" value="8" onchange="enableNext('btn-next-1')"><span class="custom-radio"></span></label>
+        <label class="likert-option"><span class="likert-text">9<br>Very much</span><input type="radio" name="personalExtent" value="9" onchange="enableNext('btn-next-1')"><span class="custom-radio"></span></label>
+    </div>
+    <div class="nav-controls">
+        <button id="btn-next-1" onclick="submitPersonal()" disabled>Next</button>
+    </div>
+</div>
+
+<div id="stage-general" class="question-container hidden">
+    <h3>To what extent do you think this is generally the case for other participants?</h3>
+    <div class="likert-container">
+        <label class="likert-option"><span class="likert-text">1<br>Not at all</span><input type="radio" name="generalExtent" value="1" onchange="enableNext('btn-next-2')"><span class="custom-radio"></span></label>
+        <label class="likert-option"><span class="likert-text">2</span><input type="radio" name="generalExtent" value="2" onchange="enableNext('btn-next-2')"><span class="custom-radio"></span></label>
+        <label class="likert-option"><span class="likert-text">3</span><input type="radio" name="generalExtent" value="3" onchange="enableNext('btn-next-2')"><span class="custom-radio"></span></label>
+        <label class="likert-option"><span class="likert-text">4</span><input type="radio" name="generalExtent" value="4" onchange="enableNext('btn-next-2')"><span class="custom-radio"></span></label>
+        <label class="likert-option"><span class="likert-text">5<br>Moderately</span><input type="radio" name="generalExtent" value="5" onchange="enableNext('btn-next-2')"><span class="custom-radio"></span></label>
+        <label class="likert-option"><span class="likert-text">6</span><input type="radio" name="generalExtent" value="6" onchange="enableNext('btn-next-2')"><span class="custom-radio"></span></label>
+        <label class="likert-option"><span class="likert-text">7</span><input type="radio" name="generalExtent" value="7" onchange="enableNext('btn-next-2')"><span class="custom-radio"></span></label>
+        <label class="likert-option"><span class="likert-text">8</span><input type="radio" name="generalExtent" value="8" onchange="enableNext('btn-next-2')"><span class="custom-radio"></span></label>
+        <label class="likert-option"><span class="likert-text">9<br>Very much</span><input type="radio" name="generalExtent" value="9" onchange="enableNext('btn-next-2')"><span class="custom-radio"></span></label>
+    </div>
+    <div class="nav-controls">
+        <button id="btn-next-2" onclick="submitGeneral()" disabled>Next</button>
+    </div>
+</div>
+
+<div id="stage-explanation" class="question-container hidden">
+    <h3>You can explain your answer if you feel like it or/and you can express yourself about this questionnaire</h3>
+    <textarea id="explanationText" rows="6" style="width:100%; padding: 12px; font-size: 1em; border: 1px solid #ccc; border-radius: 6px; resize: vertical;" placeholder="Optional explanation..."></textarea>
+    <div class="nav-controls">
+        <button id="btn-finish" onclick="submitExplanationAndFinish()">Finish</button>
+    </div>
+</div>
+
+<div id="final-message" class="question-container hidden" style="border-left: 5px solid #28a745; background-color: #d4edda;">
+    <h3 style="color: #155724;">Questionnaire completed</h3>
+    <p>Please click <strong>Next</strong> in the study interface to continue.</p>
+</div>
+
+<script>
+    let questionnaireAnswers = {
+        personalExtent: null,
+        generalExtent: null,
+        explanation: null
+    };
+
+    function enableNext(btnId) {
+        document.getElementById(btnId).disabled = false;
+    }
+
+    function lockSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        section.classList.add('disabled-section');
+        const btn = section.querySelector('.nav-controls button');
+        if (btn) btn.classList.add('hidden');
+    }
+
+    function submitPersonal() {
+        const selected = document.querySelector('input[name="personalExtent"]:checked');
+        questionnaireAnswers.personalExtent = selected ? selected.value : null;
+        lockSection('stage-personal');
+        document.getElementById('stage-general').classList.remove('hidden');
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+
+    function submitGeneral() {
+        const selected = document.querySelector('input[name="generalExtent"]:checked');
+        questionnaireAnswers.generalExtent = selected ? selected.value : null;
+        lockSection('stage-general');
+        document.getElementById('stage-explanation').classList.remove('hidden');
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+
+    function submitExplanationAndFinish() {
+        questionnaireAnswers.explanation = document.getElementById('explanationText').value.trim();
+        saveAndFinish();
+    }
+
+    function saveAndFinish() {
+        lockSection('stage-explanation');
+        if (typeof Revisit !== 'undefined') {
+            Revisit.postAnswers({ ...questionnaireAnswers, completionSignal: "Finished" });
+        }
+        document.getElementById('final-message').classList.remove('hidden');
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+</script>
+</body>
+</html>

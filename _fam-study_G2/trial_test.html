@@ -134,65 +134,33 @@
     <div id="object-name-display" class="object-name"></div>
 </div>
 
-<div id="stage-identification" class="question-container">
-    <h3>Did you see this object in Part 1?</h3>
-    <div>
-        <button class="choice-btn" id="btn-seen-yes" onclick="selectSeen('seen')">Yes</button>
-        <button class="choice-btn" id="btn-seen-no" onclick="selectSeen('not_seen')">No</button>
+<div id="stage-retrieval" class="question-container">
+    <h3>Choose an answer</h3>
+    <div class="likert-container" style="justify-content: space-around;">
+        <label class="likert-option"><span class="likert-text">This object was not in Part 1</span><input type="radio" name="retrievalAnswer" value="not_in_part_1" onchange="enableNext('btn-next-1')"><span class="custom-radio"></span></label>
+        <label class="likert-option"><span class="likert-text">This object was real</span><input type="radio" name="retrievalAnswer" value="real" onchange="enableNext('btn-next-1')"><span class="custom-radio"></span></label>
+        <label class="likert-option"><span class="likert-text">This object was virtuel</span><input type="radio" name="retrievalAnswer" value="virtual" onchange="enableNext('btn-next-1')"><span class="custom-radio"></span></label>
     </div>
     <div class="nav-controls">
-        <button id="btn-next-1" onclick="submitIdentification()" disabled>Next</button>
+        <button id="btn-next-1" onclick="submitRetrieval()" disabled>Next</button>
     </div>
 </div>
 
-<div id="stage-conf-1" class="question-container hidden">
+<div id="stage-confidence" class="question-container hidden">
     <h3>How confident are you?</h3>
     <div class="likert-container">
-        <label class="likert-option"><span class="likert-text">0%</span><input type="radio" name="conf1" value="0" onclick="enableNext('btn-next-2')"><span class="custom-radio"></span></label>
-        <label class="likert-option"><span class="likert-text">20%</span><input type="radio" name="conf1" value="20" onclick="enableNext('btn-next-2')"><span class="custom-radio"></span></label>
-        <label class="likert-option"><span class="likert-text">40%</span><input type="radio" name="conf1" value="40" onclick="enableNext('btn-next-2')"><span class="custom-radio"></span></label>
-        <label class="likert-option"><span class="likert-text">60%</span><input type="radio" name="conf1" value="60" onclick="enableNext('btn-next-2')"><span class="custom-radio"></span></label>
-        <label class="likert-option"><span class="likert-text">80%</span><input type="radio" name="conf1" value="80" onclick="enableNext('btn-next-2')"><span class="custom-radio"></span></label>
-        <label class="likert-option"><span class="likert-text">100%</span><input type="radio" name="conf1" value="100" onclick="enableNext('btn-next-2')"><span class="custom-radio"></span></label>
+        <label class="likert-option"><span class="likert-text">0%</span><input type="radio" name="confidence" value="0" onclick="enableNext('btn-next-2')"><span class="custom-radio"></span></label>
+        <label class="likert-option"><span class="likert-text">20%</span><input type="radio" name="confidence" value="20" onclick="enableNext('btn-next-2')"><span class="custom-radio"></span></label>
+        <label class="likert-option"><span class="likert-text">40%</span><input type="radio" name="confidence" value="40" onclick="enableNext('btn-next-2')"><span class="custom-radio"></span></label>
+        <label class="likert-option"><span class="likert-text">60%</span><input type="radio" name="confidence" value="60" onclick="enableNext('btn-next-2')"><span class="custom-radio"></span></label>
+        <label class="likert-option"><span class="likert-text">80%</span><input type="radio" name="confidence" value="80" onclick="enableNext('btn-next-2')"><span class="custom-radio"></span></label>
+        <label class="likert-option"><span class="likert-text">100%</span><input type="radio" name="confidence" value="100" onclick="enableNext('btn-next-2')"><span class="custom-radio"></span></label>
     </div>
     <div class="nav-controls">
-        <button id="btn-next-2" onclick="submitConf1()" disabled>Next</button>
+        <button id="btn-next-2" onclick="submitConfidence()" disabled>Next</button>
     </div>
 </div>
 
-<div id="stage-source" class="question-container hidden">
-    <h3>What kind of object was it?</h3>
-    <div>
-        <button class="choice-btn" id="btn-source-real" onclick="selectSource('real')">It was real</button>
-        <button class="choice-btn" id="btn-source-virtual" onclick="selectSource('virtual')">It was virtual</button>
-    </div>
-    <div class="nav-controls">
-        <button id="btn-next-3" onclick="submitSource()" disabled>Next</button>
-    </div>
-</div>
-
-<div id="stage-conf-2" class="question-container hidden">
-    <h3>How confident are you?</h3>
-    <div class="likert-container">
-        <label class="likert-option"><span class="likert-text">0%</span><input type="radio" name="conf2" value="0" onclick="enableNext('btn-next-4')"><span class="custom-radio"></span></label>
-        <label class="likert-option"><span class="likert-text">20%</span><input type="radio" name="conf2" value="20" onclick="enableNext('btn-next-4')"><span class="custom-radio"></span></label>
-        <label class="likert-option"><span class="likert-text">40%</span><input type="radio" name="conf2" value="40" onclick="enableNext('btn-next-4')"><span class="custom-radio"></span></label>
-        <label class="likert-option"><span class="likert-text">60%</span><input type="radio" name="conf2" value="60" onclick="enableNext('btn-next-4')"><span class="custom-radio"></span></label>
-        <label class="likert-option"><span class="likert-text">80%</span><input type="radio" name="conf2" value="80" onclick="enableNext('btn-next-4')"><span class="custom-radio"></span></label>
-        <label class="likert-option"><span class="likert-text">100%</span><input type="radio" name="conf2" value="100" onclick="enableNext('btn-next-4')"><span class="custom-radio"></span></label>
-    </div>
-    <div class="nav-controls">
-        <button id="btn-next-4" onclick="submitConf2()" disabled>Next</button>
-    </div>
-</div>
-
-<div id="stage-reason" class="question-container hidden">
-    <h3 id="reason-title">Please explain your answer.</h3>
-    <textarea id="reason-input" placeholder="Type your answer here..." oninput="enableNext('btn-finish')"></textarea>
-    <div class="nav-controls">
-        <button id="btn-finish" onclick="submitReasonAndFinish()" disabled>Finish Trial</button>
-    </div>
-</div>
 
 <div id="final-message" class="question-container hidden" style="border-left: 5px solid #28a745; background-color: #d4edda;">
     <h3 style="color: #155724;">Trial finished</h3>
@@ -202,11 +170,8 @@
 <script>
     let trialAnswers = {
         objectName: "",
-        seenAnswer: null,
-        seenConfidence: null,
-        sourceAnswer: null,
-        sourceConfidence: null,
-        reasoning: ""
+        retrievalAnswer: null,
+        confidence: null
     };
 
     // Initialization
@@ -229,68 +194,24 @@
     function lockSection(sectionId) {
         const section = document.getElementById(sectionId);
         section.classList.add('disabled-section');
-        // Hide the "Next" button in that section to keep UI clean
         const btn = section.querySelector('.nav-controls button');
         if (btn) btn.classList.add('hidden');
     }
 
-    function selectSeen(choice) {
-        trialAnswers.seenAnswer = choice;
-        document.getElementById('btn-seen-yes').classList.toggle('selected', choice === 'seen');
-        document.getElementById('btn-seen-no').classList.toggle('selected', choice === 'not_seen');
-        enableNext('btn-next-1');
-    }
-
-    function submitIdentification() {
-        lockSection('stage-identification');
-        document.getElementById('stage-conf-1').classList.remove('hidden');
+    function submitRetrieval() {
+        const selected = document.querySelector('input[name="retrievalAnswer"]:checked');
+        trialAnswers.retrievalAnswer = selected ? selected.value : null;
+        lockSection('stage-retrieval');
+        document.getElementById('stage-confidence').classList.remove('hidden');
         window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
     }
 
-    function submitConf1() {
-        trialAnswers.seenConfidence = document.querySelector('input[name="conf1"]:checked').value;
-        lockSection('stage-conf-1');
-
-        if (trialAnswers.seenAnswer === 'seen') {
-            document.getElementById('stage-source').classList.remove('hidden');
-            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-        } else {
-            trialAnswers.sourceAnswer = "NA";
-            trialAnswers.sourceConfidence = "NA";
-            trialAnswers.reasoning = "NA";
-            saveAndFinish();
-        }
-    }
-
-    function selectSource(choice) {
-        trialAnswers.sourceAnswer = choice;
-        document.getElementById('btn-source-real').classList.toggle('selected', choice === 'real');
-        document.getElementById('btn-source-virtual').classList.toggle('selected', choice === 'virtual');
-        enableNext('btn-next-3');
-    }
-
-    function submitSource() {
-        lockSection('stage-source');
-        document.getElementById('stage-conf-2').classList.remove('hidden');
-        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-    }
-
-    function submitConf2() {
-        trialAnswers.sourceConfidence = document.querySelector('input[name="conf2"]:checked').value;
-        lockSection('stage-conf-2');
-        const label = trialAnswers.sourceAnswer === 'virtual' ? 'Virtual' : 'Real';
-        document.getElementById('reason-title').textContent = `Please explain why you chose ${label}.`;
-        document.getElementById('stage-reason').classList.remove('hidden');
-        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-    }
-
-    function submitReasonAndFinish() {
-        trialAnswers.reasoning = document.getElementById('reason-input').value;
+    function submitConfidence() {
+        trialAnswers.confidence = document.querySelector('input[name="confidence"]:checked').value;
         saveAndFinish();
     }
 
     function saveAndFinish() {
-        lockSection('stage-reason');
         if (typeof Revisit !== 'undefined') {
             Revisit.postAnswers({ ...trialAnswers, completionSignal: "Finished" });
         }
