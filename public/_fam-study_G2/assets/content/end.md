@@ -6,9 +6,19 @@ Thank you for completing this part of the experiment. Before you go, please take
 
 ## What the Study Was Actually About
 
-As stated in the consent form, you were initially told that this study examined the perception of virtual objects in augmented reality. In reality, this study investigates how accurately people remember digitally altered content — such as augmented reality visuals and AI-edited images — over time. For example: will you come to misremember a virtual object as real?
+As described in the consent form, you were initially told that this study examined the perception of virtual objects in augmented reality. 
 
-In Part 1, we manipulated the intensity of the visual effect applied to altered content at two levels: subtle and evident. We aimed to determine (1) whether a visual effect reduces the tendency to misremember altered content as real, and (2) which intensity level — subtle or evident — is more effective at doing so.
+In reality, the study examines how people’s **self-perceived familiarity with digital technologies** relates to two key aspects:
+
+1. **Source confusion —** the tendency to misattribute the origin of a piece of information (for instance, remembering digital or virtual content as real), and
+2. **Confidence bias —** the belief that one is less likely than others to make such errors.
+
+In the first part of the experiment, you completed a vocabulary recognition test that included both real and fictitious terms. This "overclaiming" task measures a natural human tendency to overestimate one’s knowledge or familiarity. To preserve the validity of the measure, we could not disclose beforehand that some terms were non-existent. 
+Here the list of items wich were fictional :
+
+Please note that endorsing fictitious items is a normal and common cognitive phenomenon — it does not indicate any pathology, lack of knowledge, or dishonesty.
+
+We aim to explore whether this perceived familiarity can sometimes lead to overconfidence, a well-documented cognitive bias where increased experience in a domain may paradoxically reduce vigilance (e.g., Miller et al., 2012; Fernandes et al., 2026).
 
 All data collected in this session will be used to draw conclusions about this effect.
 

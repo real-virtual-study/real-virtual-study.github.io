@@ -14,15 +14,12 @@ This study aims to enhance our understanding of how real and virtual objects are
 
 ### What We Expect From You
 
-You will be asked to answer questions related to the previous experiment on the perception of real and virtual objects, which you participated in about 10 days ago.
+You will be asked to answer questions related to the previous experiment on the perception of real and virtual objects, which you participated in about X days ago.
 You will first see a sequence of icons and words, some referring to objects you have seen, others to new objects.
 Each time, you will be asked to remember whether you saw the object as real, virtual, or new.
-For each object you identified as real or virtual, you will be asked to explain what cues informed your choice.
+For each object you will be asked to explain what cues informed your choice.
 
-You will then complete three questionnaires:
-* A self-assessment questionnaire about your perceived memory abilities in daily life
-* A self-assessment of your familiarity with augmented reality
-* A brief sociodemographic questionnaire
+You will then complete one short questionnaire about your overall confidence in your answers.
 
 This study should take about 20 minutes to complete. Please complete it without distractions or pauses.
 One or more attention check questions will be included to filter out bots or participants who click randomly or rush through the study.
@@ -52,7 +49,7 @@ Once the research project is completed, all anonymized data will be made publicl
 
 ### Potential Benefits
 
-You will receive £4 for participating, provided that you:
+You will receive £X for participating, provided that you:
 * Complete the study
 * Do not rush
 * Answer attention check questions correctly
