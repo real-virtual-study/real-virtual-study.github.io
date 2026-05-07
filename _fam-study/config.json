@@ -19,7 +19,7 @@
     "withProgressBar": true,
     "autoDownloadStudy": false,
     "withSidebar": false,
-    "enumerateQuestions": true,
+    "enumerateQuestions": false,
     "minWidthSize": 0,
     "minHeightSize": 0,
     "studyEndMsg": "Thank you for completing the study. You may click this link and return to Prolific: [X](X)",
