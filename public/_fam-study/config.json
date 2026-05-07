@@ -1006,7 +1006,7 @@
     "trial4A": {
       "baseComponent": "video-task-template",
       "parameters": {
-        "videoFile": "keys_15.mp4",
+        "videoFile": "keys_Overlay.mp4",
         "correctObjectName": "Keys",
         "correctSourceName": "Virtual"
       }
@@ -1014,7 +1014,7 @@
     "trial5A": {
       "baseComponent": "video-task-template",
       "parameters": {
-        "videoFile": "rubber-duck_65.mp4",
+        "videoFile": "rubber-duck_Overlay.mp4",
         "correctObjectName": "Rubber duck",
         "correctSourceName": "Virtual"
       }
@@ -1022,7 +1022,7 @@
     "trial6A": {
       "baseComponent": "video-task-template",
       "parameters": {
-        "videoFile": "box-cutter_15.mp4",
+        "videoFile": "box-cutter_Overlay.mp4",
         "correctObjectName": "Box cutter",
         "correctSourceName": "Virtual"
       }
@@ -1046,7 +1046,7 @@
     "trial9A": {
       "baseComponent": "video-task-template",
       "parameters": {
-        "videoFile": "pen_15.mp4",
+        "videoFile": "pen_Overlay.mp4",
         "correctObjectName": "Pen",
         "correctSourceName": "Virtual"
       }
@@ -1062,7 +1062,7 @@
     "trial11A": {
       "baseComponent": "video-task-template",
       "parameters": {
-        "videoFile": "apple_65.mp4",
+        "videoFile": "apple_Overlay.mp4",
         "correctObjectName": "Apple",
         "correctSourceName": "Virtual"
       }
@@ -1070,7 +1070,7 @@
     "trial12A": {
       "baseComponent": "video-task-template",
       "parameters": {
-        "videoFile": "banana_65.mp4",
+        "videoFile": "banana_Overlay.mp4",
         "correctObjectName": "Banana",
         "correctSourceName": "Virtual"
       }
@@ -1086,7 +1086,7 @@
     "trial14A": {
       "baseComponent": "video-task-template",
       "parameters": {
-        "videoFile": "toothbrush_65.mp4",
+        "videoFile": "toothbrush_Overlay.mp4",
         "correctObjectName": "Toothbrush",
         "correctSourceName": "Virtual"
       }
@@ -1126,7 +1126,7 @@
     "trial19A": {
       "baseComponent": "video-task-template",
       "parameters": {
-        "videoFile": "usb-drive_15.mp4",
+        "videoFile": "usb-drive_Overlay.mp4",
         "correctObjectName": "Usb drive",
         "correctSourceName": "Virtual"
       }
@@ -1134,7 +1134,7 @@
     "trial20A": {
       "baseComponent": "video-task-template",
       "parameters": {
-        "videoFile": "tin-can_15.mp4",
+        "videoFile": "tin-can_Overlay.mp4",
         "correctObjectName": "Tin can",
         "correctSourceName": "Virtual"
       }
@@ -1142,7 +1142,7 @@
     "trial21A": {
       "baseComponent": "video-task-template",
       "parameters": {
-        "videoFile": "cup_15.mp4",
+        "videoFile": "cup_Overlay.mp4",
         "correctObjectName": "Cup",
         "correctSourceName": "Virtual"
       }
@@ -1150,7 +1150,7 @@
     "trial22A": {
       "baseComponent": "video-task-template",
       "parameters": {
-        "videoFile": "serving-spoon_65.mp4",
+        "videoFile": "serving-spoon_Overlay.mp4",
         "correctObjectName": "Serving spoon",
         "correctSourceName": "Virtual"
       }
@@ -1158,7 +1158,7 @@
     "trial23A": {
       "baseComponent": "video-task-template",
       "parameters": {
-        "videoFile": "book_65.mp4",
+        "videoFile": "book_Overlay.mp4",
         "correctObjectName": "Book",
         "correctSourceName": "Virtual"
       }
@@ -1174,7 +1174,7 @@
     "trial1B": {
       "baseComponent": "video-task-template",
       "parameters": {
-        "videoFile": "hanger_15.mp4",
+        "videoFile": "hanger_Overlay.mp4",
         "correctObjectName": "Hanger",
         "correctSourceName": "Virtual"
       }
@@ -1182,7 +1182,7 @@
     "trial2B": {
       "baseComponent": "video-task-template",
       "parameters": {
-        "videoFile": "paint-palette_65.mp4",
+        "videoFile": "paint-palette_Overlay.mp4",
         "correctObjectName": "Paint palette",
         "correctSourceName": "Virtual"
       }
@@ -1190,7 +1190,7 @@
     "trial3B": {
       "baseComponent": "video-task-template",
       "parameters": {
-        "videoFile": "scissors_65.mp4",
+        "videoFile": "scissors_Overlay.mp4",
         "correctObjectName": "Scissors",
         "correctSourceName": "Virtual"
       }
@@ -1222,7 +1222,7 @@
     "trial7B": {
       "baseComponent": "video-task-template",
       "parameters": {
-        "videoFile": "sunglasses_15.mp4",
+        "videoFile": "sunglasses_Overlay.mp4",
         "correctObjectName": "Sunglasses",
         "correctSourceName": "Virtual"
       }
@@ -1230,7 +1230,7 @@
     "trial8B": {
       "baseComponent": "video-task-template",
       "parameters": {
-        "videoFile": "candle_15.mp4",
+        "videoFile": "candle_Overlay.mp4",
         "correctObjectName": "Candle",
         "correctSourceName": "Virtual"
       }
@@ -1246,7 +1246,7 @@
     "trial10B": {
       "baseComponent": "video-task-template",
       "parameters": {
-        "videoFile": "screwdriver_65.mp4",
+        "videoFile": "screwdriver_Overlay.mp4",
         "correctObjectName": "Screwdriver",
         "correctSourceName": "Virtual"
       }
@@ -1270,7 +1270,7 @@
     "trial13B": {
       "baseComponent": "video-task-template",
       "parameters": {
-        "videoFile": "lighter_15.mp4",
+        "videoFile": "lighter_Overlay.mp4",
         "correctObjectName": "Lighter",
         "correctSourceName": "Virtual"
       }
@@ -1286,7 +1286,7 @@
     "trial15B": {
       "baseComponent": "video-task-template",
       "parameters": {
-        "videoFile": "calculator_65.mp4",
+        "videoFile": "calculator_Overlay.mp4",
         "correctObjectName": "Calculator",
         "correctSourceName": "Virtual"
       }
@@ -1294,7 +1294,7 @@
     "trial16B": {
       "baseComponent": "video-task-template",
       "parameters": {
-        "videoFile": "clock_15.mp4",
+        "videoFile": "clock_Overlay.mp4",
         "correctObjectName": "Clock",
         "correctSourceName": "Virtual"
       }
@@ -1302,7 +1302,7 @@
     "trial17B": {
       "baseComponent": "video-task-template",
       "parameters": {
-        "videoFile": "computer-mouse_15.mp4",
+        "videoFile": "computer-mouse_Overlay.mp4",
         "correctObjectName": "Computer mouse",
         "correctSourceName": "Virtual"
       }
@@ -1310,7 +1310,7 @@
     "trial18B": {
       "baseComponent": "video-task-template",
       "parameters": {
-        "videoFile": "lemon_65.mp4",
+        "videoFile": "lemon_Overlay.mp4",
         "correctObjectName": "Lemon",
         "correctSourceName": "Virtual"
       }
@@ -1358,7 +1358,7 @@
     "trial24B": {
       "baseComponent": "video-task-template",
       "parameters": {
-        "videoFile": "hairdryer_65.mp4",
+        "videoFile": "hairdryer_Overlay.mp4",
         "correctObjectName": "Hair dryer",
         "correctSourceName": "Virtual"
       }
