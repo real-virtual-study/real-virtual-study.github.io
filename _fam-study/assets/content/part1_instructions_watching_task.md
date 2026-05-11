@@ -9,10 +9,8 @@ style="display: block; margin: 0 auto; width: 100%; max-width: 1200px; height: a
 
 **Please watch carefully each video until the end.** They last only 8 seconds and will disappear before you need to answer the questions.
 
-After each video, you will be asked to:
+After each video, you will be asked to name the object you saw. **You do not need to search for the perfect word.** Afterward, you will receive a suggested answer for comparison; this does not mean your response is incorrect.
 
-Name the object you saw. **You do not need to search for the perfect word.** Afterward, you will receive a suggested answer for comparison; this does not mean your response is incorrect.
-
-For each question, try not to spend too long. If you're not sure, just answer with your best guess.
+=> For each question, try not to spend too long. If you're not sure, just answer with your best guess.
 
 **Now as soon as you click "Start", you will see the first video. Be ready.**
