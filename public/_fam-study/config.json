@@ -1454,7 +1454,6 @@
       "IntroGlobal",
       "SelfAssessment",
       "IntroPageOCT",
-      "PostOCTQuestionnaire",
       {
         "id": "overclaiming-block",
         "order": "random",
@@ -1503,6 +1502,7 @@
           "overclaiming41"
         ]
       },
+      "PostOCTQuestionnaire",
       "PostOCTQuestionnaireFollowUp",
       "IntroPageWatchingTask",
       {
