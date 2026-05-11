@@ -1,9 +1,9 @@
 ### Instructions for the video watching task:
-You will watch a series of short video clips. Each clip will show a single object on a table. The object may be **real** or **virtual**. Virtual objects have a visual effect applied to them: they tend to be blue, translucent, luminous, and glowing. The effect may be subtle or obvious.
+You will watch a series of short video clips. Each clip will show a single object on a table. The object may be **real** or **virtual**. Virtual objects have a visual effect applied to them: they tend to be blue, translucent, luminous, and glowing.
 
-Here is one example of a real object and two examples of virtual objects:
+Here is one example of a real object and one of a virtual object:
 
-<img src="_real_virtual_study/assets/Instructions/conditions.png"
+<img src="_fam-study/assets/Instructions/stapler_r_and_v.png"
 style="display: block; margin: 0 auto; width: 100%; max-width: 1200px; height: auto;">
 
 
@@ -11,11 +11,8 @@ style="display: block; margin: 0 auto; width: 100%; max-width: 1200px; height: a
 
 After each video, you will be asked to:
 
-1. Name the object you saw. **You do not need to search for the perfect word.** Afterward, you will receive a suggested answer for comparison; this does not mean your response is incorrect.
-2. Indicate whether you think the objest is **real** or **virtual**.
-3. Rate your confidence in your choice from 0% (completely guessing) to 100% (completely certain).
-4. The correct answer for the real/virtual question will be revealed.
+Name the object you saw. **You do not need to search for the perfect word.** Afterward, you will receive a suggested answer for comparison; this does not mean your response is incorrect.
 
-For both the naming question and the real/virtual question, try not to spend too long on each. If you're not sure, just answer with your best guess.
+For each question, try not to spend too long. If you're not sure, just answer with your best guess.
 
 **Now as soon as you click "Start", you will see the first video. Be ready.**
