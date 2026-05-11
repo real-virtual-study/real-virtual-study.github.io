@@ -47,20 +47,6 @@
           "required": false,
           "hidden": true,
           "prompt": "Object Name"
-        },
-        {
-          "id": "sourceChoice",
-          "type": "reactive",
-          "required": false,
-          "hidden": true,
-          "prompt": "Real or Virtual"
-        },
-        {
-          "id": "confidence",
-          "type": "reactive",
-          "required": false,
-          "hidden": true,
-          "prompt": "Confidence Level"
         }
       ]
     },
@@ -144,6 +130,7 @@
       "nextButtonText": "Start",
       "response": []
     },
+    
     "IntroPageWatchingTask": {
       "type": "markdown",
       "path": "_fam-study/assets/content/part1_instructions_watching_task.md",
