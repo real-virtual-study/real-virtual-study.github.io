@@ -1506,7 +1506,7 @@
             "responseId": "postOCTExperience",
             "value": "Yes",
             "comparison": "notEqual",
-            "to": "end"
+            "to": "IntroPageWatchingTask"
           }
         ]
       },
