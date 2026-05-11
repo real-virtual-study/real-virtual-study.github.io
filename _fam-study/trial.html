@@ -233,75 +233,6 @@
             <div class="participant-answer"><strong>Your answer:</strong> <span id="participantObjectName"></span></div>
             <div class="correct-answer"><strong>Suggested answer:</strong> <span id="correctObjectName"></span></div>
         </div>
-        <button onclick="goToStep2()">Next</button>
-    </div>
-
-    <div id="step2" class="question-container hidden">
-        <h3>Was the object real or virtual?</h3>
-
-        <div>
-            <button class="choice-btn" id="btn-real" onclick="selectSource('Real')">Real</button>
-            <button class="choice-btn" id="btn-virtual" onclick="selectSource('Virtual')">Virtual</button>
-        </div>
-
-        <div class="nav-controls">
-            <button id="step2-next" onclick="confirmSourceSelection()" disabled>Next</button>
-        </div>
-    </div>
-
-    <div id="rateConfidence" class="question-container hidden">
-        <h3>How confident are you?</h3>
-
-        <div class="likert-container">
-            <label class="likert-option">
-                <span class="likert-text">0%<br><small>(Completely guessing)</small></span>
-                <input type="radio" name="confidence" value="0" onclick="enableConfidenceNext()">
-                <span class="custom-radio"></span>
-            </label>
-
-            <label class="likert-option">
-                <span class="likert-text">20%</span>
-                <input type="radio" name="confidence" value="20" onclick="enableConfidenceNext()">
-                <span class="custom-radio"></span>
-            </label>
-
-            <label class="likert-option">
-                <span class="likert-text">40%</span>
-                <input type="radio" name="confidence" value="40" onclick="enableConfidenceNext()">
-                <span class="custom-radio"></span>
-            </label>
-
-            <label class="likert-option">
-                <span class="likert-text">60%</span>
-                <input type="radio" name="confidence" value="60" onclick="enableConfidenceNext()">
-                <span class="custom-radio"></span>
-            </label>
-
-            <label class="likert-option">
-                <span class="likert-text">80%</span>
-                <input type="radio" name="confidence" value="80" onclick="enableConfidenceNext()">
-                <span class="custom-radio"></span>
-            </label>
-
-            <label class="likert-option">
-                <span class="likert-text">100%<br><small>(Completely confident that I am right)</small></span>
-                <input type="radio" name="confidence" value="100" onclick="enableConfidenceNext()">
-                <span class="custom-radio"></span>
-            </label>
-        </div>
-
-        <div class="nav-controls">
-            <button id="confidence-next" onclick="showStep2Correction()" disabled>Next</button>
-        </div>
-
-    </div>
-
-
-    <div id="step2Correction" class="question-container hidden">
-        <div class="correction-message">
-            <div class="participant-answer"><strong>Your answer:</strong> <span id="participantSourceName"></span></div>
-            <div class="correct-answer">Correct answer: <span id="correctSourceName"></span></div>
-        </div>
         <button onclick="finishTrial()">Next</button>
     </div>
 
@@ -319,14 +250,11 @@
     const video = document.getElementById('stimulus-video');
 
     let trialData = {
-        objectName: "",
-        sourceChoice: "",
-        confidence: ""
+        objectName: ""
     };
 
     // Values from Revisit
     let suggestedObjectName = "Unknown";
-    let suggestedSourceName = "Unknown";
 
     // RECEIVE REVISIT PARAMETERS
     if (typeof Revisit !== 'undefined') {
@@ -340,7 +268,6 @@
 
             if (data.videoFile) video.src = normalizeVideoFile(data.videoFile);
             if (data.correctObjectName) suggestedObjectName = data.correctObjectName;
-            if (data.correctSourceName) suggestedSourceName = data.correctSourceName;
         });
     }
 
@@ -366,63 +293,6 @@
         document.getElementById('step1Correction').classList.remove('hidden');
     };
 
-    window.goToStep2 = function () {
-        document.getElementById('step1Correction').classList.add('hidden');
-        document.getElementById('step2').classList.remove('hidden');
-    };
-
-    // ----------------------------------------
-    // STEP 2: Real vs Virtual (Selection)
-    // ----------------------------------------
-    let tempSourceChoice = null;
-
-    window.selectSource = function(choice) {
-        tempSourceChoice = choice;
-
-        // Update UI to show selection
-        document.getElementById('btn-real').classList.remove('selected');
-        document.getElementById('btn-virtual').classList.remove('selected');
-
-        if(choice === 'Real') {
-            document.getElementById('btn-real').classList.add('selected');
-        } else {
-            document.getElementById('btn-virtual').classList.add('selected');
-        }
-
-        // Enable Next button
-        document.getElementById('step2-next').disabled = false;
-    };
-
-    window.confirmSourceSelection = function() {
-        if (!tempSourceChoice) return;
-
-        trialData.sourceChoice = tempSourceChoice;
-        document.getElementById('step2').classList.add('hidden');
-        document.getElementById('rateConfidence').classList.remove('hidden');
-    };
-
-    // ----------------------------------------
-    // STEP 3: Confidence (Selection)
-    // ----------------------------------------
-    window.enableConfidenceNext = function() {
-        document.getElementById('confidence-next').disabled = false;
-    };
-
-    window.showStep2Correction = function() {
-        const selectedConfidence = document.querySelector('input[name="confidence"]:checked');
-        if (!selectedConfidence) return;
-
-        trialData.confidence = selectedConfidence.value;
-
-        document.getElementById('rateConfidence').classList.add('hidden');
-        document.getElementById('step2Correction').classList.remove('hidden');
-
-        // Show participant answers
-        document.getElementById('participantSourceName').textContent = trialData.sourceChoice;
-        document.getElementById('correctSourceName').textContent = suggestedSourceName;
-    };
-
-
     // ----------------------------------------
     // FINISH
     // ----------------------------------------
@@ -441,7 +311,7 @@
             alert("Error: Revisit communication library not found.");
         }
 
-        document.getElementById('step2Correction').classList.add('hidden');
+        document.getElementById('step1Correction').classList.add('hidden');
         document.getElementById('finalMessage').classList.remove('hidden');
     };
 
