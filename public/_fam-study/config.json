@@ -130,7 +130,46 @@
       "nextButtonText": "Start",
       "response": []
     },
-    
+    "PostOCTQuestionnaire": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "postOCTExperience",
+          "prompt": "Have you ever taken part in this kind of questionnaire?",
+          "location": "belowStimulus",
+          "type": "radio",
+          "options": [
+            "Yes",
+            "No",
+            "I don't know"
+          ],
+          "required": true
+        }
+      ]
+    },
+    "PostOCTQuestionnaireFollowUp": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "postOCTExplain",
+          "prompt": "What kind of questionnaire did you think it was?",
+          "location": "belowStimulus",
+          "type": "longText",
+          "placeholder": "Enter your answer here.",
+          "required": true
+        }
+      ],
+      "skip": [
+        {
+          "name": "PostOCTQuestionnaire",
+          "check": "response",
+          "responseId": "postOCTExperience",
+          "value": "Yes",
+          "comparison": "notEqual",
+          "to": "IntroPageWatchingTask"
+        }
+      ]
+    },
     "IntroPageWatchingTask": {
       "type": "markdown",
       "path": "_fam-study/assets/content/part1_instructions_watching_task.md",
@@ -1415,6 +1454,7 @@
       "IntroGlobal",
       "SelfAssessment",
       "IntroPageOCT",
+      "PostOCTQuestionnaire",
       {
         "id": "overclaiming-block",
         "order": "random",
@@ -1463,6 +1503,7 @@
           "overclaiming41"
         ]
       },
+      "PostOCTQuestionnaireFollowUp",
       "IntroPageWatchingTask",
       {
         "id": "group-assignment",
