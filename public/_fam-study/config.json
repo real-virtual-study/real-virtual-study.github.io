@@ -158,16 +158,6 @@
           "placeholder": "Enter your answer here.",
           "required": true
         }
-      ],
-      "skip": [
-        {
-          "name": "PostOCTQuestionnaire",
-          "check": "response",
-          "responseId": "postOCTExperience",
-          "value": "Yes",
-          "comparison": "notEqual",
-          "to": "IntroPageWatchingTask"
-        }
       ]
     },
     "IntroPageWatchingTask": {
@@ -1502,8 +1492,24 @@
           "overclaiming41"
         ]
       },
-      "PostOCTQuestionnaire",
-      "PostOCTQuestionnaireFollowUp",
+      {
+        "id": "post-oct-block",
+        "order": "fixed",
+        "components": [
+          "PostOCTQuestionnaire",
+          "PostOCTQuestionnaireFollowUp"
+        ],
+        "skip": [
+          {
+            "name": "PostOCTQuestionnaire",
+            "check": "response",
+            "responseId": "postOCTExperience",
+            "value": "Yes",
+            "comparison": "notEqual",
+            "to": "end"
+          }
+        ]
+      },
       "IntroPageWatchingTask",
       {
         "id": "group-assignment",
