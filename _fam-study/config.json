@@ -52,7 +52,7 @@
         {
           "id": "sourceChoice",
           "type": "reactive",
-          "required": true,
+          "required": false,
           "hidden": true,
           "prompt": "Was this object real or virtual?"
         }
