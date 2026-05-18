@@ -245,17 +245,12 @@
             <div class="participant-answer"><strong>Your source choice:</strong> <span id="participantSourceChoice"></span></div>
             <div class="correct-answer"><strong>Suggested answer:</strong> <span id="correctObjectName"></span></div>
         </div>
-        <button onclick="finishTrial()">Next</button>
-    </div>
-
-    <div class="question-container hidden" id="finalMessage" style="border-color: #28a745; background-color: #d4edda;">
+        <div class="question-container hidden" id="finalMessage" style="border-color: #28a745; background-color: #d4edda;">
         <h3 style="color: #155724;">Trial Complete!</h3>
         <p>➔ Please click the <strong>Next</strong> button to see the next video.</p>
         <p><strong>Please watch the video carefully until the end.</strong></p>
-
-
+        </div>
     </div>
-
 </div>
 
 <script>
@@ -282,7 +277,7 @@
         });
     }
 
-    // QUAND LA VIDEO SE TERMINE → STEP 1
+    // QUAND LA VIDEO SE TERMINE 
     video.addEventListener('ended', () => {
         document.getElementById('video-stage').classList.add('hidden');
         document.getElementById('question-stage').classList.remove('hidden');
@@ -307,13 +302,6 @@
 
         document.getElementById('stepSource').classList.add('hidden');
         document.getElementById('correction').classList.remove('hidden');
-    };
-
-    // FINISH : appelé après le choix source, active le bouton reVISit
-    window.finishTrial = function () {
-        const sel = document.querySelector('input[name="sourceOption"]:checked');
-        if (!sel) return;
-        trialData.sourceChoice = sel.value;
 
         if (typeof Revisit !== 'undefined') {
             Revisit.postAnswers({
@@ -321,11 +309,7 @@
                 completionSignal: "Finished"
             });
         }
-
-        document.getElementById('correction').classList.add('hidden');
-        document.getElementById('finalMessage').classList.remove('hidden');
     };
-
 </script>
 </body>
 </html>
