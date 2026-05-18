@@ -326,6 +326,18 @@
         }
     };
 
+    console.log("postAnswers called:", {
+        ...trialData,
+        completionSignal: "Finished"
+    });
+
+    if (typeof Revisit !== 'undefined') {
+        Revisit.postAnswers({
+            ...trialData,
+            completionSignal: "Finished"
+        });
+    }
+
     // ----------------------------------------
     // FINISH
     // ----------------------------------------
