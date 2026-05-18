@@ -48,6 +48,14 @@
           "hidden": true,
           "prompt": "Object Name"
         }
+        ,
+        {
+          "id": "sourceChoice",
+          "type": "reactive",
+          "required": true,
+          "hidden": true,
+          "prompt": "Was this object real or virtual?"
+        }
       ]
     },
     "overclaiming-question-template": {
@@ -1490,24 +1498,6 @@
           "overclaiming39",
           "overclaiming40",
           "overclaiming41"
-        ]
-      },
-      {
-        "id": "post-oct-block",
-        "order": "fixed",
-        "components": [
-          "PostOCTQuestionnaire",
-          "PostOCTQuestionnaireFollowUp"
-        ],
-        "skip": [
-          {
-            "name": "PostOCTQuestionnaire",
-            "check": "response",
-            "responseId": "postOCTExperience",
-            "value": "Yes",
-            "comparison": "notEqual",
-            "to": "IntroPageWatchingTask"
-          }
         ]
       },
       "IntroPageWatchingTask",
