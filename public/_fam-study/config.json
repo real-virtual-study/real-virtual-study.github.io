@@ -174,7 +174,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Prompt engineering",
+          "prompt": "2. Prompt engineering",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
