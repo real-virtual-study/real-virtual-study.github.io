@@ -245,7 +245,7 @@
             <div class="participant-answer"><strong>Your source choice:</strong> <span id="participantSourceChoice"></span></div>
             <div class="correct-answer"><strong>Suggested answer:</strong> <span id="correctObjectName"></span></div>
         </div>
-        <button onclick="finishTrial()">Next</button>
+        <!-- Plus de bouton ici : c'est le bouton reVISit qui gère la suite -->
     </div>
 
     <div class="question-container hidden" id="finalMessage" style="border-color: #28a745; background-color: #d4edda;">
@@ -306,19 +306,24 @@
 
     window.showStepSourceCorrection = function () {
         const sel = document.querySelector('input[name="sourceOption"]:checked');
-        if (!sel) {
-            alert('Please select Real or Virtual to continue.');
-            return;
-        }
+        if (!sel) return;
         trialData.sourceChoice = sel.value;
 
-        // populate correction view
+        // Affiche la correction
         document.getElementById('participantObjectName').textContent = trialData.objectName;
         document.getElementById('participantSourceChoice').textContent = trialData.sourceChoice;
         document.getElementById('correctObjectName').textContent = suggestedObjectName;
 
         document.getElementById('stepSource').classList.add('hidden');
         document.getElementById('step1Correction').classList.remove('hidden');
+
+        // → Active le bouton Next de reVISit
+        if (typeof Revisit !== 'undefined') {
+            Revisit.postAnswers({
+                ...trialData,
+                completionSignal: "Finished"
+            });
+        }
     };
 
     // ----------------------------------------
