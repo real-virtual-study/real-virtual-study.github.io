@@ -185,7 +185,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Android",
+          "prompt": "VPN",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -205,7 +205,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "iOS",
+          "prompt": "Prompt engineering",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -225,7 +225,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Windows 11",
+          "prompt": "Deepfake",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -245,7 +245,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "macOS",
+          "prompt": "Hologram",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -265,7 +265,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Linux",
+          "prompt": "Snapdragon",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -285,7 +285,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Dark mode",
+          "prompt": "Unreal Engine",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -305,7 +305,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "LumenOS",
+          "prompt": "Mesh network",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -325,7 +325,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "GPU (Graphics Processing Unit)",
+          "prompt": "macOS",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -345,7 +345,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "SSD Disk",
+          "prompt": "Wi-Fi 6",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -365,7 +365,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "OLED display",
+          "prompt": "NovaLink Mesh",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -385,7 +385,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "USB-C",
+          "prompt": "M2 chip",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -405,7 +405,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Snapdragon",
+          "prompt": "Linux",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -422,13 +422,10 @@
     },
     "overclaiming13": {
       "baseComponent": "overclaiming-question-template",
-      "parameters": {
-        "itemLabel": "M2 chip"
-      },
       "response": [
         {
           "id": "q-radio",
-          "prompt": "BIOS / UEFI (Hardware)",
+          "prompt": "Haptic feedback",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -448,7 +445,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Helix DDR6",
+          "prompt": "OmniLens VR",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -468,7 +465,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Wi-Fi 6",
+          "prompt": "Midjourney",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -488,7 +485,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "5G",
+          "prompt": "Model amnesia",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -508,7 +505,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "VPN",
+          "prompt": "Gemini",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -548,7 +545,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "IP Address",
+          "prompt": "SSD",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -568,7 +565,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Bluetooth",
+          "prompt": "XPU",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -588,7 +585,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "NovaLink Mesh",
+          "prompt": "Phishing",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -608,7 +605,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "ChatGPT",
+          "prompt": "iOS",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -628,7 +625,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Gemini",
+          "prompt": "LumenOS",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -648,7 +645,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Copilot",
+          "prompt": "eSIM",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -668,7 +665,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Deepfake",
+          "prompt": "GPU",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -688,7 +685,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Midjourney",
+          "prompt": "IP address",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -708,7 +705,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Prompt engineering",
+          "prompt": "Android",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -728,7 +725,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Synthex AI",
+          "prompt": "Open Source",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -748,7 +745,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "NeuroPrompt",
+          "prompt": "Ray tracing",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -768,7 +765,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Meta Quest 3",
+          "prompt": "USB-C",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -788,7 +785,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Apple Vision Pro",
+          "prompt": "OLED display",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -808,7 +805,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Ray tracing",
+          "prompt": "ViviRender Engine",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -828,7 +825,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Unreal Engine 5",
+          "prompt": "Copilot",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -848,7 +845,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "DLSS",
+          "prompt": "Dark mode",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -868,7 +865,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Haptic feedback",
+          "prompt": "Meta Quest 3",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -908,7 +905,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Omnilens VR",
+          "prompt": "Hallucination",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -928,7 +925,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "VividRender Engine",
+          "prompt": "Synthex AI",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -968,7 +965,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Phishing",
+          "prompt": "Sentinel Shield",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -988,7 +985,7 @@
       "response": [
         {
           "id": "q-radio",
-          "prompt": "Sentinel Shield",
+          "prompt": "DLSS",
           "location": "aboveStimulus",
           "type": "radio",
           "options": [
@@ -1454,9 +1451,8 @@
       "IntroPageOCT",
       {
         "id": "overclaiming-block",
-        "order": "random",
+        "order": "fixed",
         "components": [
-          "myAttentionCheckComponent",
           "overclaiming1",
           "overclaiming2",
           "overclaiming3",
@@ -1479,6 +1475,7 @@
           "overclaiming20",
           "overclaiming21",
           "overclaiming22",
+          "myAttentionCheckComponent",
           "overclaiming23",
           "overclaiming24",
           "overclaiming25",
