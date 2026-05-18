@@ -43,7 +43,7 @@
         {
           "id": "objectName",
           "type": "reactive",
-          "required": true,
+          "required": false,
           "hidden": true,
           "prompt": "Object Name"
         }
