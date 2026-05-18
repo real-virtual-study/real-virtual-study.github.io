@@ -239,7 +239,7 @@
         <button onclick="showCorrection()" id="btn-source-next" disabled>Next</button>
     </div>
 
-    <div id="step1Correction" class="question-container hidden">
+    <div id="correction" class="question-container hidden">
         <div class="correction-message">
             <div class="participant-answer"><strong>Your answer:</strong> <span id="participantObjectName"></span></div>
             <div class="participant-answer"><strong>Your source choice:</strong> <span id="participantSourceChoice"></span></div>
@@ -306,7 +306,7 @@
         document.getElementById('correctObjectName').textContent = suggestedObjectName;
 
         document.getElementById('stepSource').classList.add('hidden');
-        document.getElementById('step1Correction').classList.remove('hidden');
+        document.getElementById('correction').classList.remove('hidden');
     };
 
     // FINISH : appelé après le choix source, active le bouton reVISit
@@ -322,7 +322,7 @@
             });
         }
 
-        document.getElementById('step1Correction').classList.add('hidden');
+        document.getElementById('correction').classList.add('hidden');
         document.getElementById('finalMessage').classList.remove('hidden');
     };
 
