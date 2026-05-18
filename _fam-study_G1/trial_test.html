@@ -206,13 +206,16 @@
     }
 
     function submitConfidence() {
-        trialAnswers.confidence = document.querySelector('input[name="confidence"]:checked').value;
+        const selected = document.querySelector('input[name="confidence"]:checked');
+        trialAnswers.confidence = selected ? selected.value : null;
         saveAndFinish();
     }
 
     function saveAndFinish() {
+        trialAnswers.completionSignal = "Finished";
+        console.log('Trial finish posting answers', trialAnswers);
         if (typeof Revisit !== 'undefined') {
-            Revisit.postAnswers({ ...trialAnswers, completionSignal: "Finished" });
+            Revisit.postAnswers({ ...trialAnswers });
         }
         document.getElementById('final-message').classList.remove('hidden');
         window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
