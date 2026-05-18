@@ -225,7 +225,7 @@
                 autocapitalize="off"
                 spellcheck="false"
         >        <br>
-        <button onclick="showStep1Correction()">Continue</button>
+        <button onclick="goToSourceQuestion()">Continue</button>
     </div>
 
     <div id="stepSource" class="question-container hidden">
@@ -236,7 +236,7 @@
             <label><input type="radio" name="sourceOption" value="Virtual" 
                 onchange="document.getElementById('btn-source-next').disabled = false"> Virtual</label>
         </div>
-        <button onclick="showStepSourceCorrection()" id="btn-source-next" disabled>Next</button>
+        <button onclick="showCorrection()" id="btn-source-next" disabled>Next</button>
     </div>
 
     <div id="step1Correction" class="question-container hidden">
@@ -266,7 +266,6 @@
         sourceChoice: ""
     };
 
-    // Values from Revisit
     let suggestedObjectName = "Unknown";
 
     // RECEIVE REVISIT PARAMETERS
@@ -278,38 +277,30 @@
                 if (!videoFile.includes('/')) return `assets/sample-stimuli/${videoFile}`;
                 return videoFile;
             };
-
             if (data.videoFile) video.src = normalizeVideoFile(data.videoFile);
             if (data.correctObjectName) suggestedObjectName = data.correctObjectName;
         });
     }
 
-    // WHEN VIDEO ENDS → SHOW STEP 1
+    // QUAND LA VIDEO SE TERMINE → STEP 1
     video.addEventListener('ended', () => {
         document.getElementById('video-stage').classList.add('hidden');
         document.getElementById('question-stage').classList.remove('hidden');
-        // Ensure Step 1 is the visible starting point inside question-stage
-        document.getElementById('step1').classList.remove('hidden');
     });
 
-    // ----------------------------------------
-    // STEP 1: Object Naming
-    // ----------------------------------------
-    window.showStep1Correction = function () {
-        const input = document.getElementById('objectInput').value.trim();
-        trialData.objectName = input;
-
-        // move to source choice step
+    // STEP 1 : récupère le nom et passe à la question source
+    window.goToSourceQuestion = function () {
+        trialData.objectName = document.getElementById('objectInput').value.trim();
         document.getElementById('step1').classList.add('hidden');
         document.getElementById('stepSource').classList.remove('hidden');
     };
 
-    window.showStepSourceCorrection = function () {
+    // STEP 2 : récupère la source, affiche la correction, active le bouton Next reVISit
+    window.showCorrection = function () {
         const sel = document.querySelector('input[name="sourceOption"]:checked');
         if (!sel) return;
         trialData.sourceChoice = sel.value;
 
-        // Affiche la correction
         document.getElementById('participantObjectName').textContent = trialData.objectName;
         document.getElementById('participantSourceChoice').textContent = trialData.sourceChoice;
         document.getElementById('correctObjectName').textContent = suggestedObjectName;
@@ -317,47 +308,12 @@
         document.getElementById('stepSource').classList.add('hidden');
         document.getElementById('step1Correction').classList.remove('hidden');
 
-        // → Active le bouton Next de reVISit
         if (typeof Revisit !== 'undefined') {
             Revisit.postAnswers({
                 ...trialData,
                 completionSignal: "Finished"
             });
         }
-    };
-
-    console.log("postAnswers called:", {
-        ...trialData,
-        completionSignal: "Finished"
-    });
-
-    if (typeof Revisit !== 'undefined') {
-        Revisit.postAnswers({
-            ...trialData,
-            completionSignal: "Finished"
-        });
-    }
-
-    // ----------------------------------------
-    // FINISH
-    // ----------------------------------------
-    window.finishTrial = function () {
-        // 1. Log what you are about to send to the browser console
-        console.log("Sending to Revisit:", { ...trialData, completionSignal: "Finished" });
-
-        if (typeof Revisit !== 'undefined') {
-            Revisit.postAnswers({
-                ...trialData,
-                completionSignal: "Finished"
-            });
-        } else {
-            // 2. Alert if Revisit library isn't found (helps catch path errors)
-            console.error("Revisit library not loaded! Check script src path.");
-            alert("Error: Revisit communication library not found.");
-        }
-
-        document.getElementById('step1Correction').classList.add('hidden');
-        document.getElementById('finalMessage').classList.remove('hidden');
     };
 
 </script>
