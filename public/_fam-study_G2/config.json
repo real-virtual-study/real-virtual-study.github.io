@@ -40,7 +40,6 @@
         {
           "id": "completionSignal",
           "type": "reactive",
-          "location": "sidebar",
           "prompt": "Click on next to continue with another object",
           "required": true,
           "hidden": true
