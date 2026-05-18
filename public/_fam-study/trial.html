@@ -228,9 +228,19 @@
         <button onclick="showStep1Correction()">Continue</button>
     </div>
 
+    <div id="stepSource" class="question-container hidden">
+        <h3>This object was real or virtual?</h3>
+        <div style="margin: 20px 0;"> 
+            <label style="margin-right:20px;"><input type="radio" name="sourceOption" value="Real"> Real</label>
+            <label><input type="radio" name="sourceOption" value="Virtual"> Virtual</label>
+        </div>
+        <button onclick="showStepSourceCorrection()">Next</button>
+    </div>
+
     <div id="step1Correction" class="question-container hidden">
         <div class="correction-message">
             <div class="participant-answer"><strong>Your answer:</strong> <span id="participantObjectName"></span></div>
+            <div class="participant-answer"><strong>Your source choice:</strong> <span id="participantSourceChoice"></span></div>
             <div class="correct-answer"><strong>Suggested answer:</strong> <span id="correctObjectName"></span></div>
         </div>
         <button onclick="finishTrial()">Next</button>
@@ -250,7 +260,8 @@
     const video = document.getElementById('stimulus-video');
 
     let trialData = {
-        objectName: ""
+        objectName: "",
+        sourceChoice: ""
     };
 
     // Values from Revisit
@@ -286,10 +297,25 @@
         const input = document.getElementById('objectInput').value.trim();
         trialData.objectName = input;
 
-        document.getElementById('participantObjectName').textContent = input;
+        // move to source choice step
+        document.getElementById('step1').classList.add('hidden');
+        document.getElementById('stepSource').classList.remove('hidden');
+    };
+
+    window.showStepSourceCorrection = function () {
+        const sel = document.querySelector('input[name="sourceOption"]:checked');
+        if (!sel) {
+            alert('Please select Real or Virtual to continue.');
+            return;
+        }
+        trialData.sourceChoice = sel.value;
+
+        // populate correction view
+        document.getElementById('participantObjectName').textContent = trialData.objectName;
+        document.getElementById('participantSourceChoice').textContent = trialData.sourceChoice;
         document.getElementById('correctObjectName').textContent = suggestedObjectName;
 
-        document.getElementById('step1').classList.add('hidden');
+        document.getElementById('stepSource').classList.add('hidden');
         document.getElementById('step1Correction').classList.remove('hidden');
     };
 
