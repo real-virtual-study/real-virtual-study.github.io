@@ -231,10 +231,12 @@
     <div id="stepSource" class="question-container hidden">
         <h3>This object was real or virtual?</h3>
         <div style="margin: 20px 0;"> 
-            <label style="margin-right:20px;"><input type="radio" name="sourceOption" value="Real"> Real</label>
-            <label><input type="radio" name="sourceOption" value="Virtual"> Virtual</label>
+            <label style="margin-right:20px;"><input type="radio" name="sourceOption" value="Real" 
+                onchange="document.getElementById('btn-source-next').disabled = false"> Real</label>
+            <label><input type="radio" name="sourceOption" value="Virtual" 
+                onchange="document.getElementById('btn-source-next').disabled = false"> Virtual</label>
         </div>
-        <button onclick="showStepSourceCorrection()">Next</button>
+        <button onclick="showStepSourceCorrection()" id="btn-source-next" disabled>Next</button>
     </div>
 
     <div id="step1Correction" class="question-container hidden">
