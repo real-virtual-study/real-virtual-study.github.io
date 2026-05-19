@@ -19,6 +19,7 @@
     "withProgressBar": true,
     "autoDownloadStudy": false,
     "withSidebar": false,
+    "nextOnEnter": true,
     "enumerateQuestions": false,
     "minWidthSize": 0,
     "minHeightSize": 0,
@@ -60,7 +61,7 @@
     },
     "overclaiming-question-template": {
       "type": "questionnaire",
-      "nextButtonLocation": "belowStimulus",
+      "nextButtonLocation": "aboveStimulus",
       "response": []
     }
   },
