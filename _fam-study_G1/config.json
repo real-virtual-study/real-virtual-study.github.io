@@ -19,6 +19,7 @@
     "withProgressBar": true,
     "autoDownloadStudy": false,
     "withSidebar": false,
+    "nextOnEnter": true,
     "enumerateQuestions": true,
     "minWidthSize": 0,
     "minHeightSize": 0,
@@ -47,21 +48,21 @@
         {
           "id": "objectName",
           "type": "reactive",
-          "required": true,
+          "required": false,
           "hidden": true,
           "prompt": "Object Name"
         },
         {
           "id": "retrievalAnswer",
           "type": "reactive",
-          "required": true,
+          "required": false,
           "hidden": true,
           "prompt": "Choose an answer"
         },
         {
           "id": "confidence",
           "type": "reactive",
-          "required": true,
+          "required": false,
           "hidden": true,
           "prompt": "Confidence"
         }
