@@ -6,11 +6,9 @@
     "_mr-confusion_G2",
     "_mr-confusion_G3",
     "_mr-confusion_G4",
-    "_fam-study",
-    "_fam-study_G1",
-    "_fam-study_G2",
-    "_pilot-mr",
-    "_pilot-mr2"
+    "_real_virtual_study",
+    "_real_virtual_study2_G1"
+
   ],
   "configs": {
     "_mr-confusion": {
@@ -28,20 +26,12 @@
     "_mr-confusion_G4": {
       "path": "_mr-confusion_G4/config.json"
     },
-    "_fam-study": {
-      "path": "_fam-study/config.json"
+      "_real_virtual_study": {
+      "path": "_real_virtual_study/config.json"
     },
-    "_fam-study_G1": {
-      "path": "_fam-study_G1/config.json"
-    },
-    "_fam-study_G2": {
-      "path": "_fam-study_G2/config.json"
-    },
-    "_pilot-mr": {
-      "path": "_pilot-mr/config.json"
-    },
-    "_pilot-mr2": {
-      "path": "_pilot-mr2/config.json"
+    "_real_virtual_study2_G1": {
+      "path": "_real_virtual_study_G1/config.json"
     }
+
   }
 }
