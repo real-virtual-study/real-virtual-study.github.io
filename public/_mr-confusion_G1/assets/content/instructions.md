@@ -1,5 +1,3 @@
-When you click **Next**, the first trial of the task will begin.
-
 La semaine dernière, on vous a demandé de participer à une conversation avec un interlocuteur virtuel simulé. Vous apparaissiez tous les deux sous forme d'avatars dans un miroir virtuel. À un moment donné, votre propre avatar a pris la parole et a participé à la conversation.
 
 L'objectif est maintenant d'évaluer dans quelle mesure vous vous souvenez si chaque phrase a été prononcée par vous, par votre avatar ou par l'interlocuteur virtuel. Les phrases vous seront présentées sous forme écrite. De plus, certaines phrases seront nouvelles et ne faisaient pas partie de la conversation de la partie 1.
