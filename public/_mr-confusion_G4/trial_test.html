@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Source Memory Task (Part 2)</title>
+    <title>Tâche de mémoire de source (Partie 2)</title>
     <script src="../revisitUtilities/revisit-communicate.js"></script>
 
     <style>
@@ -143,23 +143,23 @@
 
 <!-- Sentence display replaces the old icon/image header -->
 <div class="sentence-header">
-    <div class="sentence-label">Sentence to evaluate</div>
-    <div id="sentence-display" class="sentence-text">Loading sentence…</div>
+    <div class="sentence-label">Phrase à évaluer</div>
+    <div id="sentence-display" class="sentence-text">Chargement de la phrase…</div>
 </div>
 
 <div id="stage-identification" class="question-container">
-    <h3>Was this sentence said in part 1?</h3>
+    <h3>Cette phrase a-t-elle été dite dans la partie 1 ?</h3>
     <div>
-        <button class="choice-btn" id="btn-seen-yes" onclick="selectSeen('seen')">Yes</button>
-        <button class="choice-btn" id="btn-seen-no" onclick="selectSeen('not_seen')">No</button>
+        <button class="choice-btn" id="btn-seen-yes" onclick="selectSeen('seen')">Oui</button>
+        <button class="choice-btn" id="btn-seen-no" onclick="selectSeen('not_seen')">Non</button>
     </div>
     <div class="nav-controls">
-        <button id="btn-next-1" onclick="submitIdentification()" disabled>Next</button>
+        <button id="btn-next-1" onclick="submitIdentification()" disabled>Suivant</button>
     </div>
 </div>
 
 <div id="stage-conf-1" class="question-container hidden">
-    <h3>How confident are you?</h3>
+    <h3>Quel est ton niveau de confiance ?</h3>
     <div class="likert-container">
         <label class="likert-option"><span class="likert-text">0%</span><input type="radio" name="conf1" value="0" onclick="enableNext('btn-next-2')"><span class="custom-radio"></span></label>
         <label class="likert-option"><span class="likert-text">20%</span><input type="radio" name="conf1" value="20" onclick="enableNext('btn-next-2')"><span class="custom-radio"></span></label>
@@ -169,24 +169,24 @@
         <label class="likert-option"><span class="likert-text">100%</span><input type="radio" name="conf1" value="100" onclick="enableNext('btn-next-2')"><span class="custom-radio"></span></label>
     </div>
     <div class="nav-controls">
-        <button id="btn-next-2" onclick="submitConf1()" disabled>Next</button>
+        <button id="btn-next-2" onclick="submitConf1()" disabled>Suivant</button>
     </div>
 </div>
 
 <div id="stage-source" class="question-container hidden">
-    <h3>Who said it?</h3>
+    <h3>Qui l'a dit ?</h3>
     <div>
-        <button class="choice-btn" id="btn-source-interlocutor" onclick="selectSource('interlocutor')">It was the interlocutor</button>
-        <button class="choice-btn" id="btn-source-self"         onclick="selectSource('self')">It was me</button>
-        <button class="choice-btn" id="btn-source-self-avatar"  onclick="selectSource('self-avatar')">It was my avatar</button>
+        <button class="choice-btn" id="btn-source-interlocutor" onclick="selectSource('interlocutor')">C'était l'interlocuteur</button>
+        <button class="choice-btn" id="btn-source-self"         onclick="selectSource('self')">C'était moi</button>
+        <button class="choice-btn" id="btn-source-self-avatar"  onclick="selectSource('self-avatar')">C'était mon avatar</button>
     </div>
     <div class="nav-controls">
-        <button id="btn-next-3" onclick="submitSource()" disabled>Next</button>
+        <button id="btn-next-3" onclick="submitSource()" disabled>Suivant</button>
     </div>
 </div>
 
 <div id="stage-conf-2" class="question-container hidden">
-    <h3>How confident are you?</h3>
+    <h3>Quel est ton niveau de confiance ?</h3>
     <div class="likert-container">
         <label class="likert-option"><span class="likert-text">0%</span><input type="radio" name="conf2" value="0" onclick="enableNext('btn-next-4')"><span class="custom-radio"></span></label>
         <label class="likert-option"><span class="likert-text">20%</span><input type="radio" name="conf2" value="20" onclick="enableNext('btn-next-4')"><span class="custom-radio"></span></label>
@@ -196,29 +196,29 @@
         <label class="likert-option"><span class="likert-text">100%</span><input type="radio" name="conf2" value="100" onclick="enableNext('btn-next-4')"><span class="custom-radio"></span></label>
     </div>
     <div class="nav-controls">
-        <button id="btn-next-4" onclick="submitConf2()" disabled>Next</button>
+        <button id="btn-next-4" onclick="submitConf2()" disabled>Suivant</button>
     </div>
 </div>
 
 <div id="stage-reason" class="question-container hidden">
-    <h3 id="reason-title">Please explain your answer.</h3>
-    <textarea id="reason-input" placeholder="Type your answer here..." oninput="enableNext('btn-finish')"></textarea>
+    <h3 id="reason-title">Merci d'expliquer ta réponse.</h3>
+    <textarea id="reason-input" placeholder="Écris ta réponse ici..." oninput="enableNext('btn-finish')"></textarea>
     <div class="nav-controls">
-        <button id="btn-finish" onclick="submitReasonAndFinish()" disabled>Finish Trial</button>
+        <button id="btn-finish" onclick="submitReasonAndFinish()" disabled>Terminer l'essai</button>
     </div>
 </div>
 
 <div id="final-message" class="question-container hidden" style="border-left: 5px solid #28a745; background-color: #d4edda;">
-    <h3 style="color: #155724;">Trial finished</h3>
-    <p>Please click <strong>Next</strong> in the study interface to continue.</p>
+    <h3 style="color: #155724;">Essai terminé</h3>
+    <p>Clique sur <strong>Suivant</strong> dans l'interface de l'étude pour continuer.</p>
 </div>
 
 <script>
     // --- Source labels used for the reasoning prompt ---
     const SOURCE_LABELS = {
-        'interlocutor': 'the interlocutor',
-        'self':         'you',
-        'self-avatar':  'your avatar'
+        'interlocutor': "l'interlocuteur",
+        'self':         'toi',
+        'self-avatar':  'ton avatar'
     };
 
     let trialAnswers = {
@@ -324,7 +324,7 @@
         // Build a human-readable label for the reasoning prompt
         const label = SOURCE_LABELS[trialAnswers.sourceAnswer] || trialAnswers.sourceAnswer;
         document.getElementById('reason-title').textContent =
-            `Please explain why you think it was said by ${label}.`;
+            `Merci d'expliquer pourquoi tu penses que c'était dit par ${label}.`;
 
         document.getElementById('stage-reason').classList.remove('hidden');
         window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
