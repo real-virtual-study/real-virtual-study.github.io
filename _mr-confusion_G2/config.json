@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.3.2/src/parser/StudyConfigSchema.json",
   "studyMetadata": {
-    "title": "MR conversational task - Part 2 Group2",
+    "title": "MR conversational task - Part 2 Group1",
     "version": "1",
     "authors": [
       "Leana"
@@ -14,7 +14,7 @@
   },
   "uiConfig": {
     "contactEmail": "",
-    "helpTextPath": "_mr-confusion_G2/assets/content/help.md",
+    "helpTextPath": "_mr-confusion_G1/assets/content/help.md",
     "logoPath": "revisitAssets/revisitLogoSquare.svg",
     "withProgressBar": true,
     "autoDownloadStudy": false,
@@ -22,12 +22,12 @@
     "enumerateQuestions": true,
     "minWidthSize": 0,
     "minHeightSize": 0,
-    "studyEndMsg": "Thank you for completing the study. You may now close the page. Do not hesitate to contact Leana if you want more information about the study."
+    "studyEndMsg": "Merci pour votre participation !"
   },
   "baseComponents": {
     "sentence-task": {
       "type": "website",
-      "path": "_mr-confusion_G2/trial_test.html",
+      "path": "_mr-confusion_G1/trial_test.html",
       "instruction": "Read the sentence and answer the questions.",
       "forceCompletion": true,
       "nextButtonLocation": "belowStimulus",
@@ -91,53 +91,252 @@
   "components": {
     "IntroPage": {
       "type": "markdown",
-      "path": "_mr-confusion_G2/assets/content/instructions.md",
+      "path": "_mr-confusion_G1/assets/content/instructions.md",
       "response": []
     },
-    "trial1A":  { "baseComponent": "sentence-task", "parameters": { "sentence": "Have you noticed how today's news seems to fly by faster than we can keep up? I feel like I'm constantly chasing information." } },
-    "trial2A":  { "baseComponent": "sentence-task", "parameters": { "sentence": "Absolutely. I listen to a podcast every morning to see what's happened in the world. Otherwise, I feel out of the loop before breakfast is even over." } },
-    "trial3A":  { "baseComponent": "sentence-task", "parameters": { "sentence": "Right now, local politics is becoming the main headline of the daily paper. It's almost all anyone talks about anymore." } },
-    "trial4A":  { "baseComponent": "sentence-task", "parameters": { "sentence": "Yes, especially with the two candidates fighting to take the lead in the latest polls. It's a neck-and-neck race." } },
-    "trial5A":  { "baseComponent": "sentence-task", "parameters": { "sentence": "And they both promised to fix the roads before next winter... We'll see if that actually happens." } },
-    "trial6A":  { "baseComponent": "sentence-task", "parameters": { "sentence": "Speaking of ambitious promises, did you see the news about space exploration? The new lunar base marks a major milestone." } },
-    "trial7A":  { "baseComponent": "sentence-task", "parameters": { "sentence": "Yes! Astronauts are preparing to live there for at least six consecutive months. It's fascinating." } },
-    "trial8A":  { "baseComponent": "sentence-task", "parameters": { "sentence": "This mission could really help us better understand the history of our solar system. We're living in an incredible era." } },
-    "trial9A":  { "baseComponent": "sentence-task", "parameters": { "sentence": "Incredible... and a bit unstable too. Tech stocks plummeted suddenly during late afternoon trading." } },
-    "trial10A": { "baseComponent": "sentence-task", "parameters": { "sentence": "Investors are worried about the new regulations on artificial intelligence tools, apparently." } },
-    "trial11A": { "baseComponent": "sentence-task", "parameters": { "sentence": "Economic experts are still saying to stay calm despite the market volatility. Easier said than done." } },
-    "trial12A": { "baseComponent": "sentence-task", "parameters": { "sentence": "For sure. Hey, on a completely different note, a rare painting was discovered in a dusty old attic today." } },
-    "trial13A": { "baseComponent": "sentence-task", "parameters": { "sentence": "Yes, I read that! Art historians think it might belong to a famous Italian master." } },
-    "trial14A": { "baseComponent": "sentence-task", "parameters": { "sentence": "And the auction house expects a price of several million. It goes to show, you should always rummage through your grandparents' attics..." } },
-    "trial15A": { "baseComponent": "sentence-task", "parameters": { "sentence": "If only! Regarding scientific discoveries, climate change is affecting the migration patterns of many wild birds." } },
-    "trial16A": { "baseComponent": "sentence-task", "parameters": { "sentence": "Yes, and they're arriving much earlier than they did only a decade ago." } },
-    "trial17A": { "baseComponent": "sentence-task", "parameters": { "sentence": "Scientists are tracking their movements using small satellite tags; it's impressive." } },
-    "trial18A": { "baseComponent": "sentence-task", "parameters": { "sentence": "Exactly. Migration patterns are being completely disrupted." } },
-    "trial19A": { "baseComponent": "sentence-task", "parameters": { "sentence": "That reminds me of the Ministry of Health's report on sleep. They say most people need seven hours to stay efficient." } },
-    "trial20A": { "baseComponent": "sentence-task", "parameters": { "sentence": "Yes, and that we should consume less caffeine in the evening to improve rest quality. I should probably stop having espressos after 6 p.m..." } },
-    "trial21A": { "baseComponent": "sentence-task", "parameters": { "sentence": "Good resolution! Otherwise, did you see that the big film festival announced its official selection?" } },
-    "trial22A": { "baseComponent": "sentence-task", "parameters": { "sentence": "Yes, and it's mostly independent directors drawing attention this year, more so than the big studio stars." } },
-    "trial23A": { "baseComponent": "sentence-task", "parameters": { "sentence": "That's for the best. I hope to see some truly creative stories on the big screen this summer." } },
-    "trial24A": { "baseComponent": "sentence-task", "parameters": { "sentence": "In the meantime, the national stadium will host the world finals next weekend." } },
-    "trial25A": { "baseComponent": "sentence-task", "parameters": { "sentence": "I know! Tickets sold out five minutes after they went online. It's crazy." } },
-    "trial26A": { "baseComponent": "sentence-task", "parameters": { "sentence": "Fans are coming from every continent to support their favorite teams. The atmosphere is going to be electric." } },
-    "trial27A": { "baseComponent": "sentence-task", "parameters": { "sentence": "Our city is going to change its face again with all of this. Modern architecture is already transforming the skyline of our beautiful waterfront." } },
-    "trial28A": { "baseComponent": "sentence-task", "parameters": { "sentence": "Yes, those new glass towers rising above the old port district... it's impressive, even if I'm a bit nostalgic." } },
-    "trial29A": { "baseComponent": "sentence-task", "parameters": { "sentence": "Me too. Maybe that's why I prefer reading a paper newspaper with a good hot coffee." } },
-    "trial30A": { "baseComponent": "sentence-task", "parameters": { "sentence": "Same here. It feels good to disconnect from the digital world for a moment... especially when the news moves at a hundred miles an hour." } },
-    "trial31A": { "baseComponent": "sentence-task", "parameters": { "sentence": "..." } },
-    "trial32A": { "baseComponent": "sentence-task", "parameters": { "sentence": "Distractor" } },
-    "trial33A": { "baseComponent": "sentence-task", "parameters": { "sentence": "Distractor" } },
-    "trial34A": { "baseComponent": "sentence-task", "parameters": { "sentence": "Distractor" } },
-    "trial35A": { "baseComponent": "sentence-task", "parameters": { "sentence": "Distractor" } },
-    "trial36A": { "baseComponent": "sentence-task", "parameters": { "sentence": "Distractor" } },
-    "trial37A": { "baseComponent": "sentence-task", "parameters": { "sentence": "Distractor" } },
-    "trial38A": { "baseComponent": "sentence-task", "parameters": { "sentence": "Distractor" } },
-    "trial39A": { "baseComponent": "sentence-task", "parameters": { "sentence": "Distractor" } },
-    "trial40A": { "baseComponent": "sentence-task", "parameters": { "sentence": "Distractor" } },
-
+    "trial1A": {
+      "baseComponent": "sentence-task",
+      "parameters": {
+        "sentence": "Tu as remarqué à quel point l'actualité semble défiler plus vite qu'on ne peut la suivre ? J'ai l'impression de courir en permanence après l'information."
+      }
+    },
+    "trial2A": {
+      "baseComponent": "sentence-task",
+      "parameters": {
+        "sentence": "Personnellement, j'écouté un podcast chaque matin pour voir ce qui s'est passé. Sinon, je me sens déjà dépassé·e avant même la fin de mon petit-déjeuner."
+      }
+    },
+    "trial3A": {
+      "baseComponent": "sentence-task",
+      "parameters": {
+        "sentence": "Par exemple, la politique locale fait la une de tous les journaux. On n'entend plus parler que de ça dans les médias et sur les réseaux sociaux."
+      }
+    },
+    "trial4A": {
+      "baseComponent": "sentence-task",
+      "parameters": {
+        "sentence": "On en fait trop, mais c'est vrai avec les deux candidats qui se battent pour les sondages. Ils sont maintenant au coude-à-coude pour l'élection."
+      }
+    },
+    "trial5A": {
+      "baseComponent": "sentence-task",
+      "parameters": {
+        "sentence": "Ils ont tous les deux promis d'aménager les trottoirs... On verra bien si cette promesse se concrétise vraiment dans les mois futurs."
+      }
+    },
+    "trial6A": {
+      "baseComponent": "sentence-task",
+      "parameters": {
+        "sentence": "Je ne parierais pas là-dessus. En parlant de projets ambitieux, tu as vu les infos sur l'espace ? La nouvelle base lunaire marque une étape majeure."
+      }
+    },
+    "trial7A": {
+      "baseComponent": "sentence-task",
+      "parameters": {
+        "sentence": "C'est surtout symbolique pour l'instant, mais les astronautes se préparent déjà à y vivre six mois consécutifs. C'est fascinant d'imaginer une telle vie sur la Lune."
+      }
+    },
+    "trial8A": {
+      "baseComponent": "sentence-task",
+      "parameters": {
+        "sentence": "Cette mission pourrait vraiment nous aider à mieux comprendre l'histoire de notre système solaire. Nous vivons sans aucun doute une époque technologique tout à fait incroyable."
+      }
+    },
+    "trial9A": {
+      "baseComponent": "sentence-task",
+      "parameters": {
+        "sentence": "C'est incroyable mais un peu instable aussi. J'ai vu que les valeurs technologiques ont soudainement chuté en fin d'après-midi à la bourse, ce qui inquiète beaucoup de monde.."
+      }
+    },
+    "trial10A": {
+      "baseComponent": "sentence-task",
+      "parameters": {
+        "sentence": "Je pensais que c'était une correction de routine, mais les investisseurs s'inquiètent surtout des nouvelles réglementations strictes sur les outils récents de l'intelligence artificielle."
+      }
+    },
+    "trial11A": {
+      "baseComponent": "sentence-task",
+      "parameters": {
+        "sentence": "Les experts économiques continuent de dire qu'il faut garder son calme malgré la volatilité actuelle. C'est souvent plus facile à dire qu'à faire en réalité."
+      }
+    },
+    "trial12A": {
+      "baseComponent": "sentence-task",
+      "parameters": {
+        "sentence": "C'est clair. Dans un tout autre registre, un tableau rare a été découvert dans un vieux grenier très poussiéreux par une famille ce matin même."
+      }
+    },
+    "trial13A": {
+      "baseComponent": "sentence-task",
+      "parameters": {
+        "sentence": "Oui, j'ai lu ça ! Même si certains restent sceptiques, les historiens de l'art pensent qu'il pourrait appartenir à un très grand maître italien de l'époque."
+      }
+    },
+    "trial14A": {
+      "baseComponent": "sentence-task",
+      "parameters": {
+        "sentence": "La maison de vente aux enchères en attend un prix de plusieurs millions. Ça prouve qu'il faut toujours fouiller dans le grenier de ses grands-parents."
+      }
+    },
+    "trial15A": {
+      "baseComponent": "sentence-task",
+      "parameters": {
+        "sentence": "Si seulement c'était moins rare ! Côté sciences, le changement climatique affecte maintenant sérieusement les schémas de migration de nombreux oiseaux sauvages à travers le monde."
+      }
+    },
+    "trial16A": {
+      "baseComponent": "sentence-task",
+      "parameters": {
+        "sentence": "Oui, et même si l'étalement urbain y joue un rôle, ils arrivent beaucoup plus tôt qu'il y a seulement dix ans dans notre région."
+      }
+    },
+    "trial17A": {
+      "baseComponent": "sentence-task",
+      "parameters": {
+        "sentence": "Les scientifiques suivent précisément leurs mouvements grâce à de petites balises satellites. Cela permet de récolter des données précieuses sur leur adaptation face au climat."
+      }
+    },
+    "trial18A": {
+      "baseComponent": "sentence-task",
+      "parameters": {
+        "sentence": "Cela me rappelle d'ailleurs le rapport récent du ministère de la Santé sur l'importance cruciale de la qualité du sommeil. Peu importe si on prévient les gens, rien ne change."
+      }
+    },
+    "trial19A": {
+      "baseComponent": "sentence-task",
+      "parameters": {
+        "sentence": "Oui j'ai vu, la plupart des gens ont besoin de sept heures pour rester performants, même si personnellement, je me sens très bien avec seulement six heures de repos."
+      }
+    },
+    "trial20A": {
+      "baseComponent": "sentence-task",
+      "parameters": {
+        "sentence": "Ça varie selon les personnes, mais on devrait consommer moins de caféine l'après midi. Je devrais probablement arrêter de prendre des expressos après dix-sept heures."
+      }
+    },
+    "trial21A": {
+      "baseComponent": "sentence-task",
+      "parameters": {
+        "sentence": "Bonne résolution, même si ça risque d'être dur ! Sinon, tu as vu que le grand festival de cinéma a enfin annoncé sa sélection officielle de films ?"
+      }
+    },
+    "trial22A": {
+      "baseComponent": "sentence-task",
+      "parameters": {
+        "sentence": "Ce sont surtout des réalisateurs indépendants qui attirent l'attention cette année, bien plus que les grandes stars habituelles des immenses studios de production de cinéma."
+      }
+    },
+    "trial23A": {
+      "baseComponent": "sentence-task",
+      "parameters": {
+        "sentence": "Les blockbusters me manquent un peu, mais c'est une bonne chose. J'espère voir des histoires créatives sur grand écran lors de mes prochaines vacances d'été."
+      }
+    },
+    "trial24A": {
+      "baseComponent": "sentence-task",
+      "parameters": {
+        "sentence": "En attendant, le stade national va accueillir les grandes finales mondiales le week-end prochain. Tout le monde attend cet événement sportif avec une très grande impatience."
+      }
+    },
+    "trial25A": {
+      "baseComponent": "sentence-task",
+      "parameters": {
+        "sentence": "Le site n'arrêtait pas de planter, mais les billets se sont tous vendus en cinq minutes seulement. C'est fou de voir un tel engouement populaire aujourd'hui."
+      }
+    },
+    "trial26A": {
+      "baseComponent": "sentence-task",
+      "parameters": {
+        "sentence": "Les fans viennent de tous les continents pour soutenir leurs équipes préférées. L'ambiance va être absolument électrique dans toute la ville pendant ces quelques jours."
+      }
+    },
+    "trial27A": {
+      "baseComponent": "sentence-task",
+      "parameters": {
+        "sentence": "Notre ville va encore changer de visage avec tout ça. L'architecture moderne transforme déjà radicalement l'horizon de notre beau front de mer depuis quelques années déjà."
+      }
+    },
+    "trial28A": {
+      "baseComponent": "sentence-task",
+      "parameters": {
+        "sentence": "Je trouve ça un peu trop chargé maintenant. Ces nouvelles tours de verre qui s'élèvent au-dessus du vieux port sont impressionnantes, mais je reste assez nostalgique."
+      }
+    },
+    "trial29A": {
+      "baseComponent": "sentence-task",
+      "parameters": {
+        "sentence": "Moi aussi. C'est peut-être pour ça que je préfère encore lire un journal papier avec un bon café chaud plutôt que de consulter mon téléphone portable."
+      }
+    },
+    "trial30A": {
+      "baseComponent": "sentence-task",
+      "parameters": {
+        "sentence": "Pareil. Ça fait du bien de se déconnecter du monde numérique un instant, surtout quand l'actualité avance à cent à l'heure sans nous laisser de répit."
+      }
+    },
+    "trial31A": {
+      "baseComponent": "sentence-task",
+      "parameters": {
+        "sentence": "Le débat d'hier soir n'a pas vraiment clarifié la position des deux candidats sur le prochain budget de la ville."
+      }
+    },
+    "trial32A": {
+      "baseComponent": "sentence-task",
+      "parameters": {
+        "sentence": "J'ai entendu dire qu'ils prévoient aussi de lancer un nouveau rover pour explorer les calottes glaciaires de Mars."
+      }
+    },
+    "trial33A": {
+      "baseComponent": "sentence-task",
+      "parameters": {
+        "sentence": "Certains analystes prédisent que le marché va vite rebondir une fois que ces directives sur l'IA seront finalisées."
+      }
+    },
+    "trial34A": {
+      "baseComponent": "sentence-task",
+      "parameters": {
+        "sentence": "Apparemment, le cadre en bois sculpté qui entoure le tableau est une antiquité qui vaut elle-même une petite fortune."
+      }
+    },
+    "trial35A": {
+      "baseComponent": "sentence-task",
+      "parameters": {
+        "sentence": "Même la faune marine locale montre des changements de comportement étranges à cause du réchauffement des courants océaniques."
+      }
+    },
+    "trial36A": {
+      "baseComponent": "sentence-task",
+      "parameters": {
+        "sentence": "J'ai commencé à laisser mon téléphone dans la cuisine la nuit pour éviter la lumière bleue avant de dormir."
+      }
+    },
+    "trial37A": {
+      "baseComponent": "sentence-task",
+      "parameters": {
+        "sentence": "Les critiques disent déjà que l'un des films en langue étrangère va remporter le prix principal."
+      }
+    },
+    "trial38A": {
+      "baseComponent": "sentence-task",
+      "parameters": {
+        "sentence": "Ils s'attendent à ce que les transports en commun autour du stade soient complètement paralysés dès vendredi matin."
+      }
+    },
+    "trial39A": {
+      "baseComponent": "sentence-task",
+      "parameters": {
+        "sentence": "Le conseil municipal veut planter plus d'arbres autour du quartier d'affaires pour adoucir tout ce béton."
+      }
+    },
+    "trial40A": {
+      "baseComponent": "sentence-task",
+      "parameters": {
+        "sentence": "Il y a vraiment quelque chose d'incroyablement réconfortant dans l'odeur de l'encre fraîche sur une page imprimée."
+      }
+    },
     "Questionnaires": {
       "type": "markdown",
-      "path": "_mr-confusion_G2/assets/content/questionnaires.md",
+      "path": "_mr-confusion_G1/assets/content/questionnaires.md",
       "response": []
     },
     "EMQuestionnaire": {
@@ -145,31 +344,31 @@
       "response": [
         {
           "id": "ih-q",
-          "prompt": "The statements set out below are about forgetting things, something everyone does to an extent. Please indicate how frequently the examples given have happened to you, over the last 3 months, using the following scale:",
+          "prompt": "Les affirmations ci-dessous concernent les petits oublis, une chose qui arrive à tout le monde dans une certaine mesure. Veuillez indiquer à quelle fréquence les exemples donnés vous sont arrivés au cours des 3 derniers mois, en utilisant l'échelle suivante :",
           "location": "aboveStimulus",
           "type": "matrix-radio",
           "questionOrder": "random",
           "answerOptions": [
-            "Once or less in the last month.",
-            "More than once a month but less than once a week",
-            "About once a week",
-            "More that once a week or less than once a day",
-            "Once or more in a day"
+            "Une fois ou moins au cours du mois dernier",
+            "Plus d'une fois par mois mais moins d'une fois par semaine",
+            "Environ une fois par semaine",
+            "Plus d'une fois par semaine mais moins d'une fois par jour",
+            "Une ou plusieurs fois par jour"
           ],
           "questionOptions": [
-            "Having to check whether you have done something that you should have done.",
-            "Forgetting when it was that something happened; for example, whether it was yesterday or last week.",
-            "Forgetting that you were told something yesterday or a few days ago, and maybe having to be reminded about it.",
-            "Starting to read something (a book or an article in a newspaper, or a magazine) without realizing you have already read it before.",
-            "Finding that a word is 'on the tip of your tongue'. You know what it is but cannot quite find it.",
-            "Completely forgetting to do things you said you would do, and things you planned to do.",
-            "Forgetting important details of what you did or what happened to you the day before.",
-            "When talking to someone, forgetting what you have just said. Maybe saying 'what was I talking about?'",
-            "When reading a newspaper or magazine, being unable to follow the thread of a story; losing track of what it is about.",
-            "Forgetting to tell somebody something important, perhaps forgetting to pass on a message or remind someone of something.",
-            "Getting the details of what someone was told you mixed up and confused.",
-            "Forgetting where things are normally kept or looking for them in the wrong place.",
-            "Repeating to someone what you have just told them or asking someone the same question twice."
+            "Devoir vérifier si vous avez fait quelque chose que vous auriez dû faire.",
+            "Oublier quand quelque chose s'est passé ; par exemple, si c'était hier ou la semaine dernière.",
+            "Oublier qu'on vous a dit quelque chose hier ou il y a quelques jours, et peut-être avoir besoin qu'on vous le rappelle.",
+            "Commencer à lire quelque chose (un livre, un article de journal ou un magazine) sans vous rendre compte que vous l'avez déjà lu.",
+            "Avoir un mot « sur le bout de la langue ». Vous savez ce que c'est mais vous n'arrivez pas à le retrouver.",
+            "Oublier complètement de faire des choses que vous aviez dit que vous feriez, ou des choses que vous aviez prévu de faire.",
+            "Oublier des détails importants de ce que vous avez fait ou de ce qui vous est arrivé la veille.",
+            "En parlant à quelqu'un, oublier ce que vous venez de dire. Par exemple en disant « de quoi est-ce que je parlais ? ».",
+            "En lisant un journal ou un magazine, être incapable de suivre le fil de l'histoire ; perdre le fil du sujet.",
+            "Oublier de dire quelque chose d'important à quelqu'un, par exemple oublier de transmettre un message ou de rappeler quelque chose à quelqu'un.",
+            "Confondre et mélanger les détails de ce que quelqu'un vous a dit.",
+            "Oublier où les choses sont normalement rangées ou les chercher au mauvais endroit.",
+            "Répéter à quelqu'un ce que vous venez de lui dire ou poser la même question deux fois."
           ]
         }
       ]
@@ -179,20 +378,20 @@
       "response": [
         {
           "id": "tech-familiarity",
-          "prompt": "Please indicate how familiar you are with each of the following:",
+          "prompt": "Veuillez indiquer votre niveau de familiarité avec les éléments suivants :",
           "location": "aboveStimulus",
           "type": "matrix-radio",
           "answerOptions": [
-            "Not at all familiar",
-            "Slightly familiar",
-            "Moderately familiar",
-            "Fairly familiar",
-            "Very familiar"
+            "Pas du tout familier(ère)",
+            "Légèrement familier(ère)",
+            "Modérément familier(ère)",
+            "Assez familier(ère)",
+            "Très familier(ère)"
           ],
           "questionOptions": [
-            "How familiar are you with virtual reality (VR) technology?",
-            "How familiar are you with augmented reality (AR) technology?",
-            "How familiar are you with the features and functions of AR applications?"
+            "À quel point êtes-vous familier(ère) avec la technologie de la réalité virtuelle (RV) ?",
+            "À quel point êtes-vous familier(ère) avec la technologie de la réalité augmentée (RA) ?",
+            "À quel point êtes-vous familier(ère) avec les caractéristiques et les fonctions des applications de RA ?"
           ]
         }
       ]
@@ -202,79 +401,78 @@
       "response": [
         {
           "id": "gender",
-          "prompt": "What is your gender?",
+          "prompt": "Quel est votre genre ?",
           "required": true,
           "type": "radio",
           "options": [
-            "Female",
-            "Male",
-            "Non-binary",
-            "Other",
-            "Do not want to answer"
+            "Femme",
+            "Homme",
+            "Non-binaire",
+            "Autre",
+            "Je ne souhaite pas répondre"
           ]
         },
         {
           "id": "gender-other",
-          "prompt": "If you selected 'Other', please specify:",
+          "prompt": "Si vous avez sélectionné « Autre », veuillez préciser :",
           "required": false,
           "type": "shortText",
-          "placeholder": "Please specify"
+          "placeholder": "Veuillez préciser"
         },
         {
           "id": "age",
-          "prompt": "What is your age?",
+          "prompt": "Quel est votre âge ?",
           "required": true,
           "type": "shortText",
-          "placeholder": "Enter your age"
+          "placeholder": "Entrez votre âge"
         },
         {
           "id": "education",
-          "prompt": "What is your current level of study?",
+          "prompt": "Quel est votre niveau d'études actuel ?",
           "required": true,
           "type": "radio",
           "options": [
-            "High school",
-            "Undergraduate (Bachelor's degree)",
-            "Master's degree",
-            "Doctorate (PhD)",
-            "Other",
-            "Do not want to answer"
+            "Lycée (Baccalauréat)",
+            "Licence (Bac +3)",
+            "Master (Bac +5)",
+            "Doctorat",
+            "Autre",
+            "Je ne souhaite pas répondre"
           ]
         },
         {
           "id": "education-other",
-          "prompt": "If you selected 'Other', please specify:",
+          "prompt": "Si vous avez sélectionné « Autre », veuillez préciser :",
           "required": false,
           "type": "shortText",
-          "placeholder": "Please specify"
+          "placeholder": "Veuillez préciser"
         }
       ]
     },
     "EndPage": {
       "type": "markdown",
-      "path": "_mr-confusion_G2/assets/content/end.md",
+      "path": "_mr-confusion_G1/assets/content/end.md",
       "response": []
+    }},
+    "sequence": {
+      "order": "fixed",
+      "components": [
+        "IntroPage",
+        {
+          "order": "random",
+          "components": [
+            "trial1A",  "trial2A",  "trial3A",  "trial4A",
+            "trial5A",  "trial6A",  "trial7A",  "trial8A",  "trial9A",  "trial10A", "trial11A",
+            "trial12A", "trial13A", "trial14A", "trial15A", "trial16A", "trial17A", "trial18A",
+            "trial19A", "trial20A", "trial21A", "trial22A", "trial23A", "trial24A",
+            "trial25A", "trial26A", "trial27A", "trial28A", "trial29A", "trial30A", "trial31A", "trial32A", "trial33A", "trial34A", "trial35A", "trial36A", "trial37A", "trial38A", "trial39A", "trial40A"
+          ]
+        },
+        "Questionnaires",
+        "EMQuestionnaire",
+        "TechFamiliarity",
+        "SDQuestionnaire",
+        "EndPage"
+      ]
     }
-  },
-  "sequence": {
-    "order": "fixed",
-    "components": [
-      "IntroPage",
-      {
-        "order": "random",
-        "components": [
-          "trial1A",  "trial2A",  "trial3A",  "trial4A",
-          "trial5A",  "trial6A",  "trial7A",  "trial8A",  "trial9A",  "trial10A", "trial11A",
-          "trial12A", "trial13A", "trial14A", "trial15A", "trial16A", "trial17A", "trial18A",
-          "trial19A", "trial20A", "trial21A", "trial22A", "trial23A", "trial24A",
-          "trial25A", "trial26A", "trial27A", "trial28A", "trial29A", "trial30A", "trial31A", "trial32A", "trial33A", "trial34A", "trial35A", "trial36A", "trial37A", "trial38A", "trial39A", "trial40A"
-        ]
-      },
-      "Questionnaires",
-      "EMQuestionnaire",
-      "TechFamiliarity",
-      "SDQuestionnaire",
-      "EndPage"
-    ]
   }
-}

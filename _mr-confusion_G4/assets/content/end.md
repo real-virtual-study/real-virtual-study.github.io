@@ -1,41 +1,27 @@
-# Thank You for Participating!
+## Merci pour votre participation !
+Merci d’avoir complété cette partie de l'expérience. Avant de partir, veuillez prendre un moment pour lire les informations importantes suivantes concernant l'étude.
 
-Thank you for completing this part of the experiment. Before you go, please take a moment to read the following important information about the study.
+## Quel était le véritable objectif de l'étude ?
+Comme indiqué dans le formulaire de consentement, il vous avait été dit au départ que cette étude examinait votre ressenti subjectif lors d'une expérience de réalité augmentée. En réalité, cette étude cherche à évaluer la précision avec laquelle les personnes se souviennent, au fil du temps, d'une conversation en réalité augmentée. Par exemple : allez-vous finir par vous attribuer les phrases prononcées par votre interlocuteur ou par votre propre avatar ?
 
----
+Notre objectif était de déterminer (1) si les participants ont davantage tendance à s'attribuer à tort les phrases prononcées par leur propre avatar, par rapport aux phrases de l'interlocuteur.
 
-## What the Study Was Actually About
+Toutes les données recueillies au cours de cette session seront utilisées pour tirer des conclusions sur cet effet.
 
-As stated in the consent form, you were initially told that this study examined XXX. In reality, this study investigates how accurately people remember a mixed reality conversation over time. For example: will you come to misremember the interlocutor or your self-avatar sentences to you?
+## Pourquoi nous ne pouvions pas vous le dire plus tôt
+Pour tester correctement nos hypothèses, les détails complets de l'étude ne pouvaient pas être divulgués à l'avance. Cela a permis de garantir que vos réponses restent spontanées et ne soient pas influencées par la connaissance préalable du véritable objectif de l'étude. Nous regrettons ce subterfuge nécessaire et vous remercions sincèrement pour votre compréhension.
 
-We aimed to determine (1) whether people misremember more their self-avatar sentences as their than the interlocutor sentences.
+## Vos données et confidentialité
+Tous les autres aspects du formulaire de consentement initial restent entièrement valables. Vos données sont protégées de la manière suivante :
 
-All data collected in this session will be used to draw conclusions about this effect.
+Vos réponses ne sont associées à aucune information d'identification.
 
----
+Vos données ne constituent pas des données personnelles.
 
-## Why We Could Not Tell You This Beforehand
+Les participants sont uniquement désignés sous les termes "Participant 1", "Participant 2", etc.
 
-To properly test our hypotheses, full details of the study could not be disclosed in advance. This ensured that your responses remained spontaneous and were not influenced by prior knowledge of the study's true objective. We regret this necessary deception and sincerely appreciate your understanding.
+## Droit de rétractation
+Maintenant que vous êtes pleinement informé(e) du véritable but de cette étude, vous avez le droit de retirer vos données. Si vous souhaitez que vos données soient définitivement supprimées, veuillez en informer l'enquêteur avant de partir.
 
----
-
-## Your Data & Confidentiality
-
-All other aspects of the original consent form remain fully accurate. Your data is protected as follows:
-
-- Your responses are not linked to any identifying information
-- Your data does not constitute personal data
-- Participants are referred to only as Participant 1, Participant 2, etc.
-
----
-
-## Right to Withdraw
-
-Now that you are fully informed of the study's true purpose, you have the right to withdraw your data. If you wish to have your data permanently deleted, please inform the investigator before leaving.
-
----
-
-## One Last Request
-
-Please do not discuss the study's procedures or hypotheses with anyone who may participate in the future. Doing so could influence their responses and affect the validity of our results. Thank you for helping us maintain the integrity of this research.
+## Une dernière demande
+Veuillez ne pas discuter des procédures ou des hypothèses de l'étude avec des personnes susceptibles d'y participer à l'avenir. Cela pourrait influencer leurs réponses et compromettre la validité de nos résultats. Merci de nous aider à préserver l'intégrité de cette recherche.
