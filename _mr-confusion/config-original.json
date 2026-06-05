@@ -28,6 +28,12 @@
       "nextButtonText": "Commencer",
       "response": []
     },
+      "ConsentPage": {
+      "type": "markdown",
+      "path": "_mr-confusion/assets/content/part1_consent.md",
+      "nextButtonText": "I agree",
+      "response": []
+    },
     "Doubt": {
       "type": "questionnaire",
       "response": [
@@ -154,6 +160,7 @@
   "sequence": {
     "order": "fixed",
     "components": [
+      "ConsentPage",
       "IntroPage",
       "EmbodimentAgency",
       "Similarity",
