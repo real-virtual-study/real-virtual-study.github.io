@@ -22,7 +22,7 @@
     "enumerateQuestions": true,
     "minWidthSize": 0,
     "minHeightSize": 0,
-    "studyEndMsg": "Thank you for completing the study. You may now close the page. Do not hesitate to contact Leana if you want more information about the study."
+    "studyEndMsg": "Merci pour votre participation !"
   },
   "baseComponents": {
     "sentence-task": {

@@ -1,5 +1,5 @@
-## Questionnaires 
+## Questionnaires
 
-On the following pages, you will be asked to complete three short questionnaires. These questionnaires ask about your everyday experiences, attitudes, and familiarity with certain topics.
+Dans les pages suivantes, nous vous demanderons de remplir trois courts questionnaires. Ces questionnaires portent sur vos expériences quotidiennes, vos attitudes et votre connaissance de certains sujets.
 
-There are no right or wrong answers. We are interested in your personal experiences and opinions. Please read each question carefully and respond as honestly and accurately as possible.
+Il n'y a pas de bonnes ou de mauvaises réponses. Ce qui nous intéresse, ce sont vos expériences et vos opinions personnelles. Veuillez lire attentivement chaque question et y répondre de la manière la plus honnête et la plus précise possible.
