@@ -16,7 +16,7 @@ L'étude se divise en deux parties: une première phase en laboratoire d'une dur
 
 
 Première partie J0: 
-Vous participerez à une conversation scénarisée tout en portant un casque de réalité augmentée. La discussion portera sur un sujet neutre, tel que la répartition des responsabilités dans le cadre d'un projet professionnel. Le dispositif comprend un miroir virtuel affichant l'avatar que vous avez choisi préalablement ainsi qu’un interlocuteur virtuel simulé placé à côté de vous. Votre avatar et l'interlocuteur virtuel produiront des phrases ; vous serez également invité à lire les phrases présentées dans le miroir. À l'issue de la conversation, vous remplirez des questionnaires afin d'évaluer votre expérience subjective de l'interaction.
+Vous participerez à une conversation scénarisée tout en portant un casque de réalité augmentée. La discussion portera sur des sujets neutres. Le dispositif comprend un miroir virtuel affichant l'avatar que vous avez choisi préalablement ainsi qu’un interlocuteur virtuel simulé placé à côté de vous. Votre avatar et l'interlocuteur virtuel produiront des phrases ; vous serez également invité à lire les phrases présentées dans le miroir. À l'issue de la conversation, vous remplirez des questionnaires afin d'évaluer votre expérience subjective de l'interaction.
 
 Deuxième partie J2 à J4: 
 Cette étude comporte également une deuxième partie rapide à compléter en ligne. Vous recevrez, 48 heures après votre participation, un courriel contenant un questionnaire visant à évaluer votre expérience subjective de l'interaction à long terme.
