@@ -22,6 +22,12 @@
   },
 
   "components": {
+    "ConsentPage": {
+      "type": "markdown",
+      "path": "_mr-confusion/assets/content/part1_consent.md",
+      "nextButtonText": "I agree",
+      "response": []
+    },
     "IntroPage": {
       "type": "markdown",
       "path": "_mr-confusion/assets/content/part1_instructions.md",
@@ -176,6 +182,7 @@
   "sequence": {
     "order": "fixed",
     "components": [
+      "ConsentPage",
       "IntroPage",
       "Presence",
       "Embodiment",
