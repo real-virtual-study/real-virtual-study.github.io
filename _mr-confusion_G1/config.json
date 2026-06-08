@@ -109,240 +109,280 @@
     "trial1A": {
       "baseComponent": "sentence-task",
       "parameters": {
+        "obs_source": "SA",
         "sentence": "Tu as remarqué à quel point l'actualité semble défiler plus vite qu'on ne peut la suivre ? J'ai l'impression de courir en permanence après l'information."
       }
     },
     "trial2A": {
       "baseComponent": "sentence-task",
       "parameters": {
+        "obs_source": "I",
         "sentence": "Personnellement, j'écouté un podcast chaque matin pour voir ce qui s'est passé. Sinon, je me sens déjà dépassé·e avant même la fin de mon petit-déjeuner."
       }
     },
     "trial3A": {
       "baseComponent": "sentence-task",
       "parameters": {
+        "obs_source": "P",
         "sentence": "Par exemple, la politique locale fait la une de tous les journaux. On n'entend plus parler que de ça dans les médias et sur les réseaux sociaux."
       }
     },
     "trial4A": {
       "baseComponent": "sentence-task",
       "parameters": {
+        "obs_source": "SA",
         "sentence": "On en fait trop, mais c'est vrai avec les deux candidats qui se battent pour les sondages. Ils sont maintenant au coude-à-coude pour l'élection."
       }
     },
     "trial5A": {
       "baseComponent": "sentence-task",
       "parameters": {
+        "obs_source": "P",
         "sentence": "Ils ont tous les deux promis d'aménager les trottoirs... On verra bien si cette promesse se concrétise vraiment dans les mois futurs."
       }
     },
     "trial6A": {
       "baseComponent": "sentence-task",
       "parameters": {
+        "obs_source": "I",
         "sentence": "Je ne parierais pas là-dessus. En parlant de projets ambitieux, tu as vu les infos sur l'espace ? La nouvelle base lunaire marque une étape majeure."
       }
     },
     "trial7A": {
       "baseComponent": "sentence-task",
       "parameters": {
+        "obs_source": "SA",
         "sentence": "C'est surtout symbolique pour l'instant, mais les astronautes se préparent déjà à y vivre six mois consécutifs. C'est fascinant d'imaginer une telle vie sur la Lune."
       }
     },
     "trial8A": {
       "baseComponent": "sentence-task",
       "parameters": {
+        "obs_source": "I",
         "sentence": "Cette mission pourrait vraiment nous aider à mieux comprendre l'histoire de notre système solaire. Nous vivons sans aucun doute une époque technologique tout à fait incroyable."
       }
     },
     "trial9A": {
       "baseComponent": "sentence-task",
       "parameters": {
+        "obs_source": "P",
         "sentence": "C'est incroyable mais un peu instable aussi. J'ai vu que les valeurs technologiques ont soudainement chuté en fin d'après-midi à la bourse, ce qui inquiète beaucoup de monde.."
       }
     },
     "trial10A": {
       "baseComponent": "sentence-task",
       "parameters": {
+        "obs_source": "I",
         "sentence": "Je pensais que c'était une correction de routine, mais les investisseurs s'inquiètent surtout des nouvelles réglementations strictes sur les outils récents de l'intelligence artificielle."
       }
     },
     "trial11A": {
       "baseComponent": "sentence-task",
       "parameters": {
+        "obs_source": "I",
         "sentence": "Les experts économiques continuent de dire qu'il faut garder son calme malgré la volatilité actuelle. C'est souvent plus facile à dire qu'à faire en réalité."
       }
     },
     "trial12A": {
       "baseComponent": "sentence-task",
       "parameters": {
+        "obs_source": "P",
         "sentence": "C'est clair. Dans un tout autre registre, un tableau rare a été découvert dans un vieux grenier très poussiéreux par une famille ce matin même."
       }
     },
     "trial13A": {
       "baseComponent": "sentence-task",
       "parameters": {
+        "obs_source": "I",
         "sentence": "Oui, j'ai lu ça ! Même si certains restent sceptiques, les historiens de l'art pensent qu'il pourrait appartenir à un très grand maître italien de l'époque."
       }
     },
     "trial14A": {
       "baseComponent": "sentence-task",
       "parameters": {
+        "obs_source": "P",
         "sentence": "La maison de vente aux enchères en attend un prix de plusieurs millions. Ça prouve qu'il faut toujours fouiller dans le grenier de ses grands-parents."
       }
     },
     "trial15A": {
       "baseComponent": "sentence-task",
       "parameters": {
+        "obs_source": "SA",
         "sentence": "Si seulement c'était moins rare ! Côté sciences, le changement climatique affecte maintenant sérieusement les schémas de migration de nombreux oiseaux sauvages à travers le monde."
       }
     },
     "trial16A": {
       "baseComponent": "sentence-task",
       "parameters": {
+        "obs_source": "P",
         "sentence": "Oui, et même si l'étalement urbain y joue un rôle, ils arrivent beaucoup plus tôt qu'il y a seulement dix ans dans notre région."
       }
     },
     "trial17A": {
       "baseComponent": "sentence-task",
       "parameters": {
+        "obs_source": "SA",
         "sentence": "Les scientifiques suivent précisément leurs mouvements grâce à de petites balises satellites. Cela permet de récolter des données précieuses sur leur adaptation face au climat."
       }
     },
     "trial18A": {
       "baseComponent": "sentence-task",
       "parameters": {
+        "obs_source": "P",
         "sentence": "Cela me rappelle d'ailleurs le rapport récent du ministère de la Santé sur l'importance cruciale de la qualité du sommeil. Peu importe si on prévient les gens, rien ne change."
       }
     },
     "trial19A": {
       "baseComponent": "sentence-task",
       "parameters": {
+        "obs_source": "SA",
         "sentence": "Oui j'ai vu, la plupart des gens ont besoin de sept heures pour rester performants, même si personnellement, je me sens très bien avec seulement six heures de repos."
       }
     },
     "trial20A": {
       "baseComponent": "sentence-task",
       "parameters": {
+        "obs_source": "SA",
         "sentence": "Ça varie selon les personnes, mais on devrait consommer moins de caféine l'après midi. Je devrais probablement arrêter de prendre des expressos après dix-sept heures."
       }
     },
     "trial21A": {
       "baseComponent": "sentence-task",
       "parameters": {
+        "obs_source": "I",
         "sentence": "Bonne résolution, même si ça risque d'être dur ! Sinon, tu as vu que le grand festival de cinéma a enfin annoncé sa sélection officielle de films ?"
       }
     },
     "trial22A": {
       "baseComponent": "sentence-task",
       "parameters": {
+        "obs_source": "I",
         "sentence": "Ce sont surtout des réalisateurs indépendants qui attirent l'attention cette année, bien plus que les grandes stars habituelles des immenses studios de production de cinéma."
       }
     },
     "trial23A": {
       "baseComponent": "sentence-task",
       "parameters": {
+        "obs_source": "P",
         "sentence": "Les blockbusters me manquent un peu, mais c'est une bonne chose. J'espère voir des histoires créatives sur grand écran lors de mes prochaines vacances d'été."
       }
     },
     "trial24A": {
       "baseComponent": "sentence-task",
       "parameters": {
+        "obs_source": "P",
         "sentence": "En attendant, le stade national va accueillir les grandes finales mondiales le week-end prochain. Tout le monde attend cet événement sportif avec une très grande impatience."
       }
     },
     "trial25A": {
       "baseComponent": "sentence-task",
       "parameters": {
+        "obs_source": "I",
         "sentence": "Le site n'arrêtait pas de planter, mais les billets se sont tous vendus en cinq minutes seulement. C'est fou de voir un tel engouement populaire aujourd'hui."
       }
     },
     "trial26A": {
       "baseComponent": "sentence-task",
       "parameters": {
+        "obs_source": "SA",
         "sentence": "Les fans viennent de tous les continents pour soutenir leurs équipes préférées. L'ambiance va être absolument électrique dans toute la ville pendant ces quelques jours."
       }
     },
     "trial27A": {
       "baseComponent": "sentence-task",
       "parameters": {
+        "obs_source": "SA",
         "sentence": "Notre ville va encore changer de visage avec tout ça. L'architecture moderne transforme déjà radicalement l'horizon de notre beau front de mer depuis quelques années déjà."
       }
     },
     "trial28A": {
       "baseComponent": "sentence-task",
       "parameters": {
+        "obs_source": "P",
         "sentence": "Je trouve ça un peu trop chargé maintenant. Ces nouvelles tours de verre qui s'élèvent au-dessus du vieux port sont impressionnantes, mais je reste assez nostalgique."
       }
     },
     "trial29A": {
       "baseComponent": "sentence-task",
       "parameters": {
+        "obs_source": "I",
         "sentence": "Moi aussi. C'est peut-être pour ça que je préfère encore lire un journal papier avec un bon café chaud plutôt que de consulter mon téléphone portable."
       }
     },
     "trial30A": {
       "baseComponent": "sentence-task",
       "parameters": {
+        "obs_source": "SA",
         "sentence": "Pareil. Ça fait du bien de se déconnecter du monde numérique un instant, surtout quand l'actualité avance à cent à l'heure sans nous laisser de répit."
       }
     },
     "trial31A": {
       "baseComponent": "sentence-task",
       "parameters": {
+        "obs_source": "new",
         "sentence": "Le débat d'hier soir n'a pas vraiment clarifié la position des deux candidats sur le prochain budget de la ville."
       }
     },
     "trial32A": {
       "baseComponent": "sentence-task",
       "parameters": {
+        "obs_source": "new",
         "sentence": "J'ai entendu dire qu'ils prévoient aussi de lancer un nouveau rover pour explorer les calottes glaciaires de Mars."
       }
     },
     "trial33A": {
       "baseComponent": "sentence-task",
       "parameters": {
+        "obs_source": "new",
         "sentence": "Certains analystes prédisent que le marché va vite rebondir une fois que ces directives sur l'IA seront finalisées."
       }
     },
     "trial34A": {
       "baseComponent": "sentence-task",
       "parameters": {
+        "obs_source": "new",
         "sentence": "Apparemment, le cadre en bois sculpté qui entoure le tableau est une antiquité qui vaut elle-même une petite fortune."
       }
     },
     "trial35A": {
       "baseComponent": "sentence-task",
       "parameters": {
+        "obs_source": "new",
         "sentence": "Même la faune marine locale montre des changements de comportement étranges à cause du réchauffement des courants océaniques."
       }
     },
     "trial36A": {
       "baseComponent": "sentence-task",
       "parameters": {
+        "obs_source": "new",
         "sentence": "J'ai commencé à laisser mon téléphone dans la cuisine la nuit pour éviter la lumière bleue avant de dormir."
       }
     },
     "trial37A": {
       "baseComponent": "sentence-task",
       "parameters": {
+        "obs_source": "new",
         "sentence": "Les critiques disent déjà que l'un des films en langue étrangère va remporter le prix principal."
       }
     },
     "trial38A": {
       "baseComponent": "sentence-task",
       "parameters": {
+        "obs_source": "new",
         "sentence": "Ils s'attendent à ce que les transports en commun autour du stade soient complètement paralysés dès vendredi matin."
       }
     },
     "trial39A": {
       "baseComponent": "sentence-task",
       "parameters": {
+        "obs_source": "new",
         "sentence": "Le conseil municipal veut planter plus d'arbres autour du quartier d'affaires pour adoucir tout ce béton."
       }
     },
     "trial40A": {
       "baseComponent": "sentence-task",
       "parameters": {
+        "obs_source": "new",
         "sentence": "Il y a vraiment quelque chose d'incroyablement réconfortant dans l'odeur de l'encre fraîche sur une page imprimée."
       }
     },
