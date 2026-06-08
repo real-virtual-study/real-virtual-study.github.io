@@ -92,6 +92,7 @@
     "IntroPage": {
       "type": "markdown",
       "path": "_mr-confusion_G1/assets/content/instructions.md",
+      "nextButtonText": "Commencer",
             "response": [
               {
                 "id": "subj_id",
@@ -103,6 +104,8 @@
               }
       ]
     },
+
+  
     "trial1A": {
       "baseComponent": "sentence-task",
       "parameters": {
