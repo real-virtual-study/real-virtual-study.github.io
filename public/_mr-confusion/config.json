@@ -32,7 +32,16 @@
       "type": "markdown",
       "path": "_mr-confusion/assets/content/part1_instructions.md",
       "nextButtonText": "Commencer",
-      "response": []
+            "response": [
+              {
+                "id": "subj_id",
+                "prompt": "Votre numéro de participant : ",
+                "required": true,
+                "location": "belowStimulus",
+                "type": "shortText",
+                "placeholder": "Numéro de participant donné dans le mail"
+              }
+      ]
     },
     "Doubt": {
       "type": "questionnaire",
