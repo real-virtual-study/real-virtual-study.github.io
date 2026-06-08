@@ -92,7 +92,16 @@
     "IntroPage": {
       "type": "markdown",
       "path": "_mr-confusion_G1/assets/content/instructions.md",
-      "response": []
+            "response": [
+              {
+                "id": "subj_id",
+                "prompt": "Votre numéro de participant : ",
+                "required": true,
+                "location": "belowStimulus",
+                "type": "shortText",
+                "placeholder": "Numéro de participant donné dans le mail"
+              }
+      ]
     },
     "trial1A": {
       "baseComponent": "sentence-task",

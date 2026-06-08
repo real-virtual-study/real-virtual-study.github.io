@@ -16,9 +16,11 @@ L'étude se divise en deux parties: une première phase en laboratoire d'une dur
 
 
 Première partie J0: 
+
 Vous participerez à une conversation scénarisée tout en portant un casque de réalité augmentée. La discussion portera sur des sujets neutres. Le dispositif comprend un miroir virtuel affichant l'avatar que vous avez choisi préalablement ainsi qu’un interlocuteur virtuel simulé placé à côté de vous. Votre avatar et l'interlocuteur virtuel produiront des phrases ; vous serez également invité à lire les phrases présentées dans le miroir. À l'issue de la conversation, vous remplirez des questionnaires afin d'évaluer votre expérience subjective de l'interaction.
 
 Deuxième partie J2 à J4: 
+
 Cette étude comporte également une deuxième partie rapide à compléter en ligne. Vous recevrez, 48 heures après votre participation, un courriel contenant un questionnaire visant à évaluer votre expérience subjective de l'interaction à long terme.
 
 
@@ -37,7 +39,7 @@ Requis pour participer :
 
 ### Droit de rétractation à tout moment
 
-Votre participation à cette étude est entièrement volontaire et vous pouvez y mettre fin à tout moment, sans avoir à vous justifier. Si vous décidez d'arrêter, vos données seront supprimées. Néanmoins, nous ne serons pas en mesure de vous rémunérer si vous ne terminez pas l'étude.
+Votre participation à cette étude est entièrement volontaire et vous pouvez y mettre fin à tout moment, sans avoir à vous justifier. Si vous décidez d'arrêter, vos données seront supprimées. 
 
 ### Droits à la confidentialité et au respect de la vie privée
 
@@ -47,7 +49,7 @@ En tant que chercheurs, nous n'avons pas accès à vos informations personnelles
 
 L'experimentatrice vous donnera une copie physique.
 
-### Avantages potentiels
+### Avantages 
 
 Si vous n’êtes pas agent Inria, votre participation à l’étude complète sera indemnisée à hauteur de X €. En cas d'interruption de votre participation après la première partie de l'étude, ou si vous ne complétez pas la partie 2, une indemnisation de Y € vous sera versée [moitié de X]. Le paiement s’effectuera par virement bancaire. Celui-ci nécessite une inscription préalable auprès d'un organisme tiers X.
 

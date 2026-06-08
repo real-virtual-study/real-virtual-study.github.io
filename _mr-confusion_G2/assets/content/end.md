@@ -18,7 +18,7 @@ Vos réponses ne sont associées à aucune information d'identification.
 
 Vos données ne constituent pas des données personnelles.
 
-Les participants sont uniquement désignés sous les termes "Participant 1", "Participant 2", etc.
+Vous et les autres participants serez uniquement désignés sous les termes "Participant 1", "Participant 2", etc.
 
 ## Droit de rétractation
 Maintenant que vous êtes pleinement informé(e) du véritable but de cette étude, vous avez le droit de retirer vos données. Si vous souhaitez que vos données soient définitivement supprimées, veuillez en informer l'enquêteur avant de partir.
