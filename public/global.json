@@ -5,7 +5,6 @@
     "_mr-confusion_G1",
     "_mr-confusion_G2",
     "_mr-confusion_G3",
-    "_mr-confusion_G4",
     "_real_virtual_study",
     "_real_virtual_study2_G1"
 
@@ -22,9 +21,6 @@
     },
     "_mr-confusion_G3": {
       "path": "_mr-confusion_G3/config.json"
-    },
-    "_mr-confusion_G4": {
-      "path": "_mr-confusion_G4/config.json"
     },
       "_real_virtual_study": {
       "path": "_real_virtual_study/config.json"
