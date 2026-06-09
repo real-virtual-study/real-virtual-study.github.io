@@ -511,11 +511,11 @@
         {
           "order": "random",
           "components": [
-            "trial1A",  "trial2A",  "trial3A",  "trial4A",
-            "trial5A",  "trial6A",  "trial7A",  "trial8A",  "trial9A",  "trial10A", "trial11A",
-            "trial12A", "trial13A", "trial14A", "trial15A", "trial16A", "trial17A", "trial18A",
-            "trial19A", "trial20A", "trial21A", "trial22A", "trial23A", "trial24A",
-            "trial25A", "trial26A", "trial27A", "trial28A", "trial29A", "trial30A", "trial31A", "trial32A", "trial33A", "trial34A", "trial35A", "trial36A", "trial37A", "trial38A", "trial39A", "trial40A"
+            "trial1B",  "trial2B",  "trial3B",  "trial4B",
+            "trial5B",  "trial6B",  "trial7B",  "trial8B",  "trial9B",  "trial10B", "trial11B",
+            "trial12B", "trial13B", "trial14B", "trial15B", "trial16B", "trial17B", "trial18B",
+            "trial19B", "trial20B", "trial21B", "trial22B", "trial23B", "trial24B",
+            "trial25B", "trial26B", "trial27B", "trial28B", "trial29B", "trial30B", "trial31B", "trial32B", "trial33B", "trial34B", "trial35B", "trial36B", "trial37B", "trial38B", "trial39B", "trial40B"
           ]
         },
         "Questionnaires",
