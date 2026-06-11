@@ -12,13 +12,7 @@ Toutes les données recueillies au cours de cette session seront utilisées pour
 Pour tester correctement nos hypothèses, les détails complets de l'étude ne pouvaient pas être divulgués à l'avance. Cela a permis de garantir que vos réponses restent spontanées et ne soient pas influencées par la connaissance préalable du véritable objectif de l'étude. Nous regrettons ce subterfuge nécessaire et vous remercions sincèrement pour votre compréhension.
 
 ## Vos données et confidentialité
-Tous les autres aspects du formulaire de consentement initial restent entièrement valables. Vos données sont protégées de la manière suivante :
-
-Vos réponses ne sont associées à aucune information d'identification.
-
-Vos données ne constituent pas des données personnelles.
-
-Les participants sont uniquement désignés sous les termes "Participant 1", "Participant 2", etc.
+Tous les autres aspects du formulaire de consentement initial restent entièrement valables. 
 
 ## Droit de rétractation
 Maintenant que vous êtes pleinement informé(e) du véritable but de cette étude, vous avez le droit de retirer vos données. Si vous souhaitez que vos données soient définitivement supprimées, veuillez en informer l'enquêteur avant de partir.
