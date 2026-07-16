@@ -6,7 +6,12 @@
     "_mr-confusion_G2",
     "_mr-confusion_G3",
     "_real_virtual_study",
-    "_real_virtual_study2_G1"
+    "_real_virtual_study2_G1",
+    "_real_virtual_study2_G2",
+    "_real_virtual_study2_G3",
+    "_real_virtual_study2_G4",
+    "Ano_real_virtual_study",
+    "Ano_real_virtual_study2_G1"
 
   ],
   "configs": {
@@ -27,6 +32,22 @@
     },
     "_real_virtual_study2_G1": {
       "path": "_real_virtual_study2_G1/config.json"
+    },
+    "_real_virtual_study2_G2": {
+      "path": "_real_virtual_study2_G2/config.json"
+    },
+    "_real_virtual_study2_G3": {
+      "path": "_real_virtual_study2_G3/config.json"
+    },
+    "_real_virtual_study2_G4": {
+      "path": "_real_virtual_study2_G4/config.json"
+    },
+    
+    "Ano_real_virtual_study": {
+      "path": "Ano_real_virtual_study/config.json"
+    },
+    "Ano_real_virtual_study2_G1": {
+      "path": "Ano_real_virtual_study2_G1/config.json"
     }
 
   }
