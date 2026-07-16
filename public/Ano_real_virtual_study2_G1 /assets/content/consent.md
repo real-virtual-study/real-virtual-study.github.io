@@ -3,10 +3,7 @@
 Please read this information notice carefully. We recommend that you save or print this page.
 
 ### Main Researcher
-
-* Pierre Dragicevic
-* Research Scientist at Inria Bordeaux, France
-* Email: pierre.dragicevic@inria.fr
+[anonymized]
 
 ### Research Goal
 
@@ -69,9 +66,7 @@ All anonymized data will be made publicly available on an open science platform.
 ### Right to Ask Questions
 
 If you have any questions, complaints, suggestions, or concerns, please contact:
-* Pierre Dragicevic — pierre.dragicevic@inria.fr
-* University of Bordeaux Ethical Committee — cer.ub@u-bordeaux.fr
-* Inria Data Protection Officer — dpo@inria.fr
+[anonymized]
 
 ### Consent
 

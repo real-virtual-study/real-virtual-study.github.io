@@ -4,12 +4,12 @@
     "title": "Real vs Virtual Study Part 2 GroupA",
     "version": "1",
     "authors": [
-      "Leana"
+      "[anonymized]"
     ],
     "date": "2025-12-02",
     "description": "First Part",
     "organizations": [
-      "inria"
+      "[anonymized]"
     ]
   },
   "uiConfig": {
@@ -22,7 +22,7 @@
     "enumerateQuestions": true,
     "minWidthSize": 0,
     "minHeightSize": 0,
-    "studyEndMsg": "Thank you for completing the study. You may click this link and return to Prolific: [https://app.prolific.com/submissions/complete?cc=C1BBH8WL](https://app.prolific.com/submissions/complete?cc=C1BBH8WL)",
+    "studyEndMsg": "Thank you for completing the study. You may click this link and return to Prolific:[anonymized]",
     "urlParticipantIdParam": "PROLIFIC_PID"
   },
   "baseComponents": {

@@ -3,13 +3,13 @@
   "studyMetadata": {
     "title": "Real vs Virtual Study Part1",
     "version": "1",
-    "authors": ["Leana"],
+    "authors": ["anonymized"],
     "date": "2025-12-02",
     "description": "First Part",
-    "organizations": ["inria"]
+    "organizations": ["anonymized"]
   },
   "uiConfig": {
-    "contactEmail": "leana.petiot@inria.fr",
+    "contactEmail": "anonymized",
     "helpTextPath": "_real_virtual_study/assets/content/help.md",
     "logoPath": "revisitAssets/revisitLogoSquare.svg",
     "withProgressBar": true,
