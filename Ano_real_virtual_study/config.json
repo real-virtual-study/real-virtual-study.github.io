@@ -10,7 +10,7 @@
   },
   "uiConfig": {
     "contactEmail": "anonymized",
-    "helpTextPath": "_real_virtual_study/assets/content/help.md",
+    "helpTextPath": "Ano_real_virtual_study/assets/content/help.md",
     "logoPath": "revisitAssets/revisitLogoSquare.svg",
     "withProgressBar": true,
     "autoDownloadStudy": false,
@@ -24,7 +24,7 @@
   "baseComponents": {
     "video-task-template": {
       "type": "website",
-      "path": "_real_virtual_study/trial.html",
+      "path": "Ano_real_virtual_study/trial.html",
       "instruction": "Watch the video and answer the questions.",
       "forceCompletion": true,
       "nextButtonLocation": "belowStimulus",
@@ -89,7 +89,7 @@
     },
     "IntroPage": {
       "type": "markdown",
-      "path": "_real_virtual_study/assets/content/part1_instructions.md",
+      "path": "Ano_real_virtual_study/assets/content/part1_instructions.md",
       "nextButtonText": "Start",
       "response": [
         {
@@ -105,7 +105,7 @@
     },
     "ConsentPage": {
       "type": "markdown",
-      "path": "_real_virtual_study/assets/content/part1_consent.md",
+      "path": "Ano_real_virtual_study/assets/content/part1_consent.md",
       "nextButtonText": "I agree",
       "response": []
     },
@@ -936,7 +936,7 @@
     },
     "EndPage": {
       "type": "markdown",
-      "path": "_real_virtual_study/assets/content/part1_end.md",
+      "path": "Ano_real_virtual_study/assets/content/part1_end.md",
       "response": []
     }
 
