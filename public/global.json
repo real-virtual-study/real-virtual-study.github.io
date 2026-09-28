@@ -48,7 +48,12 @@
     },
     "Ano_real_virtual_study2_G1": {
       "path": "Ano_real_virtual_study2_G1/config.json"
+    },
+        "Ano_mr-confusion": {
+      "path": "Ano_mr-confusion/config.json"
+    },
+    "Ano_mr-confusion_G1": {
+      "path": "Ano_mr-confusion_G1/config.json"
     }
-
   }
 }

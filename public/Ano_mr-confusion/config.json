@@ -1,0 +1,203 @@
+{
+  "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.3.2/src/parser/StudyConfigSchema.json",
+  "studyMetadata": {
+    "title": "MR conversational task - part 1",
+    "version": "1",
+    "authors": ["anonymized"],
+    "date": "2025-12-02",
+    "description": "Première partie",
+    "organizations": ["anonymized"]
+  },
+  "uiConfig": {
+    "contactEmail": "anonymized",
+    "helpTextPath": "Ano_mr-confusion/assets/content/help.md",
+    "logoPath": "revisitAssets/revisitLogoSquare.svg",
+    "withProgressBar": true,
+    "autoDownloadStudy": false,
+    "withSidebar": false,
+    "enumerateQuestions": true,
+    "minWidthSize": 0,
+    "minHeightSize": 0,
+    "studyEndMsg": "Merci ! Nous te contacterons par mail pour t'envoyer la deuxième partie dans 48h"
+  },
+
+  "components": {
+    "ConsentPage": {
+      "type": "markdown",
+      "path": "Ano_mr-confusion/assets/content/part1_consent.md",
+      "nextButtonText": "I agree",
+      "response": []
+    },
+    "IntroPage": {
+      "type": "markdown",
+      "path": "Ano_mr-confusion/assets/content/part1_instructions.md",
+      "nextButtonText": "Commencer",
+            "response": [
+              {
+                "id": "subj_id",
+                "prompt": "Votre numéro de participant : ",
+                "required": true,
+                "location": "belowStimulus",
+                "type": "shortText",
+                "placeholder": "Numéro de participant donné dans le mail"
+              }
+      ]
+    },
+    "Doubt": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "doubtQ1",
+          "prompt": "Avais-tu des doutes sur le but de l'étude ?",
+          "location": "belowStimulus",
+          "type": "longText",
+          "placeholder": "Entre ta réponse ici."
+        },
+        {
+          "id": "doubtQ2",
+          "prompt": "Que penses-tu que nous espérons trouver avec cette expérience ?",
+          "location": "belowStimulus",
+          "type": "longText",
+          "placeholder": "Entre ta réponse ici."
+        }
+      ]
+    },
+    "Feedback": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "q1",
+          "prompt": "As-tu rencontré des problèmes avec notre étude ? Par exemple, est-ce que quelque chose ne s'est pas affiché ou rendu correctement ? D'autres problèmes ou autre chose que tu voudrais nous dire ?",
+          "location": "belowStimulus",
+          "type": "longText",
+          "placeholder": "Entre ta réponse ici.",
+          "required": true
+        }
+      ]
+    },
+
+    "Presence": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "presence-psi-nevertomostofthetime",
+          "prompt": "En pensant à ton expérience dans l'environnement virtuel, merci d'évaluer les éléments suivants (1 = Jamais, 7 = Presque tout le temps) :",
+          "location": "aboveStimulus",
+          "type": "matrix-radio",
+          "answerOptions": [
+            "1 - Jamais",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7 - Presque tout le temps"
+          ],
+          "questionOptions": [
+            "Dans quelle mesure ta réponse émotionnelle dans la conversation était-elle la même que si elle avait été réelle ?",
+            "Dans quelle mesure les pensées que tu avais dans la pièce étaient-elles les mêmes que si la situation avait été réelle ?",
+            "Dans quelle mesure te disais-tu « je sais que ce n'est pas réel », tout en te retrouvant à te comporter comme si c'était réel ?",
+            "Dans quelle mesure tes réponses physiques (rythme cardiaque, transpiration, etc.) étaient-elles les mêmes que si la situation avait été réelle ?"
+          ]
+        },
+        {
+          "id": "presence-psi-notalltoverymuch",
+          "prompt": "Merci d'évaluer les éléments suivants concernant ton comportement et tes réponses (1 = Pas du tout, 7 = Tout à fait) :",
+          "location": "aboveStimulus",
+          "type": "matrix-radio",
+          "answerOptions": [
+            "1 - Pas du tout",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7 - Tout à fait"
+          ],
+          "questionOptions": [
+            "Dans quelle mesure t'es-tu comporté(e) dans la pièce comme si la situation était réelle ?",
+            "Dans quelle mesure t'es-tu comporté(e) comme si l'autre était une vraie personne ?",
+            "Dans quelle mesure ta réponse émotionnelle envers l'autre était-elle comme si cette personne était réelle ?",
+            "Dans quelle mesure tes pensées en lien avec l'autre étaient-elles comme si cette personne était réelle ?",
+            "Dans quelle mesure as-tu eu des réponses physiques (rythme cardiaque, etc.) envers l'autre comme si cette personne était réelle ?",
+            "Dans quelle mesure te disais-tu « je sais que cette personne n'est pas réelle », tout en te retrouvant à te comporter comme si elle l'était ?"
+          ]
+        }
+      ]
+    },
+
+    "Embodiment": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "embodiment-body",
+          "prompt": "En pensant à ton corps virtuel, merci d'indiquer dans quelle mesure tu es d'accord avec les affirmations suivantes (1 = Pas du tout d'accord, 7 = Tout à fait d'accord) :",
+          "location": "aboveStimulus",
+          "type": "matrix-radio",
+          "answerOptions": [
+            "1 - Pas du tout d'accord",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7 - Tout à fait d'accord"
+          ],
+          "questionOptions": [
+            "J'avais l'impression que le corps virtuel que je voyais dans le miroir était mon propre corps",
+            "J'avais l'impression que mon corps virtuel ressemblait à mon propre corps (réel) en termes de forme, de teint de peau ou d'autres caractéristiques visuelles",
+            "J'avais l'impression d'avoir deux corps",
+            "J'avais l'impression que si je bougeais mon corps réel (bras, mains), le corps virtuel bougerait également en conséquence"
+          ]
+        },
+        {
+          "id": "embodiment-voice",
+          "prompt": "En pensant à la voix que tu as entendue, merci d'indiquer dans quelle mesure tu es d'accord avec les affirmations suivantes (1 = Pas du tout d'accord, 7 = Tout à fait d'accord) :",
+          "location": "aboveStimulus",
+          "type": "matrix-radio",
+          "answerOptions": [
+            "1 - Pas du tout d'accord",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7 - Tout à fait d'accord"
+          ],
+          "questionOptions": [
+            "J'avais l'impression que la voix que j'entendais provenait d'un endroit dans la pièce",
+            "J'avais l'impression que la voix que j'entendais venait de l'intérieur de ma tête",
+            "J'avais l'impression que la voix que j'entendais était ma propre voix",
+            "J'avais l'impression que la voix que j'entendais était une version modifiée de ma propre voix",
+            "J'avais l'impression de prononcer moi-même les mots que j'entendais"
+          ]
+        }
+      ]
+    },
+    "EndPage": {
+      "type": "markdown",
+      "path": "Ano_mr-confusion/assets/content/part1_end.md",
+      "response": [
+        {
+          "id": "mail",
+          "prompt": "Ton adresse mail",
+          "required": true,
+          "location": "belowStimulus",
+          "type": "shortText"
+        }
+      ]
+    }
+  },
+  "sequence": {
+    "order": "fixed",
+    "components": [
+      "ConsentPage",
+      "IntroPage",
+      "Presence",
+      "Embodiment",
+      "Doubt",
+      "Feedback",
+      "EndPage"
+    ]
+  }
+}
