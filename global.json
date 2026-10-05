@@ -11,8 +11,9 @@
     "_real_virtual_study2_G3",
     "_real_virtual_study2_G4",
     "Ano_real_virtual_study",
-    "Ano_real_virtual_study2_G1"
-
+    "Ano_real_virtual_study2_G1",
+    "Ano_mr-confusion",
+    "Ano_mr-confusion_G1"
   ],
   "configs": {
     "_mr-confusion": {
